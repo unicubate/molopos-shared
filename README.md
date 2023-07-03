@@ -5,7 +5,7 @@ Data shared between backend and frontend repos
 ### installation
 
 ```
-$ npm i @recrowd/shared-data
+$ npm i @recrowd/shared
 ```
 
 ### contents
