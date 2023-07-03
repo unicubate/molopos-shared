@@ -1,0 +1,17 @@
+name: Publish package from dist
+
+on: push
+
+jobs:
+  build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: Use Node.js version 18
+          uses: actions/setup-node@v3
+          with:
+            node-version: '18'
+        - run: npm ci && npm run build
+        - run: cd ./dist && npm version patch && npm publish
+          env:
+            NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
