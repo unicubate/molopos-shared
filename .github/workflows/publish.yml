@@ -13,6 +13,6 @@ jobs:
             node-version: '18'
             registry-url: 'https://npm.pkg.github.com'
         - run: npm ci && npm run build
-        - run: cd ./dist && npm version patch && npm publish
+        - run: cd ./dist && npm publish
           env:
             NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
