@@ -2,9 +2,12 @@
 
 Data shared between backend and frontend repos
 
-## installation
+## authentication
 
-### 1) via npmrc file
+You will need an access token with the **`read:packages`** permission.  
+You can **create a new personal access** token [**here**](https://github.com/settings/tokens).
+
+#### 1) via npmrc file
 
 create or edit a private **`.npmrc`** file along side your `package.json`, with the following content:
 ```
@@ -12,15 +15,7 @@ create or edit a private **`.npmrc`** file along side your `package.json`, with 
 @recrowd:registry=https://npm.pkg.github.com
 ```
 
-then
-```
-$ npm i @recrowd/shared@1.0.1
-```
-
-The personal access token requires the **`read:packages`** permission.  
-You can **create a new personal access** token [**here**](https://github.com/settings/tokens).
-
-### 2) via npm login
+#### 2) via npm login
 
 ```
 $ npm login --scope=@recrowd --auth-type=legacy --registry=https://npm.pkg.github.com
@@ -28,7 +23,9 @@ $ npm login --scope=@recrowd --auth-type=legacy --registry=https://npm.pkg.githu
 > Username: {your-username}
 > Password: {personal-access-token}
 ```
-then
+
+## installation
+
 ```
-$ npm i @recrowd/shared@1.0.1
+$ npm i @recrowd/shared@1.0.0
 ```
