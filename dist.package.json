@@ -1,11 +1,11 @@
 {
-  "name": "@recrowd/shared",
-  "version": "1.0.0",
-  "description": "Data shared between backend and frontend repos",
-  "license": "ISC",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Recrowd/shared.git"
-  }
+    "name": "@recrowd/shared",
+    "version": "1.0.1",
+    "description": "Data shared between backend and frontend repos",
+    "license": "ISC",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Recrowd/shared.git"
+    }
 }

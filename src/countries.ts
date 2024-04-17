@@ -1,11 +1,11 @@
-export type CountryData = {
-  code: string
-  name: string
-  iso2: string
-  iso3: string
-}
+export type Country = {
+  code: string;
+  name: string;
+  iso2: string;
+  iso3: string;
+};
 
-export const countries: CountryData[] = [
+export const countries: Country[] = [
   {
     code: "002",
     name: "AFGHANISTAN",

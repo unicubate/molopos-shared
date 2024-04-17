@@ -1,10 +1,10 @@
-export type CityData = {
-  code: string
-  name: string
-  province: string
-}
+export type City = {
+  code: string;
+  name: string;
+  province: string;
+};
 
-export const cities: CityData[] = [
+export const cities: City[] = [
   {
     code: "166009",
     name: "AGRIGENTO",
