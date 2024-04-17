@@ -1,7 +1,11 @@
 export enum DocumentType {
     Pending = '-1',
     IdentityCard = '0',
+    ProofOfAddress = '1',
     IbanCert = '2',
+    PassportEU = '3',
+    PassportExtraEU = '4',
+    Residence = '5',
     CompanyCert = '7',
     DrivingLicense = '11',
     Shareholder1ID = '14',
