@@ -1,11 +1,12 @@
 {
-  "include": [
-    "./src/**/*"
-  ],
-  "compilerOptions": {
-    "target": "ESNext",
-    "moduleResolution": "Node",
-    "outDir": "./dist",
-    "declaration": true,
-  }
+    "include": [
+        "./src/**/*"
+    ],
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "outDir": "./dist",
+        "declaration": true
+    }
 }
