@@ -38,7 +38,7 @@ for (const item of data) {
         body += "## " + toSpace(key) + "\n\n";
         if (itemDesc) {
             body += itemDesc + "\n";
-            index += ", " + itemDesc + "\n";
+            index += ", " + itemDesc.trim();
         }
         body += "|name|value|\n";
         body += "|----|-----|\n";

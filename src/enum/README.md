@@ -2,14 +2,14 @@
 
 # Statuses and type
 
-- [Document Type](#document-type)
-- [Document Status](#document-status)
-- [Onfido Document Status](#onfido-document-status)
-- [Wallet Status](#wallet-status)
-- [Transaction Status](#transaction-status)
-- [Iban Status](#iban-status)
-- [Money In Type](#money-in-type)
-- [Gender Type](#gender-type)
+- [Document Type](#document-type), both lemonway and database document types
+- [Document Status](#document-status), both lemonway and database document statuses
+- [Onfido Document Status](#onfido-document-status), status of an identity document sent to onfido
+- [Wallet Status](#wallet-status), both lemonway and database wallet statuses
+- [Transaction Status](#transaction-status), both lemonway and database transaction statuses
+- [Iban Status](#iban-status), both lemonway and database iban statuses
+- [Money In Type](#money-in-type), both lemonway and database money in types
+- [Gender Type](#gender-type), lemonway only geneder type
 - [Alert Type](#alert-type)
 - [Notification Type](#notification-type)
 - [Project Payout Strategy Type](#project-payout-strategy-type)
@@ -27,32 +27,34 @@
 - [Voucher Activity Type](#voucher-activity-type)
 - [Voucher Category](#voucher-category)
 - [Survey Level](#survey-level), user classification survey score
-
-
 ## Document Type
+
+both lemonway and database document types
 
 |name|value|
 |----|-----|
 |Pending|'-1'|
-|Identity Card|'0'|
+|Identity Card (identity document)|'0'|
 |Proof Of Address|'1'|
 |Iban Cert|'2'|
-|Passport EU|'3'|
-|Passport Extra EU|'4'|
+|Passport EU (identity document)|'3'|
+|Passport Extra EU (identity document)|'4'|
 |Residence|'5'|
 |Company Cert|'7'|
-|Driving License|'11'|
-|Shareholder1ID|'14'|
-|Shareholder2ID|'15'|
-|Shareholder3ID|'16'|
-|Shareholder4ID|'17'|
-|Residency Permit|'5'|
+|Driving License (identity document)|'11'|
+|Shareholder1ID (identity document)|'14'|
+|Shareholder2ID (identity document)|'15'|
+|Shareholder3ID (identity document)|'16'|
+|Shareholder4ID (identity document)|'17'|
+|Residency Permit (identity document)|'5'|
 |Status|'12'|
 |Selfie|'13'|
 |Ssd Mandate|'21'|
 
 
 ## Document Status
+
+both lemonway and database document statuses
 
 |name|value|
 |----|-----|
@@ -70,6 +72,8 @@
 
 ## Onfido Document Status
 
+status of an identity document sent to onfido
+
 |name|value|
 |----|-----|
 |Initialized|0|
@@ -80,9 +84,11 @@
 
 ## Wallet Status
 
+both lemonway and database wallet statuses
+
 |name|value|
 |----|-----|
-|Wallet SC|'-1'|
+|Wallet SC (recrowd wallet)|'-1'|
 |Missing Documents|'2'|
 |Documents Rejected|'3'|
 |Registered|'5'|
@@ -99,6 +105,8 @@
 
 ## Transaction Status
 
+both lemonway and database transaction statuses
+
 |name|value|
 |----|-----|
 |Created|'-1'|
@@ -109,6 +117,8 @@
 
 
 ## Iban Status
+
+both lemonway and database iban statuses
 
 |name|value|
 |----|-----|
@@ -125,6 +135,8 @@
 
 ## Money In Type
 
+both lemonway and database money in types
+
 |name|value|
 |----|-----|
 |Wire Received|'10'|
@@ -135,6 +147,8 @@
 
 
 ## Gender Type
+
+lemonway only geneder type
 
 |name|value|
 |----|-----|
@@ -185,9 +199,10 @@
 |name|value|
 |----|-----|
 |Created|-1|
-|Overdue|0|
-|Active|1|
-|Done|2|
+|Waiting|0|
+|Confirmed|1|
+|Active|2|
+|Done (every rate has been paid)|3|
 
 
 ## Prospect Rate Status
@@ -217,7 +232,7 @@
 |name|value|
 |----|-----|
 |Created|-1|
-|Confirmed|2|
+|Success|2|
 |Refunded|3|
 
 

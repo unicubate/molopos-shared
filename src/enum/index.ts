@@ -1,24 +1,26 @@
 export enum DocumentType {
+    // both lemonway and database document types
     Pending = '-1',
-    IdentityCard = '0',
+    IdentityCard = '0',     // identity document
     ProofOfAddress = '1',
     IbanCert = '2',
-    PassportEU = '3',
-    PassportExtraEU = '4',
+    PassportEU = '3',       // identity document
+    PassportExtraEU = '4',  // identity document
     Residence = '5',
     CompanyCert = '7',
-    DrivingLicense = '11',
-    Shareholder1ID = '14',
-    Shareholder2ID = '15',
-    Shareholder3ID = '16',
-    Shareholder4ID = '17',
-    ResidencyPermit = '5',
+    DrivingLicense = '11',  // identity document
+    Shareholder1ID = '14',  // identity document
+    Shareholder2ID = '15',  // identity document
+    Shareholder3ID = '16',  // identity document
+    Shareholder4ID = '17',  // identity document
+    ResidencyPermit = '5',  // identity document
     Status = '12',
     Selfie = '13',
     SsdMandate = '21',
 };
 
 export enum DocumentStatus {
+    // both lemonway and database document statuses
     Initialized = '-1',
     OnHold = '0',
     Received = '1',
@@ -32,6 +34,7 @@ export enum DocumentStatus {
 };
 
 export enum OnfidoDocumentStatus {
+    // status of an identity document sent to onfido
     Initialized = 0,
     Processing = 1,
     Complete = 2,
@@ -39,7 +42,8 @@ export enum OnfidoDocumentStatus {
 };
 
 export enum WalletStatus {
-    WalletSC = '-1',
+    // both lemonway and database wallet statuses
+    WalletSC = '-1', // recrowd wallet
     MissingDocuments = '2',
     DocumentsRejected = '3',
     Registered = '5',
@@ -55,6 +59,7 @@ export enum WalletStatus {
 };
 
 export enum TransactionStatus {
+    // both lemonway and database transaction statuses
     Created = '-1',
     Completed = '0',
     CompletedP2P = '3',
@@ -63,6 +68,7 @@ export enum TransactionStatus {
 };
 
 export enum IbanStatus {
+    // both lemonway and database iban statuses
     None = '1',
     Internal = '2',
     NotUsed = '3',
@@ -75,6 +81,7 @@ export enum IbanStatus {
 };
 
 export enum MoneyInType {
+    // both lemonway and database money in types
     WireReceived = '10',
     SddReceived = '11',
     ChequeReceived = '12',
@@ -83,6 +90,7 @@ export enum MoneyInType {
 };
 
 export enum GenderType {
+    // lemonway only geneder type
     Male = 'M',
     Female = 'F',
     Juridical = 'J',
@@ -115,9 +123,10 @@ export enum EventStatus {
 
 export enum ProspectStatus {
     Created = -1,
-    Overdue = 0,
-    Active = 1,
-    Done = 2,
+    Waiting = 0,
+    Confirmed = 1,
+    Active = 2,
+    Done = 3, // every rate has been paid
 };
 
 export enum ProspectRateStatus {
@@ -138,7 +147,7 @@ export enum ProspectRateInvestorStatus {
 
 export enum InvestmentStatus {
     Created = -1,
-    Confirmed = 2,
+    Success = 2,
     Refunded = 3,
 };
 
