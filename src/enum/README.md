@@ -20,8 +20,8 @@
 - [Investment Status](#investment-status)
 - [Classification Status](#classification-status)
 - [Category Project](#category-project)
-- [Statuses Project](#statuses-project)
-- [Status Register Type](#status-register-type)
+- [Project Status](#project-status)
+- [User Registration Status](#user-registration-status), aka StatusRegisterType
 - [Account Type](#account-type)
 - [Transaction Type](#transaction-type)
 - [Voucher Activity Type](#voucher-activity-type)
@@ -242,7 +242,7 @@ lemonway only
 
 </table>
 
-## Statuses Project
+## Project Status
 
 <table>
 <tr><td>Default</td><td>"DEFAULT"</td></tr>
@@ -257,7 +257,9 @@ lemonway only
 
 </table>
 
-## Status Register Type
+## User Registration Status
+
+aka StatusRegisterType
 
 <table>
 <tr><td>Registered</td><td>"REGISTERED"</td></tr>

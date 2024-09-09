@@ -157,7 +157,7 @@ export enum CategoryProject {
     Elite = "ELITE",
 };
 
-export enum StatusesProject {
+export enum ProjectStatus {
     Default = "DEFAULT",
     Draft = "DRAFT",
     ComingSoon = "COMING_SOON",
@@ -169,7 +169,8 @@ export enum StatusesProject {
     Postponed = "POSTPONED", // in proproga
 };
 
-export enum StatusRegisterType {
+export enum UserRegistrationStatus {
+    // aka StatusRegisterType
     Registered = "REGISTERED",
     EmailConfirmed = "REGISTERED_CONFIRMED",
     KYCCompleted = "REGISTERED_PROFILE",
