@@ -18,6 +18,19 @@ export enum DocumentType {
     SsdMandate = '21',
 };
 
+export enum DocumentStatus {
+    Initialized = '-1',
+    OnHold = '0',
+    Received = '1',
+    Accepted = '2',
+    Rejected = '3',
+    RejectedUnreadable = '4',
+    RejectedExpired = '5',
+    RejectedWrongType = '6',
+    RejectedWrongName = '7',
+    RejectedDuplicated = '8',
+};
+
 export enum WalletStatus {
     WalletSC = '-1',
     MissingDocuments = '2',
