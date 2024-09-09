@@ -286,7 +286,7 @@
 
 ## Survey Level
 
-punteggio questionario classicazione
+User classification survey score
 
 |name|value|
 |----|-----|

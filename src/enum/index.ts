@@ -162,7 +162,7 @@ export enum StatusesProject {
     Financed = "READY",
     Closed = "CLOSED",
     Test = "TEST",
-    Overdue = "OVERDUE", // in gestione
+    Overdue = "OVERDUE",     // in gestione
     Postponed = "POSTPONED", // in proproga
 };
 
@@ -209,8 +209,8 @@ export enum VoucherCategory {
 };
 
 export enum SurveyLevel {
-    // punteggio questionario classicazione
-    Low = "LOW", // score < 50
+    // User classification survey score
+    Low = "LOW",    // score < 50
     Mid = "MIDDLE", // 50 <= score < 90
-    High = "HIGH", // score >= 90
+    High = "HIGH",  // score >= 90
 };
