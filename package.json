@@ -1,9 +1,8 @@
 {
     "name": "shared",
-    "version": "0.0.0",
+    "version": "2.0.0",
     "scripts": {
         "dev": "tsc --watch",
-        "build": "rm -rf ./dist && tsc && cp ./dist.package.json ./dist/package.json"
-    },
-    "private": true
+        "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
+    }
 }
