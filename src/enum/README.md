@@ -46,7 +46,7 @@ both lemonway and database
 |Shareholder2ID (identity document)|'15'|
 |Shareholder3ID (identity document)|'16'|
 |Shareholder4ID (identity document)|'17'|
-|Residency Permit (identity document)|'5'|
+|Residency Permit|'5'|
 |Status|'12'|
 |Selfie|'13'|
 |Ssd Mandate|'21'|

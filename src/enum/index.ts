@@ -13,7 +13,7 @@ export enum DocumentType {
     Shareholder2ID = '15',  // identity document
     Shareholder3ID = '16',  // identity document
     Shareholder4ID = '17',  // identity document
-    ResidencyPermit = '5',  // identity document
+    ResidencyPermit = '5',
     Status = '12',
     Selfie = '13',
     SsdMandate = '21',
