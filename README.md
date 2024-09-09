@@ -6,7 +6,7 @@ A package shared between backend and frontend repos
 ## Installation
 
 ```
-npm i @recrowd/fe@latest
+npm i @recrowd/shared@latest
 ```
 
 > [!NOTE]
