@@ -21,7 +21,7 @@ Awlays explicit the enum value, with `=`
 
 ### documenting the newly created status
 
-Run `npm run docs` to **automatically** generate the documentation [readme](https://github.com/Recrowd/shared/edit/main/src/enum/README.md) file, it will look like this:
+Run `npm run docs` to **automatically** generate the documentation [readme](https://github.com/Recrowd/shared/edit/main/src/enum) file, it will look like this:
 
 <blockquote>
 
