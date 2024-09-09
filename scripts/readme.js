@@ -30,7 +30,11 @@ for (const item of data) {
             let [value, desc] = raw.split("//");
             value = value.trim();
             desc = desc && desc.trim();
-            itemTable += "|" + toSpace(key) + (desc ? " (" + desc + ")" : "") + "|" + value + "|\n";
+            itemTable += "<tr><td>"
+                + toSpace(key) + (desc ? " (" + desc + ")" : "")
+                + "</td><td>"
+                + value
+                + "</td></tr>\n";
         }
 
         index += "- [" + toSpace(key) + "](#" + toUrl(toSpace(key)) + ")";
@@ -40,10 +44,9 @@ for (const item of data) {
             body += itemDesc + "\n";
             index += ", " + itemDesc.trim();
         }
-        body += "|name|value|\n";
-        body += "|----|-----|\n";
+        body += "<table>\n";
         body += itemTable + "\n";
-        body += "\n";
+        body += "</table>\n\n";
         index += "\n";
     }
 }

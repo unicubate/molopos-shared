@@ -29,299 +29,299 @@
 - [Survey Level](#survey-level), user classification survey score
 ## Document Type
 
-|name|value|
-|----|-----|
-|Pending|'-1'|
-|Identity Card (identity document)|'0'|
-|Proof Of Address|'1'|
-|Iban Cert|'2'|
-|Passport EU (identity document)|'3'|
-|Passport Extra EU (identity document)|'4'|
-|Residence|'5'|
-|Company Cert|'7'|
-|Driving License (identity document)|'11'|
-|Shareholder1ID (identity document)|'14'|
-|Shareholder2ID (identity document)|'15'|
-|Shareholder3ID (identity document)|'16'|
-|Shareholder4ID (identity document)|'17'|
-|Residency Permit|'5'|
-|Status|'12'|
-|Selfie|'13'|
-|Ssd Mandate|'21'|
+<table>
+<tr><td>Pending</td><td>'-1'</td></tr>
+<tr><td>Identity Card (identity document)</td><td>'0'</td></tr>
+<tr><td>Proof Of Address</td><td>'1'</td></tr>
+<tr><td>Iban Cert</td><td>'2'</td></tr>
+<tr><td>Passport EU (identity document)</td><td>'3'</td></tr>
+<tr><td>Passport Extra EU (identity document)</td><td>'4'</td></tr>
+<tr><td>Residence</td><td>'5'</td></tr>
+<tr><td>Company Cert</td><td>'7'</td></tr>
+<tr><td>Driving License (identity document)</td><td>'11'</td></tr>
+<tr><td>Shareholder1ID (identity document)</td><td>'14'</td></tr>
+<tr><td>Shareholder2ID (identity document)</td><td>'15'</td></tr>
+<tr><td>Shareholder3ID (identity document)</td><td>'16'</td></tr>
+<tr><td>Shareholder4ID (identity document)</td><td>'17'</td></tr>
+<tr><td>Residency Permit</td><td>'5'</td></tr>
+<tr><td>Status</td><td>'12'</td></tr>
+<tr><td>Selfie</td><td>'13'</td></tr>
+<tr><td>Ssd Mandate</td><td>'21'</td></tr>
 
+</table>
 
 ## Document Status
 
-|name|value|
-|----|-----|
-|Initialized|'-1'|
-|On Hold|'0'|
-|Received|'1'|
-|Accepted|'2'|
-|Rejected|'3'|
-|Rejected Unreadable|'4'|
-|Rejected Expired|'5'|
-|Rejected Wrong Type|'6'|
-|Rejected Wrong Name|'7'|
-|Rejected Duplicated|'8'|
+<table>
+<tr><td>Initialized</td><td>'-1'</td></tr>
+<tr><td>On Hold</td><td>'0'</td></tr>
+<tr><td>Received</td><td>'1'</td></tr>
+<tr><td>Accepted</td><td>'2'</td></tr>
+<tr><td>Rejected</td><td>'3'</td></tr>
+<tr><td>Rejected Unreadable</td><td>'4'</td></tr>
+<tr><td>Rejected Expired</td><td>'5'</td></tr>
+<tr><td>Rejected Wrong Type</td><td>'6'</td></tr>
+<tr><td>Rejected Wrong Name</td><td>'7'</td></tr>
+<tr><td>Rejected Duplicated</td><td>'8'</td></tr>
 
+</table>
 
 ## Onfido Document Status
 
 status of an identity document sent to onfido
 
-|name|value|
-|----|-----|
-|Initialized|0|
-|Processing|1|
-|Complete|2|
-|Error|3|
+<table>
+<tr><td>Initialized</td><td>0</td></tr>
+<tr><td>Processing</td><td>1</td></tr>
+<tr><td>Complete</td><td>2</td></tr>
+<tr><td>Error</td><td>3</td></tr>
 
+</table>
 
 ## Wallet Status
 
-|name|value|
-|----|-----|
-|Wallet SC (recrowd wallet)|'-1'|
-|Missing Documents|'2'|
-|Documents Rejected|'3'|
-|Registered|'5'|
-|Valid|'6'|
-|Pending KYC3|'7'|
-|Expired Documents|'8'|
-|Blocked|'10'|
-|Closed|'12'|
-|Missing Documents KYC3|'13'|
-|One Time Customer|'14'|
-|Special Wallet For Crowdlending|'15'|
-|Technical Wallet|'16'|
+<table>
+<tr><td>Wallet SC (recrowd wallet)</td><td>'-1'</td></tr>
+<tr><td>Missing Documents</td><td>'2'</td></tr>
+<tr><td>Documents Rejected</td><td>'3'</td></tr>
+<tr><td>Registered</td><td>'5'</td></tr>
+<tr><td>Valid</td><td>'6'</td></tr>
+<tr><td>Pending KYC3</td><td>'7'</td></tr>
+<tr><td>Expired Documents</td><td>'8'</td></tr>
+<tr><td>Blocked</td><td>'10'</td></tr>
+<tr><td>Closed</td><td>'12'</td></tr>
+<tr><td>Missing Documents KYC3</td><td>'13'</td></tr>
+<tr><td>One Time Customer</td><td>'14'</td></tr>
+<tr><td>Special Wallet For Crowdlending</td><td>'15'</td></tr>
+<tr><td>Technical Wallet</td><td>'16'</td></tr>
 
+</table>
 
 ## Transaction Status
 
-|name|value|
-|----|-----|
-|Created|'-1'|
-|Completed|'0'|
-|Completed P2P|'3'|
-|Pending|'4'|
-|Error|'6'|
+<table>
+<tr><td>Created</td><td>'-1'</td></tr>
+<tr><td>Completed</td><td>'0'</td></tr>
+<tr><td>Completed P2P</td><td>'3'</td></tr>
+<tr><td>Pending</td><td>'4'</td></tr>
+<tr><td>Error</td><td>'6'</td></tr>
 
+</table>
 
 ## Iban Status
 
-|name|value|
-|----|-----|
-|None|'1'|
-|Internal|'2'|
-|Not Used|'3'|
-|To Be Verified|'4'|
-|Enabled|'5'|
-|Rejected By Bank|'6'|
-|Rejected No Owner|'7'|
-|Disabled|'8'|
-|Rejected By Lemonway|'9'|
+<table>
+<tr><td>None</td><td>'1'</td></tr>
+<tr><td>Internal</td><td>'2'</td></tr>
+<tr><td>Not Used</td><td>'3'</td></tr>
+<tr><td>To Be Verified</td><td>'4'</td></tr>
+<tr><td>Enabled</td><td>'5'</td></tr>
+<tr><td>Rejected By Bank</td><td>'6'</td></tr>
+<tr><td>Rejected No Owner</td><td>'7'</td></tr>
+<tr><td>Disabled</td><td>'8'</td></tr>
+<tr><td>Rejected By Lemonway</td><td>'9'</td></tr>
 
+</table>
 
 ## Money In Type
 
-|name|value|
-|----|-----|
-|Wire Received|'10'|
-|Sdd Received|'11'|
-|Cheque Received|'12'|
-|Card Received Subscription|'22'|
-|Sofort Received|'48'|
+<table>
+<tr><td>Wire Received</td><td>'10'</td></tr>
+<tr><td>Sdd Received</td><td>'11'</td></tr>
+<tr><td>Cheque Received</td><td>'12'</td></tr>
+<tr><td>Card Received Subscription</td><td>'22'</td></tr>
+<tr><td>Sofort Received</td><td>'48'</td></tr>
 
+</table>
 
 ## Gender Type
 
 lemonway only
 
-|name|value|
-|----|-----|
-|Male|'M'|
-|Female|'F'|
-|Juridical|'J'|
-|Unknown|'U'|
+<table>
+<tr><td>Male</td><td>'M'</td></tr>
+<tr><td>Female</td><td>'F'</td></tr>
+<tr><td>Juridical</td><td>'J'</td></tr>
+<tr><td>Unknown</td><td>'U'</td></tr>
 
+</table>
 
 ## Alert Type
 
-|name|value|
-|----|-----|
-|Info|0|
-|Warning|1|
-|Error|2|
+<table>
+<tr><td>Info</td><td>0</td></tr>
+<tr><td>Warning</td><td>1</td></tr>
+<tr><td>Error</td><td>2</td></tr>
 
+</table>
 
 ## Notification Type
 
-|name|value|
-|----|-----|
-|Info|0|
-|Basic|1|
-|Warning|2|
-|Error|3|
+<table>
+<tr><td>Info</td><td>0</td></tr>
+<tr><td>Basic</td><td>1</td></tr>
+<tr><td>Warning</td><td>2</td></tr>
+<tr><td>Error</td><td>3</td></tr>
 
+</table>
 
 ## Project Payout Strategy Type
 
-|name|value|
-|----|-----|
-|Immediate|0|
-|Partial|1|
+<table>
+<tr><td>Immediate</td><td>0</td></tr>
+<tr><td>Partial</td><td>1</td></tr>
 
+</table>
 
 ## Event Status
 
-|name|value|
-|----|-----|
-|Overdue|0|
-|Active|1|
-|Done|2|
+<table>
+<tr><td>Overdue</td><td>0</td></tr>
+<tr><td>Active</td><td>1</td></tr>
+<tr><td>Done</td><td>2</td></tr>
 
+</table>
 
 ## Prospect Status
 
-|name|value|
-|----|-----|
-|Created|-1|
-|Waiting|0|
-|Confirmed|1|
-|Active|2|
-|Done (every rate has been paid)|3|
+<table>
+<tr><td>Created</td><td>-1</td></tr>
+<tr><td>Waiting</td><td>0</td></tr>
+<tr><td>Confirmed</td><td>1</td></tr>
+<tr><td>Active</td><td>2</td></tr>
+<tr><td>Done (every rate has been paid)</td><td>3</td></tr>
 
+</table>
 
 ## Prospect Rate Status
 
-|name|value|
-|----|-----|
-|Created|0|
-|To Be Paid|1|
-|In Payment|2|
-|Paid|3|
-|Error|4|
+<table>
+<tr><td>Created</td><td>0</td></tr>
+<tr><td>To Be Paid</td><td>1</td></tr>
+<tr><td>In Payment</td><td>2</td></tr>
+<tr><td>Paid</td><td>3</td></tr>
+<tr><td>Error</td><td>4</td></tr>
 
+</table>
 
 ## Prospect Rate Investor Status
 
-|name|value|
-|----|-----|
-|Created|0|
-|To Be Paid|1|
-|In Payment|2|
-|Paid|3|
-|Error|4|
+<table>
+<tr><td>Created</td><td>0</td></tr>
+<tr><td>To Be Paid</td><td>1</td></tr>
+<tr><td>In Payment</td><td>2</td></tr>
+<tr><td>Paid</td><td>3</td></tr>
+<tr><td>Error</td><td>4</td></tr>
 
+</table>
 
 ## Investment Status
 
-|name|value|
-|----|-----|
-|Created|-1|
-|Success|2|
-|Refunded|3|
+<table>
+<tr><td>Created</td><td>-1</td></tr>
+<tr><td>Success</td><td>2</td></tr>
+<tr><td>Refunded</td><td>3</td></tr>
 
+</table>
 
 ## Classification Status
 
-|name|value|
-|----|-----|
-|Pending|0|
-|Approved|1|
-|Declined|2|
+<table>
+<tr><td>Pending</td><td>0</td></tr>
+<tr><td>Approved</td><td>1</td></tr>
+<tr><td>Declined</td><td>2</td></tr>
 
+</table>
 
 ## Category Project
 
-|name|value|
-|----|-----|
-|Relax|"RELAX"|
-|Exclusive|"EXCLUSIVE"|
-|Elite|"ELITE"|
+<table>
+<tr><td>Relax</td><td>"RELAX"</td></tr>
+<tr><td>Exclusive</td><td>"EXCLUSIVE"</td></tr>
+<tr><td>Elite</td><td>"ELITE"</td></tr>
 
+</table>
 
 ## Statuses Project
 
-|name|value|
-|----|-----|
-|Default|"DEFAULT"|
-|Draft|"DRAFT"|
-|Coming Soon|"COMING_SOON"|
-|Crowdfunding|"CROWDFUNDING"|
-|Financed|"READY"|
-|Closed|"CLOSED"|
-|Test|"TEST"|
-|Overdue (in gestione)|"OVERDUE"|
-|Postponed (in proproga)|"POSTPONED"|
+<table>
+<tr><td>Default</td><td>"DEFAULT"</td></tr>
+<tr><td>Draft</td><td>"DRAFT"</td></tr>
+<tr><td>Coming Soon</td><td>"COMING_SOON"</td></tr>
+<tr><td>Crowdfunding</td><td>"CROWDFUNDING"</td></tr>
+<tr><td>Financed</td><td>"READY"</td></tr>
+<tr><td>Closed</td><td>"CLOSED"</td></tr>
+<tr><td>Test</td><td>"TEST"</td></tr>
+<tr><td>Overdue (in gestione)</td><td>"OVERDUE"</td></tr>
+<tr><td>Postponed (in proproga)</td><td>"POSTPONED"</td></tr>
 
+</table>
 
 ## Status Register Type
 
-|name|value|
-|----|-----|
-|Registered|"REGISTERED"|
-|Email Confirmed|"REGISTERED_CONFIRMED"|
-|KYC Completed|"REGISTERED_PROFILE"|
-|Document Uploaded|"REGISTERED_DOCUMENT"|
-|Aml Completed|"REGISTERED_AML"|
-|Registration Completed|"REGISTERED_COMPLETED"|
-|Investor|"INVESTOR"|
+<table>
+<tr><td>Registered</td><td>"REGISTERED"</td></tr>
+<tr><td>Email Confirmed</td><td>"REGISTERED_CONFIRMED"</td></tr>
+<tr><td>KYC Completed</td><td>"REGISTERED_PROFILE"</td></tr>
+<tr><td>Document Uploaded</td><td>"REGISTERED_DOCUMENT"</td></tr>
+<tr><td>Aml Completed</td><td>"REGISTERED_AML"</td></tr>
+<tr><td>Registration Completed</td><td>"REGISTERED_COMPLETED"</td></tr>
+<tr><td>Investor</td><td>"INVESTOR"</td></tr>
 
+</table>
 
 ## Account Type
 
-|name|value|
-|----|-----|
-|Company|"AZIENDA"|
-|Private|"PRIVATO"|
-|Proponent|"PROPONENT"|
+<table>
+<tr><td>Company</td><td>"AZIENDA"</td></tr>
+<tr><td>Private</td><td>"PRIVATO"</td></tr>
+<tr><td>Proponent</td><td>"PROPONENT"</td></tr>
 
+</table>
 
 ## Transaction Type
 
-|name|value|
-|----|-----|
-|Money In|"MONEYIN"|
-|Money Out|"MONEYOUT"|
-|P2P|"P2P"|
-|Pay By Bank|"PAYBYBANK"|
-|Voucher|"VOUCHER"|
+<table>
+<tr><td>Money In</td><td>"MONEYIN"</td></tr>
+<tr><td>Money Out</td><td>"MONEYOUT"</td></tr>
+<tr><td>P2P</td><td>"P2P"</td></tr>
+<tr><td>Pay By Bank</td><td>"PAYBYBANK"</td></tr>
+<tr><td>Voucher</td><td>"VOUCHER"</td></tr>
 
+</table>
 
 ## Voucher Activity Type
 
-|name|value|
-|----|-----|
-|Receive|"RECEIVE"|
-|Friend|"FRIEND"|
-|Friend Invested|"FRIEND_INVESTED"|
-|Promotion|"PROMOTION"|
-|Invited|"INVITED"|
+<table>
+<tr><td>Receive</td><td>"RECEIVE"</td></tr>
+<tr><td>Friend</td><td>"FRIEND"</td></tr>
+<tr><td>Friend Invested</td><td>"FRIEND_INVESTED"</td></tr>
+<tr><td>Promotion</td><td>"PROMOTION"</td></tr>
+<tr><td>Invited</td><td>"INVITED"</td></tr>
 
+</table>
 
 ## Voucher Category
 
-|name|value|
-|----|-----|
-|Wallet|"WALLET"|
-|Investment|"INVESTMENT"|
-|Invite User|"INVITE_USER"|
-|Invite|"INVITE"|
-|First Investment|"FIRST_INVESTMENT"|
-|Not Benefit|"NOT_BENEFIT"|
-|Tracking Code|"TRACKING_CODE"|
+<table>
+<tr><td>Wallet</td><td>"WALLET"</td></tr>
+<tr><td>Investment</td><td>"INVESTMENT"</td></tr>
+<tr><td>Invite User</td><td>"INVITE_USER"</td></tr>
+<tr><td>Invite</td><td>"INVITE"</td></tr>
+<tr><td>First Investment</td><td>"FIRST_INVESTMENT"</td></tr>
+<tr><td>Not Benefit</td><td>"NOT_BENEFIT"</td></tr>
+<tr><td>Tracking Code</td><td>"TRACKING_CODE"</td></tr>
 
+</table>
 
 ## Survey Level
 
 user classification survey score
 
-|name|value|
-|----|-----|
-|Low (score < 50)|"LOW"|
-|Mid (50 <= score < 90)|"MIDDLE"|
-|High (score >= 90)|"HIGH"|
+<table>
+<tr><td>Low (score < 50)</td><td>"LOW"</td></tr>
+<tr><td>Mid (50 <= score < 90)</td><td>"MIDDLE"</td></tr>
+<tr><td>High (score >= 90)</td><td>"HIGH"</td></tr>
 
+</table>
 
