@@ -85,7 +85,7 @@ export enum MoneyInType {
 export enum GenderType {
     Male = 'M',
     Female = 'F',
-    J = 'J',
+    Juridical = 'J',
     Unknown = 'U',
 };
 

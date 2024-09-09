@@ -3,6 +3,7 @@
     "version": "2.0.0",
     "scripts": {
         "dev": "tsc --watch",
+        "docs": "node ./scripts/readme.js",
         "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
     }
 }
