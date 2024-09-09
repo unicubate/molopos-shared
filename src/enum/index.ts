@@ -209,7 +209,7 @@ export enum VoucherCategory {
 };
 
 export enum SurveyLevel {
-    // User classification survey score
+    // user classification survey score
     Low = "LOW",    // score < 50
     Mid = "MIDDLE", // 50 <= score < 90
     High = "HIGH",  // score >= 90

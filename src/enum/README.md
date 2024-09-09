@@ -1,6 +1,33 @@
+<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>
+
 # Statuses and type
 
-<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>
+- [Document Type](#document-type)
+- [Document Status](#document-status)
+- [Onfido Document Status](#onfido-document-status)
+- [Wallet Status](#wallet-status)
+- [Transaction Status](#transaction-status)
+- [Iban Status](#iban-status)
+- [Money In Type](#money-in-type)
+- [Gender Type](#gender-type)
+- [Alert Type](#alert-type)
+- [Notification Type](#notification-type)
+- [Project Payout Strategy Type](#project-payout-strategy-type)
+- [Event Status](#event-status)
+- [Prospect Status](#prospect-status)
+- [Prospect Rate Status](#prospect-rate-status)
+- [Prospect Rate Investor Status](#prospect-rate-investor-status)
+- [Investment Status](#investment-status)
+- [Classification Status](#classification-status)
+- [Category Project](#category-project)
+- [Statuses Project](#statuses-project)
+- [Status Register Type](#status-register-type)
+- [Account Type](#account-type)
+- [Transaction Type](#transaction-type)
+- [Voucher Activity Type](#voucher-activity-type)
+- [Voucher Category](#voucher-category)
+- [Survey Level](#survey-level), user classification survey score
+
 
 ## Document Type
 
@@ -286,7 +313,7 @@
 
 ## Survey Level
 
-User classification survey score
+user classification survey score
 
 |name|value|
 |----|-----|

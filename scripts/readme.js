@@ -2,8 +2,8 @@ const fs = require("fs");
 
 const data = fs.readFileSync("./src/enum/index.ts", "utf8").split("export enum ");
 
-let README_MD = "# Statuses and type\n\n";
-README_MD += "<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>\n\n"
+let index = "";
+let body = "";
 
 for (const item of data) {
     if (item) {
@@ -33,19 +33,35 @@ for (const item of data) {
             itemTable += "|" + toSpace(key) + (desc ? " (" + desc + ")" : "") + "|" + value + "|\n";
         }
 
-        README_MD += "## " + toSpace(key) + "\n\n";
+        index += "- [" + toSpace(key) + "](#" + toUrl(toSpace(key)) + ")";
+
+        body += "## " + toSpace(key) + "\n\n";
         if (itemDesc) {
-            README_MD += itemDesc + "\n";
+            body += itemDesc + "\n";
+            index += ", " + itemDesc + "\n";
         }
-        README_MD += "|name|value|\n";
-        README_MD += "|----|-----|\n";
-        README_MD += itemTable + "\n";
-        README_MD += "\n";
+        body += "|name|value|\n";
+        body += "|----|-----|\n";
+        body += itemTable + "\n";
+        body += "\n";
+        index += "\n";
     }
 }
+
+let README_MD = "";
+
+README_MD += "<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>\n\n";
+README_MD += "# Statuses and type\n\n";
+
+README_MD += index;
+README_MD += body;
 
 fs.writeFileSync("./src/enum/README.md", README_MD);
 
 function toSpace(str) {
     return str.replace(/([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g, '$1$4 $2$3$5');
+}
+
+function toUrl(str) {
+    return str.toLowerCase().replace(/ /g, "-");
 }
