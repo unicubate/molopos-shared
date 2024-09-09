@@ -170,7 +170,7 @@ export enum ProjectStatus {
 };
 
 export enum UserRegistrationStatus {
-    // aka StatusRegisterType
+    // a.k.a. StatusRegisterType
     Registered = "REGISTERED",
     EmailConfirmed = "REGISTERED_CONFIRMED",
     KYCCompleted = "REGISTERED_PROFILE",

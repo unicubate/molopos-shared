@@ -21,7 +21,7 @@
 - [Classification Status](#classification-status)
 - [Category Project](#category-project)
 - [Project Status](#project-status)
-- [User Registration Status](#user-registration-status), aka StatusRegisterType
+- [User Registration Status](#user-registration-status), a.k.a. StatusRegisterType
 - [Account Type](#account-type)
 - [Transaction Type](#transaction-type)
 - [Voucher Activity Type](#voucher-activity-type)
@@ -259,7 +259,7 @@ lemonway only
 
 ## User Registration Status
 
-aka StatusRegisterType
+a.k.a. StatusRegisterType
 
 <table>
 <tr><td>Registered</td><td>"REGISTERED"</td></tr>
