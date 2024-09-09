@@ -1,5 +1,4 @@
 export enum DocumentType {
-    // both lemonway and database
     Pending = '-1',
     IdentityCard = '0',     // identity document
     ProofOfAddress = '1',
@@ -20,7 +19,6 @@ export enum DocumentType {
 };
 
 export enum DocumentStatus {
-    // both lemonway and database
     Initialized = '-1',
     OnHold = '0',
     Received = '1',
@@ -42,7 +40,6 @@ export enum OnfidoDocumentStatus {
 };
 
 export enum WalletStatus {
-    // both lemonway and database
     WalletSC = '-1', // recrowd wallet
     MissingDocuments = '2',
     DocumentsRejected = '3',
@@ -59,7 +56,6 @@ export enum WalletStatus {
 };
 
 export enum TransactionStatus {
-    // both lemonway and database
     Created = '-1',
     Completed = '0',
     CompletedP2P = '3',
@@ -68,7 +64,6 @@ export enum TransactionStatus {
 };
 
 export enum IbanStatus {
-    // both lemonway and database
     None = '1',
     Internal = '2',
     NotUsed = '3',
@@ -81,7 +76,6 @@ export enum IbanStatus {
 };
 
 export enum MoneyInType {
-    // both lemonway and database
     WireReceived = '10',
     SddReceived = '11',
     ChequeReceived = '12',
@@ -192,7 +186,6 @@ export enum AccountType {
 };
 
 export enum TransactionType {
-    // both lemonway and database
     MoneyIn = "MONEYIN",
     MoneyOut = "MONEYOUT",
     P2P = "P2P",

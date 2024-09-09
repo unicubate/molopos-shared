@@ -2,13 +2,13 @@
 
 # Statuses and type
 
-- [Document Type](#document-type), both lemonway and database
-- [Document Status](#document-status), both lemonway and database
+- [Document Type](#document-type)
+- [Document Status](#document-status)
 - [Onfido Document Status](#onfido-document-status), status of an identity document sent to onfido
-- [Wallet Status](#wallet-status), both lemonway and database
-- [Transaction Status](#transaction-status), both lemonway and database
-- [Iban Status](#iban-status), both lemonway and database
-- [Money In Type](#money-in-type), both lemonway and database
+- [Wallet Status](#wallet-status)
+- [Transaction Status](#transaction-status)
+- [Iban Status](#iban-status)
+- [Money In Type](#money-in-type)
 - [Gender Type](#gender-type), lemonway only
 - [Alert Type](#alert-type)
 - [Notification Type](#notification-type)
@@ -23,13 +23,11 @@
 - [Statuses Project](#statuses-project)
 - [Status Register Type](#status-register-type)
 - [Account Type](#account-type)
-- [Transaction Type](#transaction-type), both lemonway and database
+- [Transaction Type](#transaction-type)
 - [Voucher Activity Type](#voucher-activity-type)
 - [Voucher Category](#voucher-category)
 - [Survey Level](#survey-level), user classification survey score
 ## Document Type
-
-both lemonway and database
 
 |name|value|
 |----|-----|
@@ -53,8 +51,6 @@ both lemonway and database
 
 
 ## Document Status
-
-both lemonway and database
 
 |name|value|
 |----|-----|
@@ -84,8 +80,6 @@ status of an identity document sent to onfido
 
 ## Wallet Status
 
-both lemonway and database
-
 |name|value|
 |----|-----|
 |Wallet SC (recrowd wallet)|'-1'|
@@ -105,8 +99,6 @@ both lemonway and database
 
 ## Transaction Status
 
-both lemonway and database
-
 |name|value|
 |----|-----|
 |Created|'-1'|
@@ -117,8 +109,6 @@ both lemonway and database
 
 
 ## Iban Status
-
-both lemonway and database
 
 |name|value|
 |----|-----|
@@ -134,8 +124,6 @@ both lemonway and database
 
 
 ## Money In Type
-
-both lemonway and database
 
 |name|value|
 |----|-----|
@@ -292,8 +280,6 @@ lemonway only
 
 
 ## Transaction Type
-
-both lemonway and database
 
 |name|value|
 |----|-----|
