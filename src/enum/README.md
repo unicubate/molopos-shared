@@ -2,14 +2,14 @@
 
 # Statuses and type
 
-- [Document Type](#document-type), both lemonway and database document types
-- [Document Status](#document-status), both lemonway and database document statuses
+- [Document Type](#document-type), both lemonway and database
+- [Document Status](#document-status), both lemonway and database
 - [Onfido Document Status](#onfido-document-status), status of an identity document sent to onfido
-- [Wallet Status](#wallet-status), both lemonway and database wallet statuses
-- [Transaction Status](#transaction-status), both lemonway and database transaction statuses
-- [Iban Status](#iban-status), both lemonway and database iban statuses
-- [Money In Type](#money-in-type), both lemonway and database money in types
-- [Gender Type](#gender-type), lemonway only geneder type
+- [Wallet Status](#wallet-status), both lemonway and database
+- [Transaction Status](#transaction-status), both lemonway and database
+- [Iban Status](#iban-status), both lemonway and database
+- [Money In Type](#money-in-type), both lemonway and database
+- [Gender Type](#gender-type), lemonway only
 - [Alert Type](#alert-type)
 - [Notification Type](#notification-type)
 - [Project Payout Strategy Type](#project-payout-strategy-type)
@@ -23,13 +23,13 @@
 - [Statuses Project](#statuses-project)
 - [Status Register Type](#status-register-type)
 - [Account Type](#account-type)
-- [Transaction Type](#transaction-type)
+- [Transaction Type](#transaction-type), both lemonway and database
 - [Voucher Activity Type](#voucher-activity-type)
 - [Voucher Category](#voucher-category)
 - [Survey Level](#survey-level), user classification survey score
 ## Document Type
 
-both lemonway and database document types
+both lemonway and database
 
 |name|value|
 |----|-----|
@@ -54,7 +54,7 @@ both lemonway and database document types
 
 ## Document Status
 
-both lemonway and database document statuses
+both lemonway and database
 
 |name|value|
 |----|-----|
@@ -84,7 +84,7 @@ status of an identity document sent to onfido
 
 ## Wallet Status
 
-both lemonway and database wallet statuses
+both lemonway and database
 
 |name|value|
 |----|-----|
@@ -105,7 +105,7 @@ both lemonway and database wallet statuses
 
 ## Transaction Status
 
-both lemonway and database transaction statuses
+both lemonway and database
 
 |name|value|
 |----|-----|
@@ -118,7 +118,7 @@ both lemonway and database transaction statuses
 
 ## Iban Status
 
-both lemonway and database iban statuses
+both lemonway and database
 
 |name|value|
 |----|-----|
@@ -135,7 +135,7 @@ both lemonway and database iban statuses
 
 ## Money In Type
 
-both lemonway and database money in types
+both lemonway and database
 
 |name|value|
 |----|-----|
@@ -148,7 +148,7 @@ both lemonway and database money in types
 
 ## Gender Type
 
-lemonway only geneder type
+lemonway only
 
 |name|value|
 |----|-----|
@@ -292,6 +292,8 @@ lemonway only geneder type
 
 
 ## Transaction Type
+
+both lemonway and database
 
 |name|value|
 |----|-----|
