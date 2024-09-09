@@ -209,7 +209,8 @@ export enum VoucherCategory {
 };
 
 export enum SurveyLevel {
-    Low = "LOW",
-    Mid = "MIDDLE",
-    High = "HIGH",
+    // punteggio questionario classicazione
+    Low = "LOW", // score < 50
+    Mid = "MIDDLE", // 50 <= score < 90
+    High = "HIGH", // score >= 90
 };

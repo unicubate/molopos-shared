@@ -286,10 +286,12 @@
 
 ## Survey Level
 
+punteggio questionario classicazione
+
 |name|value|
 |----|-----|
-|Low|"LOW"|
-|Mid|"MIDDLE"|
-|High|"HIGH"|
+|Low (score < 50)|"LOW"|
+|Mid (50 <= score < 90)|"MIDDLE"|
+|High (score >= 90)|"HIGH"|
 
 
