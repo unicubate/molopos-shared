@@ -1,6 +1,6 @@
 {
     "name": "@recrowd/shared",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Data shared between backend and frontend repos",
     "license": "ISC",
     "repository": {

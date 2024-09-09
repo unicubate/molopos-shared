@@ -1,6 +1,6 @@
 {
     "name": "shared",
-    "version": "0.0.2",
+    "version": "0.0.0",
     "scripts": {
         "dev": "tsc --watch",
         "build": "rm -rf ./dist && tsc && cp ./dist.package.json ./dist/package.json"
