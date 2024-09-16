@@ -1,34 +1,34 @@
 export enum DocumentType {
-    Pending = '-1',
-    IdentityCard = '0',     // identity document
-    ProofOfAddress = '1',
-    IbanCert = '2',
-    PassportEU = '3',       // identity document
-    PassportExtraEU = '4',  // identity document
-    Residence = '5',
-    CompanyCert = '7',
-    DrivingLicense = '11',  // identity document
-    Shareholder1ID = '14',  // identity document
-    Shareholder2ID = '15',  // identity document
-    Shareholder3ID = '16',  // identity document
-    Shareholder4ID = '17',  // identity document
-    ResidencyPermit = '5',
-    Status = '12',
-    Selfie = '13',
-    SsdMandate = '21',
+    Pending = "-1",
+    IdentityCard = "0",     // identity document
+    ProofOfAddress = "1",
+    IbanCert = "2",
+    PassportEU = "3",       // identity document
+    PassportExtraEU = "4",  // identity document
+    Residence = "5",
+    CompanyCert = "7",
+    DrivingLicense = "11",  // identity document
+    Shareholder1ID = "14",  // identity document
+    Shareholder2ID = "15",  // identity document
+    Shareholder3ID = "16",  // identity document
+    Shareholder4ID = "17",  // identity document
+    ResidencyPermit = "5",
+    Status = "12",
+    Selfie = "13",
+    SsdMandate = "21",
 };
 
 export enum DocumentStatus {
-    Initialized = '-1',
-    OnHold = '0',
-    Received = '1',
-    Accepted = '2',
-    Rejected = '3',
-    RejectedUnreadable = '4',
-    RejectedExpired = '5',
-    RejectedWrongType = '6',
-    RejectedWrongName = '7',
-    RejectedDuplicated = '8',
+    Initialized = "-1",
+    OnHold = "0",
+    Received = "1",
+    Accepted = "2",
+    Rejected = "3",
+    RejectedUnreadable = "4",
+    RejectedExpired = "5",
+    RejectedWrongType = "6",
+    RejectedWrongName = "7",
+    RejectedDuplicated = "8",
 };
 
 export enum OnfidoDocumentStatus {
@@ -40,55 +40,55 @@ export enum OnfidoDocumentStatus {
 };
 
 export enum WalletStatus {
-    WalletSC = '-1', // recrowd wallet
-    MissingDocuments = '2',
-    DocumentsRejected = '3',
-    Registered = '5',
-    Valid = '6',
-    PendingKYC3 = '7',
-    ExpiredDocuments = '8',
-    Blocked = '10',
-    Closed = '12',
-    MissingDocumentsKYC3 = '13',
-    OneTimeCustomer = '14',
-    SpecialWalletForCrowdlending = '15',
-    TechnicalWallet = '16',
+    WalletSC = "-1", // recrowd wallet
+    MissingDocuments = "2",
+    DocumentsRejected = "3",
+    Registered = "5",
+    Valid = "6",
+    PendingKYC3 = "7",
+    ExpiredDocuments = "8",
+    Blocked = "10",
+    Closed = "12",
+    MissingDocumentsKYC3 = "13",
+    OneTimeCustomer = "14",
+    SpecialWalletForCrowdlending = "15",
+    TechnicalWallet = "16",
 };
 
 export enum TransactionStatus {
-    Created = '-1',
-    Completed = '0',
-    CompletedP2P = '3',
-    Pending = '4',
-    Error = '6',
+    Created = "-1",
+    Completed = "0",
+    CompletedP2P = "3",
+    Pending = "4",
+    Error = "6",
 };
 
 export enum IbanStatus {
-    None = '1',
-    Internal = '2',
-    NotUsed = '3',
-    ToBeVerified = '4',
-    Enabled = '5',
-    RejectedByBank = '6',
-    RejectedNoOwner = '7',
-    Disabled = '8',
-    RejectedByLemonway = '9',
+    None = "1",
+    Internal = "2",
+    NotUsed = "3",
+    ToBeVerified = "4",
+    Enabled = "5",
+    RejectedByBank = "6",
+    RejectedNoOwner = "7",
+    Disabled = "8",
+    RejectedByLemonway = "9",
 };
 
 export enum MoneyInType {
-    WireReceived = '10',
-    SddReceived = '11',
-    ChequeReceived = '12',
-    CardReceivedSubscription = '22',
-    SofortReceived = '48',
+    WireReceived = "10",
+    SddReceived = "11",
+    ChequeReceived = "12",
+    CardReceivedSubscription = "22",
+    SofortReceived = "48",
 };
 
 export enum GenderType {
     // lemonway only
-    Male = 'M',
-    Female = 'F',
-    Juridical = 'J',
-    Unknown = 'U',
+    Male = "M",
+    Female = "F",
+    Juridical = "J",
+    Unknown = "U",
 };
 
 export enum AlertType {

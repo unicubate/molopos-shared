@@ -30,39 +30,39 @@
 ## Document Type
 
 <table>
-<tr><td>Pending</td><td>'-1'</td></tr>
-<tr><td>Identity Card (identity document)</td><td>'0'</td></tr>
-<tr><td>Proof Of Address</td><td>'1'</td></tr>
-<tr><td>Iban Cert</td><td>'2'</td></tr>
-<tr><td>Passport EU (identity document)</td><td>'3'</td></tr>
-<tr><td>Passport Extra EU (identity document)</td><td>'4'</td></tr>
-<tr><td>Residence</td><td>'5'</td></tr>
-<tr><td>Company Cert</td><td>'7'</td></tr>
-<tr><td>Driving License (identity document)</td><td>'11'</td></tr>
-<tr><td>Shareholder1ID (identity document)</td><td>'14'</td></tr>
-<tr><td>Shareholder2ID (identity document)</td><td>'15'</td></tr>
-<tr><td>Shareholder3ID (identity document)</td><td>'16'</td></tr>
-<tr><td>Shareholder4ID (identity document)</td><td>'17'</td></tr>
-<tr><td>Residency Permit</td><td>'5'</td></tr>
-<tr><td>Status</td><td>'12'</td></tr>
-<tr><td>Selfie</td><td>'13'</td></tr>
-<tr><td>Ssd Mandate</td><td>'21'</td></tr>
+<tr><td>Pending</td><td>"-1"</td></tr>
+<tr><td>Identity Card (identity document)</td><td>"0"</td></tr>
+<tr><td>Proof Of Address</td><td>"1"</td></tr>
+<tr><td>Iban Cert</td><td>"2"</td></tr>
+<tr><td>Passport EU (identity document)</td><td>"3"</td></tr>
+<tr><td>Passport Extra EU (identity document)</td><td>"4"</td></tr>
+<tr><td>Residence</td><td>"5"</td></tr>
+<tr><td>Company Cert</td><td>"7"</td></tr>
+<tr><td>Driving License (identity document)</td><td>"11"</td></tr>
+<tr><td>Shareholder1ID (identity document)</td><td>"14"</td></tr>
+<tr><td>Shareholder2ID (identity document)</td><td>"15"</td></tr>
+<tr><td>Shareholder3ID (identity document)</td><td>"16"</td></tr>
+<tr><td>Shareholder4ID (identity document)</td><td>"17"</td></tr>
+<tr><td>Residency Permit</td><td>"5"</td></tr>
+<tr><td>Status</td><td>"12"</td></tr>
+<tr><td>Selfie</td><td>"13"</td></tr>
+<tr><td>Ssd Mandate</td><td>"21"</td></tr>
 
 </table>
 
 ## Document Status
 
 <table>
-<tr><td>Initialized</td><td>'-1'</td></tr>
-<tr><td>On Hold</td><td>'0'</td></tr>
-<tr><td>Received</td><td>'1'</td></tr>
-<tr><td>Accepted</td><td>'2'</td></tr>
-<tr><td>Rejected</td><td>'3'</td></tr>
-<tr><td>Rejected Unreadable</td><td>'4'</td></tr>
-<tr><td>Rejected Expired</td><td>'5'</td></tr>
-<tr><td>Rejected Wrong Type</td><td>'6'</td></tr>
-<tr><td>Rejected Wrong Name</td><td>'7'</td></tr>
-<tr><td>Rejected Duplicated</td><td>'8'</td></tr>
+<tr><td>Initialized</td><td>"-1"</td></tr>
+<tr><td>On Hold</td><td>"0"</td></tr>
+<tr><td>Received</td><td>"1"</td></tr>
+<tr><td>Accepted</td><td>"2"</td></tr>
+<tr><td>Rejected</td><td>"3"</td></tr>
+<tr><td>Rejected Unreadable</td><td>"4"</td></tr>
+<tr><td>Rejected Expired</td><td>"5"</td></tr>
+<tr><td>Rejected Wrong Type</td><td>"6"</td></tr>
+<tr><td>Rejected Wrong Name</td><td>"7"</td></tr>
+<tr><td>Rejected Duplicated</td><td>"8"</td></tr>
 
 </table>
 
@@ -81,56 +81,56 @@ status of an identity document sent to onfido
 ## Wallet Status
 
 <table>
-<tr><td>Wallet SC (recrowd wallet)</td><td>'-1'</td></tr>
-<tr><td>Missing Documents</td><td>'2'</td></tr>
-<tr><td>Documents Rejected</td><td>'3'</td></tr>
-<tr><td>Registered</td><td>'5'</td></tr>
-<tr><td>Valid</td><td>'6'</td></tr>
-<tr><td>Pending KYC3</td><td>'7'</td></tr>
-<tr><td>Expired Documents</td><td>'8'</td></tr>
-<tr><td>Blocked</td><td>'10'</td></tr>
-<tr><td>Closed</td><td>'12'</td></tr>
-<tr><td>Missing Documents KYC3</td><td>'13'</td></tr>
-<tr><td>One Time Customer</td><td>'14'</td></tr>
-<tr><td>Special Wallet For Crowdlending</td><td>'15'</td></tr>
-<tr><td>Technical Wallet</td><td>'16'</td></tr>
+<tr><td>Wallet SC (recrowd wallet)</td><td>"-1"</td></tr>
+<tr><td>Missing Documents</td><td>"2"</td></tr>
+<tr><td>Documents Rejected</td><td>"3"</td></tr>
+<tr><td>Registered</td><td>"5"</td></tr>
+<tr><td>Valid</td><td>"6"</td></tr>
+<tr><td>Pending KYC3</td><td>"7"</td></tr>
+<tr><td>Expired Documents</td><td>"8"</td></tr>
+<tr><td>Blocked</td><td>"10"</td></tr>
+<tr><td>Closed</td><td>"12"</td></tr>
+<tr><td>Missing Documents KYC3</td><td>"13"</td></tr>
+<tr><td>One Time Customer</td><td>"14"</td></tr>
+<tr><td>Special Wallet For Crowdlending</td><td>"15"</td></tr>
+<tr><td>Technical Wallet</td><td>"16"</td></tr>
 
 </table>
 
 ## Transaction Status
 
 <table>
-<tr><td>Created</td><td>'-1'</td></tr>
-<tr><td>Completed</td><td>'0'</td></tr>
-<tr><td>Completed P2P</td><td>'3'</td></tr>
-<tr><td>Pending</td><td>'4'</td></tr>
-<tr><td>Error</td><td>'6'</td></tr>
+<tr><td>Created</td><td>"-1"</td></tr>
+<tr><td>Completed</td><td>"0"</td></tr>
+<tr><td>Completed P2P</td><td>"3"</td></tr>
+<tr><td>Pending</td><td>"4"</td></tr>
+<tr><td>Error</td><td>"6"</td></tr>
 
 </table>
 
 ## Iban Status
 
 <table>
-<tr><td>None</td><td>'1'</td></tr>
-<tr><td>Internal</td><td>'2'</td></tr>
-<tr><td>Not Used</td><td>'3'</td></tr>
-<tr><td>To Be Verified</td><td>'4'</td></tr>
-<tr><td>Enabled</td><td>'5'</td></tr>
-<tr><td>Rejected By Bank</td><td>'6'</td></tr>
-<tr><td>Rejected No Owner</td><td>'7'</td></tr>
-<tr><td>Disabled</td><td>'8'</td></tr>
-<tr><td>Rejected By Lemonway</td><td>'9'</td></tr>
+<tr><td>None</td><td>"1"</td></tr>
+<tr><td>Internal</td><td>"2"</td></tr>
+<tr><td>Not Used</td><td>"3"</td></tr>
+<tr><td>To Be Verified</td><td>"4"</td></tr>
+<tr><td>Enabled</td><td>"5"</td></tr>
+<tr><td>Rejected By Bank</td><td>"6"</td></tr>
+<tr><td>Rejected No Owner</td><td>"7"</td></tr>
+<tr><td>Disabled</td><td>"8"</td></tr>
+<tr><td>Rejected By Lemonway</td><td>"9"</td></tr>
 
 </table>
 
 ## Money In Type
 
 <table>
-<tr><td>Wire Received</td><td>'10'</td></tr>
-<tr><td>Sdd Received</td><td>'11'</td></tr>
-<tr><td>Cheque Received</td><td>'12'</td></tr>
-<tr><td>Card Received Subscription</td><td>'22'</td></tr>
-<tr><td>Sofort Received</td><td>'48'</td></tr>
+<tr><td>Wire Received</td><td>"10"</td></tr>
+<tr><td>Sdd Received</td><td>"11"</td></tr>
+<tr><td>Cheque Received</td><td>"12"</td></tr>
+<tr><td>Card Received Subscription</td><td>"22"</td></tr>
+<tr><td>Sofort Received</td><td>"48"</td></tr>
 
 </table>
 
@@ -139,10 +139,10 @@ status of an identity document sent to onfido
 lemonway only
 
 <table>
-<tr><td>Male</td><td>'M'</td></tr>
-<tr><td>Female</td><td>'F'</td></tr>
-<tr><td>Juridical</td><td>'J'</td></tr>
-<tr><td>Unknown</td><td>'U'</td></tr>
+<tr><td>Male</td><td>"M"</td></tr>
+<tr><td>Female</td><td>"F"</td></tr>
+<tr><td>Juridical</td><td>"J"</td></tr>
+<tr><td>Unknown</td><td>"U"</td></tr>
 
 </table>
 
