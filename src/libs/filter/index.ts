@@ -116,7 +116,7 @@ export class Filter<A extends Action = Action> {
                         throw new Error('Invalid number payload: ' + p);
                     }
 
-                    payload[i] = parseInt(p);
+                    payload[i] = Number(p);
 
                     if (allowed && !allowed.some((p) => p === payload[i])) {
                         throw new Error('Invalid option: ' + p);
