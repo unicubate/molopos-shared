@@ -187,9 +187,9 @@ lemonway only
 <table>
 <tr><td>Created (default status)</td><td>-1</td></tr>
 <tr><td>Modified (modified by user)</td><td>0</td></tr>
-<tr><td>Refund Period (campaign ended)</td><td>1</td></tr>
-<tr><td>Active (refund period ended)</td><td>2</td></tr>
-<tr><td>Done (rates paid)</td><td>3</td></tr>
+<tr><td>Refund Period (awaiting 5-day refund period)</td><td>1</td></tr>
+<tr><td>Active (paying rates)</td><td>2</td></tr>
+<tr><td>Done (all rates paid)</td><td>3</td></tr>
 
 </table>
 

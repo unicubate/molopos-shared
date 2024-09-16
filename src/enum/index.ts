@@ -118,9 +118,9 @@ export enum EventStatus {
 export enum ProspectStatus {
     Created = -1,       // default status
     Modified = 0,       // modified by user
-    RefundPeriod = 1,   // campaign ended
-    Active = 2,         // refund period ended
-    Done = 3,           // rates paid
+    RefundPeriod = 1,   // awaiting 5-day refund period
+    Active = 2,         // paying rates
+    Done = 3,           // all rates paid
 };
 
 export enum ProspectRateStatus {
