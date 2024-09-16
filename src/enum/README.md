@@ -185,11 +185,11 @@ lemonway only
 ## Prospect Status
 
 <table>
-<tr><td>Created</td><td>-1</td></tr>
-<tr><td>Waiting</td><td>0</td></tr>
-<tr><td>Confirmed</td><td>1</td></tr>
-<tr><td>Active</td><td>2</td></tr>
-<tr><td>Done (every rate has been paid)</td><td>3</td></tr>
+<tr><td>Created (default status)</td><td>-1</td></tr>
+<tr><td>Updated (modified by user)</td><td>0</td></tr>
+<tr><td>Confirmed (campaign ended)</td><td>1</td></tr>
+<tr><td>Active (refund period ended)</td><td>2</td></tr>
+<tr><td>Done (rates paid)</td><td>3</td></tr>
 
 </table>
 

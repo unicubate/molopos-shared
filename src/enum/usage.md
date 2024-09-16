@@ -133,4 +133,28 @@ await client.user.findMany({
 
 </td>
 </tr>
+<tr></tr>
+<tr>
+  <td>
+  
+```ts
+type Project = {
+    title: string;
+    status: "CROWDFUNDING" | "COMING_SOON" | "READY";
+};
+```
+
+</td><td>
+
+```ts
+import { ProjectStatus } from "@recrowd/shared";
+
+type Project = {
+    title: string;
+    status: ProjectStatus;
+};
+```
+
+</td>
+</tr>
 </table>
