@@ -140,7 +140,16 @@ await client.user.findMany({
 ```ts
 type Project = {
     title: string;
-    status: "CROWDFUNDING" | "COMING_SOON" | "READY";
+    status:
+    | "TEST"
+    | "DRAFT"
+    | "COMING_SOON"
+    | "CROWDFUNDING"
+    | "READY"
+    | "CLOSED"
+    | "POSTPONED"
+    | "OVERDUE"
+    | "DEFAULT";
 };
 ```
 
