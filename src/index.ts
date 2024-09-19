@@ -1,3 +1,3 @@
 export * from "./data";
 export * from "./enum";
-export * from "./libs";
+export * from "./lib";
