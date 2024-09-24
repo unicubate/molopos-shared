@@ -1,6 +1,9 @@
 name: Publish package from dist
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
