@@ -24,8 +24,8 @@
 - [User Registration Status](#user-registration-status), a.k.a. StatusRegisterType
 - [Account Type](#account-type)
 - [Transaction Type](#transaction-type)
-- [Voucher Activity Type](#voucher-activity-type)
 - [Voucher Category](#voucher-category)
+- [Voucher Activity Type](#voucher-activity-type)
 - [Survey Level](#survey-level), user classification survey score
 ## Document Type
 
@@ -292,27 +292,22 @@ a.k.a. StatusRegisterType
 
 </table>
 
-## Voucher Activity Type
-
-<table>
-<tr><td>Receive</td><td>"RECEIVE"</td></tr>
-<tr><td>Friend</td><td>"FRIEND"</td></tr>
-<tr><td>Friend Invested</td><td>"FRIEND_INVESTED"</td></tr>
-<tr><td>Promotion</td><td>"PROMOTION"</td></tr>
-<tr><td>Invited</td><td>"INVITED"</td></tr>
-
-</table>
-
 ## Voucher Category
 
 <table>
-<tr><td>Wallet</td><td>"WALLET"</td></tr>
-<tr><td>Investment</td><td>"INVESTMENT"</td></tr>
-<tr><td>Invite User</td><td>"INVITE_USER"</td></tr>
-<tr><td>Invite</td><td>"INVITE"</td></tr>
-<tr><td>First Investment</td><td>"FIRST_INVESTMENT"</td></tr>
-<tr><td>Not Benefit</td><td>"NOT_BENEFIT"</td></tr>
 <tr><td>Tracking Code</td><td>"TRACKING_CODE"</td></tr>
+<tr><td>Investment</td><td>"INVESTMENT"</td></tr>
+<tr><td>First Investment</td><td>"FIRST_INVESTMENT"</td></tr>
+<tr><td>Invite Friend</td><td>"INVITE_FRIEND"</td></tr>
+<tr><td>Wallet</td><td>"WALLET"</td></tr>
+
+</table>
+
+## Voucher Activity Type
+
+<table>
+<tr><td>Friend Registration</td><td>"FRIEND_REGISTRATION"</td></tr>
+<tr><td>Promotion</td><td>"PROMOTION"</td></tr>
 
 </table>
 

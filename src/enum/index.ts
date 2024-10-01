@@ -194,22 +194,17 @@ export enum TransactionType {
     Voucher = "VOUCHER",
 };
 
-export enum VoucherActivityType {
-    Receive = "RECEIVE",
-    Friend = "FRIEND",
-    FriendInvested = "FRIEND_INVESTED",
-    Promotion = "PROMOTION",
-    Invited = "INVITED",
+export enum VoucherCategory {
+    TrackingCode = "TRACKING_CODE",
+    Investment = "INVESTMENT",
+    FirstInvestment = "FIRST_INVESTMENT",
+    InviteFriend = "INVITE_FRIEND",
+    Wallet = "WALLET",
 };
 
-export enum VoucherCategory {
-    Wallet = "WALLET",
-    Investment = "INVESTMENT",
-    InviteUser = "INVITE_USER",
-    Invite = "INVITE",
-    FirstInvestment = "FIRST_INVESTMENT",
-    NotBenefit = "NOT_BENEFIT",
-    TrackingCode = "TRACKING_CODE",
+export enum VoucherActivityType {
+    FriendRegistration = "FRIEND_REGISTRATION",
+    Promotion = "PROMOTION",
 };
 
 export enum SurveyLevel {
