@@ -213,3 +213,8 @@ export enum SurveyLevel {
     Mid = "MIDDLE", // 50 <= score < 90
     High = "HIGH",  // score >= 90
 };
+
+export enum LegalForm {
+    Spa = "SPA",
+    Srl = "SRL"
+}

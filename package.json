@@ -1,9 +1,9 @@
 {
-    "name": "shared",
-    "version": "2.0.6",
-    "scripts": {
-        "dev": "tsc --watch",
-        "docs": "node ./scripts/readme.js",
-        "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
-    }
+  "name": "shared",
+  "version": "2.0.7",
+  "scripts": {
+    "dev": "tsc --watch",
+    "docs": "node ./scripts/readme.js",
+    "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
+  }
 }

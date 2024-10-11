@@ -27,6 +27,7 @@
 - [Voucher Category](#voucher-category)
 - [Voucher Activity Type](#voucher-activity-type)
 - [Survey Level](#survey-level), user classification survey score
+- [Legal Form](#legal-form)
 ## Document Type
 
 <table>
@@ -319,6 +320,14 @@ user classification survey score
 <tr><td>Low (score < 50)</td><td>"LOW"</td></tr>
 <tr><td>Mid (50 <= score < 90)</td><td>"MIDDLE"</td></tr>
 <tr><td>High (score >= 90)</td><td>"HIGH"</td></tr>
+
+</table>
+
+## Legal Form
+
+<table>
+<tr><td>Spa</td><td>"SPA"</td></tr>
+<tr><td>Srl</td><td>"SRL"</td></tr>
 
 </table>
 
