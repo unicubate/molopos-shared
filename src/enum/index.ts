@@ -218,3 +218,9 @@ export enum LegalForm {
     Spa = "SPA",
     Srl = "SRL"
 }
+
+export enum TopInvestorType {
+    // a.k.a. StatusInvestmentTop
+    Top = "TOP",
+    SuperTop = "SUPER_TOP"
+}

@@ -28,6 +28,7 @@
 - [Voucher Activity Type](#voucher-activity-type)
 - [Survey Level](#survey-level), user classification survey score
 - [Legal Form](#legal-form)
+- [Top Investor Type](#top-investor-type), a.k.a. StatusInvestmentTop
 ## Document Type
 
 <table>
@@ -328,6 +329,16 @@ user classification survey score
 <table>
 <tr><td>Spa</td><td>"SPA"</td></tr>
 <tr><td>Srl</td><td>"SRL"</td></tr>
+
+</table>
+
+## Top Investor Type
+
+a.k.a. StatusInvestmentTop
+
+<table>
+<tr><td>Top</td><td>"TOP"</td></tr>
+<tr><td>Super Top</td><td>"SUPER_TOP"</td></tr>
 
 </table>
 
