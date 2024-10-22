@@ -166,4 +166,35 @@ type Project = {
 
 </td>
 </tr>
+<tr></tr>
+<tr>
+  <td>
+  
+```ts
+import { z } from 'zod';
+
+z.enum([
+    "DEFAULT",
+    "DRAFT",
+    "COMING_SOON",
+    "CROWDFUNDING",
+    "READY",
+    "CLOSED",
+    "TEST",
+    "OVERDUE",
+    "POSTPONED"
+]);
+```
+
+</td><td>
+
+```ts
+import { ProjectStatus } from "@recrowd/shared";
+import { z } from 'zod';
+
+z.nativeEnum(ProjectStatus);
+```
+
+</td>
+</tr>
 </table>
