@@ -59,7 +59,7 @@ README_MD += "# Statuses and type\n\n";
 README_MD += index;
 README_MD += body;
 
-fs.writeFileSync("./src/enum/docs.md", README_MD);
+fs.writeFileSync("./README.md", README_MD);
 
 function toSpace(str) {
     return str.replace(/([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g, '$1$4 $2$3$5');
