@@ -29,14 +29,15 @@
 - [Survey Level](#survey-level), user classification survey score
 - [Legal Form](#legal-form)
 - [Top Investor Type](#top-investor-type), a.k.a. StatusInvestmentTop
-- [TAS_Onboarding Type](#tas_onboarding-type)
-- [TAS_AML Question Type](#tas_aml-question-type)
-- [TAS_AML Answer Type](#tas_aml-answer-type)
-- [TAS_User Type](#tas_user-type)
-- [TAS_Gender](#tas_gender)
-- [TAS_Address Type](#tas_address-type)
-- [TAS_Document Type](#tas_document-type)
-- [TAS_Document Issuer](#tas_document-issuer)
+- [Permission](#permission), backoffice permissions
+- [TAS Onboarding Type](#tas-onboarding-type)
+- [TAS AML Question Type](#tas-aml-question-type)
+- [TAS AML Answer Type](#tas-aml-answer-type)
+- [TAS User Type](#tas-user-type)
+- [TAS Gender](#tas-gender)
+- [TAS Address Type](#tas-address-type)
+- [TAS Document Type](#tas-document-type)
+- [TAS Document Issuer](#tas-document-issuer)
 ## Document Type
 
 <table>
@@ -350,7 +351,24 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## TAS_Onboarding Type
+## Permission
+
+backoffice permissions
+
+<table>
+<tr><td>Assign Role</td><td>"assign:role"</td></tr>
+<tr><td>Create Role</td><td>"create:role"</td></tr>
+<tr><td>Read Role</td><td>"read:role"</td></tr>
+<tr><td>Update Role</td><td>"update:role"</td></tr>
+<tr><td>Delete Role</td><td>"delete:role"</td></tr>
+<tr><td>Create Admin</td><td>"create:admin"</td></tr>
+<tr><td>Read Admin</td><td>"read:admin"</td></tr>
+<tr><td>Update Admin</td><td>"update:admin"</td></tr>
+<tr><td>Delete Admin</td><td>"delete:admin"</td></tr>
+
+</table>
+
+## TAS Onboarding Type
 
 <table>
 <tr><td>Private</td><td>0</td></tr>
@@ -359,7 +377,7 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## TAS_AML Question Type
+## TAS AML Question Type
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B"</td></tr>
@@ -367,7 +385,7 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## TAS_AML Answer Type
+## TAS AML Answer Type
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B-ANSWER"</td></tr>
@@ -375,7 +393,7 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## TAS_User Type
+## TAS User Type
 
 <table>
 <tr><td>Private</td><td>"RETAIL"</td></tr>
@@ -383,7 +401,7 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## TAS_Gender
+## TAS Gender
 
 <table>
 <tr><td>Male</td><td>"M"</td></tr>
@@ -391,7 +409,7 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## TAS_Address Type
+## TAS Address Type
 
 <table>
 <tr><td>Residence</td><td>"RESIDENCE"</td></tr>
@@ -401,7 +419,7 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## TAS_Document Type
+## TAS Document Type
 
 <table>
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
@@ -410,7 +428,7 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## TAS_Document Issuer
+## TAS Document Issuer
 
 <table>
 <tr><td>Municipality</td><td>"MUNICIPALITY"</td></tr>

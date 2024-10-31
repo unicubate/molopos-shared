@@ -62,7 +62,7 @@ README_MD += body;
 fs.writeFileSync("./README.md", README_MD);
 
 function toSpace(str) {
-    return str.replace(/([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g, '$1$4 $2$3$5');
+    return str.replace(/([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g, '$1$4 $2$3$5').replace("_", " ");
 }
 
 function toUrl(str) {

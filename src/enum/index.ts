@@ -225,48 +225,61 @@ export enum TopInvestorType {
     SuperTop = "SUPER_TOP"
 }
 
+export enum Permission {
+    // backoffice permissions
+    AssignRole = "assign:role",
+    CreateRole = "create:role",
+    ReadRole = "read:role",
+    UpdateRole = "update:role",
+    DeleteRole = "delete:role",
+    CreateAdmin = "create:admin",
+    ReadAdmin = "read:admin",
+    UpdateAdmin = "update:admin",
+    DeleteAdmin = "delete:admin",
+}
+
 export enum TAS_OnboardingType {
     Private = 0,
     Company = 1,
     Proponent = 2,
-};
+}
 
 export enum TAS_AMLQuestionType {
     B2B = "AML-B2B",
     B2C = "AML-B2C",
-};
+}
 
 export enum TAS_AMLAnswerType {
     B2B = "AML-B2B-ANSWER",
     B2C = "AML-B2C-ANSWER",
-};
+}
 
 export enum TAS_UserType {
     Private = "RETAIL",
     Company = "BUSINESS",
-};
+}
 
 export enum TAS_Gender {
     Male = "M",
     Female = "F",
-};
+}
 
 export enum TAS_AddressType {
     Residence = "RESIDENCE",
     Domicile = "DOMICILE",
     Legal = "LEGAL",
     Office = "OFFICE",
-};
+}
 
 export enum TAS_DocumentType {
     IdentityCard = "IDENTITY_CARD",
     Passport = "PASSPORT",
     DrivingLicense = "DRIVING_LICENSE",
-};
+}
 
 export enum TAS_DocumentIssuer {
     Municipality = "MUNICIPALITY",
     Motorisation = "MCTC",
     Embassy = "ITALIAN_REPRESENTATION_ABROAD",
     Ministry = "MINISTRY",
-};
+}
