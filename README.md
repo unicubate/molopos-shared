@@ -29,6 +29,14 @@
 - [Survey Level](#survey-level), user classification survey score
 - [Legal Form](#legal-form)
 - [Top Investor Type](#top-investor-type), a.k.a. StatusInvestmentTop
+- [TAS_Onboarding Type](#tas_onboarding-type)
+- [TAS_AML Question Type](#tas_aml-question-type)
+- [TAS_AML Answer Type](#tas_aml-answer-type)
+- [TAS_User Type](#tas_user-type)
+- [TAS_Gender](#tas_gender)
+- [TAS_Address Type](#tas_address-type)
+- [TAS_Document Type](#tas_document-type)
+- [TAS_Document Issuer](#tas_document-issuer)
 ## Document Type
 
 <table>
@@ -339,6 +347,76 @@ a.k.a. StatusInvestmentTop
 <table>
 <tr><td>Top</td><td>"TOP"</td></tr>
 <tr><td>Super Top</td><td>"SUPER_TOP"</td></tr>
+
+</table>
+
+## TAS_Onboarding Type
+
+<table>
+<tr><td>Private</td><td>0</td></tr>
+<tr><td>Company</td><td>1</td></tr>
+<tr><td>Proponent</td><td>2</td></tr>
+
+</table>
+
+## TAS_AML Question Type
+
+<table>
+<tr><td>B2B</td><td>"AML-B2B"</td></tr>
+<tr><td>B2C</td><td>"AML-B2C"</td></tr>
+
+</table>
+
+## TAS_AML Answer Type
+
+<table>
+<tr><td>B2B</td><td>"AML-B2B-ANSWER"</td></tr>
+<tr><td>B2C</td><td>"AML-B2C-ANSWER"</td></tr>
+
+</table>
+
+## TAS_User Type
+
+<table>
+<tr><td>Private</td><td>"RETAIL"</td></tr>
+<tr><td>Company</td><td>"BUSINESS"</td></tr>
+
+</table>
+
+## TAS_Gender
+
+<table>
+<tr><td>Male</td><td>"M"</td></tr>
+<tr><td>Female</td><td>"F"</td></tr>
+
+</table>
+
+## TAS_Address Type
+
+<table>
+<tr><td>Residence</td><td>"RESIDENCE"</td></tr>
+<tr><td>Domicile</td><td>"DOMICILE"</td></tr>
+<tr><td>Legal</td><td>"LEGAL"</td></tr>
+<tr><td>Office</td><td>"OFFICE"</td></tr>
+
+</table>
+
+## TAS_Document Type
+
+<table>
+<tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
+<tr><td>Passport</td><td>"PASSPORT"</td></tr>
+<tr><td>Driving License</td><td>"DRIVING_LICENSE"</td></tr>
+
+</table>
+
+## TAS_Document Issuer
+
+<table>
+<tr><td>Municipality</td><td>"MUNICIPALITY"</td></tr>
+<tr><td>Motorisation</td><td>"MCTC"</td></tr>
+<tr><td>Embassy</td><td>"ITALIAN_REPRESENTATION_ABROAD"</td></tr>
+<tr><td>Ministry</td><td>"MINISTRY"</td></tr>
 
 </table>
 
