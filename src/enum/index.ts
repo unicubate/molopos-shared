@@ -244,6 +244,12 @@ export enum TAS_OnboardingType {
     Proponent = 2,
 }
 
+export enum TAS_OnboardingStatus {
+    Created = 0,
+    Completed = 1,
+    Aborted = 2,
+}
+
 export enum TAS_AMLQuestionType {
     B2B = "AML-B2B",
     B2C = "AML-B2C",

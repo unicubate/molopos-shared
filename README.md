@@ -31,6 +31,7 @@
 - [Top Investor Type](#top-investor-type), a.k.a. StatusInvestmentTop
 - [Permission](#permission), backoffice permissions
 - [TAS Onboarding Type](#tas-onboarding-type)
+- [TAS Onboarding Status](#tas-onboarding-status)
 - [TAS AML Question Type](#tas-aml-question-type)
 - [TAS AML Answer Type](#tas-aml-answer-type)
 - [TAS User Type](#tas-user-type)
@@ -374,6 +375,15 @@ backoffice permissions
 <tr><td>Private</td><td>0</td></tr>
 <tr><td>Company</td><td>1</td></tr>
 <tr><td>Proponent</td><td>2</td></tr>
+
+</table>
+
+## TAS Onboarding Status
+
+<table>
+<tr><td>Created</td><td>0</td></tr>
+<tr><td>Completed</td><td>1</td></tr>
+<tr><td>Aborted</td><td>2</td></tr>
 
 </table>
 
