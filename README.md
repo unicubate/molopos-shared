@@ -30,7 +30,6 @@
 - [Legal Form](#legal-form)
 - [Top Investor Type](#top-investor-type), a.k.a. StatusInvestmentTop
 - [Permission](#permission), backoffice permissions
-- [TAS Onboarding Type](#tas-onboarding-type)
 - [TAS Onboarding Status](#tas-onboarding-status)
 - [TAS AML Question Type](#tas-aml-question-type)
 - [TAS AML Answer Type](#tas-aml-answer-type)
@@ -366,15 +365,6 @@ backoffice permissions
 <tr><td>Read Admin</td><td>"read:admin"</td></tr>
 <tr><td>Update Admin</td><td>"update:admin"</td></tr>
 <tr><td>Delete Admin</td><td>"delete:admin"</td></tr>
-
-</table>
-
-## TAS Onboarding Type
-
-<table>
-<tr><td>Private</td><td>0</td></tr>
-<tr><td>Company</td><td>1</td></tr>
-<tr><td>Proponent</td><td>2</td></tr>
 
 </table>
 

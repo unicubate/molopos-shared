@@ -238,12 +238,6 @@ export enum Permission {
     DeleteAdmin = "delete:admin",
 }
 
-export enum TAS_OnboardingType {
-    Private = 0,
-    Company = 1,
-    Proponent = 2,
-}
-
 export enum TAS_OnboardingStatus {
     Created = 0,
     Completed = 1,
