@@ -277,6 +277,11 @@ export enum TAS_DocumentType {
     DrivingLicense = "DRIVING_LICENSE",
 }
 
+export enum TAS_AdditionalDocumentType {
+    ResidencyPermit = "PS",
+    W9 = "W9",
+}
+
 export enum TAS_DocumentIssuer {
     Municipality = "MUNICIPALITY",
     Motorisation = "MCTC",

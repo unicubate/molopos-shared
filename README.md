@@ -37,6 +37,7 @@
 - [TAS Gender](#tas-gender)
 - [TAS Address Type](#tas-address-type)
 - [TAS Document Type](#tas-document-type)
+- [TAS Additional Document Type](#tas-additional-document-type)
 - [TAS Document Issuer](#tas-document-issuer)
 ## Document Type
 
@@ -425,6 +426,14 @@ backoffice permissions
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
 <tr><td>Passport</td><td>"PASSPORT"</td></tr>
 <tr><td>Driving License</td><td>"DRIVING_LICENSE"</td></tr>
+
+</table>
+
+## TAS Additional Document Type
+
+<table>
+<tr><td>Residency Permit</td><td>"PS"</td></tr>
+<tr><td>W9</td><td>"W9"</td></tr>
 
 </table>
 
