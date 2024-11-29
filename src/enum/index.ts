@@ -288,3 +288,12 @@ export enum TAS_DocumentIssuer {
     Embassy = "ITALIAN_REPRESENTATION_ABROAD",
     Ministry = "MINISTRY",
 }
+
+export enum TAS_ShuftiStatus {
+    Pending = 0,
+    PendingReview = 1,
+    Valid = 2,
+    RequestError = 3,
+    Cancelled = 4,
+    Declined = 5,
+}

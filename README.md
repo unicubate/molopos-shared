@@ -39,6 +39,7 @@
 - [TAS Document Type](#tas-document-type)
 - [TAS Additional Document Type](#tas-additional-document-type)
 - [TAS Document Issuer](#tas-document-issuer)
+- [TAS Shufti Status](#tas-shufti-status)
 ## Document Type
 
 <table>
@@ -444,6 +445,18 @@ backoffice permissions
 <tr><td>Motorisation</td><td>"MCTC"</td></tr>
 <tr><td>Embassy</td><td>"ITALIAN_REPRESENTATION_ABROAD"</td></tr>
 <tr><td>Ministry</td><td>"MINISTRY"</td></tr>
+
+</table>
+
+## TAS Shufti Status
+
+<table>
+<tr><td>Pending</td><td>0</td></tr>
+<tr><td>Pending Review</td><td>1</td></tr>
+<tr><td>Valid</td><td>2</td></tr>
+<tr><td>Request Error</td><td>3</td></tr>
+<tr><td>Cancelled</td><td>4</td></tr>
+<tr><td>Declined</td><td>5</td></tr>
 
 </table>
 
