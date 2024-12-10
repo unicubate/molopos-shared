@@ -1,4 +1,6 @@
 export function checkCodiceFiscale(cf: string) {
+    cf = cf.toUpperCase();
+
     if (!/^[A-Z]{6}[0-9LMNPQRSTUV]{2}[ABCDEHLMPRST]{1}[0-9LMNPQRSTUV]{2}[A-Z]{1}[0-9LMNPQRSTUV]{3}[A-Z]{1}$/.test(cf)) {
         return false;
     }
@@ -29,6 +31,8 @@ export type CodiceFiscaleData = {
  * @throws if the *codice fiscale* is invalid
  */
 export function parseCodiceFiscale(cf: string): CodiceFiscaleData {
+    cf = cf.toUpperCase();
+
     if (!checkCodiceFiscale(cf)) {
         throw new Error("Invalid Codice Fiscale");
     }
