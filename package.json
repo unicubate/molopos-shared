@@ -1,9 +1,10 @@
 {
     "name": "shared",
-    "version": "2.0.15",
+    "version": "2.1.0",
     "scripts": {
         "dev": "tsc --watch",
         "docs": "node ./scripts/docs .js",
+        "test": "bun ./src/lib/codice-fiscale/test.ts",
         "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
     }
 }

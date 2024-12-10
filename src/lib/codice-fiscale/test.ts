@@ -1,0 +1,11 @@
+import { parseCodiceFiscale } from ".";
+
+const data = parseCodiceFiscale("BGLMRC99R30F205T");
+
+if (JSON.stringify(data, null, 4) !== `{
+    "firstName": "MRC",
+    "lastName": "BGL",
+    "gender": "M",
+    "birth": "1999-10-30T00:00:00.000Z",
+    "belfiore": "F205"
+}`) throw 1;
