@@ -9,7 +9,7 @@ export function checkCodiceFiscale(cf: string) {
 
     for (let i = 0; i < 15; i++) {
         const d = cf.charAt(i);
-        const c = /[0-9]/.test(d) ? String.fromCharCode(65 + Number(d)) : d;
+        const c = /\d/.test(d) ? String.fromCharCode(65 + Number(d)) : d;
         v += i % 2 === 0
             ? "BAKPLCQDREVOSFTGUHMINJWZYX".indexOf(c)
             : "ABCDEFGHIJKLMNOPQRSTUVWXYZ".indexOf(c);
@@ -35,6 +35,16 @@ export function parseCodiceFiscale(cf: string): CodiceFiscaleData {
 
     if (!checkCodiceFiscale(cf)) {
         throw new Error("Invalid Codice Fiscale");
+    }
+
+    for (const i of [6, 7, 9, 10, 12, 13, 14]) {
+        const d = cf.charAt(i);
+
+        if (!/\d/.test(d)) {
+            cf = cf.substring(0, i)
+                + "LMNPQRSTUV".indexOf(d)
+                + cf.substring(i + 1);
+        }
     }
 
     const lastName = cf.substring(0, 3);
