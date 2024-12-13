@@ -1,439 +1,439 @@
 export type Province = {
-  code: string;
+  iso: string;
   name: string;
 };
 
 export const provinces: Province[] = [
   {
-    code: "AG",
+    iso: "AG",
     name: "AGRIGENTO"
   },
   {
-    code: "AL",
+    iso: "AL",
     name: "ALESSANDRIA"
   },
   {
-    code: "AN",
+    iso: "AN",
     name: "ANCONA"
   },
   {
-    code: "AO",
+    iso: "AO",
     name: "AOSTA"
   },
   {
-    code: "AP",
+    iso: "AP",
     name: "ASCOLI PICENO"
   },
   {
-    code: "AQ",
+    iso: "AQ",
     name: "L'AQUILA"
   },
   {
-    code: "AR",
+    iso: "AR",
     name: "AREZZO"
   },
   {
-    code: "AT",
+    iso: "AT",
     name: "ASTI"
   },
   {
-    code: "AV",
+    iso: "AV",
     name: "AVELLINO"
   },
   {
-    code: "BA",
+    iso: "BA",
     name: "BARI"
   },
   {
-    code: "BG",
+    iso: "BG",
     name: "BERGAMO"
   },
   {
-    code: "BI",
+    iso: "BI",
     name: "BIELLA"
   },
   {
-    code: "BL",
+    iso: "BL",
     name: "BELLUNO"
   },
   {
-    code: "BN",
+    iso: "BN",
     name: "BENEVENTO"
   },
   {
-    code: "BO",
+    iso: "BO",
     name: "BOLOGNA"
   },
   {
-    code: "BR",
+    iso: "BR",
     name: "BRINDISI"
   },
   {
-    code: "BS",
+    iso: "BS",
     name: "BRESCIA"
   },
   {
-    code: "BT",
+    iso: "BT",
     name: "BARLETTA-ANDRIA-TRANI"
   },
   {
-    code: "BZ",
+    iso: "BZ",
     name: "BOLZANO"
   },
   {
-    code: "CA",
+    iso: "CA",
     name: "CAGLIARI"
   },
   {
-    code: "CB",
+    iso: "CB",
     name: "CAMPOBASSO"
   },
   {
-    code: "CE",
+    iso: "CE",
     name: "CASERTA"
   },
   {
-    code: "CH",
+    iso: "CH",
     name: "CHIETI"
   },
   {
-    code: "CL",
+    iso: "CL",
     name: "CALTANISSETTA"
   },
   {
-    code: "CN",
+    iso: "CN",
     name: "CUNEO"
   },
   {
-    code: "CO",
+    iso: "CO",
     name: "COMO"
   },
   {
-    code: "CR",
+    iso: "CR",
     name: "CREMONA"
   },
   {
-    code: "CS",
+    iso: "CS",
     name: "COSENZA"
   },
   {
-    code: "CT",
+    iso: "CT",
     name: "CATANIA"
   },
   {
-    code: "CZ",
+    iso: "CZ",
     name: "CATANZARO"
   },
   {
-    code: "EN",
+    iso: "EN",
     name: "ENNA"
   },
   {
-    code: "FC",
+    iso: "FC",
     name: "FORLI'-CESENA"
   },
   {
-    code: "FE",
+    iso: "FE",
     name: "FERRARA"
   },
   {
-    code: "FG",
+    iso: "FG",
     name: "FOGGIA"
   },
   {
-    code: "FI",
+    iso: "FI",
     name: "FIRENZE"
   },
   {
-    code: "FM",
+    iso: "FM",
     name: "FERMO"
   },
   {
-    code: "FR",
+    iso: "FR",
     name: "FROSINONE"
   },
   {
-    code: "FU",
+    iso: "FU",
     name: "FIUME"
   },
   {
-    code: "GE",
+    iso: "GE",
     name: "GENOVA"
   },
   {
-    code: "GO",
+    iso: "GO",
     name: "GORIZIA"
   },
   {
-    code: "GR",
+    iso: "GR",
     name: "GROSSETO"
   },
   {
-    code: "IM",
+    iso: "IM",
     name: "IMPERIA"
   },
   {
-    code: "IS",
+    iso: "IS",
     name: "ISERNIA"
   },
   {
-    code: "KR",
+    iso: "KR",
     name: "CROTONE"
   },
   {
-    code: "LC",
+    iso: "LC",
     name: "LECCO"
   },
   {
-    code: "LE",
+    iso: "LE",
     name: "LECCE"
   },
   {
-    code: "LI",
+    iso: "LI",
     name: "LIVORNO"
   },
   {
-    code: "LO",
+    iso: "LO",
     name: "LODI"
   },
   {
-    code: "LT",
+    iso: "LT",
     name: "LATINA"
   },
   {
-    code: "LU",
+    iso: "LU",
     name: "LUCCA"
   },
   {
-    code: "MB",
+    iso: "MB",
     name: "MONZA E BRIANZA"
   },
   {
-    code: "MC",
+    iso: "MC",
     name: "MACERATA"
   },
   {
-    code: "ME",
+    iso: "ME",
     name: "MESSINA"
   },
   {
-    code: "MI",
+    iso: "MI",
     name: "MILANO"
   },
   {
-    code: "MN",
+    iso: "MN",
     name: "MANTOVA"
   },
   {
-    code: "MO",
+    iso: "MO",
     name: "MODENA"
   },
   {
-    code: "MS",
+    iso: "MS",
     name: "MASSA-CARRARA"
   },
   {
-    code: "MT",
+    iso: "MT",
     name: "MATERA"
   },
   {
-    code: "NA",
+    iso: "NA",
     name: "NAPOLI"
   },
   {
-    code: "NO",
+    iso: "NO",
     name: "NOVARA"
   },
   {
-    code: "NU",
+    iso: "NU",
     name: "NUORO"
   },
   {
-    code: "OR",
+    iso: "OR",
     name: "ORISTANO"
   },
   {
-    code: "PA",
+    iso: "PA",
     name: "PALERMO"
   },
   {
-    code: "PC",
+    iso: "PC",
     name: "PIACENZA"
   },
   {
-    code: "PD",
+    iso: "PD",
     name: "PADOVA"
   },
   {
-    code: "PE",
+    iso: "PE",
     name: "PESCARA"
   },
   {
-    code: "PG",
+    iso: "PG",
     name: "PERUGIA"
   },
   {
-    code: "PI",
+    iso: "PI",
     name: "PISA"
   },
   {
-    code: "PN",
+    iso: "PN",
     name: "PORDENONE"
   },
   {
-    code: "PO",
+    iso: "PO",
     name: "PRATO"
   },
   {
-    code: "PR",
+    iso: "PR",
     name: "PARMA"
   },
   {
-    code: "PT",
+    iso: "PT",
     name: "PISTOIA"
   },
   {
-    code: "PU",
+    iso: "PU",
     name: "PESARO-URBINO"
   },
   {
-    code: "PV",
+    iso: "PV",
     name: "PAVIA"
   },
   {
-    code: "PZ",
+    iso: "PZ",
     name: "POTENZA"
   },
   {
-    code: "RA",
+    iso: "RA",
     name: "RAVENNA"
   },
   {
-    code: "RC",
+    iso: "RC",
     name: "REGGIO CALABRIA"
   },
   {
-    code: "RE",
+    iso: "RE",
     name: "REGGIO NELL'EMILIA"
   },
   {
-    code: "RG",
+    iso: "RG",
     name: "RAGUSA"
   },
   {
-    code: "RI",
+    iso: "RI",
     name: "RIETI"
   },
   {
-    code: "RM",
+    iso: "RM",
     name: "ROMA"
   },
   {
-    code: "RN",
+    iso: "RN",
     name: "RIMINI"
   },
   {
-    code: "RO",
+    iso: "RO",
     name: "ROVIGO"
   },
   {
-    code: "SA",
+    iso: "SA",
     name: "SALERNO"
   },
   {
-    code: "SI",
+    iso: "SI",
     name: "SIENA"
   },
   {
-    code: "SO",
+    iso: "SO",
     name: "SONDRIO"
   },
   {
-    code: "SP",
+    iso: "SP",
     name: "LA SPEZIA"
   },
   {
-    code: "SR",
+    iso: "SR",
     name: "SIRACUSA"
   },
   {
-    code: "SS",
+    iso: "SS",
     name: "SASSARI"
   },
   {
-    code: "SU",
+    iso: "SU",
     name: "SUD SARDEGNA"
   },
   {
-    code: "SV",
+    iso: "SV",
     name: "SAVONA"
   },
   {
-    code: "TA",
+    iso: "TA",
     name: "TARANTO"
   },
   {
-    code: "TE",
+    iso: "TE",
     name: "TERAMO"
   },
   {
-    code: "TN",
+    iso: "TN",
     name: "TRENTO"
   },
   {
-    code: "TO",
+    iso: "TO",
     name: "TORINO"
   },
   {
-    code: "TP",
+    iso: "TP",
     name: "TRAPANI"
   },
   {
-    code: "TR",
+    iso: "TR",
     name: "TERNI"
   },
   {
-    code: "TS",
+    iso: "TS",
     name: "TRIESTE"
   },
   {
-    code: "TV",
+    iso: "TV",
     name: "TREVISO"
   },
   {
-    code: "UD",
+    iso: "UD",
     name: "UDINE"
   },
   {
-    code: "VA",
+    iso: "VA",
     name: "VARESE"
   },
   {
-    code: "VB",
+    iso: "VB",
     name: "VERBANIA"
   },
   {
-    code: "VC",
+    iso: "VC",
     name: "VERCELLI"
   },
   {
-    code: "VE",
+    iso: "VE",
     name: "VENEZIA"
   },
   {
-    code: "VI",
+    iso: "VI",
     name: "VICENZA"
   },
   {
-    code: "VR",
+    iso: "VR",
     name: "VERONA"
   },
   {
-    code: "VT",
+    iso: "VT",
     name: "VITERBO"
   },
   {
-    code: "VV",
+    iso: "VV",
     name: "VIBO VALENTIA"
   }
 ];
