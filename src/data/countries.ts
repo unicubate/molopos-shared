@@ -1,4 +1,5 @@
 export type Country = {
+  /** @deprecated use *iso3* instead */
   code: string;
   name: string;
   iso2: string;
