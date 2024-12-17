@@ -297,3 +297,63 @@ export enum TAS_ShuftiStatus {
     Cancelled = 4,
     Declined = 5,
 }
+
+export enum Tas_PepRel {
+    // No
+    No = "PEP_REL_N",
+    // Persona politica esposta
+    Pep = "PEP_REL_D",
+    // Familiare di una persona politica esposta
+    Family = "PEP_REL_F",
+    // Legami in affari con una persona politicamente esposta
+    Business = "PEP_REL_A",
+}
+
+export enum Tas_PepType {
+    // Presidente della Repubblica
+    PresidenteRepubblica = "PEP_TYPE_A",
+    // Presidente del Consiglio
+    PresidenteConsiglio = "PEP_TYPE_B",
+    // Ministro
+    Ministro = "PEP_TYPE_C",
+    // Vice Ministro
+    ViceMinistro = "PEP_TYPE_D",
+    // Sottosegretario
+    Sottosegretario = "PEP_TYPE_E",
+    // Presidente di Regione
+    PresidenteRegione = "PEP_TYPE_F",
+    // Assessore Regionale
+    AssessoreRegionale = "PEP_TYPE_G",
+    // Sindaco di capoluogo di provincia o città metropolitana
+    SindacoCapoluogo = "PEP_TYPE_H",
+    // Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri
+    SindacoComune = "PEP_TYPE_I",
+    // Deputato
+    Deputato = "PEP_TYPE_J",
+    // Senatore
+    Senatore = "PEP_TYPE_K",
+    // Parlamentare Europeo
+    ParlamentareEuropeo = "PEP_TYPE_L",
+    // Consigliere regionale nonché cariche analoghe in Stati esteri
+    ConsigliereRegionale = "PEP_TYPE_M",
+    // Membro degli organi direttivi centrali di partiti politici
+    MembroPartitiPolitici = "PEP_TYPE_N",
+    // Giudice della Corte Costituzionale
+    GiudiceCorteCostituzionale = "PEP_TYPE_O",
+    // Magistrato della Corte di Cassazione o della Corte dei Conti
+    MagistratoCorte = "PEP_TYPE_Q",
+    // Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri
+    ConsiglioGiustiziaAmministrativa = "PEP_TYPE_R",
+    // Membro degli organi direttivi delle banche centrali e delle autorità indipendenti
+    MembroBancheCentrali = "PEP_TYPE_S",
+    // Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri
+    Ambasciatore = "PEP_TYPE_T",
+    // Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti
+    ComponenteImpreseStato = "PEP_TYPE_U",
+    // Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale
+    DirettoreASL = "PEP_TYPE_V",
+    // Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali
+    MembroOrganizzazioniInternazionali = "PEP_TYPE_W",
+    // Consigliere di Stato
+    ConsigliereStato = "PEP_TYPE_P"
+}
