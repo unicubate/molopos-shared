@@ -1,6 +1,8 @@
 const fs = require("fs");
 
-const data = fs.readFileSync("./src/enum/index.ts", "utf8").split("export enum ");
+const raw = fs.readFileSync("./src/enum/index.ts", "utf8");
+const lines = raw.split("\n");
+const data = raw.split("export enum ");
 
 let index = "";
 let body = "";
@@ -8,6 +10,14 @@ let body = "";
 for (const item of data) {
     if (item) {
         const [key, values] = item.split(" {");
+
+        let line = -1;
+        for (let i = 0; i < lines.length; i++) {
+            if (lines[i].includes("export enum " + key + " {")) {
+                line = i;
+                break;
+            }
+        }
 
         const contents = values
             .replace(/\};?/, "")
@@ -37,9 +47,12 @@ for (const item of data) {
                 + "</td></tr>\n";
         }
 
-        index += "- [" + toSpace(key) + "](#" + toUrl(toSpace(key)) + ")";
+        index += "- [" + toSpace(key) + "](#" + toUrl(toSpace(key) + "-" + toUrl(key)) + ")";
 
-        body += "## " + toSpace(key) + "\n\n";
+        line++;
+        body += "## " + toSpace(key);
+        body += " <sub><sup>[" + key + "](./src/enum/index.ts#L" + line + ")</sup></sub>\n\n";
+
         if (itemDesc) {
             body += itemDesc + "\n";
             index += ", " + itemDesc.trim();

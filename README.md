@@ -2,47 +2,47 @@
 
 # Statuses and type
 
-- [Document Type](#document-type)
-- [Document Status](#document-status)
-- [Onfido Document Status](#onfido-document-status), status of an identity document sent to onfido
-- [Wallet Status](#wallet-status)
-- [Transaction Status](#transaction-status)
-- [Iban Status](#iban-status)
-- [Money In Type](#money-in-type)
-- [Gender Type](#gender-type), lemonway only
-- [Alert Type](#alert-type)
-- [Notification Type](#notification-type)
-- [Project Payout Strategy Type](#project-payout-strategy-type)
-- [Event Status](#event-status)
-- [Prospect Status](#prospect-status)
-- [Prospect Rate Status](#prospect-rate-status)
-- [Prospect Rate Investor Status](#prospect-rate-investor-status)
-- [Investment Status](#investment-status)
-- [Classification Status](#classification-status)
-- [Category Project](#category-project)
-- [Project Status](#project-status)
-- [User Registration Status](#user-registration-status), a.k.a. StatusRegisterType
-- [Account Type](#account-type)
-- [Transaction Type](#transaction-type)
-- [Voucher Category](#voucher-category)
-- [Voucher Activity Type](#voucher-activity-type)
-- [Survey Level](#survey-level), user classification survey score
-- [Legal Form](#legal-form)
-- [Top Investor Type](#top-investor-type), a.k.a. StatusInvestmentTop
-- [Permission](#permission), backoffice permissions
-- [TAS Onboarding Status](#tas-onboarding-status)
-- [TAS AML Question Type](#tas-aml-question-type)
-- [TAS AML Answer Type](#tas-aml-answer-type)
-- [TAS User Type](#tas-user-type)
-- [TAS Gender](#tas-gender)
-- [TAS Address Type](#tas-address-type)
-- [TAS Document Type](#tas-document-type)
-- [TAS Additional Document Type](#tas-additional-document-type)
-- [TAS Document Issuer](#tas-document-issuer)
-- [TAS Shufti Status](#tas-shufti-status)
-- [TAS Pep](#tas-pep)
-- [TAS Pep Type](#tas-pep-type)
-## Document Type
+- [Document Type](#document-type-documenttype)
+- [Document Status](#document-status-documentstatus)
+- [Onfido Document Status](#onfido-document-status-onfidodocumentstatus), status of an identity document sent to onfido
+- [Wallet Status](#wallet-status-walletstatus)
+- [Transaction Status](#transaction-status-transactionstatus)
+- [Iban Status](#iban-status-ibanstatus)
+- [Money In Type](#money-in-type-moneyintype)
+- [Gender Type](#gender-type-gendertype), lemonway only
+- [Alert Type](#alert-type-alerttype)
+- [Notification Type](#notification-type-notificationtype)
+- [Project Payout Strategy Type](#project-payout-strategy-type-projectpayoutstrategytype)
+- [Event Status](#event-status-eventstatus)
+- [Prospect Status](#prospect-status-prospectstatus)
+- [Prospect Rate Status](#prospect-rate-status-prospectratestatus)
+- [Prospect Rate Investor Status](#prospect-rate-investor-status-prospectrateinvestorstatus)
+- [Investment Status](#investment-status-investmentstatus)
+- [Classification Status](#classification-status-classificationstatus)
+- [Category Project](#category-project-categoryproject)
+- [Project Status](#project-status-projectstatus)
+- [User Registration Status](#user-registration-status-userregistrationstatus), a.k.a. StatusRegisterType
+- [Account Type](#account-type-accounttype)
+- [Transaction Type](#transaction-type-transactiontype)
+- [Voucher Category](#voucher-category-vouchercategory)
+- [Voucher Activity Type](#voucher-activity-type-voucheractivitytype)
+- [Survey Level](#survey-level-surveylevel), user classification survey score
+- [Legal Form](#legal-form-legalform)
+- [Top Investor Type](#top-investor-type-topinvestortype), a.k.a. StatusInvestmentTop
+- [Permission](#permission-permission), backoffice permissions
+- [TAS Onboarding Status](#tas-onboarding-status-tas_onboardingstatus)
+- [TAS AML Question Type](#tas-aml-question-type-tas_amlquestiontype)
+- [TAS AML Answer Type](#tas-aml-answer-type-tas_amlanswertype)
+- [TAS User Type](#tas-user-type-tas_usertype)
+- [TAS Gender](#tas-gender-tas_gender)
+- [TAS Address Type](#tas-address-type-tas_addresstype)
+- [TAS Document Type](#tas-document-type-tas_documenttype)
+- [TAS Additional Document Type](#tas-additional-document-type-tas_additionaldocumenttype)
+- [TAS Document Issuer](#tas-document-issuer-tas_documentissuer)
+- [TAS Shufti Status](#tas-shufti-status-tas_shuftistatus)
+- [TAS Pep](#tas-pep-tas_pep)
+- [TAS Pep Type](#tas-pep-type-tas_peptype)
+## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>"-1"</td></tr>
@@ -65,7 +65,7 @@
 
 </table>
 
-## Document Status
+## Document Status <sub><sup>[DocumentStatus](./src/enum/index.ts#L21)</sup></sub>
 
 <table>
 <tr><td>Initialized</td><td>"-1"</td></tr>
@@ -81,7 +81,7 @@
 
 </table>
 
-## Onfido Document Status
+## Onfido Document Status <sub><sup>[OnfidoDocumentStatus](./src/enum/index.ts#L34)</sup></sub>
 
 status of an identity document sent to onfido
 
@@ -93,7 +93,7 @@ status of an identity document sent to onfido
 
 </table>
 
-## Wallet Status
+## Wallet Status <sub><sup>[WalletStatus](./src/enum/index.ts#L42)</sup></sub>
 
 <table>
 <tr><td>Wallet SC (recrowd wallet)</td><td>"-1"</td></tr>
@@ -112,7 +112,7 @@ status of an identity document sent to onfido
 
 </table>
 
-## Transaction Status
+## Transaction Status <sub><sup>[TransactionStatus](./src/enum/index.ts#L58)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>"-1"</td></tr>
@@ -123,7 +123,7 @@ status of an identity document sent to onfido
 
 </table>
 
-## Iban Status
+## Iban Status <sub><sup>[IbanStatus](./src/enum/index.ts#L66)</sup></sub>
 
 <table>
 <tr><td>None</td><td>"1"</td></tr>
@@ -138,7 +138,7 @@ status of an identity document sent to onfido
 
 </table>
 
-## Money In Type
+## Money In Type <sub><sup>[MoneyInType](./src/enum/index.ts#L78)</sup></sub>
 
 <table>
 <tr><td>Wire Received</td><td>"10"</td></tr>
@@ -149,7 +149,7 @@ status of an identity document sent to onfido
 
 </table>
 
-## Gender Type
+## Gender Type <sub><sup>[GenderType](./src/enum/index.ts#L86)</sup></sub>
 
 lemonway only
 
@@ -161,7 +161,7 @@ lemonway only
 
 </table>
 
-## Alert Type
+## Alert Type <sub><sup>[AlertType](./src/enum/index.ts#L94)</sup></sub>
 
 <table>
 <tr><td>Info</td><td>0</td></tr>
@@ -170,7 +170,7 @@ lemonway only
 
 </table>
 
-## Notification Type
+## Notification Type <sub><sup>[NotificationType](./src/enum/index.ts#L100)</sup></sub>
 
 <table>
 <tr><td>Info</td><td>0</td></tr>
@@ -180,7 +180,7 @@ lemonway only
 
 </table>
 
-## Project Payout Strategy Type
+## Project Payout Strategy Type <sub><sup>[ProjectPayoutStrategyType](./src/enum/index.ts#L107)</sup></sub>
 
 <table>
 <tr><td>Immediate</td><td>0</td></tr>
@@ -188,7 +188,7 @@ lemonway only
 
 </table>
 
-## Event Status
+## Event Status <sub><sup>[EventStatus](./src/enum/index.ts#L112)</sup></sub>
 
 <table>
 <tr><td>Overdue</td><td>0</td></tr>
@@ -197,7 +197,7 @@ lemonway only
 
 </table>
 
-## Prospect Status
+## Prospect Status <sub><sup>[ProspectStatus](./src/enum/index.ts#L118)</sup></sub>
 
 <table>
 <tr><td>Created (default status)</td><td>-1</td></tr>
@@ -208,7 +208,7 @@ lemonway only
 
 </table>
 
-## Prospect Rate Status
+## Prospect Rate Status <sub><sup>[ProspectRateStatus](./src/enum/index.ts#L126)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -219,7 +219,7 @@ lemonway only
 
 </table>
 
-## Prospect Rate Investor Status
+## Prospect Rate Investor Status <sub><sup>[ProspectRateInvestorStatus](./src/enum/index.ts#L134)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -230,7 +230,7 @@ lemonway only
 
 </table>
 
-## Investment Status
+## Investment Status <sub><sup>[InvestmentStatus](./src/enum/index.ts#L142)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>-1</td></tr>
@@ -239,7 +239,7 @@ lemonway only
 
 </table>
 
-## Classification Status
+## Classification Status <sub><sup>[ClassificationStatus](./src/enum/index.ts#L148)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -248,7 +248,7 @@ lemonway only
 
 </table>
 
-## Category Project
+## Category Project <sub><sup>[CategoryProject](./src/enum/index.ts#L154)</sup></sub>
 
 <table>
 <tr><td>Relax</td><td>"RELAX"</td></tr>
@@ -257,7 +257,7 @@ lemonway only
 
 </table>
 
-## Project Status
+## Project Status <sub><sup>[ProjectStatus](./src/enum/index.ts#L160)</sup></sub>
 
 <table>
 <tr><td>Default</td><td>"DEFAULT"</td></tr>
@@ -272,7 +272,7 @@ lemonway only
 
 </table>
 
-## User Registration Status
+## User Registration Status <sub><sup>[UserRegistrationStatus](./src/enum/index.ts#L172)</sup></sub>
 
 a.k.a. StatusRegisterType
 
@@ -287,7 +287,7 @@ a.k.a. StatusRegisterType
 
 </table>
 
-## Account Type
+## Account Type <sub><sup>[AccountType](./src/enum/index.ts#L183)</sup></sub>
 
 <table>
 <tr><td>Company</td><td>"AZIENDA"</td></tr>
@@ -296,7 +296,7 @@ a.k.a. StatusRegisterType
 
 </table>
 
-## Transaction Type
+## Transaction Type <sub><sup>[TransactionType](./src/enum/index.ts#L189)</sup></sub>
 
 <table>
 <tr><td>Money In</td><td>"MONEYIN"</td></tr>
@@ -307,7 +307,7 @@ a.k.a. StatusRegisterType
 
 </table>
 
-## Voucher Category
+## Voucher Category <sub><sup>[VoucherCategory](./src/enum/index.ts#L197)</sup></sub>
 
 <table>
 <tr><td>Tracking Code</td><td>"TRACKING_CODE"</td></tr>
@@ -318,7 +318,7 @@ a.k.a. StatusRegisterType
 
 </table>
 
-## Voucher Activity Type
+## Voucher Activity Type <sub><sup>[VoucherActivityType](./src/enum/index.ts#L205)</sup></sub>
 
 <table>
 <tr><td>Friend Registration</td><td>"FRIEND_REGISTRATION"</td></tr>
@@ -326,7 +326,7 @@ a.k.a. StatusRegisterType
 
 </table>
 
-## Survey Level
+## Survey Level <sub><sup>[SurveyLevel](./src/enum/index.ts#L210)</sup></sub>
 
 user classification survey score
 
@@ -337,7 +337,7 @@ user classification survey score
 
 </table>
 
-## Legal Form
+## Legal Form <sub><sup>[LegalForm](./src/enum/index.ts#L217)</sup></sub>
 
 <table>
 <tr><td>Spa</td><td>"SPA"</td></tr>
@@ -345,7 +345,7 @@ user classification survey score
 
 </table>
 
-## Top Investor Type
+## Top Investor Type <sub><sup>[TopInvestorType](./src/enum/index.ts#L222)</sup></sub>
 
 a.k.a. StatusInvestmentTop
 
@@ -355,7 +355,7 @@ a.k.a. StatusInvestmentTop
 
 </table>
 
-## Permission
+## Permission <sub><sup>[Permission](./src/enum/index.ts#L228)</sup></sub>
 
 backoffice permissions
 
@@ -372,7 +372,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Status
+## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L241)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -381,7 +381,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Question Type
+## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L247)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B"</td></tr>
@@ -389,7 +389,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Answer Type
+## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L252)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B-ANSWER"</td></tr>
@@ -397,7 +397,7 @@ backoffice permissions
 
 </table>
 
-## TAS User Type
+## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L257)</sup></sub>
 
 <table>
 <tr><td>Private</td><td>"RETAIL"</td></tr>
@@ -405,7 +405,7 @@ backoffice permissions
 
 </table>
 
-## TAS Gender
+## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L262)</sup></sub>
 
 <table>
 <tr><td>Male</td><td>"M"</td></tr>
@@ -413,7 +413,7 @@ backoffice permissions
 
 </table>
 
-## TAS Address Type
+## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L267)</sup></sub>
 
 <table>
 <tr><td>Residence</td><td>"RESIDENCE"</td></tr>
@@ -423,7 +423,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Type
+## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L274)</sup></sub>
 
 <table>
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
@@ -432,7 +432,7 @@ backoffice permissions
 
 </table>
 
-## TAS Additional Document Type
+## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L280)</sup></sub>
 
 <table>
 <tr><td>Residency Permit</td><td>"PS"</td></tr>
@@ -440,7 +440,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Issuer
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L285)</sup></sub>
 
 <table>
 <tr><td>Municipality</td><td>"MUNICIPALITY"</td></tr>
@@ -450,7 +450,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Status
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L292)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -462,7 +462,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L301)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -472,7 +472,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L308)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica (Presidente della Repubblica)</td><td>"PEP_TYPE_A"</td></tr>
