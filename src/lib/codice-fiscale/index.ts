@@ -25,6 +25,8 @@ export type CodiceFiscaleData = {
     birth: Date;
     /** the birth city identification code */
     belfiore: string;
+    isOmocodia: boolean;
+    isForeign: boolean;
 };
 
 /**
@@ -37,10 +39,12 @@ export function parseCodiceFiscale(cf: string): CodiceFiscaleData {
         throw new Error("Invalid Codice Fiscale");
     }
 
+    let isOmocodia = false;
     for (const i of [6, 7, 9, 10, 12, 13, 14]) {
         const d = cf.charAt(i);
 
         if (!/\d/.test(d)) {
+            isOmocodia = true;
             cf = cf.substring(0, i)
                 + "LMNPQRSTUV".indexOf(d)
                 + cf.substring(i + 1);
@@ -62,6 +66,7 @@ export function parseCodiceFiscale(cf: string): CodiceFiscaleData {
     const birth = new Date(Date.UTC(year, month, day, 0, 0, 0, 0));
 
     const belfiore = cf.substring(11, 15);
+    const isForeign = belfiore.startsWith("Z");
 
     return {
         firstName,
@@ -69,5 +74,7 @@ export function parseCodiceFiscale(cf: string): CodiceFiscaleData {
         gender,
         birth,
         belfiore,
+        isOmocodia,
+        isForeign,
     };
 }

@@ -1083,7 +1083,7 @@ export const countries: Country[] = [
   },
   {
     code: "187",
-    name: "SAO TOMÉ E PRINCIPE",
+    name: "SAO TOME' E PRINCIPE",
     iso2: "ST",
     iso3: "STP",
   },
@@ -1173,7 +1173,7 @@ export const countries: Country[] = [
   },
   {
     code: "124",
-    name: "SURIname",
+    name: "SURINAME",
     iso2: "SR",
     iso3: "SUR",
   },
@@ -1383,7 +1383,7 @@ export const countries: Country[] = [
   },
   {
     code: "281",
-    name: "COCOS  KEELING ISOLA",
+    name: "COCOS KEELING ISOLA",
     iso2: "CC",
     iso3: "CCK",
   },
