@@ -301,23 +301,23 @@ export enum TAS_ShuftiStatus {
 export enum TAS_Pep {
     No = "PEP_REL_N", // No
     Yes = "PEP_REL_D", // Persona politica esposta
-    Family = "PEP_REL_F", // Familiare di una persona politica esposta
+    Family = "PEP_REL_F", // Familiare di una persona politicamente esposta
     Business = "PEP_REL_A", // Legami in affari con una persona politicamente esposta
 }
 
 export enum TAS_PepType {
-    PresidenteRepubblica = "PEP_TYPE_A", // Presidente della Repubblica
-    PresidenteConsiglio = "PEP_TYPE_B", // Presidente del Consiglio
-    Ministro = "PEP_TYPE_C", // Ministro
-    ViceMinistro = "PEP_TYPE_D", // Vice Ministro
-    Sottosegretario = "PEP_TYPE_E", // Sottosegretario
-    PresidenteRegione = "PEP_TYPE_F", // Presidente di Regione
-    AssessoreRegionale = "PEP_TYPE_G", // Assessore Regionale
+    PresidenteRepubblica = "PEP_TYPE_A",
+    PresidenteConsiglio = "PEP_TYPE_B",
+    Ministro = "PEP_TYPE_C",
+    ViceMinistro = "PEP_TYPE_D",
+    Sottosegretario = "PEP_TYPE_E",
+    PresidenteRegione = "PEP_TYPE_F",
+    AssessoreRegionale = "PEP_TYPE_G",
     SindacoCapoluogo = "PEP_TYPE_H", // Sindaco di capoluogo di provincia o città metropolitana
     SindacoComune = "PEP_TYPE_I", // Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri
-    Deputato = "PEP_TYPE_J", // Deputato
-    Senatore = "PEP_TYPE_K", // Senatore
-    ParlamentareEuropeo = "PEP_TYPE_L", // Parlamentare Europeo
+    Deputato = "PEP_TYPE_J",
+    Senatore = "PEP_TYPE_K",
+    ParlamentareEuropeo = "PEP_TYPE_L",
     ConsigliereRegionale = "PEP_TYPE_M", // Consigliere regionale nonché cariche analoghe in Stati esteri
     MembroPartitiPolitici = "PEP_TYPE_N", // Membro degli organi direttivi centrali di partiti politici
     GiudiceCorteCostituzionale = "PEP_TYPE_O", // Giudice della Corte Costituzionale
@@ -328,5 +328,5 @@ export enum TAS_PepType {
     ComponenteImpreseStato = "PEP_TYPE_U", // Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti
     DirettoreASL = "PEP_TYPE_V", // Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale
     MembroOrganizzazioniInternazionali = "PEP_TYPE_W", // Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali
-    ConsigliereStato = "PEP_TYPE_P", // Consigliere di Stato
+    ConsigliereStato = "PEP_TYPE_P",
 }
