@@ -40,6 +40,33 @@
 - [TAS Additional Document Type](#tas-additional-document-type)
 - [TAS Document Issuer](#tas-document-issuer)
 - [TAS Shufti Status](#tas-shufti-status)
+- [Tas Pep Rel](#tas-pep-rel), No
+Persona politica esposta
+Familiare di una persona politica esposta
+Legami in affari con una persona politicamente esposta
+- [Tas Pep Type](#tas-pep-type), Presidente della Repubblica
+Presidente del Consiglio
+Ministro
+Vice Ministro
+Sottosegretario
+Presidente di Regione
+Assessore Regionale
+Sindaco di capoluogo di provincia o città metropolitana
+Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri
+Deputato
+Senatore
+Parlamentare Europeo
+Consigliere regionale nonché cariche analoghe in Stati esteri
+Membro degli organi direttivi centrali di partiti politici
+Giudice della Corte Costituzionale
+Magistrato della Corte di Cassazione o della Corte dei Conti
+Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri
+Membro degli organi direttivi delle banche centrali e delle autorità indipendenti
+Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri
+Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti
+Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale
+Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali
+Consigliere di Stato
 ## Document Type
 
 <table>
@@ -457,6 +484,74 @@ backoffice permissions
 <tr><td>Request Error</td><td>3</td></tr>
 <tr><td>Cancelled</td><td>4</td></tr>
 <tr><td>Declined</td><td>5</td></tr>
+
+</table>
+
+## Tas Pep Rel
+
+No
+Persona politica esposta
+Familiare di una persona politica esposta
+Legami in affari con una persona politicamente esposta
+
+<table>
+<tr><td>No</td><td>"PEP_REL_N"</td></tr>
+<tr><td>Pep</td><td>"PEP_REL_D"</td></tr>
+<tr><td>Family</td><td>"PEP_REL_F"</td></tr>
+<tr><td>Business</td><td>"PEP_REL_A"</td></tr>
+
+</table>
+
+## Tas Pep Type
+
+Presidente della Repubblica
+Presidente del Consiglio
+Ministro
+Vice Ministro
+Sottosegretario
+Presidente di Regione
+Assessore Regionale
+Sindaco di capoluogo di provincia o città metropolitana
+Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri
+Deputato
+Senatore
+Parlamentare Europeo
+Consigliere regionale nonché cariche analoghe in Stati esteri
+Membro degli organi direttivi centrali di partiti politici
+Giudice della Corte Costituzionale
+Magistrato della Corte di Cassazione o della Corte dei Conti
+Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri
+Membro degli organi direttivi delle banche centrali e delle autorità indipendenti
+Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri
+Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti
+Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale
+Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali
+Consigliere di Stato
+
+<table>
+<tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>
+<tr><td>Presidente Consiglio</td><td>"PEP_TYPE_B"</td></tr>
+<tr><td>Ministro</td><td>"PEP_TYPE_C"</td></tr>
+<tr><td>Vice Ministro</td><td>"PEP_TYPE_D"</td></tr>
+<tr><td>Sottosegretario</td><td>"PEP_TYPE_E"</td></tr>
+<tr><td>Presidente Regione</td><td>"PEP_TYPE_F"</td></tr>
+<tr><td>Assessore Regionale</td><td>"PEP_TYPE_G"</td></tr>
+<tr><td>Sindaco Capoluogo</td><td>"PEP_TYPE_H"</td></tr>
+<tr><td>Sindaco Comune</td><td>"PEP_TYPE_I"</td></tr>
+<tr><td>Deputato</td><td>"PEP_TYPE_J"</td></tr>
+<tr><td>Senatore</td><td>"PEP_TYPE_K"</td></tr>
+<tr><td>Parlamentare Europeo</td><td>"PEP_TYPE_L"</td></tr>
+<tr><td>Consigliere Regionale</td><td>"PEP_TYPE_M"</td></tr>
+<tr><td>Membro Partiti Politici</td><td>"PEP_TYPE_N"</td></tr>
+<tr><td>Giudice Corte Costituzionale</td><td>"PEP_TYPE_O"</td></tr>
+<tr><td>Magistrato Corte</td><td>"PEP_TYPE_Q"</td></tr>
+<tr><td>Consiglio Giustizia Amministrativa</td><td>"PEP_TYPE_R"</td></tr>
+<tr><td>Membro Banche Centrali</td><td>"PEP_TYPE_S"</td></tr>
+<tr><td>Ambasciatore</td><td>"PEP_TYPE_T"</td></tr>
+<tr><td>Componente Imprese Stato</td><td>"PEP_TYPE_U"</td></tr>
+<tr><td>Direttore ASL</td><td>"PEP_TYPE_V"</td></tr>
+<tr><td>Membro Organizzazioni Internazionali</td><td>"PEP_TYPE_W"</td></tr>
+<tr><td>Consigliere Stato</td><td>"PEP_TYPE_P"</td></tr>
 
 </table>
 
