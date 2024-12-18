@@ -300,7 +300,7 @@ export enum TAS_ShuftiStatus {
 
 export enum TAS_Pep {
     No = "PEP_REL_N", // No
-    Yes = "PEP_REL_D", // Persona politica esposta
+    Yes = "PEP_REL_D", // Persona politicamente esposta
     Family = "PEP_REL_F", // Familiare di una persona politicamente esposta
     Business = "PEP_REL_A", // Legami in affari con una persona politicamente esposta
 }

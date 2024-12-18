@@ -466,7 +466,7 @@ backoffice permissions
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
-<tr><td>Yes (Persona politica esposta)</td><td>"PEP_REL_D"</td></tr>
+<tr><td>Yes (Persona politicamente esposta)</td><td>"PEP_REL_D"</td></tr>
 <tr><td>Family (Familiare di una persona politicamente esposta)</td><td>"PEP_REL_F"</td></tr>
 <tr><td>Business (Legami in affari con una persona politicamente esposta)</td><td>"PEP_REL_A"</td></tr>
 
