@@ -29,7 +29,6 @@
 - [Survey Level](#survey-level-surveylevel), user classification survey score
 - [Legal Form](#legal-form-legalform)
 - [Top Investor Type](#top-investor-type-topinvestortype), a.k.a. *StatusInvestmentTop*
-- [Document Issuer](#document-issuer-documentissuer)
 - [Permission](#permission-permission), backoffice permissions
 - [TAS Onboarding Status](#tas-onboarding-status-tas_onboardingstatus)
 - [TAS AML Question Type](#tas-aml-question-type-tas_amlquestiontype)
@@ -356,18 +355,7 @@ a.k.a. *StatusInvestmentTop*
 
 </table>
 
-## Document Issuer <sub><sup>[DocumentIssuer](./src/enum/index.ts#L228)</sup></sub>
-
-<table>
-<tr><td>DMV (Motorizzazione)</td><td>"DMV"</td></tr>
-<tr><td>Municipality (Comune)</td><td>"MUNICIPALITY"</td></tr>
-<tr><td>Consulate (Consolato)</td><td>"CONSULATE"</td></tr>
-<tr><td>Ministry (Ministero)</td><td>"MINISTRY"</td></tr>
-<tr><td>Preccint (Questura)</td><td>"PRECCINT"</td></tr>
-
-</table>
-
-## Permission <sub><sup>[Permission](./src/enum/index.ts#L236)</sup></sub>
+## Permission <sub><sup>[Permission](./src/enum/index.ts#L228)</sup></sub>
 
 backoffice permissions
 
@@ -384,7 +372,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L249)</sup></sub>
+## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L241)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -393,7 +381,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L255)</sup></sub>
+## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L247)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B"</td></tr>
@@ -401,7 +389,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L260)</sup></sub>
+## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L252)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B-ANSWER"</td></tr>
@@ -409,7 +397,7 @@ backoffice permissions
 
 </table>
 
-## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L265)</sup></sub>
+## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L257)</sup></sub>
 
 <table>
 <tr><td>Private</td><td>"RETAIL"</td></tr>
@@ -417,7 +405,7 @@ backoffice permissions
 
 </table>
 
-## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L270)</sup></sub>
+## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L262)</sup></sub>
 
 <table>
 <tr><td>Male</td><td>"M"</td></tr>
@@ -425,7 +413,7 @@ backoffice permissions
 
 </table>
 
-## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L275)</sup></sub>
+## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L267)</sup></sub>
 
 <table>
 <tr><td>Residence</td><td>"RESIDENCE"</td></tr>
@@ -435,7 +423,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L282)</sup></sub>
+## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L274)</sup></sub>
 
 <table>
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
@@ -444,7 +432,7 @@ backoffice permissions
 
 </table>
 
-## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L288)</sup></sub>
+## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L280)</sup></sub>
 
 *PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to "PS" when calling the TAS API
 
@@ -455,17 +443,18 @@ backoffice permissions
 
 </table>
 
-## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L295)</sup></sub>
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L287)</sup></sub>
 
 <table>
-<tr><td>Municipality</td><td>"MUNICIPALITY"</td></tr>
-<tr><td>Motorisation</td><td>"MCTC"</td></tr>
-<tr><td>Embassy</td><td>"ITALIAN_REPRESENTATION_ABROAD"</td></tr>
-<tr><td>Ministry</td><td>"MINISTRY"</td></tr>
+<tr><td>DMV (Motorizzazione)</td><td>"MCTC"</td></tr>
+<tr><td>Municipality (Comune)</td><td>"MUNICIPALITY"</td></tr>
+<tr><td>Consulate (Consolato)</td><td>"ITALIAN_REPRESENTATION_ABROAD"</td></tr>
+<tr><td>Ministry (Ministero)</td><td>"MINISTRY"</td></tr>
+<tr><td>Preccint (Questura)</td><td>"POLICE_HEADQUARTER"</td></tr>
 
 </table>
 
-## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L302)</sup></sub>
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L295)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -477,7 +466,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L311)</sup></sub>
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L304)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -487,7 +476,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L318)</sup></sub>
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L311)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>

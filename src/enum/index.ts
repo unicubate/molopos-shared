@@ -225,14 +225,6 @@ export enum TopInvestorType {
     SuperTop = "SUPER_TOP"
 }
 
-export enum DocumentIssuer {
-    DMV = "DMV", // Motorizzazione
-    Municipality = "MUNICIPALITY", // Comune
-    Consulate = "CONSULATE", // Consolato
-    Ministry = "MINISTRY", // Ministero
-    Preccint = "PRECCINT", // Questura
-};
-
 export enum Permission {
     // backoffice permissions
     AssignRole = "assign:role",
@@ -293,11 +285,12 @@ export enum TAS_AdditionalDocumentType {
 }
 
 export enum TAS_DocumentIssuer {
-    Municipality = "MUNICIPALITY",
-    Motorisation = "MCTC",
-    Embassy = "ITALIAN_REPRESENTATION_ABROAD",
-    Ministry = "MINISTRY",
-}
+    DMV = "MCTC", // Motorizzazione
+    Municipality = "MUNICIPALITY", // Comune
+    Consulate = "ITALIAN_REPRESENTATION_ABROAD", // Consolato
+    Ministry = "MINISTRY", // Ministero
+    Preccint = "POLICE_HEADQUARTER", // Questura
+};
 
 export enum TAS_ShuftiStatus {
     Pending = 0,
