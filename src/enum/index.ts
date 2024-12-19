@@ -225,6 +225,14 @@ export enum TopInvestorType {
     SuperTop = "SUPER_TOP"
 }
 
+export enum DocumentIssuer {
+    DMV = "DMV", // Motorizzazione
+    Municipality = "MUNICIPALITY", // Comune
+    Consulate = "CONSULATE", // Consolato
+    Ministry = "MINISTRY", // Ministero
+    Preccint = "PRECCINT", // Questura
+};
+
 export enum Permission {
     // backoffice permissions
     AssignRole = "assign:role",
