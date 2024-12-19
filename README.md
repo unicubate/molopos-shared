@@ -21,14 +21,14 @@
 - [Classification Status](#classification-status-classificationstatus)
 - [Category Project](#category-project-categoryproject)
 - [Project Status](#project-status-projectstatus)
-- [User Registration Status](#user-registration-status-userregistrationstatus), a.k.a. StatusRegisterType
+- [User Registration Status](#user-registration-status-userregistrationstatus), a.k.a. *StatusRegisterType*
 - [Account Type](#account-type-accounttype)
 - [Transaction Type](#transaction-type-transactiontype)
 - [Voucher Category](#voucher-category-vouchercategory)
 - [Voucher Activity Type](#voucher-activity-type-voucheractivitytype)
 - [Survey Level](#survey-level-surveylevel), user classification survey score
 - [Legal Form](#legal-form-legalform)
-- [Top Investor Type](#top-investor-type-topinvestortype), a.k.a. StatusInvestmentTop
+- [Top Investor Type](#top-investor-type-topinvestortype), a.k.a. *StatusInvestmentTop*
 - [Document Issuer](#document-issuer-documentissuer)
 - [Permission](#permission-permission), backoffice permissions
 - [TAS Onboarding Status](#tas-onboarding-status-tas_onboardingstatus)
@@ -38,7 +38,7 @@
 - [TAS Gender](#tas-gender-tas_gender)
 - [TAS Address Type](#tas-address-type-tas_addresstype)
 - [TAS Document Type](#tas-document-type-tas_documenttype)
-- [TAS Additional Document Type](#tas-additional-document-type-tas_additionaldocumenttype)
+- [TAS Additional Document Type](#tas-additional-document-type-tas_additionaldocumenttype), *PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to "PS" when calling the TAS API
 - [TAS Document Issuer](#tas-document-issuer-tas_documentissuer)
 - [TAS Shufti Status](#tas-shufti-status-tas_shuftistatus)
 - [TAS Pep](#tas-pep-tas_pep)
@@ -275,7 +275,7 @@ lemonway only
 
 ## User Registration Status <sub><sup>[UserRegistrationStatus](./src/enum/index.ts#L172)</sup></sub>
 
-a.k.a. StatusRegisterType
+a.k.a. *StatusRegisterType*
 
 <table>
 <tr><td>Registered</td><td>"REGISTERED"</td></tr>
@@ -348,7 +348,7 @@ user classification survey score
 
 ## Top Investor Type <sub><sup>[TopInvestorType](./src/enum/index.ts#L222)</sup></sub>
 
-a.k.a. StatusInvestmentTop
+a.k.a. *StatusInvestmentTop*
 
 <table>
 <tr><td>Top</td><td>"TOP"</td></tr>
@@ -446,13 +446,16 @@ backoffice permissions
 
 ## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L288)</sup></sub>
 
+*PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to "PS" when calling the TAS API
+
 <table>
-<tr><td>Residency Permit</td><td>"PS"</td></tr>
+<tr><td>Permanent Residency Permit</td><td>"PSP"</td></tr>
+<tr><td>Temporary Residency Permit</td><td>"PST"</td></tr>
 <tr><td>W9</td><td>"W9"</td></tr>
 
 </table>
 
-## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L293)</sup></sub>
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L295)</sup></sub>
 
 <table>
 <tr><td>Municipality</td><td>"MUNICIPALITY"</td></tr>
@@ -462,7 +465,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L300)</sup></sub>
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L302)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -474,7 +477,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L309)</sup></sub>
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L311)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -484,7 +487,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L316)</sup></sub>
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L318)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>

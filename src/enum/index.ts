@@ -170,7 +170,7 @@ export enum ProjectStatus {
 };
 
 export enum UserRegistrationStatus {
-    // a.k.a. StatusRegisterType
+    // a.k.a. *StatusRegisterType*
     Registered = "REGISTERED",
     EmailConfirmed = "REGISTERED_CONFIRMED",
     KYCCompleted = "REGISTERED_PROFILE",
@@ -220,7 +220,7 @@ export enum LegalForm {
 }
 
 export enum TopInvestorType {
-    // a.k.a. StatusInvestmentTop
+    // a.k.a. *StatusInvestmentTop*
     Top = "TOP",
     SuperTop = "SUPER_TOP"
 }
@@ -286,7 +286,9 @@ export enum TAS_DocumentType {
 }
 
 export enum TAS_AdditionalDocumentType {
-    ResidencyPermit = "PS",
+    // *PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to "PS" when calling the TAS API
+    PermanentResidencyPermit = "PSP",
+    TemporaryResidencyPermit = "PST",
     W9 = "W9",
 }
 
