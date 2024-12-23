@@ -333,3 +333,15 @@ export enum TAS_PepType {
     MembroOrganizzazioniInternazionali = "PEP_TYPE_W", // Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali
     ConsigliereStato = "PEP_TYPE_P",
 }
+
+export enum TAS_ShuftiErrorTarget {
+    Shufti = 0,
+    FirstName = 1,
+    LastName = 2,
+    BirthDate = 3,
+    Document = 4,
+    DocumentReleaseDate = 5,
+    DocumentExpiryDate = 6,
+    DocumentNumber = 7,
+    Exit = 8,
+}

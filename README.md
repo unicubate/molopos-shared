@@ -42,6 +42,7 @@
 - [TAS Shufti Status](#tas-shufti-status-tas_shuftistatus)
 - [TAS Pep](#tas-pep-tas_pep)
 - [TAS Pep Type](#tas-pep-type-tas_peptype)
+- [TAS Shufti Error Target](#tas-shufti-error-target-tas_shuftierrortarget)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -502,6 +503,21 @@ backoffice permissions
 <tr><td>Direttore ASL (Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale)</td><td>"PEP_TYPE_V"</td></tr>
 <tr><td>Membro Organizzazioni Internazionali (Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali)</td><td>"PEP_TYPE_W"</td></tr>
 <tr><td>Consigliere Stato</td><td>"PEP_TYPE_P"</td></tr>
+
+</table>
+
+## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L337)</sup></sub>
+
+<table>
+<tr><td>Shufti</td><td>0</td></tr>
+<tr><td>First Name</td><td>1</td></tr>
+<tr><td>Last Name</td><td>2</td></tr>
+<tr><td>Birth Date</td><td>3</td></tr>
+<tr><td>Document</td><td>4</td></tr>
+<tr><td>Document Release Date</td><td>5</td></tr>
+<tr><td>Document Expiry Date</td><td>6</td></tr>
+<tr><td>Document Number</td><td>7</td></tr>
+<tr><td>Exit</td><td>8</td></tr>
 
 </table>
 
