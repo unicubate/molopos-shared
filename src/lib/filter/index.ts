@@ -111,7 +111,7 @@ export class Filter<A extends Action = Action> {
             case Action.Number:
                 raw.forEach((p, i) => {
                     if (
-                        !/^(\d_?)+|(\d_?)*\.(\d_?)+$/.test(p)
+                        !/^-?(\d_?)+$|^-?(\d_?)*\.(\d_?)+$/.test(p)
                     ) {
                         throw new Error('Invalid number payload: ' + p);
                     }
