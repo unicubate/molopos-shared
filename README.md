@@ -44,6 +44,7 @@
 - [TAS Pep](#tas-pep-tas_pep)
 - [TAS Pep Type](#tas-pep-type-tas_peptype)
 - [TAS Shufti Error Target](#tas-shufti-error-target-tas_shuftierrortarget)
+- [TAS Legal Form](#tas-legal-form-tas_legalform)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -451,10 +452,12 @@ backoffice permissions
 <tr><td>Permanent Residency Permit</td><td>"PSP"</td></tr>
 <tr><td>Temporary Residency Permit</td><td>"PST"</td></tr>
 <tr><td>W9</td><td>"W9"</td></tr>
+<tr><td>Company Delegation</td><td>"COMPANY_DELEGATION"</td></tr>
+<tr><td>Company Report</td><td>"COMPANY_REPORT"</td></tr>
 
 </table>
 
-## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L293)</sup></sub>
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L295)</sup></sub>
 
 <table>
 <tr><td>DMV (Motorizzazione)</td><td>"MCTC"</td></tr>
@@ -465,7 +468,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L301)</sup></sub>
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L303)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -477,7 +480,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L310)</sup></sub>
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L312)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -487,7 +490,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L317)</sup></sub>
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L319)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>
@@ -516,7 +519,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L343)</sup></sub>
+## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L345)</sup></sub>
 
 <table>
 <tr><td>Shufti</td><td>0</td></tr>
@@ -528,6 +531,85 @@ backoffice permissions
 <tr><td>Document Expiry Date</td><td>6</td></tr>
 <tr><td>Document Number</td><td>7</td></tr>
 <tr><td>Exit</td><td>8</td></tr>
+
+</table>
+
+## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L357)</sup></sub>
+
+<table>
+<tr><td>Societa Accomandita Azioni</td><td>"AA"</td></tr>
+<tr><td>Associazione</td><td>"AC"</td></tr>
+<tr><td>Societa Consortile Accomandita Semplice</td><td>"AE"</td></tr>
+<tr><td>Altre Forme</td><td>"AF"</td></tr>
+<tr><td>Associazione Impresa</td><td>"AI"</td></tr>
+<tr><td>Azienda Speciale Ente Locale</td><td>"AL"</td></tr>
+<tr><td>Azienda Municipale</td><td>"AM"</td></tr>
+<tr><td>Societa Consortile Nome Collettivo</td><td>"AN"</td></tr>
+<tr><td>Azienda Provinciale</td><td>"AP"</td></tr>
+<tr><td>Azienda Regionale</td><td>"AR"</td></tr>
+<tr><td>Societa Accomandita Semplice</td><td>"AS"</td></tr>
+<tr><td>Azienda Autonoma Statale</td><td>"AT"</td></tr>
+<tr><td>Societa Azioni Socio Unico</td><td>"AU"</td></tr>
+<tr><td>Azienda Speciale</td><td>"AZ"</td></tr>
+<tr><td>Consorzio Attivita Esterna</td><td>"CC"</td></tr>
+<tr><td>Comunione Ereditaria</td><td>"CE"</td></tr>
+<tr><td>Consorzio Fidi</td><td>"CF"</td></tr>
+<tr><td>Societa Cooperativa Responsabilita Illimitata</td><td>"CI"</td></tr>
+<tr><td>Societa Cooperativa Responsabilita Limitata</td><td>"CL"</td></tr>
+<tr><td>Consorzio Munincipale</td><td>"CM"</td></tr>
+<tr><td>Societa Consortile</td><td>"CN"</td></tr>
+<tr><td>Consorzio</td><td>"CO"</td></tr>
+<tr><td>Consorzio Intercomunale</td><td>"CR"</td></tr>
+<tr><td>Consorzio Senza Attivita Esterna</td><td>"CS"</td></tr>
+<tr><td>Consorzio DLGS2672000</td><td>"CZ"</td></tr>
+<tr><td>Impresa Individuale</td><td>"DI"</td></tr>
+<tr><td>Ente Pubblico Commerciale</td><td>"EC"</td></tr>
+<tr><td>Ente Diritto Pubblico</td><td>"ED"</td></tr>
+<tr><td>Ente Ecclesiastico</td><td>"EE"</td></tr>
+<tr><td>Ente Impresa</td><td>"EI"</td></tr>
+<tr><td>Ente Sociale</td><td>"EL"</td></tr>
+<tr><td>Ente Morale</td><td>"EM"</td></tr>
+<tr><td>Ente</td><td>"EN"</td></tr>
+<tr><td>Ente Pubblico Economico</td><td>"EP"</td></tr>
+<tr><td>Ente Ecclesiastico Civilmente Riconosciuto</td><td>"ER"</td></tr>
+<tr><td>Ente LR93N88</td><td>"ES"</td></tr>
+<tr><td>Fondazione Impresa</td><td>"FI"</td></tr>
+<tr><td>Fondazione</td><td>"FO"</td></tr>
+<tr><td>Gruppo Europeo Interesse Economico</td><td>"GE"</td></tr>
+<tr><td>Istituto Credito</td><td>"IC"</td></tr>
+<tr><td>Istituto Credito Diritto Pubblico</td><td>"ID"</td></tr>
+<tr><td>Impresa Famigliare</td><td>"IF"</td></tr>
+<tr><td>Istituto Religioso</td><td>"IR"</td></tr>
+<tr><td>Azienda Speciale DLGS2672000</td><td>"LL"</td></tr>
+<tr><td>Mutua Assicurazione</td><td>"MA"</td></tr>
+<tr><td>Societa Cooperativa Consortile</td><td>"OC"</td></tr>
+<tr><td>Cooperativa Sociale</td><td>"OO"</td></tr>
+<tr><td>Societa Consortile Coop Resp Limitata</td><td>"OS"</td></tr>
+<tr><td>Associazione Partecipazione</td><td>"PA"</td></tr>
+<tr><td>Piccola Societa Cooperativia</td><td>"PC"</td></tr>
+<tr><td>Persona Fisica</td><td>"PF"</td></tr>
+<tr><td>Piccola Societa Coop Resp Limitata</td><td>"PS"</td></tr>
+<tr><td>Societa Resp Limitata Capitale Ridotto</td><td>"RR"</td></tr>
+<tr><td>Societa Resp Limitat Semplificata</td><td>"RS"</td></tr>
+<tr><td>Societa Anonima</td><td>"SA"</td></tr>
+<tr><td>Societa Cooperativa</td><td>"SC"</td></tr>
+<tr><td>Societa Europea</td><td>"SD"</td></tr>
+<tr><td>Societa Semplice</td><td>"SE"</td></tr>
+<tr><td>Societa Di Fatto</td><td>"SF"</td></tr>
+<tr><td>Societa Coop Europea</td><td>"SG"</td></tr>
+<tr><td>Societa Irregolare</td><td>"SI"</td></tr>
+<tr><td>Societa Consortile Resp Limitata</td><td>"SL"</td></tr>
+<tr><td>Societa Mutuo Soccorso</td><td>"SM"</td></tr>
+<tr><td>Societa Nome Collettivo</td><td>"SN"</td></tr>
+<tr><td>Societa Consortile Azioni</td><td>"SO"</td></tr>
+<tr><td>Societa Azioni</td><td>"SP"</td></tr>
+<tr><td>Societa Resp Limitata</td><td>"SR"</td></tr>
+<tr><td>Societa Leggi Altro Stato</td><td>"SS"</td></tr>
+<tr><td>Soggetto Estero</td><td>"ST"</td></tr>
+<tr><td>Societa Resp Limitata Unico Socio</td><td>"SU"</td></tr>
+<tr><td>Societa Professionisti</td><td>"SV"</td></tr>
+<tr><td>Societa No Legislazione Ita</td><td>"SZ"</td></tr>
+<tr><td>Non Precisata</td><td>"XX"</td></tr>
 
 </table>
 

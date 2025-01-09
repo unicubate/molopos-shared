@@ -288,6 +288,8 @@ export enum TAS_AdditionalDocumentType {
     PermanentResidencyPermit = "PSP",
     TemporaryResidencyPermit = "PST",
     W9 = "W9",
+    CompanyDelegation = "COMPANY_DELEGATION",
+    CompanyReport = "COMPANY_REPORT",
 }
 
 export enum TAS_DocumentIssuer {
