@@ -281,6 +281,7 @@ export enum TAS_DocumentType {
     IdentityCard = "IDENTITY_CARD",
     Passport = "PASSPORT",
     DrivingLicense = "DRIVING_LICENSE",
+    ResidencyPermit = "PS",
 }
 
 export enum TAS_AdditionalDocumentType {
