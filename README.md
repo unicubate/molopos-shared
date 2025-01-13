@@ -453,7 +453,7 @@ backoffice permissions
 <tr><td>Permanent Residency Permit</td><td>"PSP"</td></tr>
 <tr><td>Temporary Residency Permit</td><td>"PST"</td></tr>
 <tr><td>W9</td><td>"W9"</td></tr>
-<tr><td>Company Delegation</td><td>"COMPANY_DELEGATION"</td></tr>
+<tr><td>Company Delegation</td><td>"POWER_OF_BOFD"</td></tr>
 <tr><td>Company Report</td><td>"COMPANY_REPORT"</td></tr>
 
 </table>
