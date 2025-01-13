@@ -225,6 +225,12 @@ export enum TopInvestorType {
     SuperTop = "SUPER_TOP"
 }
 
+export enum IntegrationType {
+    Lemonway = "LEMONWAY",
+    Activecampaign = "ACTIVECAMPAIGN",
+    Tas = "TAS",
+}
+
 export enum Permission {
     // backoffice permissions
     AssignRole = "assign:role",
