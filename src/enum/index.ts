@@ -436,3 +436,24 @@ export enum TAS_LegalForm {
     SocietaNoLegislazioneIta = "SZ",
     NonPrecisata = "XX",
 }
+
+export enum Tas_TransactionType {
+    SEPA = "TrxSEPA",
+    INST = "TrxINST",
+}
+
+export enum Tas_TransactionStatus {
+    Pending = 0,
+    Confirmed = 1,
+    Rejected = 2
+}
+export enum Tas_TransactionDirection {
+    IN = "IN",
+    OUT = "OUT",
+}
+
+export enum Tas_ScaType {
+    CHALLENGE = "CHALLENGE",
+    ALLOW = "ALLOW",
+    DENY = "DENY",
+}
