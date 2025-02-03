@@ -370,8 +370,10 @@ export enum TAS_PepType {
     AssessoreRegionale = "PEP_TYPE_G",
     /** Sindaco di capoluogo di provincia o città metropolitana */
     SindacoCapoluogo = "PEP_TYPE_H",
-    /** Sindaco di comune con popolazione non inferiore a 15.000 */
-    /** abitanti nonché cariche analoghe in Stati esteri */
+    /**
+     * Sindaco di comune con popolazione non inferiore a 15.000
+     * abitanti nonché cariche analoghe in Stati esteri
+     */
     SindacoComune = "PEP_TYPE_I",
     Deputato = "PEP_TYPE_J",
     Senatore = "PEP_TYPE_K",

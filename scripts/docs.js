@@ -92,7 +92,7 @@ function parseEnums(path) {
             if (isEnumDeclaration) {
                 const line = ts.getLineAndCharacterOfPosition(
                     file,
-                    node.getFullStart()
+                    node.getStart(file)
                 ).line + 1;
 
                 result.push({
