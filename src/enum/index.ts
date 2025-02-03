@@ -73,8 +73,8 @@ export enum TransactionStatus {
 }
 
 export enum TransactionDirection {
-    IN = "IN",
-    OUT = "OUT",
+    In = "IN",
+    Out = "OUT",
 }
 
 export enum IbanStatus {
