@@ -1,24 +1,24 @@
 export enum DocumentType {
     Pending = "-1",
-    // identity document
+    /** identity document */
     IdentityCard = "0",
     ProofOfAddress = "1",
     IbanCert = "2",
-    // identity document
+    /** identity document */
     PassportEU = "3",
-    // identity document
+    /** identity document */
     PassportExtraEU = "4",
     Residence = "5",
     CompanyCert = "7",
-    // identity document
+    /** identity document */
     DrivingLicense = "11",
-    // identity document
+    /** identity document */
     Shareholder1ID = "14",
-    // identity document
+    /** identity document */
     Shareholder2ID = "15",
-    // identity document
+    /** identity document */
     Shareholder3ID = "16",
-    // identity document
+    /** identity document */
     Shareholder4ID = "17",
     ResidencyPermit = "5",
     Status = "12",
@@ -39,7 +39,7 @@ export enum DocumentStatus {
     RejectedDuplicated = "8",
 }
 
-// status of an identity document sent to onfido
+/** status of an identity document sent to onfido */
 export enum OnfidoDocumentStatus {
     Initialized = 0,
     Processing = 1,
@@ -48,7 +48,7 @@ export enum OnfidoDocumentStatus {
 }
 
 export enum WalletStatus {
-    // recrowd wallet
+    /** recrowd wallet */
     WalletSC = "-1",
     MissingDocuments = "2",
     DocumentsRejected = "3",
@@ -97,7 +97,7 @@ export enum MoneyInType {
     SofortReceived = "48",
 }
 
-// lemonway only
+/** lemonway only */
 export enum GenderType {
     Male = "M",
     Female = "F",
@@ -130,15 +130,15 @@ export enum EventStatus {
 }
 
 export enum ProspectStatus {
-    // default status
+    /** default status */
     Created = -1,
-    // modified by user
+    /** modified by user */
     Modified = 0,
-    // awaiting 5-day refund period
+    /** awaiting 5-day refund period */
     RefundPeriod = 1,
-    // paying rates
+    /** paying rates */
     Active = 2,
-    // all rates paid
+    /** all rates paid */
     Done = 3,
 }
 
@@ -185,13 +185,13 @@ export enum ProjectStatus {
     Financed = "READY",
     Closed = "CLOSED",
     Test = "TEST",
-    // in gestione
+    /** in gestione */
     Overdue = "OVERDUE",
-    // in proproga
+    /** in proproga */
     Postponed = "POSTPONED",
 }
 
-// a.k.a. *StatusRegisterType*
+/** a.k.a. *StatusRegisterType* */
 export enum UserRegistrationStatus {
     Registered = "REGISTERED",
     EmailConfirmed = "REGISTERED_CONFIRMED",
@@ -229,13 +229,13 @@ export enum VoucherActivityType {
     Promotion = "PROMOTION",
 }
 
-// user classification survey score
+/** user classification survey score */
 export enum SurveyLevel {
-    // score < 50
+    /** score < 50 */
     Low = "LOW",
-    // 50 <= score < 90
+    /** 50 <= score < 90 */
     Mid = "MIDDLE",
-    // score >= 90
+    /** score >= 90 */
     High = "HIGH",
 }
 
@@ -244,7 +244,7 @@ export enum LegalForm {
     Srl = "SRL",
 }
 
-// a.k.a. *StatusInvestmentTop*
+/** a.k.a. *StatusInvestmentTop* */
 export enum TopInvestorType {
     Top = "TOP",
     SuperTop = "SUPER_TOP",
@@ -256,7 +256,7 @@ export enum IntegrationType {
     Tas = "TAS",
 }
 
-// backoffice permissions
+/** backoffice permissions */
 export enum Permission {
     AssignRole = "assign:role",
     CreateRole = "create:role",
@@ -315,8 +315,10 @@ export enum TAS_DocumentType {
     ResidencyPermit = "PS",
 }
 
-// *PermanentResidencyPermit* and *TemporaryResidencyPermit*
-// are both converted to "PS" when calling the TAS API
+/**
+ * *PermanentResidencyPermit* and *TemporaryResidencyPermit*
+ * are both converted to "PS" when calling the TAS API
+ */
 export enum TAS_AdditionalDocumentType {
     PermanentResidencyPermit = "PSP",
     TemporaryResidencyPermit = "PST",
@@ -326,15 +328,15 @@ export enum TAS_AdditionalDocumentType {
 }
 
 export enum TAS_DocumentIssuer {
-    // Motorizzazione
+    /** Motorizzazione */
     DMV = "MCTC",
-    // Comune
+    /** Comune */
     Municipality = "MUNICIPALITY",
-    // Consolato
+    /** Consolato */
     Consulate = "ITALIAN_REPRESENTATION_ABROAD",
-    // Ministero
+    /** Ministero */
     Ministry = "MINISTRY",
-    // Questura
+    /** Questura */
     Preccint = "POLICE_HEADQUARTER",
 }
 
@@ -348,13 +350,13 @@ export enum TAS_ShuftiStatus {
 }
 
 export enum TAS_Pep {
-    // No
+    /** No */
     No = "PEP_REL_N",
-    // Persona politicamente esposta
+    /** Persona politicamente esposta */
     Yes = "PEP_REL_D",
-    // Familiare di una persona politicamente esposta
+    /** Familiare di una persona politicamente esposta */
     Family = "PEP_REL_F",
-    // Legami in affari con una persona politicamente esposta
+    /** Legami in affari con una persona politicamente esposta */
     Business = "PEP_REL_A",
 }
 
@@ -366,46 +368,58 @@ export enum TAS_PepType {
     Sottosegretario = "PEP_TYPE_E",
     PresidenteRegione = "PEP_TYPE_F",
     AssessoreRegionale = "PEP_TYPE_G",
-    // Sindaco di capoluogo di provincia o città metropolitana
+    /** Sindaco di capoluogo di provincia o città metropolitana */
     SindacoCapoluogo = "PEP_TYPE_H",
-    // Sindaco di comune con popolazione non inferiore a 15.000
-    // abitanti nonché cariche analoghe in Stati esteri
+    /** Sindaco di comune con popolazione non inferiore a 15.000 */
+    /** abitanti nonché cariche analoghe in Stati esteri */
     SindacoComune = "PEP_TYPE_I",
     Deputato = "PEP_TYPE_J",
     Senatore = "PEP_TYPE_K",
     ParlamentareEuropeo = "PEP_TYPE_L",
-    // Consigliere regionale nonché cariche analoghe in Stati esteri
+    /** Consigliere regionale nonché cariche analoghe in Stati esteri */
     ConsigliereRegionale = "PEP_TYPE_M",
-    // Membro degli organi direttivi centrali di partiti politici
+    /** Membro degli organi direttivi centrali di partiti politici */
     MembroPartitiPolitici = "PEP_TYPE_N",
-    // Giudice della Corte Costituzionale
+    /** Giudice della Corte Costituzionale */
     GiudiceCorteCostituzionale = "PEP_TYPE_O",
-    // Magistrato della Corte di Cassazione o della Corte dei Conti
+    /** Magistrato della Corte di Cassazione o della Corte dei Conti */
     MagistratoCorte = "PEP_TYPE_Q",
-    // Altri componenti del Consiglio di Giustizia Amministrativa per
-    // la Regione siciliana nonché cariche analoghe in Stati esteri
+    /**
+     * Altri componenti del Consiglio di Giustizia Amministrativa per
+     * la Regione siciliana nonché cariche analoghe in Stati esteri
+     */
     ConsiglioGiustiziaAmministrativa = "PEP_TYPE_R",
-    // Membro degli organi direttivi delle banche centrali e delle
-    // autorità indipendenti
+    /**
+     * Membro degli organi direttivi delle banche centrali e delle
+     * autorità indipendenti
+     */
     MembroBancheCentrali = "PEP_TYPE_S",
-    // Ambasciatore, incaricato d’affari ovvero cariche equivalenti
-    // in Stati esteri, ufficiale di grado apicale delle forze armate
-    // ovvero cariche analoghe in Stati esteri
+    /**
+     * Ambasciatore, incaricato d’affari ovvero cariche equivalenti
+     * in Stati esteri, ufficiale di grado apicale delle forze armate
+     * ovvero cariche analoghe in Stati esteri 
+     */
     Ambasciatore = "PEP_TYPE_T",
-    // Componente degli organi di amministrazione, direzione o controllo
-    // delle imprese controllate, anche indirettamente, dallo Stato
-    // italiano o da uno Stato estero ovvero partecipate, in misura
-    // prevalente o totalitaria, dalle Regioni, da comuni capoluoghi
-    // di provincia e città metropolitane e da comuni con popolazione
-    // complessivamente non inferiore a 15.000 abitanti
+    /**
+     * Componente degli organi di amministrazione, direzione o controllo
+     * delle imprese controllate, anche indirettamente, dallo Stato
+     * italiano o da uno Stato estero ovvero partecipate, in misura
+     * prevalente o totalitaria, dalle Regioni, da comuni capoluoghi
+     * di provincia e città metropolitane e da comuni con popolazione
+     * complessivamente non inferiore a 15.000 abitanti
+     */
     ComponenteImpreseStato = "PEP_TYPE_U",
-    // Direttore generale di ASL e di azienda ospedaliera, di azienda
-    // ospedaliera universitaria e degli altri enti del servizio
-    // sanitario nazionale
+    /**
+     * Direttore generale di ASL e di azienda ospedaliera, di azienda
+     * ospedaliera universitaria e degli altri enti del servizio
+     * sanitario nazionale 
+     */
     DirettoreASL = "PEP_TYPE_V",
-    // Direttore, vicedirettore e membro dell’organo di gestione o
-    // soggetto svolgenti funzioni equivalenti in organizzazioni
-    // internazionali
+    /**
+     * Direttore, vicedirettore e membro dell’organo di gestione o
+     * soggetto svolgenti funzioni equivalenti in organizzazioni
+     * internazionali
+     */
     MembroOrganizzazioniInternazionali = "PEP_TYPE_W",
     ConsigliereStato = "PEP_TYPE_P",
 }
