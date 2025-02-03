@@ -1,67 +1,33 @@
 const fs = require("fs");
+const ts = require("typescript");
 
-const raw = fs.readFileSync("./src/enum/index.ts", "utf8");
-const lines = raw.split("\n");
-const data = raw.split("export enum ");
+let INDEX_MD = "";
+let BODY_MD = "";
 
-let index = "";
-let body = "";
+for (const e of parseEnums("./src/enum/index.ts")) {
+    const esc = toSpace(e.name);
 
-for (const item of data) {
-    if (item) {
-        const [key, values] = item.split(" {");
+    INDEX_MD += "- [" + esc + "](#" + toUrl(esc + "-" + toUrl(e.name)) + ")";
 
-        let line = -1;
-        for (let i = 0; i < lines.length; i++) {
-            if (lines[i].includes("export enum " + key + " {")) {
-                line = i;
-                break;
-            }
-        }
+    BODY_MD += "## " + esc;
+    BODY_MD += " <sub><sup>[" + e.name + "](./src/enum/index.ts#L" + e.line + ")</sup></sub>\n\n";
 
-        const contents = values
-            .replace(/\};?/, "")
-            .split("\n")
-            .filter((item) => item.trim() !== "");
-
-        let itemDesc = "";
-        let itemTable = "";
-
-        for (let content of contents) {
-            content = content.trim();
-            if (content.startsWith("//")) {
-                const descLine = content.replace("//", "").trim();
-                itemDesc += descLine + "\n";
-                continue;
-            };
-            let [key, raw] = content.split(" = ");
-            key = key.trim();
-            raw = raw.replace(",", "");
-            let [value, desc] = raw.split("//");
-            value = value.trim();
-            desc = desc && desc.trim();
-            itemTable += "<tr><td>"
-                + toSpace(key) + (desc ? " (" + desc + ")" : "")
-                + "</td><td>"
-                + value
-                + "</td></tr>\n";
-        }
-
-        index += "- [" + toSpace(key) + "](#" + toUrl(toSpace(key) + "-" + toUrl(key)) + ")";
-
-        line++;
-        body += "## " + toSpace(key);
-        body += " <sub><sup>[" + key + "](./src/enum/index.ts#L" + line + ")</sup></sub>\n\n";
-
-        if (itemDesc) {
-            body += itemDesc + "\n";
-            index += ", " + itemDesc.trim();
-        }
-        body += "<table>\n";
-        body += itemTable + "\n";
-        body += "</table>\n\n";
-        index += "\n";
+    if (e.comment) {
+        INDEX_MD += ", " + e.comment.trim();
+        BODY_MD += e.comment + "\n";
     }
+
+    INDEX_MD += "\n";
+
+    BODY_MD += "<table>\n";
+    for (const m of e.members) {
+        BODY_MD += "<tr><td>"
+            + toSpace(m.name) + (m.comment ? " (" + m.comment + ")" : "")
+            + "</td><td>"
+            + m.value
+            + "</td></tr>\n";
+    }
+    BODY_MD += "\n</table>\n\n";
 }
 
 let README_MD = "";
@@ -69,10 +35,96 @@ let README_MD = "";
 README_MD += "<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>\n\n";
 README_MD += "# Statuses and type\n\n";
 
-README_MD += index;
-README_MD += body;
+README_MD += INDEX_MD;
+README_MD += BODY_MD;
 
 fs.writeFileSync("./README.md", README_MD);
+
+function parseEnums(path) {
+    const file = ts
+        .createProgram([path], { allowJs: true })
+        .getSourceFile(path);
+
+    if (!file) {
+        throw new Error("file not found");
+    }
+
+    const fulltext = file.getFullText();
+
+    /** 
+     * @type {{
+     *     name: string;
+     *     line: number;
+     *     comment?: string;
+     *     members: {
+     *         name: string;
+     *         value: string;
+     *         comment?: string;
+     *     }[];
+     * }[]}
+     */
+    const result = [];
+
+    function visit(node, nest = 0) {
+        node.forEachChild((node) => {
+            const isEnumDeclaration = ts.isEnumDeclaration(node);
+            const isEnumMember = ts.isEnumMember(node);
+
+            if (!isEnumDeclaration && !isEnumMember) {
+                return;
+            }
+
+            const name = node.name.getText(file);
+
+            const commentRange = ts.getLeadingCommentRanges(
+                fulltext,
+                node.getFullStart()
+            ) || [];
+
+            let comment;
+
+            if (commentRange?.length) {
+                comment = commentRange.map(
+                    (r) => cleanComment(fulltext.slice(r.pos, r.end))
+                ).join(" ");
+            }
+
+            if (isEnumDeclaration) {
+                const line = ts.getLineAndCharacterOfPosition(
+                    file,
+                    node.getFullStart()
+                ).line + 1;
+
+                result.push({
+                    name,
+                    line,
+                    comment,
+                    members: [],
+                });
+            }
+
+            if (isEnumMember) {
+                const value = node.initializer?.getText(file) || "";
+
+                result[result.length - 1].members.push({
+                    name,
+                    value,
+                    comment,
+                });
+            }
+
+            visit(node, nest + 1);
+        });
+    }
+
+    visit(file);
+
+    return result;
+}
+
+function cleanComment(comment) {
+    return comment.replace(/(^ *\/+\** *|\**\/|\n *\*)/g, "").trim();
+}
 
 function toSpace(str) {
     return str.replace(/([A-Z])([A-Z])([a-z])|([a-z])([A-Z])/g, '$1$4 $2$3$5').replace("_", " ");

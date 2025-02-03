@@ -6,5 +6,8 @@
     "docs": "node ./scripts/docs .js",
     "test": "bun ./src/lib/codice-fiscale/test.ts",
     "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
   }
 }
