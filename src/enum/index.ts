@@ -529,15 +529,3 @@ export enum TAS_TransactionDirection {
     In = "IN",
     Out = "OUT",
 }
-
-/**
- * SCA (Strong Customer Authentication)
- */
-export enum TAS_ScaType {
-    /** OTP has been sent */
-    OTP = "CHALLENGE",
-    /** no OTP verification needed */
-    None = "ALLOW",
-    /** operation has been denied */
-    Denied = "DENY",
-}
