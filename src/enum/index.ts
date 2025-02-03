@@ -443,23 +443,23 @@ export enum TAS_LegalForm {
   NonPrecisata = "XX",
 }
 
-export enum Tas_TransactionType {
+export enum TAS_TransactionType {
   SEPA = "TrxSEPA",
   INST = "TrxINST",
 }
 
-export enum Tas_TransactionStatus {
+export enum TAS_TransactionStatus {
   Pending = 0,
   Confirmed = 1,
   Rejected = 2,
 }
 
-export enum Tas_TransactionDirection {
+export enum TAS_TransactionDirection {
   IN = "IN",
   OUT = "OUT",
 }
 
-export enum Tas_ScaType {
+export enum TAS_ScaType {
   CHALLENGE = "CHALLENGE",
   ALLOW = "ALLOW",
   DENY = "DENY",

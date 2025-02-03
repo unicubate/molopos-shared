@@ -47,10 +47,10 @@
 - [TAS Pep Type](#tas-pep-type-tas_peptype)
 - [TAS Shufti Error Target](#tas-shufti-error-target-tas_shuftierrortarget)
 - [TAS Legal Form](#tas-legal-form-tas_legalform)
-- [Tas Transaction Type](#tas-transaction-type-tas_transactiontype)
-- [Tas Transaction Status](#tas-transaction-status-tas_transactionstatus)
-- [Tas Transaction Direction](#tas-transaction-direction-tas_transactiondirection)
-- [Tas Sca Type](#tas-sca-type-tas_scatype)
+- [TAS Transaction Type](#tas-transaction-type-tas_transactiontype)
+- [TAS Transaction Status](#tas-transaction-status-tas_transactionstatus)
+- [TAS Transaction Direction](#tas-transaction-direction-tas_transactiondirection)
+- [TAS Sca Type](#tas-sca-type-tas_scatype)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -638,7 +638,7 @@ backoffice permissions
 
 </table>
 
-## Tas Transaction Type <sub><sup>[Tas_TransactionType](./src/enum/index.ts#L446)</sup></sub>
+## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L446)</sup></sub>
 
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
@@ -646,7 +646,7 @@ backoffice permissions
 
 </table>
 
-## Tas Transaction Status <sub><sup>[Tas_TransactionStatus](./src/enum/index.ts#L451)</sup></sub>
+## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L451)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -655,7 +655,7 @@ backoffice permissions
 
 </table>
 
-## Tas Transaction Direction <sub><sup>[Tas_TransactionDirection](./src/enum/index.ts#L457)</sup></sub>
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L457)</sup></sub>
 
 <table>
 <tr><td>IN</td><td>"IN"</td></tr>
@@ -663,7 +663,7 @@ backoffice permissions
 
 </table>
 
-## Tas Sca Type <sub><sup>[Tas_ScaType](./src/enum/index.ts#L462)</sup></sub>
+## TAS Sca Type <sub><sup>[TAS_ScaType](./src/enum/index.ts#L462)</sup></sub>
 
 <table>
 <tr><td>CHALLENGE</td><td>"CHALLENGE"</td></tr>
