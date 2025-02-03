@@ -1,44 +1,74 @@
 const fs = require("fs");
 const ts = require("typescript");
 
-let INDEX_MD = "";
-let BODY_MD = "";
+const enums = parseEnums("./src/enum/index.ts");
 
-for (const e of parseEnums("./src/enum/index.ts")) {
-    const esc = toSpace(e.name);
+if (process.argv.includes("--notion")) {
+    let README_MD = "Check the latest version: [github](https://github.com/Recrowd/shared)\n";
 
-    INDEX_MD += "- [" + esc + "](#" + toUrl(esc + "-" + toUrl(e.name)) + ")";
+    for (const e of enums) {
+        const esc = toSpace(e.name);
 
-    BODY_MD += "## " + esc;
-    BODY_MD += " <sub><sup>[" + e.name + "](./src/enum/index.ts#L" + e.line + ")</sup></sub>\n\n";
+        README_MD += "\n";
+        README_MD += "## " + esc;
+        README_MD += "\n";
 
-    if (e.comment) {
-        INDEX_MD += ", " + e.comment.trim();
-        BODY_MD += e.comment + "\n";
+        if (e.comment) {
+            README_MD += e.comment + "\n";
+        }
+
+        README_MD += "|Name|Value|\n";
+        README_MD += "|----|-----|\n";
+        for (const m of e.members) {
+            README_MD += "|"
+                + toSpace(m.name) + (m.comment ? " (" + m.comment + ")" : "")
+                + "|"
+                + m.value
+                + "|\n";
+        }
     }
 
-    INDEX_MD += "\n";
+    console.log(README_MD);
+} else {
+    let INDEX_MD = "";
+    let BODY_MD = "";
 
-    BODY_MD += "<table>\n";
-    for (const m of e.members) {
-        BODY_MD += "<tr><td>"
-            + toSpace(m.name) + (m.comment ? " (" + m.comment + ")" : "")
-            + "</td><td>"
-            + m.value
-            + "</td></tr>\n";
+    for (const e of enums) {
+        const esc = toSpace(e.name);
+
+        INDEX_MD += "- [" + esc + "](#" + toUrl(esc + "-" + toUrl(e.name)) + ")";
+
+        BODY_MD += "## " + esc;
+        BODY_MD += " <sub><sup>[" + e.name + "](./src/enum/index.ts#L" + e.line + ")</sup></sub>\n\n";
+
+        if (e.comment) {
+            INDEX_MD += ", " + e.comment.trim();
+            BODY_MD += e.comment + "\n";
+        }
+
+        INDEX_MD += "\n";
+
+        BODY_MD += "<table>\n";
+        for (const m of e.members) {
+            BODY_MD += "<tr><td>"
+                + toSpace(m.name) + (m.comment ? " (" + m.comment + ")" : "")
+                + "</td><td>"
+                + m.value
+                + "</td></tr>\n";
+        }
+        BODY_MD += "\n</table>\n\n";
     }
-    BODY_MD += "\n</table>\n\n";
+
+    let README_MD = "";
+
+    README_MD += "<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>\n\n";
+    README_MD += "# Statuses and type\n\n";
+
+    README_MD += INDEX_MD;
+    README_MD += BODY_MD;
+
+    fs.writeFileSync("./README.md", README_MD);
 }
-
-let README_MD = "";
-
-README_MD += "<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>\n\n";
-README_MD += "# Statuses and type\n\n";
-
-README_MD += INDEX_MD;
-README_MD += BODY_MD;
-
-fs.writeFileSync("./README.md", README_MD);
 
 function parseEnums(path) {
     const file = ts

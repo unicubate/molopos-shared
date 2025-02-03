@@ -3,7 +3,8 @@
     "version": "2.1.24",
     "scripts": {
         "dev": "tsc --watch",
-        "docs": "node ./scripts/docs .js",
+        "docs": "node ./scripts/docs.js",
+        "docs:notion": "node ./scripts/docs.js --notion",
         "test": "bun ./src/lib/codice-fiscale/test.ts",
         "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
     },
