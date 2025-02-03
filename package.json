@@ -1,13 +1,13 @@
 {
-  "name": "shared",
-  "version": "2.1.23",
-  "scripts": {
-    "dev": "tsc --watch",
-    "docs": "node ./scripts/docs .js",
-    "test": "bun ./src/lib/codice-fiscale/test.ts",
-    "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
-  },
-  "devDependencies": {
-    "typescript": "^5.7.3"
-  }
+    "name": "shared",
+    "version": "2.1.24",
+    "scripts": {
+        "dev": "tsc --watch",
+        "docs": "node ./scripts/docs .js",
+        "test": "bun ./src/lib/codice-fiscale/test.ts",
+        "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
+    },
+    "devDependencies": {
+        "typescript": "^5.7.3"
+    }
 }
