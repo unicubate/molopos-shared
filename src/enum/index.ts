@@ -516,7 +516,7 @@ export enum TAS_LegalForm {
 
 export enum TAS_TransactionType {
     SEPA = "TrxSEPA",
-    INST = "TrxINST",
+    InstantPayment = "TrxINST",
 }
 
 export enum TAS_TransactionStatus {
@@ -526,12 +526,18 @@ export enum TAS_TransactionStatus {
 }
 
 export enum TAS_TransactionDirection {
-    IN = "IN",
-    OUT = "OUT",
+    In = "IN",
+    Out = "OUT",
 }
 
+/**
+ * SCA (Strong Customer Authentication)
+ */
 export enum TAS_ScaType {
-    CHALLENGE = "CHALLENGE",
-    ALLOW = "ALLOW",
-    DENY = "DENY",
+    /** OTP has been sent */
+    OTP = "CHALLENGE",
+    /** no OTP verification needed */
+    None = "ALLOW",
+    /** operation has been denied */
+    Denied = "DENY",
 }

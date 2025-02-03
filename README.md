@@ -50,7 +50,7 @@
 - [TAS Transaction Type](#tas-transaction-type-tas_transactiontype)
 - [TAS Transaction Status](#tas-transaction-status-tas_transactionstatus)
 - [TAS Transaction Direction](#tas-transaction-direction-tas_transactiondirection)
-- [TAS Sca Type](#tas-sca-type-tas_scatype)
+- [TAS Sca Type](#tas-sca-type-tas_scatype), SCA (Strong Customer Authentication)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -635,7 +635,7 @@ backoffice permissions
 
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
-<tr><td>INST</td><td>"TrxINST"</td></tr>
+<tr><td>Instant Payment</td><td>"TrxINST"</td></tr>
 
 </table>
 
@@ -651,17 +651,18 @@ backoffice permissions
 ## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L528)</sup></sub>
 
 <table>
-<tr><td>IN</td><td>"IN"</td></tr>
-<tr><td>OUT</td><td>"OUT"</td></tr>
+<tr><td>In</td><td>"IN"</td></tr>
+<tr><td>Out</td><td>"OUT"</td></tr>
 
 </table>
 
-## TAS Sca Type <sub><sup>[TAS_ScaType](./src/enum/index.ts#L533)</sup></sub>
+## TAS Sca Type <sub><sup>[TAS_ScaType](./src/enum/index.ts#L536)</sup></sub>
 
+SCA (Strong Customer Authentication)
 <table>
-<tr><td>CHALLENGE</td><td>"CHALLENGE"</td></tr>
-<tr><td>ALLOW</td><td>"ALLOW"</td></tr>
-<tr><td>DENY</td><td>"DENY"</td></tr>
+<tr><td>OTP (OTP has been sent)</td><td>"CHALLENGE"</td></tr>
+<tr><td>None (no OTP verification needed)</td><td>"ALLOW"</td></tr>
+<tr><td>Denied (operation has been denied)</td><td>"DENY"</td></tr>
 
 </table>
 
