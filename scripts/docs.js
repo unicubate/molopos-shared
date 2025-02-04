@@ -4,14 +4,12 @@ const ts = require("typescript");
 const enums = parseEnums("./src/enum/index.ts");
 
 if (process.argv.includes("--notion")) {
-    let README_MD = "Check the latest version: [github](https://github.com/Recrowd/shared)\n";
+    let README_MD = "Check the latest version [@github](https://github.com/Recrowd/shared)\n";
 
     for (const e of enums) {
         const esc = toSpace(e.name);
 
-        README_MD += "\n";
-        README_MD += "## " + esc;
-        README_MD += "\n";
+        README_MD += "\n## " + esc + "\n";
 
         if (e.comment) {
             README_MD += e.comment + "\n";
@@ -59,10 +57,8 @@ if (process.argv.includes("--notion")) {
         BODY_MD += "\n</table>\n\n";
     }
 
-    let README_MD = "";
-
-    README_MD += "<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>\n\n";
-    README_MD += "# Statuses and type\n\n";
+    let README_MD = "<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>\n\n";
+    README_MD += "# Statuses and types\n\n";
 
     README_MD += INDEX_MD;
     README_MD += BODY_MD;

@@ -1,6 +1,6 @@
 <small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>
 
-# Statuses and type
+# Statuses and types
 
 - [Document Type](#document-type-documenttype)
 - [Document Status](#document-status-documentstatus)
@@ -133,8 +133,8 @@ status of an identity document sent to onfido
 ## Transaction Direction <sub><sup>[TransactionDirection](./src/enum/index.ts#L75)</sup></sub>
 
 <table>
-<tr><td>IN</td><td>"IN"</td></tr>
-<tr><td>OUT</td><td>"OUT"</td></tr>
+<tr><td>In</td><td>"IN"</td></tr>
+<tr><td>Out</td><td>"OUT"</td></tr>
 
 </table>
 
