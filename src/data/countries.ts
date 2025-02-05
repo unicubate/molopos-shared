@@ -4,7 +4,12 @@ export type Country = {
   name: string;
   iso2: string;
   iso3: string;
+  flags?: number;
 };
+
+export enum CountryFlags {
+  EU = 1,
+}
 
 export const countries: Country[] = [
   {
@@ -90,6 +95,7 @@ export const countries: Country[] = [
     name: "AUSTRIA",
     iso2: "AT",
     iso3: "AUT",
+    flags: CountryFlags.EU,
   },
   {
     code: "268",
@@ -126,6 +132,7 @@ export const countries: Country[] = [
     name: "BELGIO",
     iso2: "BE",
     iso3: "BEL",
+    flags: CountryFlags.EU,
   },
   {
     code: "198",
@@ -198,6 +205,7 @@ export const countries: Country[] = [
     name: "BULGARIA",
     iso2: "BG",
     iso3: "BGR",
+    flags: CountryFlags.EU,
   },
   {
     code: "142",
@@ -276,6 +284,7 @@ export const countries: Country[] = [
     name: "CIPRO",
     iso2: "CY",
     iso3: "CYP",
+    flags: CountryFlags.EU,
   },
   {
     code: "093",
@@ -342,6 +351,7 @@ export const countries: Country[] = [
     name: "CROAZIA",
     iso2: "HR",
     iso3: "HRV",
+    flags: CountryFlags.EU,
   },
   {
     code: "020",
@@ -354,6 +364,7 @@ export const countries: Country[] = [
     name: "DANIMARCA",
     iso2: "DK",
     iso3: "DNK",
+    flags: CountryFlags.EU,
   },
   {
     code: "192",
@@ -396,6 +407,7 @@ export const countries: Country[] = [
     name: "ESTONIA",
     iso2: "EE",
     iso3: "EST",
+    flags: CountryFlags.EU,
   },
   {
     code: "026",
@@ -420,6 +432,7 @@ export const countries: Country[] = [
     name: "FINLANDIA",
     iso2: "FI",
     iso3: "FIN",
+    flags: CountryFlags.EU,
   },
   {
     code: "016",
@@ -432,6 +445,7 @@ export const countries: Country[] = [
     name: "FRANCIA",
     iso2: "FR",
     iso3: "FRA",
+    flags: CountryFlags.EU,
   },
   {
     code: "157",
@@ -456,6 +470,7 @@ export const countries: Country[] = [
     name: "GERMANIA",
     iso2: "DE",
     iso3: "DEU",
+    flags: CountryFlags.EU,
   },
   {
     code: "112",
@@ -504,6 +519,7 @@ export const countries: Country[] = [
     name: "GRECIA",
     iso2: "GR",
     iso3: "GRC",
+    flags: CountryFlags.EU,
   },
   {
     code: "156",
@@ -606,6 +622,7 @@ export const countries: Country[] = [
     name: "IRLANDA",
     iso2: "IE",
     iso3: "IRL",
+    flags: CountryFlags.EU,
   },
   {
     code: "041",
@@ -615,7 +632,7 @@ export const countries: Country[] = [
   },
   {
     code: "252",
-    name: "ISOLA DI MALTA",
+    name: "ISOLE MINORI ESTERNE DEGLI USA",
     iso2: "UM",
     iso3: "UMI",
   },
@@ -666,6 +683,7 @@ export const countries: Country[] = [
     name: "ITALIA",
     iso2: "IT",
     iso3: "ITA",
+    flags: CountryFlags.EU,
   },
   {
     code: "202",
@@ -726,6 +744,7 @@ export const countries: Country[] = [
     name: "LETTONIA",
     iso2: "LV",
     iso3: "LVA",
+    flags: CountryFlags.EU,
   },
   {
     code: "095",
@@ -756,12 +775,14 @@ export const countries: Country[] = [
     name: "LITUANIA",
     iso2: "LT",
     iso3: "LTU",
+    flags: CountryFlags.EU,
   },
   {
     code: "092",
     name: "LUSSEMBURGO",
     iso2: "LU",
     iso3: "LUX",
+    flags: CountryFlags.EU,
   },
   {
     code: "059",
@@ -810,6 +831,7 @@ export const countries: Country[] = [
     name: "MALTA",
     iso2: "MT",
     iso3: "MLT",
+    flags: CountryFlags.EU,
   },
   {
     code: "107",
@@ -936,6 +958,7 @@ export const countries: Country[] = [
     name: "PAESI BASSI",
     iso2: "NL",
     iso3: "NLD",
+    flags: CountryFlags.EU,
   },
   {
     code: "036",
@@ -978,6 +1001,7 @@ export const countries: Country[] = [
     name: "POLONIA",
     iso2: "PL",
     iso3: "POL",
+    flags: CountryFlags.EU,
   },
   {
     code: "220",
@@ -990,6 +1014,7 @@ export const countries: Country[] = [
     name: "PORTOGALLO",
     iso2: "PT",
     iso3: "PRT",
+    flags: CountryFlags.EU,
   },
   {
     code: "168",
@@ -1002,6 +1027,7 @@ export const countries: Country[] = [
     name: "REPUBBLICA CECA",
     iso2: "CZ",
     iso3: "CZE",
+    flags: CountryFlags.EU,
   },
   {
     code: "078",
@@ -1038,6 +1064,7 @@ export const countries: Country[] = [
     name: "ROMANIA",
     iso2: "RO",
     iso3: "ROU",
+    flags: CountryFlags.EU,
   },
   {
     code: "151",
@@ -1134,12 +1161,14 @@ export const countries: Country[] = [
     name: "SLOVACCHIA",
     iso2: "SK",
     iso3: "SVK",
+    flags: CountryFlags.EU,
   },
   {
     code: "260",
     name: "SLOVENIA",
     iso2: "SI",
     iso3: "SVN",
+    flags: CountryFlags.EU,
   },
   {
     code: "066",
@@ -1152,6 +1181,7 @@ export const countries: Country[] = [
     name: "SPAGNA",
     iso2: "ES",
     iso3: "ESP",
+    flags: CountryFlags.EU,
   },
   {
     code: "085",
@@ -1182,6 +1212,7 @@ export const countries: Country[] = [
     name: "SVEZIA",
     iso2: "SE",
     iso3: "SWE",
+    flags: CountryFlags.EU,
   },
   {
     code: "071",
@@ -1284,6 +1315,7 @@ export const countries: Country[] = [
     name: "UNGHERIA",
     iso2: "HU",
     iso3: "HUN",
+    flags: CountryFlags.EU,
   },
   {
     code: "079",
