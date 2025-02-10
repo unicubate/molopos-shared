@@ -40,7 +40,7 @@
 - [TAS Gender](#tas-gender-tas_gender)
 - [TAS Address Type](#tas-address-type-tas_addresstype)
 - [TAS Document Type](#tas-document-type-tas_documenttype)
-- [TAS Additional Document Type](#tas-additional-document-type-tas_additionaldocumenttype), *PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to "PS" when calling the TAS API
+- [TAS Additional Document Type](#tas-additional-document-type-tas_additionaldocumenttype), *PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to "PS" when calling the TAS API
 - [TAS Document Issuer](#tas-document-issuer-tas_documentissuer)
 - [TAS Shufti Status](#tas-shufti-status-tas_shuftistatus)
 - [TAS Pep](#tas-pep-tas_pep)
@@ -50,6 +50,7 @@
 - [TAS Transaction Type](#tas-transaction-type-tas_transactiontype)
 - [TAS Transaction Status](#tas-transaction-status-tas_transactionstatus)
 - [TAS Transaction Direction](#tas-transaction-direction-tas_transactiondirection)
+- [User Login Type](#user-login-type-userlogintype)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -464,7 +465,7 @@ backoffice permissions
 
 ## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L322)</sup></sub>
 
-*PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to "PS" when calling the TAS API
+*PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to "PS" when calling the TAS API
 <table>
 <tr><td>Permanent Residency Permit</td><td>"PSP"</td></tr>
 <tr><td>Temporary Residency Permit</td><td>"PST"</td></tr>
@@ -518,7 +519,7 @@ backoffice permissions
 <tr><td>Presidente Regione</td><td>"PEP_TYPE_F"</td></tr>
 <tr><td>Assessore Regionale</td><td>"PEP_TYPE_G"</td></tr>
 <tr><td>Sindaco Capoluogo (Sindaco di capoluogo di provincia o città metropolitana)</td><td>"PEP_TYPE_H"</td></tr>
-<tr><td>Sindaco Comune (Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_I"</td></tr>
+<tr><td>Sindaco Comune (Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_I"</td></tr>
 <tr><td>Deputato</td><td>"PEP_TYPE_J"</td></tr>
 <tr><td>Senatore</td><td>"PEP_TYPE_K"</td></tr>
 <tr><td>Parlamentare Europeo</td><td>"PEP_TYPE_L"</td></tr>
@@ -526,12 +527,12 @@ backoffice permissions
 <tr><td>Membro Partiti Politici (Membro degli organi direttivi centrali di partiti politici)</td><td>"PEP_TYPE_N"</td></tr>
 <tr><td>Giudice Corte Costituzionale (Giudice della Corte Costituzionale)</td><td>"PEP_TYPE_O"</td></tr>
 <tr><td>Magistrato Corte (Magistrato della Corte di Cassazione o della Corte dei Conti)</td><td>"PEP_TYPE_Q"</td></tr>
-<tr><td>Consiglio Giustizia Amministrativa (Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_R"</td></tr>
-<tr><td>Membro Banche Centrali (Membro degli organi direttivi delle banche centrali e delle autorità indipendenti)</td><td>"PEP_TYPE_S"</td></tr>
-<tr><td>Ambasciatore (Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_T"</td></tr>
-<tr><td>Componente Imprese Stato (Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti)</td><td>"PEP_TYPE_U"</td></tr>
-<tr><td>Direttore ASL (Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale)</td><td>"PEP_TYPE_V"</td></tr>
-<tr><td>Membro Organizzazioni Internazionali (Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali)</td><td>"PEP_TYPE_W"</td></tr>
+<tr><td>Consiglio Giustizia Amministrativa (Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_R"</td></tr>
+<tr><td>Membro Banche Centrali (Membro degli organi direttivi delle banche centrali e delle autorità indipendenti)</td><td>"PEP_TYPE_S"</td></tr>
+<tr><td>Ambasciatore (Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_T"</td></tr>
+<tr><td>Componente Imprese Stato (Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti)</td><td>"PEP_TYPE_U"</td></tr>
+<tr><td>Direttore ASL (Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale)</td><td>"PEP_TYPE_V"</td></tr>
+<tr><td>Membro Organizzazioni Internazionali (Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali)</td><td>"PEP_TYPE_W"</td></tr>
 <tr><td>Consigliere Stato</td><td>"PEP_TYPE_P"</td></tr>
 
 </table>
@@ -652,6 +653,15 @@ backoffice permissions
 <table>
 <tr><td>In</td><td>"IN"</td></tr>
 <tr><td>Out</td><td>"OUT"</td></tr>
+
+</table>
+
+## User Login Type <sub><sup>[UserLoginType](./src/enum/index.ts#L533)</sup></sub>
+
+<table>
+<tr><td>Email</td><td>0</td></tr>
+<tr><td>Authenticator</td><td>1</td></tr>
+<tr><td>Sms</td><td>2</td></tr>
 
 </table>
 

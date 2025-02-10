@@ -529,3 +529,9 @@ export enum TAS_TransactionDirection {
     In = "IN",
     Out = "OUT",
 }
+
+export enum UserLoginType {
+    Email = 0,
+    Authenticator = 1,
+    Sms = 2
+}
