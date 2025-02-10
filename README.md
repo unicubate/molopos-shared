@@ -662,6 +662,7 @@ backoffice permissions
 <tr><td>Email</td><td>0</td></tr>
 <tr><td>Authenticator</td><td>1</td></tr>
 <tr><td>Sms</td><td>2</td></tr>
+<tr><td>Reset</td><td>3</td></tr>
 
 </table>
 

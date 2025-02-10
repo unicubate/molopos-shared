@@ -533,5 +533,6 @@ export enum TAS_TransactionDirection {
 export enum UserLoginType {
     Email = 0,
     Authenticator = 1,
-    Sms = 2
+    Sms = 2,
+    Reset = 3
 }
