@@ -315,16 +315,15 @@ export enum TAS_AddressType {
     Office = "OFFICE",
 }
 
-/**
- * *PermanentResidencyPermit* and *TemporaryResidencyPermit*
- * are both converted to *ResidencyPermit* when calling the TAS API
- */
 export enum TAS_DocumentType {
     IdentityCard = "IDENTITY_CARD",
     Passport = "PASSPORT",
     DrivingLicense = "DRIVING_LICENSE",
+    /** does NOT exist in the database, only used when calling the TAS API */
     ResidencyPermit = "PS",
+    /** needs to be converted to *ResidencyPermit* when calling the TAS API */
     PermanentResidencyPermit = "PSP",
+    /** needs to be converted to *ResidencyPermit* when calling the TAS API */
     TemporaryResidencyPermit = "PST",
 }
 

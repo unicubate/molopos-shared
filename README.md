@@ -40,7 +40,7 @@
 - [TAS User Type](#tas-user-type-tas_usertype)
 - [TAS Gender](#tas-gender-tas_gender)
 - [TAS Address Type](#tas-address-type-tas_addresstype)
-- [TAS Document Type](#tas-document-type-tas_documenttype), *PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to *ResidencyPermit* when calling the TAS API
+- [TAS Document Type](#tas-document-type-tas_documenttype)
 - [TAS Additional Document Type](#tas-additional-document-type-tas_additionaldocumenttype)
 - [TAS Document Issuer](#tas-document-issuer-tas_documentissuer)
 - [TAS Shufti Status](#tas-shufti-status-tas_shuftistatus)
@@ -463,20 +463,19 @@ backoffice permissions
 
 </table>
 
-## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L322)</sup></sub>
+## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L318)</sup></sub>
 
-*PermanentResidencyPermit* and *TemporaryResidencyPermit* are both converted to *ResidencyPermit* when calling the TAS API
 <table>
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
 <tr><td>Passport</td><td>"PASSPORT"</td></tr>
 <tr><td>Driving License</td><td>"DRIVING_LICENSE"</td></tr>
-<tr><td>Residency Permit</td><td>"PS"</td></tr>
-<tr><td>Permanent Residency Permit</td><td>"PSP"</td></tr>
-<tr><td>Temporary Residency Permit</td><td>"PST"</td></tr>
+<tr><td>Residency Permit (does NOT exist in the database, only used when calling the TAS API)</td><td>"PS"</td></tr>
+<tr><td>Permanent Residency Permit (needs to be converted to *ResidencyPermit* when calling the TAS API)</td><td>"PSP"</td></tr>
+<tr><td>Temporary Residency Permit (needs to be converted to *ResidencyPermit* when calling the TAS API)</td><td>"PST"</td></tr>
 
 </table>
 
-## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L331)</sup></sub>
+## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L330)</sup></sub>
 
 <table>
 <tr><td>W9</td><td>"W9"</td></tr>
@@ -485,7 +484,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L337)</sup></sub>
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L336)</sup></sub>
 
 <table>
 <tr><td>DMV (Motorizzazione)</td><td>"MCTC"</td></tr>
@@ -496,7 +495,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L350)</sup></sub>
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L349)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -508,7 +507,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L359)</sup></sub>
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L358)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -518,7 +517,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L370)</sup></sub>
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L369)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>
@@ -547,7 +546,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L436)</sup></sub>
+## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L435)</sup></sub>
 
 <table>
 <tr><td>Shufti</td><td>0</td></tr>
@@ -562,7 +561,7 @@ backoffice permissions
 
 </table>
 
-## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L448)</sup></sub>
+## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L447)</sup></sub>
 
 <table>
 <tr><td>Societa Accomandita Azioni</td><td>"AA"</td></tr>
@@ -641,7 +640,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L524)</sup></sub>
+## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L523)</sup></sub>
 
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
@@ -649,7 +648,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L529)</sup></sub>
+## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L528)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -658,7 +657,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L535)</sup></sub>
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L534)</sup></sub>
 
 <table>
 <tr><td>In</td><td>"IN"</td></tr>
