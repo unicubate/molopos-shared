@@ -269,6 +269,13 @@ export enum Permission {
     DeleteAdmin = "delete:admin",
 }
 
+export enum AuthType {
+    Email = 0,
+    Authenticator = 1,
+    Sms = 2,
+    ResetPassword = 3
+}
+
 export enum TAS_OnboardingStatus {
     Created = 0,
     Completed = 1,
@@ -530,9 +537,3 @@ export enum TAS_TransactionDirection {
     Out = "OUT",
 }
 
-export enum UserLoginType {
-    Email = 0,
-    Authenticator = 1,
-    Sms = 2,
-    Reset = 3
-}
