@@ -557,11 +557,12 @@ backoffice permissions
 <tr><td>Document Release Date</td><td>5</td></tr>
 <tr><td>Document Expiry Date</td><td>6</td></tr>
 <tr><td>Document Number</td><td>7</td></tr>
-<tr><td>Exit</td><td>8</td></tr>
+<tr><td>Company Name</td><td>8</td></tr>
+<tr><td>Exit</td><td>9</td></tr>
 
 </table>
 
-## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L447)</sup></sub>
+## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L448)</sup></sub>
 
 <table>
 <tr><td>Societa Accomandita Azioni</td><td>"AA"</td></tr>
@@ -640,7 +641,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L523)</sup></sub>
+## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L524)</sup></sub>
 
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
@@ -648,7 +649,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L528)</sup></sub>
+## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L529)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -657,7 +658,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L534)</sup></sub>
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L535)</sup></sub>
 
 <table>
 <tr><td>In</td><td>"IN"</td></tr>

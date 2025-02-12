@@ -441,7 +441,8 @@ export enum TAS_ShuftiErrorTarget {
     DocumentReleaseDate = 5,
     DocumentExpiryDate = 6,
     DocumentNumber = 7,
-    Exit = 8,
+    CompanyName = 8,
+    Exit = 9,
 }
 
 export enum TAS_LegalForm {
