@@ -254,6 +254,7 @@ export enum IntegrationType {
     Lemonway = "LEMONWAY",
     Activecampaign = "ACTIVECAMPAIGN",
     Tas = "TAS",
+    Tas_Tech = "TAS_TECH",
 }
 
 /** backoffice permissions */
