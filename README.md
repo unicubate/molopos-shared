@@ -50,6 +50,8 @@
 - [TAS Legal Form](#tas-legal-form-tas_legalform)
 - [TAS Transaction Type](#tas-transaction-type-tas_transactiontype)
 - [TAS Transaction Status](#tas-transaction-status-tas_transactionstatus)
+- [TAS Operation Over All Status](#tas-operation-over-all-status-tas_operationoverallstatus)
+- [TAS Operation Current Status](#tas-operation-current-status-tas_operationcurrentstatus)
 - [TAS Transaction Direction](#tas-transaction-direction-tas_transactiondirection)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
@@ -659,7 +661,36 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L536)</sup></sub>
+## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L535)</sup></sub>
+
+<table>
+<tr><td>Valid</td><td>"VALD"</td></tr>
+<tr><td>Error</td><td>"ERRR"</td></tr>
+<tr><td>Pending</td><td>"PNDG"</td></tr>
+<tr><td>Sent</td><td>"SENT"</td></tr>
+<tr><td>Executed</td><td>"ACSC"</td></tr>
+<tr><td>Rejected</td><td>"RJCT"</td></tr>
+<tr><td>Revoked</td><td>"CNCL"</td></tr>
+<tr><td>Suspended</td><td>"SUSP"</td></tr>
+
+</table>
+
+## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L546)</sup></sub>
+
+<table>
+<tr><td>Valid</td><td>"VALD"</td></tr>
+<tr><td>Error</td><td>"ERRR"</td></tr>
+<tr><td>Pending</td><td>"PNDG"</td></tr>
+<tr><td>Sent</td><td>"SENT"</td></tr>
+<tr><td>Executed</td><td>"EXEC"</td></tr>
+<tr><td>Rejected</td><td>"RJCT"</td></tr>
+<tr><td>Revoked</td><td>"CNCL"</td></tr>
+<tr><td>Suspended</td><td>"SUSP"</td></tr>
+<tr><td>Partial</td><td>"AUT1"</td></tr>
+
+</table>
+
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L558)</sup></sub>
 
 <table>
 <tr><td>In</td><td>"IN"</td></tr>

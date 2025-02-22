@@ -532,6 +532,28 @@ export enum TAS_TransactionStatus {
     Confirmed = 1,
     Rejected = 2,
 }
+export enum TAS_OperationOverAllStatus {
+    Valid = "VALD", // transazione valida, da autorizzare
+    Error = "ERRR", // transazione in errore
+    Pending = "PNDG", // transazione in lavorazione
+    Sent = "SENT", // transazione presa in carico
+    Executed = "ACSC", // Eseguita
+    Rejected = "RJCT", // Non Eseguita
+    Revoked = "CNCL", // Revocata dall’utente
+    Suspended = "SUSP", // Sospesa (operatività corporate)
+}
+
+export enum TAS_OperationCurrentStatus {
+    Valid = "VALD", // transazione valida, da autorizzare
+    Error = "ERRR", // transazione in errore
+    Pending = "PNDG", // transazione in lavorazione
+    Sent = "SENT", // transazione presa in carico
+    Executed = "EXEC", // Eseguita
+    Rejected = "RJCT", // Non Eseguita
+    Revoked = "CNCL", // Revocata dall’utente
+    Suspended = "SUSP", // Sospesa (operatività corporate)
+    Partial= "AUT1" // Operazione firmata da un solo firmatario in un contesto in cui è richiesta firma congiunta. (caso tipicamente relativo ad utenze corporate).
+}
 
 export enum TAS_TransactionDirection {
     In = "IN",
