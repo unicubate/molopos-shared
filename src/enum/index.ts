@@ -552,7 +552,7 @@ export enum TAS_OperationCurrentStatus {
     Rejected = "RJCT", // Non Eseguita
     Revoked = "CNCL", // Revocata dall’utente
     Suspended = "SUSP", // Sospesa (operatività corporate)
-    Partial= "AUT1" // Operazione firmata da un solo firmatario in un contesto in cui è richiesta firma congiunta. (caso tipicamente relativo ad utenze corporate).
+    Partial = "AUT1" // Operazione firmata da un solo firmatario in un contesto in cui è richiesta firma congiunta. (caso tipicamente relativo ad utenze corporate).
 }
 
 export enum TAS_TransactionDirection {
