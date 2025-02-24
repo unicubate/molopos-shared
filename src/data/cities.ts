@@ -48898,5 +48898,11 @@ export const cities: City[] = [
         name: "VERMEZZO CON ZELO",
         province: "MI",
         belfiore: "M424"
-    }
+    },
+    {
+        code: "-",
+        name: "ALTAVALLE",
+        province: "TN",
+        belfiore: "M349"
+    },
 ];
