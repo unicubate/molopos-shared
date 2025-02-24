@@ -533,26 +533,47 @@ export enum TAS_TransactionStatus {
     Rejected = 2,
 }
 export enum TAS_OperationOverAllStatus {
-    Valid = "VALD", // transazione valida, da autorizzare
-    Error = "ERRR", // transazione in errore
-    Pending = "PNDG", // transazione in lavorazione
-    Sent = "SENT", // transazione presa in carico
-    Executed = "ACSC", // Eseguita
-    Rejected = "RJCT", // Non Eseguita
-    Revoked = "CNCL", // Revocata dall’utente
-    Suspended = "SUSP", // Sospesa (operatività corporate)
+    /** transazione valida, da autorizzare */
+    Valid = "VALD",
+    /** transazione in errore */
+    Error = "ERRR",
+    /** transazione in lavorazione */
+    Pending = "PNDG",
+    /** transazione presa in carico */
+    Sent = "SENT",
+    /** Eseguita */
+    Executed = "ACSC",
+    /** Non Eseguita */
+    Rejected = "RJT",
+    /** Revocata dall’utente */
+    Revoked = "CNCL",
+    /** Sospesa (operatività corporate) */
+    Suspended = "SUSP",
 }
 
 export enum TAS_OperationCurrentStatus {
-    Valid = "VALD", // transazione valida, da autorizzare
-    Error = "ERRR", // transazione in errore
-    Pending = "PNDG", // transazione in lavorazione
-    Sent = "SENT", // transazione presa in carico
-    Executed = "EXEC", // Eseguita
-    Rejected = "RJCT", // Non Eseguita
-    Revoked = "CNCL", // Revocata dall’utente
-    Suspended = "SUSP", // Sospesa (operatività corporate)
-    Partial = "AUT1" // Operazione firmata da un solo firmatario in un contesto in cui è richiesta firma congiunta. (caso tipicamente relativo ad utenze corporate).
+    /** transazione valida, da autorizzare */
+    Valid = "VALD",
+    /** transazione in errore */
+    Error = "ERRR",
+    /** transazione in lavorazione */
+    Pending = "PNDG",
+    /** transazione presa in carico */
+    Sent = "SENT",
+    /** Eseguita */
+    Executed = "XEC",
+    /** Non Eseguita */
+    Rejected = "RJCT",
+    /** Revocata dall’utente */
+    Revoked = "CNCL",
+    /** Sospesa (operatività corporate) */
+    Suspended = "SUSP",
+    /**
+     * Operazione firmata da un solo firmatario in un contesto in cui
+     * è richiesta firma congiunta. (caso tipicamente relativo ad utenze
+     * corporate).
+     */
+    Partial = "AUT1"
 }
 
 export enum TAS_TransactionDirection {
