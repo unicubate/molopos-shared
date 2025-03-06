@@ -581,7 +581,7 @@ export enum TAS_TransactionDirection {
   Out = "OUT",
 }
 
-export declare enum BankAccountType {
+export enum BankAccountType {
   Main = "MAIN",
   Tech = "TECH",
 }
