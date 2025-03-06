@@ -585,3 +585,8 @@ export enum BankAccountType {
   Main = "MAIN",
   Tech = "TECH",
 }
+
+export enum OnboardingTypes {
+  Investor = "INVESTOR",
+  Proponent = "PROPONENT",
+}

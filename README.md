@@ -54,6 +54,7 @@
 - [TAS Operation Current Status](#tas-operation-current-status-tas_operationcurrentstatus)
 - [TAS Transaction Direction](#tas-transaction-direction-tas_transactiondirection)
 - [Bank Account Type](#bank-account-type-bankaccounttype)
+- [Onboarding Types](#onboarding-types-onboardingtypes)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -704,6 +705,14 @@ backoffice permissions
 <table>
 <tr><td>Main</td><td>"MAIN"</td></tr>
 <tr><td>Tech</td><td>"TECH"</td></tr>
+
+</table>
+
+## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L589)</sup></sub>
+
+<table>
+<tr><td>Investor</td><td>"INVESTOR"</td></tr>
+<tr><td>Proponent</td><td>"PROPONENT"</td></tr>
 
 </table>
 
