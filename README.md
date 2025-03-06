@@ -53,6 +53,7 @@
 - [TAS Operation Over All Status](#tas-operation-over-all-status-tas_operationoverallstatus)
 - [TAS Operation Current Status](#tas-operation-current-status-tas_operationcurrentstatus)
 - [TAS Transaction Direction](#tas-transaction-direction-tas_transactiondirection)
+- [Bank Account Type](#bank-account-type-bankaccounttype)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -695,6 +696,14 @@ backoffice permissions
 <table>
 <tr><td>In</td><td>"IN"</td></tr>
 <tr><td>Out</td><td>"OUT"</td></tr>
+
+</table>
+
+## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L584)</sup></sub>
+
+<table>
+<tr><td>Main</td><td>"MAIN"</td></tr>
+<tr><td>Tech</td><td>"TECH"</td></tr>
 
 </table>
 
