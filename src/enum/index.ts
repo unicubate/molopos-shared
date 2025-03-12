@@ -581,6 +581,12 @@ export enum TAS_TransactionDirection {
   Out = "OUT",
 }
 
+export enum TasContracts_DocumentType {
+  Contract = "Contratto",
+  BankStatement = "EstrattoConto",
+  Ownership = "ownership",
+}
+
 export enum BankAccountType {
   Main = "MAIN",
   Tech = "TECH",
