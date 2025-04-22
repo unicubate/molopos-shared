@@ -268,6 +268,7 @@ export enum Permission {
     ReadAdmin = "read:admin",
     UpdateAdmin = "update:admin",
     DeleteAdmin = "delete:admin",
+    UpdateProspectRateAmounts = "update:prospect_rate_amounts",
 }
 
 export enum AuthType {
