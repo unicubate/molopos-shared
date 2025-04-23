@@ -257,10 +257,11 @@ lemonway only
 <tr><td>Success</td><td>2</td></tr>
 <tr><td>Refunded</td><td>3</td></tr>
 <tr><td>Expired</td><td>4</td></tr>
+<tr><td>Refund Requested</td><td>5</td></tr>
 
 </table>
 
-## Classification Status <sub><sup>[ClassificationStatus](./src/enum/index.ts#L168)</sup></sub>
+## Classification Status <sub><sup>[ClassificationStatus](./src/enum/index.ts#L169)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -269,7 +270,7 @@ lemonway only
 
 </table>
 
-## Category Project <sub><sup>[CategoryProject](./src/enum/index.ts#L174)</sup></sub>
+## Category Project <sub><sup>[CategoryProject](./src/enum/index.ts#L175)</sup></sub>
 
 <table>
 <tr><td>Relax</td><td>"RELAX"</td></tr>
@@ -278,7 +279,7 @@ lemonway only
 
 </table>
 
-## Project Status <sub><sup>[ProjectStatus](./src/enum/index.ts#L180)</sup></sub>
+## Project Status <sub><sup>[ProjectStatus](./src/enum/index.ts#L181)</sup></sub>
 
 <table>
 <tr><td>Default</td><td>"DEFAULT"</td></tr>
@@ -293,7 +294,7 @@ lemonway only
 
 </table>
 
-## User Registration Status <sub><sup>[UserRegistrationStatus](./src/enum/index.ts#L195)</sup></sub>
+## User Registration Status <sub><sup>[UserRegistrationStatus](./src/enum/index.ts#L196)</sup></sub>
 
 a.k.a. *StatusRegisterType*
 <table>
@@ -307,7 +308,7 @@ a.k.a. *StatusRegisterType*
 
 </table>
 
-## Account Type <sub><sup>[AccountType](./src/enum/index.ts#L205)</sup></sub>
+## Account Type <sub><sup>[AccountType](./src/enum/index.ts#L206)</sup></sub>
 
 <table>
 <tr><td>Company</td><td>"AZIENDA"</td></tr>
@@ -316,7 +317,7 @@ a.k.a. *StatusRegisterType*
 
 </table>
 
-## Transaction Type <sub><sup>[TransactionType](./src/enum/index.ts#L211)</sup></sub>
+## Transaction Type <sub><sup>[TransactionType](./src/enum/index.ts#L212)</sup></sub>
 
 <table>
 <tr><td>Money In</td><td>"MONEYIN"</td></tr>
@@ -327,7 +328,7 @@ a.k.a. *StatusRegisterType*
 
 </table>
 
-## Voucher Category <sub><sup>[VoucherCategory](./src/enum/index.ts#L219)</sup></sub>
+## Voucher Category <sub><sup>[VoucherCategory](./src/enum/index.ts#L220)</sup></sub>
 
 <table>
 <tr><td>Tracking Code</td><td>"TRACKING_CODE"</td></tr>
@@ -338,7 +339,7 @@ a.k.a. *StatusRegisterType*
 
 </table>
 
-## Voucher Activity Type <sub><sup>[VoucherActivityType](./src/enum/index.ts#L227)</sup></sub>
+## Voucher Activity Type <sub><sup>[VoucherActivityType](./src/enum/index.ts#L228)</sup></sub>
 
 <table>
 <tr><td>Friend Registration</td><td>"FRIEND_REGISTRATION"</td></tr>
@@ -346,7 +347,7 @@ a.k.a. *StatusRegisterType*
 
 </table>
 
-## Survey Level <sub><sup>[SurveyLevel](./src/enum/index.ts#L233)</sup></sub>
+## Survey Level <sub><sup>[SurveyLevel](./src/enum/index.ts#L234)</sup></sub>
 
 user classification survey score
 <table>
@@ -356,7 +357,7 @@ user classification survey score
 
 </table>
 
-## Legal Form <sub><sup>[LegalForm](./src/enum/index.ts#L242)</sup></sub>
+## Legal Form <sub><sup>[LegalForm](./src/enum/index.ts#L243)</sup></sub>
 
 <table>
 <tr><td>Spa</td><td>"SPA"</td></tr>
@@ -364,7 +365,7 @@ user classification survey score
 
 </table>
 
-## Top Investor Type <sub><sup>[TopInvestorType](./src/enum/index.ts#L248)</sup></sub>
+## Top Investor Type <sub><sup>[TopInvestorType](./src/enum/index.ts#L249)</sup></sub>
 
 a.k.a. *StatusInvestmentTop*
 <table>
@@ -373,7 +374,7 @@ a.k.a. *StatusInvestmentTop*
 
 </table>
 
-## Integration Type <sub><sup>[IntegrationType](./src/enum/index.ts#L253)</sup></sub>
+## Integration Type <sub><sup>[IntegrationType](./src/enum/index.ts#L254)</sup></sub>
 
 <table>
 <tr><td>Lemonway</td><td>"LEMONWAY"</td></tr>
@@ -383,7 +384,7 @@ a.k.a. *StatusInvestmentTop*
 
 </table>
 
-## Permission <sub><sup>[Permission](./src/enum/index.ts#L261)</sup></sub>
+## Permission <sub><sup>[Permission](./src/enum/index.ts#L262)</sup></sub>
 
 backoffice permissions
 <table>
@@ -400,7 +401,7 @@ backoffice permissions
 
 </table>
 
-## Auth Type <sub><sup>[AuthType](./src/enum/index.ts#L274)</sup></sub>
+## Auth Type <sub><sup>[AuthType](./src/enum/index.ts#L275)</sup></sub>
 
 <table>
 <tr><td>Email</td><td>0</td></tr>
@@ -410,7 +411,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L281)</sup></sub>
+## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L282)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -419,7 +420,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Attempt Status <sub><sup>[TAS_OnboardingAttemptStatus](./src/enum/index.ts#L287)</sup></sub>
+## TAS Onboarding Attempt Status <sub><sup>[TAS_OnboardingAttemptStatus](./src/enum/index.ts#L288)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -428,7 +429,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L293)</sup></sub>
+## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L294)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B"</td></tr>
@@ -436,7 +437,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L298)</sup></sub>
+## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L299)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B-ANSWER"</td></tr>
@@ -444,7 +445,7 @@ backoffice permissions
 
 </table>
 
-## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L303)</sup></sub>
+## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L304)</sup></sub>
 
 <table>
 <tr><td>Private</td><td>"RETAIL"</td></tr>
@@ -452,7 +453,7 @@ backoffice permissions
 
 </table>
 
-## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L308)</sup></sub>
+## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L309)</sup></sub>
 
 <table>
 <tr><td>Male</td><td>"M"</td></tr>
@@ -460,7 +461,7 @@ backoffice permissions
 
 </table>
 
-## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L313)</sup></sub>
+## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L314)</sup></sub>
 
 <table>
 <tr><td>Residence</td><td>"RESIDENCE"</td></tr>
@@ -470,7 +471,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L320)</sup></sub>
+## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L321)</sup></sub>
 
 <table>
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
@@ -482,7 +483,7 @@ backoffice permissions
 
 </table>
 
-## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L332)</sup></sub>
+## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L333)</sup></sub>
 
 <table>
 <tr><td>W9</td><td>"W9"</td></tr>
@@ -491,7 +492,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L338)</sup></sub>
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L339)</sup></sub>
 
 <table>
 <tr><td>DMV (Motorizzazione)</td><td>"MCTC"</td></tr>
@@ -502,7 +503,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L351)</sup></sub>
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L352)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -514,7 +515,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L360)</sup></sub>
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L361)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -524,7 +525,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L371)</sup></sub>
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L372)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>
@@ -553,7 +554,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L437)</sup></sub>
+## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L438)</sup></sub>
 
 <table>
 <tr><td>Shufti</td><td>0</td></tr>
@@ -569,7 +570,7 @@ backoffice permissions
 
 </table>
 
-## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L450)</sup></sub>
+## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L451)</sup></sub>
 
 <table>
 <tr><td>Societa Accomandita Azioni</td><td>"AA"</td></tr>
@@ -648,7 +649,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L526)</sup></sub>
+## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L527)</sup></sub>
 
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
@@ -656,7 +657,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L531)</sup></sub>
+## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L532)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -665,7 +666,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L536)</sup></sub>
+## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L537)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -679,7 +680,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L555)</sup></sub>
+## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L556)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -694,7 +695,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L580)</sup></sub>
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L581)</sup></sub>
 
 <table>
 <tr><td>In</td><td>"IN"</td></tr>
@@ -702,7 +703,7 @@ backoffice permissions
 
 </table>
 
-## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L585)</sup></sub>
+## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L586)</sup></sub>
 
 <table>
 <tr><td>Contract</td><td>"Contratto"</td></tr>
@@ -711,7 +712,7 @@ backoffice permissions
 
 </table>
 
-## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L591)</sup></sub>
+## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L592)</sup></sub>
 
 <table>
 <tr><td>Main</td><td>"MAIN"</td></tr>
@@ -719,7 +720,7 @@ backoffice permissions
 
 </table>
 
-## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L596)</sup></sub>
+## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L597)</sup></sub>
 
 <table>
 <tr><td>Investor</td><td>"INVESTOR"</td></tr>

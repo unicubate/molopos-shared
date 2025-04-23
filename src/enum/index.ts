@@ -163,6 +163,7 @@ export enum InvestmentStatus {
     Success = 2,
     Refunded = 3,
     Expired = 4,
+    RefundRequested = 5,
 }
 
 export enum ClassificationStatus {
