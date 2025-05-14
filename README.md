@@ -404,10 +404,12 @@ backoffice permissions
 <tr><td>Delete Proponent</td><td>"delete:proponent"</td></tr>
 <tr><td>Transaction Main Proponent</td><td>"transaction_main:proponent"</td></tr>
 <tr><td>Transaction Recrowd Proponent</td><td>"transaction_recrowd:proponent"</td></tr>
+<tr><td>Read Bank Account</td><td>"read:bank_account"</td></tr>
+<tr><td>Read Recrowd Bank Account</td><td>"read_recrowd:bank_account"</td></tr>
 
 </table>
 
-## Auth Type <sub><sup>[AuthType](./src/enum/index.ts#L281)</sup></sub>
+## Auth Type <sub><sup>[AuthType](./src/enum/index.ts#L283)</sup></sub>
 
 <table>
 <tr><td>Email</td><td>0</td></tr>
@@ -417,7 +419,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L288)</sup></sub>
+## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L290)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -426,7 +428,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Attempt Status <sub><sup>[TAS_OnboardingAttemptStatus](./src/enum/index.ts#L294)</sup></sub>
+## TAS Onboarding Attempt Status <sub><sup>[TAS_OnboardingAttemptStatus](./src/enum/index.ts#L296)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -435,7 +437,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L300)</sup></sub>
+## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L302)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B"</td></tr>
@@ -443,7 +445,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L305)</sup></sub>
+## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L307)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B-ANSWER"</td></tr>
@@ -451,7 +453,7 @@ backoffice permissions
 
 </table>
 
-## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L310)</sup></sub>
+## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L312)</sup></sub>
 
 <table>
 <tr><td>Private</td><td>"RETAIL"</td></tr>
@@ -459,7 +461,7 @@ backoffice permissions
 
 </table>
 
-## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L315)</sup></sub>
+## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L317)</sup></sub>
 
 <table>
 <tr><td>Male</td><td>"M"</td></tr>
@@ -467,7 +469,7 @@ backoffice permissions
 
 </table>
 
-## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L320)</sup></sub>
+## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L322)</sup></sub>
 
 <table>
 <tr><td>Residence</td><td>"RESIDENCE"</td></tr>
@@ -477,7 +479,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L327)</sup></sub>
+## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L329)</sup></sub>
 
 <table>
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
@@ -489,7 +491,7 @@ backoffice permissions
 
 </table>
 
-## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L339)</sup></sub>
+## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L341)</sup></sub>
 
 <table>
 <tr><td>W9</td><td>"W9"</td></tr>
@@ -498,7 +500,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L345)</sup></sub>
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L347)</sup></sub>
 
 <table>
 <tr><td>DMV (Motorizzazione)</td><td>"MCTC"</td></tr>
@@ -509,7 +511,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L358)</sup></sub>
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L360)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -521,7 +523,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L367)</sup></sub>
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L369)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -531,7 +533,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L378)</sup></sub>
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L380)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>
@@ -560,7 +562,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L444)</sup></sub>
+## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L446)</sup></sub>
 
 <table>
 <tr><td>Shufti</td><td>0</td></tr>
@@ -576,7 +578,7 @@ backoffice permissions
 
 </table>
 
-## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L457)</sup></sub>
+## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L459)</sup></sub>
 
 <table>
 <tr><td>Societa Accomandita Azioni</td><td>"AA"</td></tr>
@@ -655,7 +657,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L533)</sup></sub>
+## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L535)</sup></sub>
 
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
@@ -663,7 +665,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L538)</sup></sub>
+## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L540)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -672,7 +674,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L543)</sup></sub>
+## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L545)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -686,7 +688,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L562)</sup></sub>
+## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L564)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -701,7 +703,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L587)</sup></sub>
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L589)</sup></sub>
 
 <table>
 <tr><td>In</td><td>"IN"</td></tr>
@@ -709,7 +711,7 @@ backoffice permissions
 
 </table>
 
-## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L592)</sup></sub>
+## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L594)</sup></sub>
 
 <table>
 <tr><td>Contract</td><td>"Contratto"</td></tr>
@@ -718,7 +720,7 @@ backoffice permissions
 
 </table>
 
-## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L598)</sup></sub>
+## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L600)</sup></sub>
 
 <table>
 <tr><td>Main</td><td>"MAIN"</td></tr>
@@ -726,7 +728,7 @@ backoffice permissions
 
 </table>
 
-## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L603)</sup></sub>
+## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L605)</sup></sub>
 
 <table>
 <tr><td>Investor</td><td>"INVESTOR"</td></tr>

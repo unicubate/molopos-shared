@@ -276,6 +276,8 @@ export enum Permission {
   DeleteProponent = "delete:proponent",
   TransactionMainProponent = "transaction_main:proponent",
   TransactionRecrowdProponent = "transaction_recrowd:proponent",
+  ReadBankAccount = "read:bank_account",
+  ReadRecrowdBankAccount = "read_recrowd:bank_account",
 }
 
 export enum AuthType {
