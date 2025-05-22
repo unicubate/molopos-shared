@@ -606,3 +606,8 @@ export enum OnboardingTypes {
   Investor = "INVESTOR",
   Proponent = "PROPONENT",
 }
+
+export enum GatewayType {
+  Lemonway = "LEMONWAY",
+  TPPay = "TPPAY",
+}

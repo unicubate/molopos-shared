@@ -56,6 +56,7 @@
 - [Tas Contracts Document Type](#tas-contracts-document-type-tascontracts_documenttype)
 - [Bank Account Type](#bank-account-type-bankaccounttype)
 - [Onboarding Types](#onboarding-types-onboardingtypes)
+- [Gateway Type](#gateway-type-gatewaytype)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -733,6 +734,14 @@ backoffice permissions
 <table>
 <tr><td>Investor</td><td>"INVESTOR"</td></tr>
 <tr><td>Proponent</td><td>"PROPONENT"</td></tr>
+
+</table>
+
+## Gateway Type <sub><sup>[GatewayType](./src/enum/index.ts#L610)</sup></sub>
+
+<table>
+<tr><td>Lemonway</td><td>"LEMONWAY"</td></tr>
+<tr><td>TP Pay</td><td>"TPPAY"</td></tr>
 
 </table>
 
