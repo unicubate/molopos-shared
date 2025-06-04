@@ -278,6 +278,7 @@ export enum Permission {
   TransactionRecrowdProponent = "transaction_recrowd:proponent",
   ReadBankAccount = "read:bank_account",
   ReadRecrowdBankAccount = "read_recrowd:bank_account",
+  TechSyncBankAccount = "tech_sync:bank_account",
 }
 
 export enum AuthType {
