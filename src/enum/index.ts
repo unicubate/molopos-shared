@@ -613,3 +613,8 @@ export enum GatewayType {
   Lemonway = "LEMONWAY",
   TPPay = "TPPAY",
 }
+
+export enum AmortizationMethod {
+  Principal = 0,
+  Interest = 1,
+}
