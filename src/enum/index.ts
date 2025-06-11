@@ -279,6 +279,10 @@ export enum Permission {
   ReadBankAccount = "read:bank_account",
   ReadRecrowdBankAccount = "read_recrowd:bank_account",
   TechSyncBankAccount = "tech_sync:bank_account",
+  ReadContract = "read:contract",
+  ReadTasTransaction = "read:tas_transaction",
+  ReadStatisticsTransaction = "read_statistics:transaction",
+  ReadTransaction = "read:transaction",
 }
 
 export enum AuthType {
