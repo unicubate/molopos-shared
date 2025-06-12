@@ -228,6 +228,7 @@ export enum VoucherCategory {
 export enum VoucherActivityType {
   FriendRegistration = "FRIEND_REGISTRATION",
   Promotion = "PROMOTION",
+  Tracking = "TRACKING",
 }
 
 /** user classification survey score */
