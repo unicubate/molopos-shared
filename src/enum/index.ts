@@ -623,3 +623,11 @@ export enum AmortizationMethod {
   Principal = 0,
   Interest = 1,
 }
+
+export enum ProjectFilesType {
+  Documents = "documents",
+  Contract = "contract",
+  Assessment = "assessment",
+  BusinessPlan = "business_plan",
+  RegistrationReport = "registration_report",
+}
