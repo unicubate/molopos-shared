@@ -228,7 +228,6 @@ export enum VoucherCategory {
 export enum VoucherActivityType {
   FriendRegistration = "FRIEND_REGISTRATION",
   Promotion = "PROMOTION",
-  Tracking = "TRACKING",
 }
 
 /** user classification survey score */
@@ -284,6 +283,10 @@ export enum Permission {
   ReadTasTransaction = "read:tas_transaction",
   ReadStatisticsTransaction = "read_statistics:transaction",
   ReadTransaction = "read:transaction",
+  CreateTag = "create:tag",
+  ReadTag = "read:tag",
+  UpdateTag = "update:tag",
+  DeleteTag = "delete:tag",
 }
 
 export enum AuthType {
