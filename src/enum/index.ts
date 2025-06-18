@@ -634,3 +634,16 @@ export enum ProjectFilesType {
   BusinessPlan = "business_plan",
   RegistrationReport = "registration_report",
 }
+
+export enum FeatureFlag {
+  Investment = "investment",
+  PayByBank = "payByBank",
+  CashOut = "cashOut",
+  Registration = "registration",
+  Login = "login",
+  Proponent = "proponent",
+  TasOtp = "tas_otp",
+  TasLogin = "tas_login",
+  TasDashboard = "tas_dashboard",
+  TasTransactions = "tas_transactions",
+}

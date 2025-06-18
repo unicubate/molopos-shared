@@ -59,6 +59,7 @@
 - [Gateway Type](#gateway-type-gatewaytype)
 - [Amortization Method](#amortization-method-amortizationmethod)
 - [Project Files Type](#project-files-type-projectfilestype)
+- [Feature Flag](#feature-flag-featureflag)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -773,6 +774,22 @@ backoffice permissions
 <tr><td>Assessment</td><td>"assessment"</td></tr>
 <tr><td>Business Plan</td><td>"business_plan"</td></tr>
 <tr><td>Registration Report</td><td>"registration_report"</td></tr>
+
+</table>
+
+## Feature Flag <sub><sup>[FeatureFlag](./src/enum/index.ts#L638)</sup></sub>
+
+<table>
+<tr><td>Investment</td><td>"investment"</td></tr>
+<tr><td>Pay By Bank</td><td>"payByBank"</td></tr>
+<tr><td>Cash Out</td><td>"cashOut"</td></tr>
+<tr><td>Registration</td><td>"registration"</td></tr>
+<tr><td>Login</td><td>"login"</td></tr>
+<tr><td>Proponent</td><td>"proponent"</td></tr>
+<tr><td>Tas Otp</td><td>"tas_otp"</td></tr>
+<tr><td>Tas Login</td><td>"tas_login"</td></tr>
+<tr><td>Tas Dashboard</td><td>"tas_dashboard"</td></tr>
+<tr><td>Tas Transactions</td><td>"tas_transactions"</td></tr>
 
 </table>
 
