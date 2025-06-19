@@ -340,6 +340,7 @@ export enum TAS_OnboardingAttemptStatus {
   Completed = 1,
   Aborted = 2,
   Expired = 3,
+  Reset = 4,
 }
 
 export enum TAS_AMLQuestionType {
