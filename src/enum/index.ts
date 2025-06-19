@@ -260,33 +260,66 @@ export enum IntegrationType {
 
 /** backoffice permissions */
 export enum Permission {
+  /** role */
   AssignRole = "assign:role",
   CreateRole = "create:role",
   ReadRole = "read:role",
   UpdateRole = "update:role",
   DeleteRole = "delete:role",
+  /** admin */
   CreateAdmin = "create:admin",
   ReadAdmin = "read:admin",
   UpdateAdmin = "update:admin",
   DeleteAdmin = "delete:admin",
+  /** prospect rate amounts */
   UpdateProspectRateAmounts = "update:prospect_rate_amounts",
+  /** proponent */
   CreateProponent = "create:proponent",
   ReadProponent = "read:proponent",
   UpdateProponent = "update:proponent",
   DeleteProponent = "delete:proponent",
   TransactionMainProponent = "transaction_main:proponent",
   TransactionRecrowdProponent = "transaction_recrowd:proponent",
+  /** bank account */
   ReadBankAccount = "read:bank_account",
   ReadRecrowdBankAccount = "read_recrowd:bank_account",
   TechSyncBankAccount = "tech_sync:bank_account",
+  /** contract */
   ReadContract = "read:contract",
+  /** tas transaction */
   ReadTasTransaction = "read:tas_transaction",
+  /** transaction */
   ReadStatisticsTransaction = "read_statistics:transaction",
   ReadTransaction = "read:transaction",
+  /** tag */
   CreateTag = "create:tag",
   ReadTag = "read:tag",
   UpdateTag = "update:tag",
   DeleteTag = "delete:tag",
+  /** project */
+  ReadProjectProject = "read_project:project",
+  UpdateProjectProject = "update_project:project",
+  CreateProjectProject = "create_project:project",
+  DeleteProjectProject = "delete_project:project",
+  ReadInvestmentProject = "read_investment:project",
+  ReadPreviewProject = "read_preview:project",
+  ReadKiisProject = "read_kiis:project",
+  UpdateKiisProject = "update_kiis:project",
+  UpdateFinancialProject = "update_financial:project",
+  UpdateCommissionProject = "update_commission:project",
+  UpdateDescriptionProject = "update_description:project",
+  UpdateDocumentProject = "update_document:project",
+  UpdateImageProject = "update_image:project",
+  UpdateTagProject = "update_tag:project",
+  UpdateNegotiationRangeProject = "update_negotiation_range:project",
+  ReadRateProject = "read_rate:project",
+  UpdateRateProject = "update_rate:project",
+  UpdateProrogaProject = "update_proroga:project",
+  ReadCommunicationProject = "read_communication:project",
+  UpdateCommunicationProject = "update_communication:project",
+  DeleteCommunicationProject = "delete_communication:project",
+  UpdatePayoutStrategyProject = "update_payout_strategy:project",
+  UpdatePayoutRangeProject = "update_payout_range:project",
 }
 
 export enum AuthType {
