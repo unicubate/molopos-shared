@@ -687,3 +687,7 @@ export enum FeatureFlag {
   TasTransactions = "tas_transactions",
   TasInvestment = "tas_investment",
 }
+
+export enum UserOnboardingStatus {
+  ShuftiErrored = "shuftiErrored"
+}

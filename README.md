@@ -60,6 +60,7 @@
 - [Amortization Method](#amortization-method-amortizationmethod)
 - [Project Files Type](#project-files-type-projectfilestype)
 - [Feature Flag](#feature-flag-featureflag)
+- [User Onboarding Status](#user-onboarding-status-useronboardingstatus)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -820,6 +821,13 @@ backoffice permissions
 <tr><td>Tas Dashboard</td><td>"tas_dashboard"</td></tr>
 <tr><td>Tas Transactions</td><td>"tas_transactions"</td></tr>
 <tr><td>Tas Investment</td><td>"tas_investment"</td></tr>
+
+</table>
+
+## User Onboarding Status <sub><sup>[UserOnboardingStatus](./src/enum/index.ts#L691)</sup></sub>
+
+<table>
+<tr><td>Shufti Errored</td><td>"shuftiErrored"</td></tr>
 
 </table>
 
