@@ -271,8 +271,13 @@ export enum Permission {
   ReadAdmin = "read:admin",
   UpdateAdmin = "update:admin",
   DeleteAdmin = "delete:admin",
-  /** prospect rate amounts */
-  UpdateProspectRateAmounts = "update:prospect_rate_amounts",
+  /** prospect rate */
+  GenerateProspectProspectRate = "generate_prospect:prospect_rate",
+  ReadProspectRateInvestorsProspectRate = "read_prospect_rate_investors:prospect_rate",
+  ReadProspectRate = "read:prospect_rate",
+  CreatePaymentProspectRate = "create_payment:prospect_rate",
+  ReadPaymentProspectRate = "read_payment:prospect_rate",
+  UpdateAmountsProspectRate = "update_amounts:prospect_rate",
   /** proponent */
   CreateProponent = "create:proponent",
   ReadProponent = "read:proponent",
