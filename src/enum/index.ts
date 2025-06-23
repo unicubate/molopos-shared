@@ -680,4 +680,5 @@ export enum FeatureFlag {
   TasLogin = "tas_login",
   TasDashboard = "tas_dashboard",
   TasTransactions = "tas_transactions",
+  TasInvestment = "tas_investment",
 }

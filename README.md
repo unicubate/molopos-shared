@@ -814,6 +814,7 @@ backoffice permissions
 <tr><td>Tas Login</td><td>"tas_login"</td></tr>
 <tr><td>Tas Dashboard</td><td>"tas_dashboard"</td></tr>
 <tr><td>Tas Transactions</td><td>"tas_transactions"</td></tr>
+<tr><td>Tas Investment</td><td>"tas_investment"</td></tr>
 
 </table>
 
