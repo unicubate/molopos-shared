@@ -275,6 +275,7 @@ export enum Permission {
   GenerateProspectProspectRate = "generate_prospect:prospect_rate",
   ReadProspectRateInvestorsProspectRate = "read_prospect_rate_investors:prospect_rate",
   ReadProspectRate = "read:prospect_rate",
+  UpdateProspectRate = "update:prospect_rate",
   CreatePaymentProspectRate = "create_payment:prospect_rate",
   ReadPaymentProspectRate = "read_payment:prospect_rate",
   UpdateAmountsProspectRate = "update_amounts:prospect_rate",
@@ -689,5 +690,5 @@ export enum FeatureFlag {
 }
 
 export enum UserOnboardingStatus {
-  ShuftiErrored = "shuftiErrored"
+  ShuftiErrored = "shuftiErrored",
 }
