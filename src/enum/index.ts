@@ -274,6 +274,7 @@ export enum Permission {
   /** prospect rate */
   GenerateProspectProspectRate = "generate_prospect:prospect_rate",
   ReadProspectRateInvestorsProspectRate = "read_prospect_rate_investors:prospect_rate",
+  PayProspectRateInvestorsProspectRate = "pay_prospect_rate_investors:prospect_rate",
   ReadProspectRate = "read:prospect_rate",
   UpdateProspectRate = "update:prospect_rate",
   CreatePaymentProspectRate = "create_payment:prospect_rate",
