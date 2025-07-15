@@ -61,6 +61,7 @@
 - [Project Files Type](#project-files-type-projectfilestype)
 - [Feature Flag](#feature-flag-featureflag)
 - [User Onboarding Status](#user-onboarding-status-useronboardingstatus)
+- [COI Relationship Enum](#coi-relationship-enum-coirelationshipenum)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -831,6 +832,35 @@ backoffice permissions
 
 <table>
 <tr><td>Shufti Errored</td><td>"shuftiErrored"</td></tr>
+
+</table>
+
+## COI Relationship Enum <sub><sup>[COIRelationshipEnum](./src/enum/index.ts#L698)</sup></sub>
+
+<table>
+<tr><td>PADRE</td><td>"PADRE"</td></tr>
+<tr><td>MADRE</td><td>"MADRE"</td></tr>
+<tr><td>FIGLI</td><td>"FIGLI"</td></tr>
+<tr><td>SUOCERI</td><td>"SUOCERI"</td></tr>
+<tr><td>GENERI</td><td>"GENERI"</td></tr>
+<tr><td>NUORE</td><td>"NUORE"</td></tr>
+<tr><td>NONNI</td><td>"NONNI"</td></tr>
+<tr><td>NIPOTI</td><td>"NIPOTI"</td></tr>
+<tr><td>FRATELLI</td><td>"FRATELLI"</td></tr>
+<tr><td>SORELLE</td><td>"SORELLE"</td></tr>
+<tr><td>COGNATI</td><td>"COGNATI"</td></tr>
+<tr><td>BISNONNI</td><td>"BISNONNI"</td></tr>
+<tr><td>PRONIPOTI</td><td>"PRONIPOTI"</td></tr>
+<tr><td>ZII</td><td>"ZII"</td></tr>
+<tr><td>NIPOTI FRATELLI_SORELLE</td><td>"NIPOTI_FRATELLI_SORELLE"</td></tr>
+<tr><td>CONIUGI ZII_ZIE_NIPOTI</td><td>"CONIUGI_ZII_ZIE_NIPOTI"</td></tr>
+<tr><td>TRISAVI</td><td>"TRISAVI"</td></tr>
+<tr><td>TRINIPOTI</td><td>"TRINIPOTI"</td></tr>
+<tr><td>PROZII</td><td>"PROZII"</td></tr>
+<tr><td>PROZIE</td><td>"PROZIE"</td></tr>
+<tr><td>PRONIPOTI FRATELLI_SORELLE</td><td>"PRONIPOTI_FRATELLI_SORELLE"</td></tr>
+<tr><td>CUGINI</td><td>"CUGINI"</td></tr>
+<tr><td>CONIUGI PROZII_PROZIE_PRONIPOTI_CUGINI</td><td>"CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI"</td></tr>
 
 </table>
 
