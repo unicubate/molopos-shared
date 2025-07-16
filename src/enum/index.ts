@@ -695,28 +695,39 @@ export enum UserOnboardingStatus {
   ShuftiErrored = "shuftiErrored",
 }
 
-export enum COIRelationshipEnum {
+export enum COI_RelationshipType {
+  // Grado 1 - Linea retta
   PADRE = "PADRE",
   MADRE = "MADRE",
   FIGLI = "FIGLI",
+  // Grado 1 - Affini
   SUOCERI = "SUOCERI",
   GENERI = "GENERI",
   NUORE = "NUORE",
+  // Grado 2 - Linea retta
   NONNI = "NONNI",
   NIPOTI = "NIPOTI",
+  // Grado 2 - Collaterale
   FRATELLI = "FRATELLI",
   SORELLE = "SORELLE",
+  // Grado 2 - Affini
   COGNATI = "COGNATI",
+  // Grado 3 - Linea retta
   BISNONNI = "BISNONNI",
   PRONIPOTI = "PRONIPOTI",
+  // Grado 3 - Collaterale
   ZII = "ZII",
   NIPOTI_FRATELLI_SORELLE = "NIPOTI_FRATELLI_SORELLE",
+  // Grado 3 - Affini
   CONIUGI_ZII_ZIE_NIPOTI = "CONIUGI_ZII_ZIE_NIPOTI",
+  // Grado 4 - Linea retta
   TRISAVI = "TRISAVI",
   TRINIPOTI = "TRINIPOTI",
+  // Grado 4 - Collaterale
   PROZII = "PROZII",
   PROZIE = "PROZIE",
   PRONIPOTI_FRATELLI_SORELLE = "PRONIPOTI_FRATELLI_SORELLE",
   CUGINI = "CUGINI",
+  // Grado 4 - Affini
   CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI = "CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI",
 }
