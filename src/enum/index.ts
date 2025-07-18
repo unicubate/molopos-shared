@@ -280,6 +280,8 @@ export enum Permission {
   CreatePaymentProspectRate = "create_payment:prospect_rate",
   ReadPaymentProspectRate = "read_payment:prospect_rate",
   UpdateAmountsProspectRate = "update_amounts:prospect_rate",
+  CreatePartialPaymentProspectRate = "create_partial_payment:prospect_rate",
+  ReadPartialPaymentProspectRate = "read_partial_payment:prospect_rate",
   /** proponent */
   CreateProponent = "create:proponent",
   ReadProponent = "read:proponent",
