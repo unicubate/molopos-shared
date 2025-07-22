@@ -62,6 +62,7 @@
 - [Feature Flag](#feature-flag-featureflag)
 - [User Onboarding Status](#user-onboarding-status-useronboardingstatus)
 - [COI Relationship Type](#coi-relationship-type-coi_relationshiptype)
+- [COI Alert Type](#coi-alert-type-coi_alerttype)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -712,10 +713,11 @@ backoffice permissions
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
 <tr><td>Instant Payment</td><td>"TrxINST"</td></tr>
+<tr><td>Revoked</td><td>"TrxREVK"</td></tr>
 
 </table>
 
-## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L594)</sup></sub>
+## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L595)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -724,7 +726,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L599)</sup></sub>
+## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L600)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -738,7 +740,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L618)</sup></sub>
+## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L619)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -753,7 +755,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L643)</sup></sub>
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L644)</sup></sub>
 
 <table>
 <tr><td>In</td><td>"IN"</td></tr>
@@ -761,7 +763,7 @@ backoffice permissions
 
 </table>
 
-## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L648)</sup></sub>
+## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L649)</sup></sub>
 
 <table>
 <tr><td>Contract</td><td>"Contratto"</td></tr>
@@ -770,7 +772,7 @@ backoffice permissions
 
 </table>
 
-## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L654)</sup></sub>
+## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L655)</sup></sub>
 
 <table>
 <tr><td>Main</td><td>"MAIN"</td></tr>
@@ -778,7 +780,7 @@ backoffice permissions
 
 </table>
 
-## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L659)</sup></sub>
+## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L660)</sup></sub>
 
 <table>
 <tr><td>Investor</td><td>"INVESTOR"</td></tr>
@@ -786,7 +788,7 @@ backoffice permissions
 
 </table>
 
-## Gateway Type <sub><sup>[GatewayType](./src/enum/index.ts#L664)</sup></sub>
+## Gateway Type <sub><sup>[GatewayType](./src/enum/index.ts#L665)</sup></sub>
 
 <table>
 <tr><td>Lemonway</td><td>"LEMONWAY"</td></tr>
@@ -794,7 +796,7 @@ backoffice permissions
 
 </table>
 
-## Amortization Method <sub><sup>[AmortizationMethod](./src/enum/index.ts#L669)</sup></sub>
+## Amortization Method <sub><sup>[AmortizationMethod](./src/enum/index.ts#L670)</sup></sub>
 
 <table>
 <tr><td>Principal</td><td>0</td></tr>
@@ -802,7 +804,7 @@ backoffice permissions
 
 </table>
 
-## Project Files Type <sub><sup>[ProjectFilesType](./src/enum/index.ts#L674)</sup></sub>
+## Project Files Type <sub><sup>[ProjectFilesType](./src/enum/index.ts#L675)</sup></sub>
 
 <table>
 <tr><td>Documents</td><td>"documents"</td></tr>
@@ -813,7 +815,7 @@ backoffice permissions
 
 </table>
 
-## Feature Flag <sub><sup>[FeatureFlag](./src/enum/index.ts#L682)</sup></sub>
+## Feature Flag <sub><sup>[FeatureFlag](./src/enum/index.ts#L683)</sup></sub>
 
 <table>
 <tr><td>Investment</td><td>"investment"</td></tr>
@@ -830,14 +832,14 @@ backoffice permissions
 
 </table>
 
-## User Onboarding Status <sub><sup>[UserOnboardingStatus](./src/enum/index.ts#L696)</sup></sub>
+## User Onboarding Status <sub><sup>[UserOnboardingStatus](./src/enum/index.ts#L697)</sup></sub>
 
 <table>
 <tr><td>Shufti Errored</td><td>"shuftiErrored"</td></tr>
 
 </table>
 
-## COI Relationship Type <sub><sup>[COI_RelationshipType](./src/enum/index.ts#L700)</sup></sub>
+## COI Relationship Type <sub><sup>[COI_RelationshipType](./src/enum/index.ts#L701)</sup></sub>
 
 <table>
 <tr><td>PADRE (Grado 1 - Linea retta)</td><td>"PADRE"</td></tr>
@@ -863,6 +865,15 @@ backoffice permissions
 <tr><td>PRONIPOTI FRATELLI_SORELLE</td><td>"PRONIPOTI_FRATELLI_SORELLE"</td></tr>
 <tr><td>CUGINI</td><td>"CUGINI"</td></tr>
 <tr><td>CONIUGI PROZII_PROZIE_PRONIPOTI_CUGINI (Grado 4 - Affini)</td><td>"CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI"</td></tr>
+
+</table>
+
+## COI Alert Type <sub><sup>[COI_AlertType](./src/enum/index.ts#L738)</sup></sub>
+
+<table>
+<tr><td>RELATIVE CONFLICT</td><td>"RELATIVE_CONFLICT"</td></tr>
+<tr><td>COMPANY CONTROL_CONFLICT</td><td>"COMPANY_CONTROL_CONFLICT"</td></tr>
+<tr><td>SELF CONFLICT</td><td>"SELF_CONFLICT"</td></tr>
 
 </table>
 
