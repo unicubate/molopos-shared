@@ -589,6 +589,7 @@ export enum TAS_LegalForm {
 export enum TAS_TransactionType {
   SEPA = "TrxSEPA",
   InstantPayment = "TrxINST",
+  Revoked = "TrxREVK",
 }
 
 export enum TAS_TransactionStatus {
