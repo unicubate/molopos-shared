@@ -329,7 +329,8 @@ export enum Permission {
   DeleteCommunicationProject = "delete_communication:project",
   UpdatePayoutStrategyProject = "update_payout_strategy:project",
   UpdatePayoutRangeProject = "update_payout_range:project",
-  ReadAllCOIDeclarations = "read:all_coi_declarations",
+  /** coi declaration */
+  ReadAllCOIDeclaration = "read_all:coi_declaration",
 }
 
 export enum AuthType {
