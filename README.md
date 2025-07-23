@@ -63,6 +63,7 @@
 - [User Onboarding Status](#user-onboarding-status-useronboardingstatus)
 - [COI Relationship Type](#coi-relationship-type-coi_relationshiptype)
 - [COI Alert Type](#coi-alert-type-coi_alerttype)
+- [Restitution Type](#restitution-type-restitutiontype)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -454,11 +455,11 @@ backoffice permissions
 <tr><td>Delete Communication Project</td><td>"delete_communication:project"</td></tr>
 <tr><td>Update Payout Strategy Project</td><td>"update_payout_strategy:project"</td></tr>
 <tr><td>Update Payout Range Project</td><td>"update_payout_range:project"</td></tr>
-<tr><td>Read All COI Declarations</td><td>"read:all_coi_declarations"</td></tr>
+<tr><td>Read All COI Declaration (coi declaration)</td><td>"read_all:coi_declaration"</td></tr>
 
 </table>
 
-## Auth Type <sub><sup>[AuthType](./src/enum/index.ts#L335)</sup></sub>
+## Auth Type <sub><sup>[AuthType](./src/enum/index.ts#L336)</sup></sub>
 
 <table>
 <tr><td>Email</td><td>0</td></tr>
@@ -468,7 +469,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L342)</sup></sub>
+## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L343)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -477,7 +478,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Attempt Status <sub><sup>[TAS_OnboardingAttemptStatus](./src/enum/index.ts#L348)</sup></sub>
+## TAS Onboarding Attempt Status <sub><sup>[TAS_OnboardingAttemptStatus](./src/enum/index.ts#L349)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -488,7 +489,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L356)</sup></sub>
+## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L357)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B"</td></tr>
@@ -496,7 +497,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L361)</sup></sub>
+## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L362)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B-ANSWER"</td></tr>
@@ -504,7 +505,7 @@ backoffice permissions
 
 </table>
 
-## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L366)</sup></sub>
+## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L367)</sup></sub>
 
 <table>
 <tr><td>Private</td><td>"RETAIL"</td></tr>
@@ -512,7 +513,7 @@ backoffice permissions
 
 </table>
 
-## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L371)</sup></sub>
+## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L372)</sup></sub>
 
 <table>
 <tr><td>Male</td><td>"M"</td></tr>
@@ -520,7 +521,7 @@ backoffice permissions
 
 </table>
 
-## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L376)</sup></sub>
+## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L377)</sup></sub>
 
 <table>
 <tr><td>Residence</td><td>"RESIDENCE"</td></tr>
@@ -530,7 +531,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L383)</sup></sub>
+## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L384)</sup></sub>
 
 <table>
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
@@ -542,7 +543,7 @@ backoffice permissions
 
 </table>
 
-## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L395)</sup></sub>
+## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L396)</sup></sub>
 
 <table>
 <tr><td>W9</td><td>"W9"</td></tr>
@@ -551,7 +552,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L401)</sup></sub>
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L402)</sup></sub>
 
 <table>
 <tr><td>DMV (Motorizzazione)</td><td>"MCTC"</td></tr>
@@ -562,7 +563,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L414)</sup></sub>
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L415)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -574,7 +575,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L423)</sup></sub>
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L424)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -584,7 +585,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L434)</sup></sub>
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L435)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>
@@ -613,7 +614,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L500)</sup></sub>
+## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L501)</sup></sub>
 
 <table>
 <tr><td>Shufti</td><td>0</td></tr>
@@ -629,7 +630,7 @@ backoffice permissions
 
 </table>
 
-## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L513)</sup></sub>
+## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L514)</sup></sub>
 
 <table>
 <tr><td>Societa Accomandita Azioni</td><td>"AA"</td></tr>
@@ -708,7 +709,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L589)</sup></sub>
+## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L590)</sup></sub>
 
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
@@ -717,7 +718,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L595)</sup></sub>
+## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L596)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -726,7 +727,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L600)</sup></sub>
+## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L601)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -740,7 +741,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L619)</sup></sub>
+## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L620)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -755,7 +756,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L644)</sup></sub>
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L645)</sup></sub>
 
 <table>
 <tr><td>In</td><td>"IN"</td></tr>
@@ -763,7 +764,7 @@ backoffice permissions
 
 </table>
 
-## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L649)</sup></sub>
+## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L650)</sup></sub>
 
 <table>
 <tr><td>Contract</td><td>"Contratto"</td></tr>
@@ -772,7 +773,7 @@ backoffice permissions
 
 </table>
 
-## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L655)</sup></sub>
+## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L656)</sup></sub>
 
 <table>
 <tr><td>Main</td><td>"MAIN"</td></tr>
@@ -780,7 +781,7 @@ backoffice permissions
 
 </table>
 
-## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L660)</sup></sub>
+## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L661)</sup></sub>
 
 <table>
 <tr><td>Investor</td><td>"INVESTOR"</td></tr>
@@ -788,7 +789,7 @@ backoffice permissions
 
 </table>
 
-## Gateway Type <sub><sup>[GatewayType](./src/enum/index.ts#L665)</sup></sub>
+## Gateway Type <sub><sup>[GatewayType](./src/enum/index.ts#L666)</sup></sub>
 
 <table>
 <tr><td>Lemonway</td><td>"LEMONWAY"</td></tr>
@@ -796,7 +797,7 @@ backoffice permissions
 
 </table>
 
-## Amortization Method <sub><sup>[AmortizationMethod](./src/enum/index.ts#L670)</sup></sub>
+## Amortization Method <sub><sup>[AmortizationMethod](./src/enum/index.ts#L671)</sup></sub>
 
 <table>
 <tr><td>Principal</td><td>0</td></tr>
@@ -804,7 +805,7 @@ backoffice permissions
 
 </table>
 
-## Project Files Type <sub><sup>[ProjectFilesType](./src/enum/index.ts#L675)</sup></sub>
+## Project Files Type <sub><sup>[ProjectFilesType](./src/enum/index.ts#L676)</sup></sub>
 
 <table>
 <tr><td>Documents</td><td>"documents"</td></tr>
@@ -815,7 +816,7 @@ backoffice permissions
 
 </table>
 
-## Feature Flag <sub><sup>[FeatureFlag](./src/enum/index.ts#L683)</sup></sub>
+## Feature Flag <sub><sup>[FeatureFlag](./src/enum/index.ts#L684)</sup></sub>
 
 <table>
 <tr><td>Investment</td><td>"investment"</td></tr>
@@ -832,48 +833,56 @@ backoffice permissions
 
 </table>
 
-## User Onboarding Status <sub><sup>[UserOnboardingStatus](./src/enum/index.ts#L697)</sup></sub>
+## User Onboarding Status <sub><sup>[UserOnboardingStatus](./src/enum/index.ts#L698)</sup></sub>
 
 <table>
 <tr><td>Shufti Errored</td><td>"shuftiErrored"</td></tr>
 
 </table>
 
-## COI Relationship Type <sub><sup>[COI_RelationshipType](./src/enum/index.ts#L701)</sup></sub>
+## COI Relationship Type <sub><sup>[COI_RelationshipType](./src/enum/index.ts#L702)</sup></sub>
 
 <table>
-<tr><td>PADRE (Grado 1 - Linea retta)</td><td>"PADRE"</td></tr>
-<tr><td>MADRE</td><td>"MADRE"</td></tr>
-<tr><td>FIGLI</td><td>"FIGLI"</td></tr>
-<tr><td>SUOCERI (Grado 1 - Affini)</td><td>"SUOCERI"</td></tr>
-<tr><td>GENERI</td><td>"GENERI"</td></tr>
-<tr><td>NUORE</td><td>"NUORE"</td></tr>
-<tr><td>NONNI (Grado 2 - Linea retta)</td><td>"NONNI"</td></tr>
-<tr><td>NIPOTI</td><td>"NIPOTI"</td></tr>
-<tr><td>FRATELLI (Grado 2 - Collaterale)</td><td>"FRATELLI"</td></tr>
-<tr><td>SORELLE</td><td>"SORELLE"</td></tr>
-<tr><td>COGNATI (Grado 2 - Affini)</td><td>"COGNATI"</td></tr>
-<tr><td>BISNONNI (Grado 3 - Linea retta)</td><td>"BISNONNI"</td></tr>
-<tr><td>PRONIPOTI</td><td>"PRONIPOTI"</td></tr>
-<tr><td>ZII (Grado 3 - Collaterale)</td><td>"ZII"</td></tr>
-<tr><td>NIPOTI FRATELLI_SORELLE</td><td>"NIPOTI_FRATELLI_SORELLE"</td></tr>
-<tr><td>CONIUGI ZII_ZIE_NIPOTI (Grado 3 - Affini)</td><td>"CONIUGI_ZII_ZIE_NIPOTI"</td></tr>
-<tr><td>TRISAVI (Grado 4 - Linea retta)</td><td>"TRISAVI"</td></tr>
-<tr><td>TRINIPOTI</td><td>"TRINIPOTI"</td></tr>
-<tr><td>PROZII (Grado 4 - Collaterale)</td><td>"PROZII"</td></tr>
-<tr><td>PROZIE</td><td>"PROZIE"</td></tr>
-<tr><td>PRONIPOTI FRATELLI_SORELLE</td><td>"PRONIPOTI_FRATELLI_SORELLE"</td></tr>
-<tr><td>CUGINI</td><td>"CUGINI"</td></tr>
-<tr><td>CONIUGI PROZII_PROZIE_PRONIPOTI_CUGINI (Grado 4 - Affini)</td><td>"CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI"</td></tr>
+<tr><td>Father (Degree 1 - Direct line)</td><td>"PADRE"</td></tr>
+<tr><td>Mother</td><td>"MADRE"</td></tr>
+<tr><td>Children</td><td>"FIGLI"</td></tr>
+<tr><td>Parents In Law (Degree 1 - In-laws)</td><td>"SUOCERI"</td></tr>
+<tr><td>Sons In Law</td><td>"GENERI"</td></tr>
+<tr><td>Daughters In Law</td><td>"NUORE"</td></tr>
+<tr><td>Grandparents (Degree 2 - Direct line)</td><td>"NONNI"</td></tr>
+<tr><td>Grandchildren</td><td>"NIPOTI"</td></tr>
+<tr><td>Brothers (Degree 2 - Collateral)</td><td>"FRATELLI"</td></tr>
+<tr><td>Sisters</td><td>"SORELLE"</td></tr>
+<tr><td>Brothers In Law (Degree 2 - In-laws)</td><td>"COGNATI"</td></tr>
+<tr><td>Great Grandparents (Degree 3 - Direct line)</td><td>"BISNONNI"</td></tr>
+<tr><td>Great Grandchildren</td><td>"PRONIPOTI"</td></tr>
+<tr><td>Uncles (Degree 3 - Collateral)</td><td>"ZII"</td></tr>
+<tr><td>Nephews Nieces Siblings</td><td>"NIPOTI_FRATELLI_SORELLE"</td></tr>
+<tr><td>Spouses Of Uncles Aunts Nephews Nieces (Degree 3 - In-laws)</td><td>"CONIUGI_ZII_ZIE_NIPOTI"</td></tr>
+<tr><td>Great Great Grandparents (Degree 4 - Direct line)</td><td>"TRISAVI"</td></tr>
+<tr><td>Great Great Grandchildren</td><td>"TRINIPOTI"</td></tr>
+<tr><td>Great Uncles (Degree 4 - Collateral)</td><td>"PROZII"</td></tr>
+<tr><td>Great Aunts</td><td>"PROZIE"</td></tr>
+<tr><td>Great Nephews Nieces Siblings</td><td>"PRONIPOTI_FRATELLI_SORELLE"</td></tr>
+<tr><td>Cousins</td><td>"CUGINI"</td></tr>
+<tr><td>Spouses Of Great Uncles Aunts Nephews Cousins (Degree 4 - In-laws)</td><td>"CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI"</td></tr>
 
 </table>
 
-## COI Alert Type <sub><sup>[COI_AlertType](./src/enum/index.ts#L738)</sup></sub>
+## COI Alert Type <sub><sup>[COI_AlertType](./src/enum/index.ts#L739)</sup></sub>
 
 <table>
-<tr><td>RELATIVE CONFLICT</td><td>"RELATIVE_CONFLICT"</td></tr>
-<tr><td>COMPANY CONTROL_CONFLICT</td><td>"COMPANY_CONTROL_CONFLICT"</td></tr>
-<tr><td>SELF CONFLICT</td><td>"SELF_CONFLICT"</td></tr>
+<tr><td>Relative Conflict</td><td>"RELATIVE_CONFLICT"</td></tr>
+<tr><td>Company Control Conflict</td><td>"COMPANY_CONTROL_CONFLICT"</td></tr>
+<tr><td>Self Conflict</td><td>"SELF_CONFLICT"</td></tr>
+
+</table>
+
+## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L745)</sup></sub>
+
+<table>
+<tr><td>Mixed</td><td>"MIXED"</td></tr>
+<tr><td>Lemonway Only</td><td>"LEMONWAY_ONLY"</td></tr>
 
 </table>
 

@@ -700,44 +700,49 @@ export enum UserOnboardingStatus {
 }
 
 export enum COI_RelationshipType {
-  // Grado 1 - Linea retta
-  PADRE = "PADRE",
-  MADRE = "MADRE",
-  FIGLI = "FIGLI",
-  // Grado 1 - Affini
-  SUOCERI = "SUOCERI",
-  GENERI = "GENERI",
-  NUORE = "NUORE",
-  // Grado 2 - Linea retta
-  NONNI = "NONNI",
-  NIPOTI = "NIPOTI",
-  // Grado 2 - Collaterale
-  FRATELLI = "FRATELLI",
-  SORELLE = "SORELLE",
-  // Grado 2 - Affini
-  COGNATI = "COGNATI",
-  // Grado 3 - Linea retta
-  BISNONNI = "BISNONNI",
-  PRONIPOTI = "PRONIPOTI",
-  // Grado 3 - Collaterale
-  ZII = "ZII",
-  NIPOTI_FRATELLI_SORELLE = "NIPOTI_FRATELLI_SORELLE",
-  // Grado 3 - Affini
-  CONIUGI_ZII_ZIE_NIPOTI = "CONIUGI_ZII_ZIE_NIPOTI",
-  // Grado 4 - Linea retta
-  TRISAVI = "TRISAVI",
-  TRINIPOTI = "TRINIPOTI",
-  // Grado 4 - Collaterale
-  PROZII = "PROZII",
-  PROZIE = "PROZIE",
-  PRONIPOTI_FRATELLI_SORELLE = "PRONIPOTI_FRATELLI_SORELLE",
-  CUGINI = "CUGINI",
-  // Grado 4 - Affini
-  CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI = "CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI",
+  // Degree 1 - Direct line
+  Father = "PADRE",
+  Mother = "MADRE",
+  Children = "FIGLI",
+  // Degree 1 - In-laws
+  ParentsInLaw = "SUOCERI",
+  SonsInLaw = "GENERI",
+  DaughtersInLaw = "NUORE",
+  // Degree 2 - Direct line
+  Grandparents = "NONNI",
+  Grandchildren = "NIPOTI",
+  // Degree 2 - Collateral
+  Brothers = "FRATELLI",
+  Sisters = "SORELLE",
+  // Degree 2 - In-laws
+  BrothersInLaw = "COGNATI",
+  // Degree 3 - Direct line
+  GreatGrandparents = "BISNONNI",
+  GreatGrandchildren = "PRONIPOTI",
+  // Degree 3 - Collateral
+  Uncles = "ZII",
+  NephewsNiecesSiblings = "NIPOTI_FRATELLI_SORELLE",
+  // Degree 3 - In-laws
+  SpousesOfUnclesAuntsNephewsNieces = "CONIUGI_ZII_ZIE_NIPOTI",
+  // Degree 4 - Direct line
+  GreatGreatGrandparents = "TRISAVI",
+  GreatGreatGrandchildren = "TRINIPOTI",
+  // Degree 4 - Collateral
+  GreatUncles = "PROZII",
+  GreatAunts = "PROZIE",
+  GreatNephewsNiecesSiblings = "PRONIPOTI_FRATELLI_SORELLE",
+  Cousins = "CUGINI",
+  // Degree 4 - In-laws
+  SpousesOfGreatUnclesAuntsNephewsCousins = "CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI",
 }
 
 export enum COI_AlertType {
-  RELATIVE_CONFLICT = "RELATIVE_CONFLICT",
-  COMPANY_CONTROL_CONFLICT = "COMPANY_CONTROL_CONFLICT",
-  SELF_CONFLICT = "SELF_CONFLICT",
+  RelativeConflict = "RELATIVE_CONFLICT",
+  CompanyControlConflict = "COMPANY_CONTROL_CONFLICT",
+  SelfConflict = "SELF_CONFLICT",
+}
+
+export enum RestitutionType {
+  Mixed = "MIXED",
+  LemonwayOnly = "LEMONWAY_ONLY",
 }
