@@ -156,6 +156,7 @@ export enum ProspectRateInvestorStatus {
   InPayment = 2,
   Paid = 3,
   Error = 4,
+  Excluded = 5,
 }
 
 export enum InvestmentStatus {
