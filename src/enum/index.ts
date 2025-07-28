@@ -598,6 +598,7 @@ export enum TAS_TransactionStatus {
   Pending = 0,
   Confirmed = 1,
   Rejected = 2,
+  PreApproved = 3,
 }
 export enum TAS_OperationOverAllStatus {
   /** transazione valida, da autorizzare */
