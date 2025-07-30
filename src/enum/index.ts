@@ -703,39 +703,39 @@ export enum UserOnboardingStatus {
 
 export enum COI_RelationshipType {
   // Degree 1 - Direct line
-  Father = "PADRE",
-  Mother = "MADRE",
-  Children = "FIGLI",
+  Father = "FATHER",
+  Mother = "MOTHER",
+  Children = "CHILDREN",
   // Degree 1 - In-laws
-  ParentsInLaw = "SUOCERI",
-  SonsInLaw = "GENERI",
-  DaughtersInLaw = "NUORE",
+  ParentsInLaw = "PARENTS_IN_LAW",
+  SonsInLaw = "SONS_IN_LAW",
+  DaughtersInLaw = "DAUGHTERS_IN_LAW",
   // Degree 2 - Direct line
-  Grandparents = "NONNI",
-  Grandchildren = "NIPOTI",
+  Grandparents = "GRANDPARENTS",
+  Grandchildren = "GRANDCHILDREN",
   // Degree 2 - Collateral
-  Brothers = "FRATELLI",
-  Sisters = "SORELLE",
+  Brothers = "BROTHERS",
+  Sisters = "SISTERS",
   // Degree 2 - In-laws
-  BrothersInLaw = "COGNATI",
+  BrothersInLaw = "BROTHERS_IN_LAW",
   // Degree 3 - Direct line
-  GreatGrandparents = "BISNONNI",
-  GreatGrandchildren = "PRONIPOTI",
+  GreatGrandparents = "GREAT_GRANDPARENTS",
+  GreatGrandchildren = "GREAT_GRANDCHILDREN",
   // Degree 3 - Collateral
-  Uncles = "ZII",
-  NephewsNiecesSiblings = "NIPOTI_FRATELLI_SORELLE",
+  Uncles = "UNCLES",
+  NephewsNiecesSiblings = "NEPHEWS_NIECES_SIBLINGS",
   // Degree 3 - In-laws
-  SpousesOfUnclesAuntsNephewsNieces = "CONIUGI_ZII_ZIE_NIPOTI",
+  SpousesOfUnclesAuntsNephewsNieces = "SPOUSES_OF_UNCLES_AUNTS_NEPHEWS_NIECES",
   // Degree 4 - Direct line
-  GreatGreatGrandparents = "TRISAVI",
-  GreatGreatGrandchildren = "TRINIPOTI",
+  GreatGreatGrandparents = "GREAT_GREAT_GRANDPARENTS",
+  GreatGreatGrandchildren = "GREAT_GREAT_GRANDCHILDREN",
   // Degree 4 - Collateral
-  GreatUncles = "PROZII",
-  GreatAunts = "PROZIE",
-  GreatNephewsNiecesSiblings = "PRONIPOTI_FRATELLI_SORELLE",
-  Cousins = "CUGINI",
+  GreatUncles = "GREAT_UNCLES",
+  GreatAunts = "GREAT_AUNTS",
+  GreatNephewsNiecesSiblings = "GREAT_NEPHEWS_NIECES_SIBLINGS",
+  Cousins = "COUSINS",
   // Degree 4 - In-laws
-  SpousesOfGreatUnclesAuntsNephewsCousins = "CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI",
+  SpousesOfGreatUnclesAuntsNephewsCousins = "SPOUSES_OF_GREAT_UNCLES_AUNTS_NEPHEWS_COUSINS",
 }
 
 export enum COI_AlertType {

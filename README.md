@@ -845,29 +845,29 @@ backoffice permissions
 ## COI Relationship Type <sub><sup>[COI_RelationshipType](./src/enum/index.ts#L704)</sup></sub>
 
 <table>
-<tr><td>Father (Degree 1 - Direct line)</td><td>"PADRE"</td></tr>
-<tr><td>Mother</td><td>"MADRE"</td></tr>
-<tr><td>Children</td><td>"FIGLI"</td></tr>
-<tr><td>Parents In Law (Degree 1 - In-laws)</td><td>"SUOCERI"</td></tr>
-<tr><td>Sons In Law</td><td>"GENERI"</td></tr>
-<tr><td>Daughters In Law</td><td>"NUORE"</td></tr>
-<tr><td>Grandparents (Degree 2 - Direct line)</td><td>"NONNI"</td></tr>
-<tr><td>Grandchildren</td><td>"NIPOTI"</td></tr>
-<tr><td>Brothers (Degree 2 - Collateral)</td><td>"FRATELLI"</td></tr>
-<tr><td>Sisters</td><td>"SORELLE"</td></tr>
-<tr><td>Brothers In Law (Degree 2 - In-laws)</td><td>"COGNATI"</td></tr>
-<tr><td>Great Grandparents (Degree 3 - Direct line)</td><td>"BISNONNI"</td></tr>
-<tr><td>Great Grandchildren</td><td>"PRONIPOTI"</td></tr>
-<tr><td>Uncles (Degree 3 - Collateral)</td><td>"ZII"</td></tr>
-<tr><td>Nephews Nieces Siblings</td><td>"NIPOTI_FRATELLI_SORELLE"</td></tr>
-<tr><td>Spouses Of Uncles Aunts Nephews Nieces (Degree 3 - In-laws)</td><td>"CONIUGI_ZII_ZIE_NIPOTI"</td></tr>
-<tr><td>Great Great Grandparents (Degree 4 - Direct line)</td><td>"TRISAVI"</td></tr>
-<tr><td>Great Great Grandchildren</td><td>"TRINIPOTI"</td></tr>
-<tr><td>Great Uncles (Degree 4 - Collateral)</td><td>"PROZII"</td></tr>
-<tr><td>Great Aunts</td><td>"PROZIE"</td></tr>
-<tr><td>Great Nephews Nieces Siblings</td><td>"PRONIPOTI_FRATELLI_SORELLE"</td></tr>
-<tr><td>Cousins</td><td>"CUGINI"</td></tr>
-<tr><td>Spouses Of Great Uncles Aunts Nephews Cousins (Degree 4 - In-laws)</td><td>"CONIUGI_PROZII_PROZIE_PRONIPOTI_CUGINI"</td></tr>
+<tr><td>Father (Degree 1 - Direct line)</td><td>"FATHER"</td></tr>
+<tr><td>Mother</td><td>"MOTHER"</td></tr>
+<tr><td>Children</td><td>"CHILDREN"</td></tr>
+<tr><td>Parents In Law (Degree 1 - In-laws)</td><td>"PARENTS_IN_LAW"</td></tr>
+<tr><td>Sons In Law</td><td>"SONS_IN_LAW"</td></tr>
+<tr><td>Daughters In Law</td><td>"DAUGHTERS_IN_LAW"</td></tr>
+<tr><td>Grandparents (Degree 2 - Direct line)</td><td>"GRANDPARENTS"</td></tr>
+<tr><td>Grandchildren</td><td>"GRANDCHILDREN"</td></tr>
+<tr><td>Brothers (Degree 2 - Collateral)</td><td>"BROTHERS"</td></tr>
+<tr><td>Sisters</td><td>"SISTERS"</td></tr>
+<tr><td>Brothers In Law (Degree 2 - In-laws)</td><td>"BROTHERS_IN_LAW"</td></tr>
+<tr><td>Great Grandparents (Degree 3 - Direct line)</td><td>"GREAT_GRANDPARENTS"</td></tr>
+<tr><td>Great Grandchildren</td><td>"GREAT_GRANDCHILDREN"</td></tr>
+<tr><td>Uncles (Degree 3 - Collateral)</td><td>"UNCLES"</td></tr>
+<tr><td>Nephews Nieces Siblings</td><td>"NEPHEWS_NIECES_SIBLINGS"</td></tr>
+<tr><td>Spouses Of Uncles Aunts Nephews Nieces (Degree 3 - In-laws)</td><td>"SPOUSES_OF_UNCLES_AUNTS_NEPHEWS_NIECES"</td></tr>
+<tr><td>Great Great Grandparents (Degree 4 - Direct line)</td><td>"GREAT_GREAT_GRANDPARENTS"</td></tr>
+<tr><td>Great Great Grandchildren</td><td>"GREAT_GREAT_GRANDCHILDREN"</td></tr>
+<tr><td>Great Uncles (Degree 4 - Collateral)</td><td>"GREAT_UNCLES"</td></tr>
+<tr><td>Great Aunts</td><td>"GREAT_AUNTS"</td></tr>
+<tr><td>Great Nephews Nieces Siblings</td><td>"GREAT_NEPHEWS_NIECES_SIBLINGS"</td></tr>
+<tr><td>Cousins</td><td>"COUSINS"</td></tr>
+<tr><td>Spouses Of Great Uncles Aunts Nephews Cousins (Degree 4 - In-laws)</td><td>"SPOUSES_OF_GREAT_UNCLES_AUNTS_NEPHEWS_COUSINS"</td></tr>
 
 </table>
 
@@ -876,11 +876,13 @@ backoffice permissions
 <table>
 <tr><td>Relative Conflict</td><td>"RELATIVE_CONFLICT"</td></tr>
 <tr><td>Company Control Conflict</td><td>"COMPANY_CONTROL_CONFLICT"</td></tr>
+<tr><td>Proponent Control Conflict</td><td>"PROPONENT_CONTROL_CONFLICT"</td></tr>
 <tr><td>Self Conflict</td><td>"SELF_CONFLICT"</td></tr>
+<tr><td>Investment Conflict</td><td>"INVESTMENT_CONFLICT"</td></tr>
 
 </table>
 
-## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L747)</sup></sub>
+## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L749)</sup></sub>
 
 <table>
 <tr><td>Mixed</td><td>"MIXED"</td></tr>
