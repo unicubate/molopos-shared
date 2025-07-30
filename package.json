@@ -1,6 +1,6 @@
 {
   "name": "shared",
-  "version": "2.2.39",
+  "version": "2.2.41",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",

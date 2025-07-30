@@ -598,6 +598,7 @@ export enum TAS_TransactionStatus {
   Pending = 0,
   Confirmed = 1,
   Rejected = 2,
+  PreApproved = 3,
 }
 export enum TAS_OperationOverAllStatus {
   /** transazione valida, da autorizzare */
@@ -740,7 +741,9 @@ export enum COI_RelationshipType {
 export enum COI_AlertType {
   RelativeConflict = "RELATIVE_CONFLICT",
   CompanyControlConflict = "COMPANY_CONTROL_CONFLICT",
+  ProponentControlConflict = "PROPONENT_CONTROL_CONFLICT",
   SelfConflict = "SELF_CONFLICT",
+  InvestmentConflict = "INVESTMENT_CONFLICT",
 }
 
 export enum RestitutionType {
