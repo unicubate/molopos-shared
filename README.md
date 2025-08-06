@@ -879,10 +879,11 @@ backoffice permissions
 <tr><td>Proponent Control Conflict</td><td>"PROPONENT_CONTROL_CONFLICT"</td></tr>
 <tr><td>Self Conflict</td><td>"SELF_CONFLICT"</td></tr>
 <tr><td>Investment Conflict</td><td>"INVESTMENT_CONFLICT"</td></tr>
+<tr><td>Company Member Conflict</td><td>"COMPANY_MEMBER_CONFLICT"</td></tr>
 
 </table>
 
-## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L749)</sup></sub>
+## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L750)</sup></sub>
 
 <table>
 <tr><td>Mixed</td><td>"MIXED"</td></tr>

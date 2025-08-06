@@ -744,6 +744,7 @@ export enum COI_AlertType {
   ProponentControlConflict = "PROPONENT_CONTROL_CONFLICT",
   SelfConflict = "SELF_CONFLICT",
   InvestmentConflict = "INVESTMENT_CONFLICT",
+  CompanyMemberConflict = "COMPANY_MEMBER_CONFLICT",
 }
 
 export enum RestitutionType {
