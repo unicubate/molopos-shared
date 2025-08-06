@@ -2084,4 +2084,9 @@ export const itBanks = [
     description: "COMPASS BANCA SPA",
     code: "19275",
   },
+    {
+    name: "TPPAY S.R.L.",
+    description: "TPPAY S.R.L.",
+    code: "36928",
+  },
 ];
