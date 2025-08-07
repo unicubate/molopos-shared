@@ -294,6 +294,7 @@ export enum Permission {
   ReadBankAccount = "read:bank_account",
   ReadRecrowdBankAccount = "read_recrowd:bank_account",
   TechSyncBankAccount = "tech_sync:bank_account",
+  UpdateWithdrawalLimitBankAccount = "update_withdrawal_limit:bank_account",
   /** contract */
   ReadContract = "read:contract",
   /** tas transaction */
