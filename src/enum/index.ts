@@ -191,6 +191,7 @@ export enum ProjectStatus {
   Overdue = "OVERDUE",
   /** in proproga */
   Postponed = "POSTPONED",
+  Settlement = "SETTLEMENT",
 }
 
 /** a.k.a. *StatusRegisterType* */
