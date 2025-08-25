@@ -692,6 +692,7 @@ export enum FeatureFlag {
   Registration = "registration",
   Login = "login",
   Proponent = "proponent",
+  TasOnboarding = "tas_onboarding",
   TasOtp = "tas_otp",
   TasLogin = "tas_login",
   TasDashboard = "tas_dashboard",
