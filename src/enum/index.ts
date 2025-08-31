@@ -334,6 +334,7 @@ export enum Permission {
   UpdatePayoutRangeProject = "update_payout_range:project",
   /** coi declaration */
   ReadAllCOIDeclaration = "read_all:coi_declaration",
+  CreateEmployeeDeclaration = "create_employee:coi_declaration",
 }
 
 export enum AuthType {
