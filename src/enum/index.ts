@@ -754,3 +754,19 @@ export enum RestitutionType {
   Mixed = "MIXED",
   LemonwayOnly = "LEMONWAY_ONLY",
 }
+
+export enum ProjectFileType {
+  Document = "DOCUMENT",
+  Image = "IMAGE",
+  Video = "VIDEO",
+}
+
+export enum ProjectFileSubtype {
+  PreFundraising = "PRE_FUNDRAISING",
+  PostFundraising = "POST_FUNDRAISING",
+}
+
+export enum EventType {
+  Comunication = "COMUNICATION",
+  ExpiringEvent = "EXPIRING_EVENT",
+}
