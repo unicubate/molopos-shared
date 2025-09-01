@@ -334,7 +334,27 @@ export enum Permission {
   UpdatePayoutRangeProject = "update_payout_range:project",
   /** coi declaration */
   ReadAllCOIDeclaration = "read_all:coi_declaration",
-  CreateEmployeeDeclaration = "create_employee:coi_declaration",
+  CreateEmployeeCOIDeclaration = "create_employee:coi_declaration",
+  /** event */
+  ReadEvent = "read:event",
+  CreateEvent = "create:event",
+  UpdateEvent = "update:event",
+  DeleteEvent = "delete:event",
+  /** event update */
+  ReadEventUpdate = "read:event_update",
+  CreateEventUpdate = "create:event_update",
+  UpdateEventUpdate = "update:event_update",
+  DeleteEventUpdate = "delete:event_update",
+  /** event tag */
+  ReadEventTag = "read:event_tag",
+  CreateEventTag = "create:event_tag",
+  UpdateEventTag = "update:event_tag",
+  DeleteEventTag = "delete:event_tag",
+  AssignEventTag = "assign:event_tag",
+  /** event file */
+  ReadEventFile = "read:event_file",
+  UploadEventFile = "create:event_file",
+  DeleteEventFile = "delete:event_file",
 }
 
 export enum AuthType {
@@ -754,4 +774,20 @@ export enum COI_AlertType {
 export enum RestitutionType {
   Mixed = "MIXED",
   LemonwayOnly = "LEMONWAY_ONLY",
+}
+
+export enum ProjectFileType {
+  Document = "DOCUMENT",
+  Image = "IMAGE",
+  Video = "VIDEO",
+}
+
+export enum ProjectFileSubtype {
+  PreFundraising = "PRE_FUNDRAISING",
+  PostFundraising = "POST_FUNDRAISING",
+}
+
+export enum EventType {
+  Comunication = "COMUNICATION",
+  ExpiringEvent = "EXPIRING_EVENT",
 }
