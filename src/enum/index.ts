@@ -355,6 +355,8 @@ export enum Permission {
   ReadEventFile = "read:event_file",
   UploadEventFile = "create:event_file",
   DeleteEventFile = "delete:event_file",
+  /** investor */
+  ReadUserProspectRateInvestor = "read_user_prospect_rate:investor",
 }
 
 export enum AuthType {
