@@ -793,3 +793,9 @@ export enum EventType {
   Comunication = "COMUNICATION",
   ExpiringEvent = "EXPIRING_EVENT",
 }
+
+export enum PartialRateTypes {
+  Standard = "STANDARD",
+  Partial = "PARTIAL",
+  PartialFinal = "PARTIAL_FINAL",
+}

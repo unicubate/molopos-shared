@@ -67,6 +67,7 @@
 - [Project File Type](#project-file-type-projectfiletype)
 - [Project File Subtype](#project-file-subtype-projectfilesubtype)
 - [Event Type](#event-type-eventtype)
+- [Partial Rate Types](#partial-rate-types-partialratetypes)
 ## Document Type <sub><sup>[DocumentType](./src/enum/index.ts#L1)</sup></sub>
 
 <table>
@@ -937,6 +938,15 @@ backoffice permissions
 <table>
 <tr><td>Comunication</td><td>"COMUNICATION"</td></tr>
 <tr><td>Expiring Event</td><td>"EXPIRING_EVENT"</td></tr>
+
+</table>
+
+## Partial Rate Types <sub><sup>[PartialRateTypes](./src/enum/index.ts#L797)</sup></sub>
+
+<table>
+<tr><td>Standard</td><td>"STANDARD"</td></tr>
+<tr><td>Partial</td><td>"PARTIAL"</td></tr>
+<tr><td>Partial Final</td><td>"PARTIAL_FINAL"</td></tr>
 
 </table>
 
