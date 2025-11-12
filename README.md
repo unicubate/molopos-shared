@@ -462,6 +462,7 @@ backoffice permissions
 <tr><td>Delete Communication Project</td><td>"delete_communication:project"</td></tr>
 <tr><td>Update Payout Strategy Project</td><td>"update_payout_strategy:project"</td></tr>
 <tr><td>Update Payout Range Project</td><td>"update_payout_range:project"</td></tr>
+<tr><td>Read Project File Project</td><td>"read_project_file:project"</td></tr>
 <tr><td>Read All COI Declaration (coi declaration)</td><td>"read_all:coi_declaration"</td></tr>
 <tr><td>Create Employee COI Declaration</td><td>"create_employee:coi_declaration"</td></tr>
 <tr><td>Read Event (event)</td><td>"read:event"</td></tr>
@@ -484,7 +485,7 @@ backoffice permissions
 
 </table>
 
-## Auth Type <sub><sup>[AuthType](./src/enum/index.ts#L362)</sup></sub>
+## Auth Type <sub><sup>[AuthType](./src/enum/index.ts#L363)</sup></sub>
 
 <table>
 <tr><td>Email</td><td>0</td></tr>
@@ -494,7 +495,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L369)</sup></sub>
+## TAS Onboarding Status <sub><sup>[TAS_OnboardingStatus](./src/enum/index.ts#L370)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -503,7 +504,7 @@ backoffice permissions
 
 </table>
 
-## TAS Onboarding Attempt Status <sub><sup>[TAS_OnboardingAttemptStatus](./src/enum/index.ts#L375)</sup></sub>
+## TAS Onboarding Attempt Status <sub><sup>[TAS_OnboardingAttemptStatus](./src/enum/index.ts#L376)</sup></sub>
 
 <table>
 <tr><td>Created</td><td>0</td></tr>
@@ -514,7 +515,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L383)</sup></sub>
+## TAS AML Question Type <sub><sup>[TAS_AMLQuestionType](./src/enum/index.ts#L384)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B"</td></tr>
@@ -522,7 +523,7 @@ backoffice permissions
 
 </table>
 
-## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L388)</sup></sub>
+## TAS AML Answer Type <sub><sup>[TAS_AMLAnswerType](./src/enum/index.ts#L389)</sup></sub>
 
 <table>
 <tr><td>B2B</td><td>"AML-B2B-ANSWER"</td></tr>
@@ -530,7 +531,7 @@ backoffice permissions
 
 </table>
 
-## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L393)</sup></sub>
+## TAS User Type <sub><sup>[TAS_UserType](./src/enum/index.ts#L394)</sup></sub>
 
 <table>
 <tr><td>Private</td><td>"RETAIL"</td></tr>
@@ -538,7 +539,7 @@ backoffice permissions
 
 </table>
 
-## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L398)</sup></sub>
+## TAS Gender <sub><sup>[TAS_Gender](./src/enum/index.ts#L399)</sup></sub>
 
 <table>
 <tr><td>Male</td><td>"M"</td></tr>
@@ -546,7 +547,7 @@ backoffice permissions
 
 </table>
 
-## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L403)</sup></sub>
+## TAS Address Type <sub><sup>[TAS_AddressType](./src/enum/index.ts#L404)</sup></sub>
 
 <table>
 <tr><td>Residence</td><td>"RESIDENCE"</td></tr>
@@ -556,7 +557,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L410)</sup></sub>
+## TAS Document Type <sub><sup>[TAS_DocumentType](./src/enum/index.ts#L411)</sup></sub>
 
 <table>
 <tr><td>Identity Card</td><td>"IDENTITY_CARD"</td></tr>
@@ -568,7 +569,7 @@ backoffice permissions
 
 </table>
 
-## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L422)</sup></sub>
+## TAS Additional Document Type <sub><sup>[TAS_AdditionalDocumentType](./src/enum/index.ts#L423)</sup></sub>
 
 <table>
 <tr><td>W9</td><td>"W9"</td></tr>
@@ -577,7 +578,7 @@ backoffice permissions
 
 </table>
 
-## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L428)</sup></sub>
+## TAS Document Issuer <sub><sup>[TAS_DocumentIssuer](./src/enum/index.ts#L429)</sup></sub>
 
 <table>
 <tr><td>DMV (Motorizzazione)</td><td>"MCTC"</td></tr>
@@ -588,7 +589,7 @@ backoffice permissions
 
 </table>
 
-## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L441)</sup></sub>
+## TAS Shufti Status <sub><sup>[TAS_ShuftiStatus](./src/enum/index.ts#L442)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -600,7 +601,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L450)</sup></sub>
+## TAS Pep <sub><sup>[TAS_Pep](./src/enum/index.ts#L451)</sup></sub>
 
 <table>
 <tr><td>No (No)</td><td>"PEP_REL_N"</td></tr>
@@ -610,7 +611,7 @@ backoffice permissions
 
 </table>
 
-## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L461)</sup></sub>
+## TAS Pep Type <sub><sup>[TAS_PepType](./src/enum/index.ts#L462)</sup></sub>
 
 <table>
 <tr><td>Presidente Repubblica</td><td>"PEP_TYPE_A"</td></tr>
@@ -621,7 +622,7 @@ backoffice permissions
 <tr><td>Presidente Regione</td><td>"PEP_TYPE_F"</td></tr>
 <tr><td>Assessore Regionale</td><td>"PEP_TYPE_G"</td></tr>
 <tr><td>Sindaco Capoluogo (Sindaco di capoluogo di provincia o città metropolitana)</td><td>"PEP_TYPE_H"</td></tr>
-<tr><td>Sindaco Comune (Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_I"</td></tr>
+<tr><td>Sindaco Comune (Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_I"</td></tr>
 <tr><td>Deputato</td><td>"PEP_TYPE_J"</td></tr>
 <tr><td>Senatore</td><td>"PEP_TYPE_K"</td></tr>
 <tr><td>Parlamentare Europeo</td><td>"PEP_TYPE_L"</td></tr>
@@ -629,17 +630,17 @@ backoffice permissions
 <tr><td>Membro Partiti Politici (Membro degli organi direttivi centrali di partiti politici)</td><td>"PEP_TYPE_N"</td></tr>
 <tr><td>Giudice Corte Costituzionale (Giudice della Corte Costituzionale)</td><td>"PEP_TYPE_O"</td></tr>
 <tr><td>Magistrato Corte (Magistrato della Corte di Cassazione o della Corte dei Conti)</td><td>"PEP_TYPE_Q"</td></tr>
-<tr><td>Consiglio Giustizia Amministrativa (Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_R"</td></tr>
-<tr><td>Membro Banche Centrali (Membro degli organi direttivi delle banche centrali e delle autorità indipendenti)</td><td>"PEP_TYPE_S"</td></tr>
-<tr><td>Ambasciatore (Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_T"</td></tr>
-<tr><td>Componente Imprese Stato (Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti)</td><td>"PEP_TYPE_U"</td></tr>
-<tr><td>Direttore ASL (Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale)</td><td>"PEP_TYPE_V"</td></tr>
-<tr><td>Membro Organizzazioni Internazionali (Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali)</td><td>"PEP_TYPE_W"</td></tr>
+<tr><td>Consiglio Giustizia Amministrativa (Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_R"</td></tr>
+<tr><td>Membro Banche Centrali (Membro degli organi direttivi delle banche centrali e delle autorità indipendenti)</td><td>"PEP_TYPE_S"</td></tr>
+<tr><td>Ambasciatore (Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_T"</td></tr>
+<tr><td>Componente Imprese Stato (Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti)</td><td>"PEP_TYPE_U"</td></tr>
+<tr><td>Direttore ASL (Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale)</td><td>"PEP_TYPE_V"</td></tr>
+<tr><td>Membro Organizzazioni Internazionali (Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali)</td><td>"PEP_TYPE_W"</td></tr>
 <tr><td>Consigliere Stato</td><td>"PEP_TYPE_P"</td></tr>
 
 </table>
 
-## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L527)</sup></sub>
+## TAS Shufti Error Target <sub><sup>[TAS_ShuftiErrorTarget](./src/enum/index.ts#L528)</sup></sub>
 
 <table>
 <tr><td>Shufti</td><td>0</td></tr>
@@ -655,7 +656,7 @@ backoffice permissions
 
 </table>
 
-## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L540)</sup></sub>
+## TAS Legal Form <sub><sup>[TAS_LegalForm](./src/enum/index.ts#L541)</sup></sub>
 
 <table>
 <tr><td>Societa Accomandita Azioni</td><td>"AA"</td></tr>
@@ -734,7 +735,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L616)</sup></sub>
+## TAS Transaction Type <sub><sup>[TAS_TransactionType](./src/enum/index.ts#L617)</sup></sub>
 
 <table>
 <tr><td>SEPA</td><td>"TrxSEPA"</td></tr>
@@ -743,7 +744,7 @@ backoffice permissions
 
 </table>
 
-## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L622)</sup></sub>
+## TAS Transaction Status <sub><sup>[TAS_TransactionStatus](./src/enum/index.ts#L623)</sup></sub>
 
 <table>
 <tr><td>Pending</td><td>0</td></tr>
@@ -753,7 +754,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L628)</sup></sub>
+## TAS Operation Over All Status <sub><sup>[TAS_OperationOverAllStatus](./src/enum/index.ts#L629)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -767,7 +768,7 @@ backoffice permissions
 
 </table>
 
-## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L647)</sup></sub>
+## TAS Operation Current Status <sub><sup>[TAS_OperationCurrentStatus](./src/enum/index.ts#L648)</sup></sub>
 
 <table>
 <tr><td>Valid (transazione valida, da autorizzare)</td><td>"VALD"</td></tr>
@@ -778,11 +779,11 @@ backoffice permissions
 <tr><td>Rejected (Non Eseguita)</td><td>"RJCT"</td></tr>
 <tr><td>Revoked (Revocata dall’utente)</td><td>"CNCL"</td></tr>
 <tr><td>Suspended (Sospesa (operatività corporate))</td><td>"SUSP"</td></tr>
-<tr><td>Partial (Operazione firmata da un solo firmatario in un contesto in cui è richiesta firma congiunta. (caso tipicamente relativo ad utenze corporate).)</td><td>"AUT1"</td></tr>
+<tr><td>Partial (Operazione firmata da un solo firmatario in un contesto in cui è richiesta firma congiunta. (caso tipicamente relativo ad utenze corporate).)</td><td>"AUT1"</td></tr>
 
 </table>
 
-## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L672)</sup></sub>
+## TAS Transaction Direction <sub><sup>[TAS_TransactionDirection](./src/enum/index.ts#L673)</sup></sub>
 
 <table>
 <tr><td>In</td><td>"IN"</td></tr>
@@ -790,7 +791,7 @@ backoffice permissions
 
 </table>
 
-## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L677)</sup></sub>
+## Tas Contracts Document Type <sub><sup>[TasContracts_DocumentType](./src/enum/index.ts#L678)</sup></sub>
 
 <table>
 <tr><td>Contract</td><td>"Contratto"</td></tr>
@@ -799,7 +800,7 @@ backoffice permissions
 
 </table>
 
-## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L683)</sup></sub>
+## Bank Account Type <sub><sup>[BankAccountType](./src/enum/index.ts#L684)</sup></sub>
 
 <table>
 <tr><td>Main</td><td>"MAIN"</td></tr>
@@ -807,7 +808,7 @@ backoffice permissions
 
 </table>
 
-## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L688)</sup></sub>
+## Onboarding Types <sub><sup>[OnboardingTypes](./src/enum/index.ts#L689)</sup></sub>
 
 <table>
 <tr><td>Investor</td><td>"INVESTOR"</td></tr>
@@ -815,7 +816,7 @@ backoffice permissions
 
 </table>
 
-## Gateway Type <sub><sup>[GatewayType](./src/enum/index.ts#L693)</sup></sub>
+## Gateway Type <sub><sup>[GatewayType](./src/enum/index.ts#L694)</sup></sub>
 
 <table>
 <tr><td>Lemonway</td><td>"LEMONWAY"</td></tr>
@@ -823,7 +824,7 @@ backoffice permissions
 
 </table>
 
-## Amortization Method <sub><sup>[AmortizationMethod](./src/enum/index.ts#L698)</sup></sub>
+## Amortization Method <sub><sup>[AmortizationMethod](./src/enum/index.ts#L699)</sup></sub>
 
 <table>
 <tr><td>Principal</td><td>0</td></tr>
@@ -831,7 +832,7 @@ backoffice permissions
 
 </table>
 
-## Project Files Type <sub><sup>[ProjectFilesType](./src/enum/index.ts#L703)</sup></sub>
+## Project Files Type <sub><sup>[ProjectFilesType](./src/enum/index.ts#L704)</sup></sub>
 
 <table>
 <tr><td>Documents</td><td>"documents"</td></tr>
@@ -842,7 +843,7 @@ backoffice permissions
 
 </table>
 
-## Feature Flag <sub><sup>[FeatureFlag](./src/enum/index.ts#L711)</sup></sub>
+## Feature Flag <sub><sup>[FeatureFlag](./src/enum/index.ts#L712)</sup></sub>
 
 <table>
 <tr><td>Investment</td><td>"investment"</td></tr>
@@ -860,14 +861,14 @@ backoffice permissions
 
 </table>
 
-## User Onboarding Status <sub><sup>[UserOnboardingStatus](./src/enum/index.ts#L726)</sup></sub>
+## User Onboarding Status <sub><sup>[UserOnboardingStatus](./src/enum/index.ts#L727)</sup></sub>
 
 <table>
 <tr><td>Shufti Errored</td><td>"shuftiErrored"</td></tr>
 
 </table>
 
-## COI Relationship Type <sub><sup>[COI_RelationshipType](./src/enum/index.ts#L730)</sup></sub>
+## COI Relationship Type <sub><sup>[COI_RelationshipType](./src/enum/index.ts#L731)</sup></sub>
 
 <table>
 <tr><td>Father (Degree 1 - Direct line)</td><td>"FATHER"</td></tr>
@@ -896,7 +897,7 @@ backoffice permissions
 
 </table>
 
-## COI Alert Type <sub><sup>[COI_AlertType](./src/enum/index.ts#L767)</sup></sub>
+## COI Alert Type <sub><sup>[COI_AlertType](./src/enum/index.ts#L768)</sup></sub>
 
 <table>
 <tr><td>Relative Conflict</td><td>"RELATIVE_CONFLICT"</td></tr>
@@ -908,7 +909,7 @@ backoffice permissions
 
 </table>
 
-## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L776)</sup></sub>
+## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L777)</sup></sub>
 
 <table>
 <tr><td>Mixed</td><td>"MIXED"</td></tr>
@@ -916,7 +917,7 @@ backoffice permissions
 
 </table>
 
-## Project File Type <sub><sup>[ProjectFileType](./src/enum/index.ts#L781)</sup></sub>
+## Project File Type <sub><sup>[ProjectFileType](./src/enum/index.ts#L782)</sup></sub>
 
 <table>
 <tr><td>Document</td><td>"DOCUMENT"</td></tr>
@@ -925,7 +926,7 @@ backoffice permissions
 
 </table>
 
-## Project File Subtype <sub><sup>[ProjectFileSubtype](./src/enum/index.ts#L787)</sup></sub>
+## Project File Subtype <sub><sup>[ProjectFileSubtype](./src/enum/index.ts#L788)</sup></sub>
 
 <table>
 <tr><td>Pre Fundraising</td><td>"PRE_FUNDRAISING"</td></tr>
@@ -933,7 +934,7 @@ backoffice permissions
 
 </table>
 
-## Event Type <sub><sup>[EventType](./src/enum/index.ts#L792)</sup></sub>
+## Event Type <sub><sup>[EventType](./src/enum/index.ts#L793)</sup></sub>
 
 <table>
 <tr><td>Comunication</td><td>"COMUNICATION"</td></tr>
@@ -941,7 +942,7 @@ backoffice permissions
 
 </table>
 
-## Partial Rate Types <sub><sup>[PartialRateTypes](./src/enum/index.ts#L797)</sup></sub>
+## Partial Rate Types <sub><sup>[PartialRateTypes](./src/enum/index.ts#L798)</sup></sub>
 
 <table>
 <tr><td>Standard</td><td>"STANDARD"</td></tr>

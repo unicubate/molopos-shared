@@ -332,6 +332,7 @@ export enum Permission {
   DeleteCommunicationProject = "delete_communication:project",
   UpdatePayoutStrategyProject = "update_payout_strategy:project",
   UpdatePayoutRangeProject = "update_payout_range:project",
+  ReadProjectFileProject = "read_project_file:project",
   /** coi declaration */
   ReadAllCOIDeclaration = "read_all:coi_declaration",
   CreateEmployeeCOIDeclaration = "create_employee:coi_declaration",
