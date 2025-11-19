@@ -800,3 +800,11 @@ export enum PartialRateTypes {
   Partial = "PARTIAL",
   PartialFinal = "PARTIAL_FINAL",
 }
+
+export enum CertificationsStatus {
+  Draft = "DRAFT",
+  Generated = "GENERATED",
+  Confirmed = "CONFIRMED",
+  SignedByProponent = "SIGNED_BY_PROPONENT",
+  SentToInvestor = "SENT_TO_INVESTOR",
+}
