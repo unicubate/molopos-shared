@@ -809,3 +809,11 @@ export enum CertificationsStatus {
   SignedByProponent = "SIGNED_BY_PROPONENT",
   SentToInvestor = "SENT_TO_INVESTOR",
 }
+
+export enum VOPMatchTypes {
+  Match = "MTCH",
+  PartialMatch = "CMTC",
+  NoMatch = "NMTC",
+  NotApplicable = "NOAP",
+  Error = "ERRR",
+}
