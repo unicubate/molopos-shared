@@ -878,6 +878,8 @@ backoffice permissions
 <tr><td>Father (Degree 1 - Direct line)</td><td>"FATHER"</td></tr>
 <tr><td>Mother</td><td>"MOTHER"</td></tr>
 <tr><td>Children</td><td>"CHILDREN"</td></tr>
+<tr><td>Spouse</td><td>"SPOUSE"</td></tr>
+<tr><td>Live In Partner</td><td>"LIVE_IN_PARTNER"</td></tr>
 <tr><td>Parents In Law (Degree 1 - In-laws)</td><td>"PARENTS_IN_LAW"</td></tr>
 <tr><td>Sons In Law</td><td>"SONS_IN_LAW"</td></tr>
 <tr><td>Daughters In Law</td><td>"DAUGHTERS_IN_LAW"</td></tr>
@@ -891,6 +893,9 @@ backoffice permissions
 <tr><td>Uncles (Degree 3 - Collateral)</td><td>"UNCLES"</td></tr>
 <tr><td>Nephews Nieces Siblings</td><td>"NEPHEWS_NIECES_SIBLINGS"</td></tr>
 <tr><td>Spouses Of Uncles Aunts Nephews Nieces (Degree 3 - In-laws)</td><td>"SPOUSES_OF_UNCLES_AUNTS_NEPHEWS_NIECES"</td></tr>
+<tr><td>Uncles Aunts Of Spouse</td><td>"UNCLES_AUNTS_OF_SPOUSE"</td></tr>
+<tr><td>Cousins Of Spouse</td><td>"COUSINS_OF_SPOUSE"</td></tr>
+<tr><td>Brothers Sisters Of Spouse</td><td>"BROTHERS_SISTERS_OF_SPOUSE"</td></tr>
 <tr><td>Great Great Grandparents (Degree 4 - Direct line)</td><td>"GREAT_GREAT_GRANDPARENTS"</td></tr>
 <tr><td>Great Great Grandchildren</td><td>"GREAT_GREAT_GRANDCHILDREN"</td></tr>
 <tr><td>Great Uncles (Degree 4 - Collateral)</td><td>"GREAT_UNCLES"</td></tr>
@@ -901,7 +906,7 @@ backoffice permissions
 
 </table>
 
-## COI Alert Type <sub><sup>[COI_AlertType](./src/enum/index.ts#L770)</sup></sub>
+## COI Alert Type <sub><sup>[COI_AlertType](./src/enum/index.ts#L775)</sup></sub>
 
 <table>
 <tr><td>Relative Conflict</td><td>"RELATIVE_CONFLICT"</td></tr>
@@ -913,7 +918,7 @@ backoffice permissions
 
 </table>
 
-## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L779)</sup></sub>
+## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L784)</sup></sub>
 
 <table>
 <tr><td>Mixed</td><td>"MIXED"</td></tr>
@@ -921,7 +926,7 @@ backoffice permissions
 
 </table>
 
-## Project File Type <sub><sup>[ProjectFileType](./src/enum/index.ts#L784)</sup></sub>
+## Project File Type <sub><sup>[ProjectFileType](./src/enum/index.ts#L789)</sup></sub>
 
 <table>
 <tr><td>Document</td><td>"DOCUMENT"</td></tr>
@@ -930,7 +935,7 @@ backoffice permissions
 
 </table>
 
-## Project File Subtype <sub><sup>[ProjectFileSubtype](./src/enum/index.ts#L790)</sup></sub>
+## Project File Subtype <sub><sup>[ProjectFileSubtype](./src/enum/index.ts#L795)</sup></sub>
 
 <table>
 <tr><td>Pre Fundraising</td><td>"PRE_FUNDRAISING"</td></tr>
@@ -938,7 +943,7 @@ backoffice permissions
 
 </table>
 
-## Event Type <sub><sup>[EventType](./src/enum/index.ts#L795)</sup></sub>
+## Event Type <sub><sup>[EventType](./src/enum/index.ts#L800)</sup></sub>
 
 <table>
 <tr><td>Comunication</td><td>"COMUNICATION"</td></tr>
@@ -946,7 +951,7 @@ backoffice permissions
 
 </table>
 
-## Partial Rate Types <sub><sup>[PartialRateTypes](./src/enum/index.ts#L800)</sup></sub>
+## Partial Rate Types <sub><sup>[PartialRateTypes](./src/enum/index.ts#L805)</sup></sub>
 
 <table>
 <tr><td>Standard</td><td>"STANDARD"</td></tr>
@@ -955,7 +960,7 @@ backoffice permissions
 
 </table>
 
-## Certifications Status <sub><sup>[CertificationsStatus](./src/enum/index.ts#L806)</sup></sub>
+## Certifications Status <sub><sup>[CertificationsStatus](./src/enum/index.ts#L811)</sup></sub>
 
 <table>
 <tr><td>Draft</td><td>"DRAFT"</td></tr>
@@ -966,7 +971,7 @@ backoffice permissions
 
 </table>
 
-## VOP Match Types <sub><sup>[VOPMatchTypes](./src/enum/index.ts#L814)</sup></sub>
+## VOP Match Types <sub><sup>[VOPMatchTypes](./src/enum/index.ts#L819)</sup></sub>
 
 <table>
 <tr><td>Match</td><td>"MTCH"</td></tr>

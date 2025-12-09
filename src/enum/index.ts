@@ -735,6 +735,8 @@ export enum COI_RelationshipType {
   Father = "FATHER",
   Mother = "MOTHER",
   Children = "CHILDREN",
+  Spouse = "SPOUSE",
+  LiveInPartner = "LIVE_IN_PARTNER",
   // Degree 1 - In-laws
   ParentsInLaw = "PARENTS_IN_LAW",
   SonsInLaw = "SONS_IN_LAW",
@@ -755,6 +757,9 @@ export enum COI_RelationshipType {
   NephewsNiecesSiblings = "NEPHEWS_NIECES_SIBLINGS",
   // Degree 3 - In-laws
   SpousesOfUnclesAuntsNephewsNieces = "SPOUSES_OF_UNCLES_AUNTS_NEPHEWS_NIECES",
+  UnclesAuntsOfSpouse = "UNCLES_AUNTS_OF_SPOUSE",
+  CousinsOfSpouse = "COUSINS_OF_SPOUSE",
+  BrothersSistersOfSpouse = "BROTHERS_SISTERS_OF_SPOUSE",
   // Degree 4 - Direct line
   GreatGreatGrandparents = "GREAT_GREAT_GRANDPARENTS",
   GreatGreatGrandchildren = "GREAT_GREAT_GRANDCHILDREN",
