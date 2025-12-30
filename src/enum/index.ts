@@ -670,6 +670,8 @@ export enum TAS_OperationCurrentStatus {
    * corporate).
    */
   Partial = "AUT1",
+  /** Operazione "di accredito di bollo fiscale" */
+  TaxDebit = "IMP-EC-001"
 }
 
 export enum TAS_TransactionDirection {
