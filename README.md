@@ -626,7 +626,7 @@ backoffice permissions
 <tr><td>Presidente Regione</td><td>"PEP_TYPE_F"</td></tr>
 <tr><td>Assessore Regionale</td><td>"PEP_TYPE_G"</td></tr>
 <tr><td>Sindaco Capoluogo (Sindaco di capoluogo di provincia o città metropolitana)</td><td>"PEP_TYPE_H"</td></tr>
-<tr><td>Sindaco Comune (Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_I"</td></tr>
+<tr><td>Sindaco Comune (Sindaco di comune con popolazione non inferiore a 15.000 abitanti nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_I"</td></tr>
 <tr><td>Deputato</td><td>"PEP_TYPE_J"</td></tr>
 <tr><td>Senatore</td><td>"PEP_TYPE_K"</td></tr>
 <tr><td>Parlamentare Europeo</td><td>"PEP_TYPE_L"</td></tr>
@@ -634,12 +634,12 @@ backoffice permissions
 <tr><td>Membro Partiti Politici (Membro degli organi direttivi centrali di partiti politici)</td><td>"PEP_TYPE_N"</td></tr>
 <tr><td>Giudice Corte Costituzionale (Giudice della Corte Costituzionale)</td><td>"PEP_TYPE_O"</td></tr>
 <tr><td>Magistrato Corte (Magistrato della Corte di Cassazione o della Corte dei Conti)</td><td>"PEP_TYPE_Q"</td></tr>
-<tr><td>Consiglio Giustizia Amministrativa (Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_R"</td></tr>
-<tr><td>Membro Banche Centrali (Membro degli organi direttivi delle banche centrali e delle autorità indipendenti)</td><td>"PEP_TYPE_S"</td></tr>
-<tr><td>Ambasciatore (Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_T"</td></tr>
-<tr><td>Componente Imprese Stato (Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti)</td><td>"PEP_TYPE_U"</td></tr>
-<tr><td>Direttore ASL (Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale)</td><td>"PEP_TYPE_V"</td></tr>
-<tr><td>Membro Organizzazioni Internazionali (Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali)</td><td>"PEP_TYPE_W"</td></tr>
+<tr><td>Consiglio Giustizia Amministrativa (Altri componenti del Consiglio di Giustizia Amministrativa per la Regione siciliana nonché cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_R"</td></tr>
+<tr><td>Membro Banche Centrali (Membro degli organi direttivi delle banche centrali e delle autorità indipendenti)</td><td>"PEP_TYPE_S"</td></tr>
+<tr><td>Ambasciatore (Ambasciatore, incaricato d’affari ovvero cariche equivalenti in Stati esteri, ufficiale di grado apicale delle forze armate ovvero cariche analoghe in Stati esteri)</td><td>"PEP_TYPE_T"</td></tr>
+<tr><td>Componente Imprese Stato (Componente degli organi di amministrazione, direzione o controllo delle imprese controllate, anche indirettamente, dallo Stato italiano o da uno Stato estero ovvero partecipate, in misura prevalente o totalitaria, dalle Regioni, da comuni capoluoghi di provincia e città metropolitane e da comuni con popolazione complessivamente non inferiore a 15.000 abitanti)</td><td>"PEP_TYPE_U"</td></tr>
+<tr><td>Direttore ASL (Direttore generale di ASL e di azienda ospedaliera, di azienda ospedaliera universitaria e degli altri enti del servizio sanitario nazionale)</td><td>"PEP_TYPE_V"</td></tr>
+<tr><td>Membro Organizzazioni Internazionali (Direttore, vicedirettore e membro dell’organo di gestione o soggetto svolgenti funzioni equivalenti in organizzazioni internazionali)</td><td>"PEP_TYPE_W"</td></tr>
 <tr><td>Consigliere Stato</td><td>"PEP_TYPE_P"</td></tr>
 
 </table>
@@ -783,7 +783,7 @@ backoffice permissions
 <tr><td>Rejected (Non Eseguita)</td><td>"RJCT"</td></tr>
 <tr><td>Revoked (Revocata dall’utente)</td><td>"CNCL"</td></tr>
 <tr><td>Suspended (Sospesa (operatività corporate))</td><td>"SUSP"</td></tr>
-<tr><td>Partial (Operazione firmata da un solo firmatario in un contesto in cui è richiesta firma congiunta. (caso tipicamente relativo ad utenze corporate).)</td><td>"AUT1"</td></tr>
+<tr><td>Partial (Operazione firmata da un solo firmatario in un contesto in cui è richiesta firma congiunta. (caso tipicamente relativo ad utenze corporate).)</td><td>"AUT1"</td></tr>
 <tr><td>Tax Debit (Operazione "di accredito di bollo fiscale")</td><td>"IMP-EC-001"</td></tr>
 
 </table>
@@ -916,10 +916,11 @@ backoffice permissions
 <tr><td>Self Conflict</td><td>"SELF_CONFLICT"</td></tr>
 <tr><td>Investment Conflict</td><td>"INVESTMENT_CONFLICT"</td></tr>
 <tr><td>Company Member Conflict</td><td>"COMPANY_MEMBER_CONFLICT"</td></tr>
+<tr><td>Supplier Conflict</td><td>"SUPPLIER_CONFLICT"</td></tr>
 
 </table>
 
-## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L786)</sup></sub>
+## Restitution Type <sub><sup>[RestitutionType](./src/enum/index.ts#L787)</sup></sub>
 
 <table>
 <tr><td>Mixed</td><td>"MIXED"</td></tr>
@@ -927,7 +928,7 @@ backoffice permissions
 
 </table>
 
-## Project File Type <sub><sup>[ProjectFileType](./src/enum/index.ts#L791)</sup></sub>
+## Project File Type <sub><sup>[ProjectFileType](./src/enum/index.ts#L792)</sup></sub>
 
 <table>
 <tr><td>Document</td><td>"DOCUMENT"</td></tr>
@@ -936,7 +937,7 @@ backoffice permissions
 
 </table>
 
-## Project File Subtype <sub><sup>[ProjectFileSubtype](./src/enum/index.ts#L797)</sup></sub>
+## Project File Subtype <sub><sup>[ProjectFileSubtype](./src/enum/index.ts#L798)</sup></sub>
 
 <table>
 <tr><td>Pre Fundraising</td><td>"PRE_FUNDRAISING"</td></tr>
@@ -944,7 +945,7 @@ backoffice permissions
 
 </table>
 
-## Event Type <sub><sup>[EventType](./src/enum/index.ts#L802)</sup></sub>
+## Event Type <sub><sup>[EventType](./src/enum/index.ts#L803)</sup></sub>
 
 <table>
 <tr><td>Comunication</td><td>"COMUNICATION"</td></tr>
@@ -952,7 +953,7 @@ backoffice permissions
 
 </table>
 
-## Partial Rate Types <sub><sup>[PartialRateTypes](./src/enum/index.ts#L807)</sup></sub>
+## Partial Rate Types <sub><sup>[PartialRateTypes](./src/enum/index.ts#L808)</sup></sub>
 
 <table>
 <tr><td>Standard</td><td>"STANDARD"</td></tr>
@@ -961,7 +962,7 @@ backoffice permissions
 
 </table>
 
-## Certifications Status <sub><sup>[CertificationsStatus](./src/enum/index.ts#L813)</sup></sub>
+## Certifications Status <sub><sup>[CertificationsStatus](./src/enum/index.ts#L814)</sup></sub>
 
 <table>
 <tr><td>Draft</td><td>"DRAFT"</td></tr>
@@ -972,7 +973,7 @@ backoffice permissions
 
 </table>
 
-## VOP Match Types <sub><sup>[VOPMatchTypes](./src/enum/index.ts#L821)</sup></sub>
+## VOP Match Types <sub><sup>[VOPMatchTypes](./src/enum/index.ts#L822)</sup></sub>
 
 <table>
 <tr><td>Match</td><td>"MTCH"</td></tr>

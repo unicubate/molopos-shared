@@ -671,7 +671,7 @@ export enum TAS_OperationCurrentStatus {
    */
   Partial = "AUT1",
   /** Operazione "di accredito di bollo fiscale" */
-  TaxDebit = "IMP-EC-001"
+  TaxDebit = "IMP-EC-001",
 }
 
 export enum TAS_TransactionDirection {
@@ -781,6 +781,7 @@ export enum COI_AlertType {
   SelfConflict = "SELF_CONFLICT",
   InvestmentConflict = "INVESTMENT_CONFLICT",
   CompanyMemberConflict = "COMPANY_MEMBER_CONFLICT",
+  SupplierConflict = "SUPPLIER_CONFLICT",
 }
 
 export enum RestitutionType {
