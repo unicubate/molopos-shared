@@ -360,6 +360,9 @@ export enum Permission {
   DeleteEventFile = "delete:event_file",
   /** investor */
   ReadUserProspectRateInvestor = "read_user_prospect_rate:investor",
+  /** postmark marketing mails */
+  ReadEmailTemplates = "read:email_templates",
+  SendBatchEmails = "send_batch:emails",
 }
 
 export enum AuthType {
