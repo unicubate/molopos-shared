@@ -363,6 +363,12 @@ export enum Permission {
   /** postmark marketing mails */
   ReadEmailTemplates = "read:email_templates",
   SendBatchEmails = "send_batch:emails",
+
+  /** features flag */
+  ReadFeaturesFlag = "read:features_flag",
+  CreateFeaturesFlag = "create:features_flag",
+  UpdateFeaturesFlag = "update:features_flag",
+  DeleteFeaturesFlag = "delete:features_flag",
 }
 
 export enum AuthType {
