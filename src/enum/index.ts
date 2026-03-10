@@ -24,6 +24,8 @@ export enum DocumentType {
   Status = "12",
   Selfie = "13",
   SsdMandate = "21",
+  Certification = "CERTIFICATION",
+  SignedCertification = "SIGNED_CERTIFICATION",
 }
 
 export enum DocumentStatus {
@@ -693,6 +695,7 @@ export enum TasContracts_DocumentType {
   Contract = "Contratto",
   BankStatement = "EstrattoConto",
   Ownership = "ownership",
+  PeriodicReport = "RelazionePeriodica",
 }
 
 export enum BankAccountType {
