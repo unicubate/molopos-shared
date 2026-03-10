@@ -335,6 +335,7 @@ export enum Permission {
   UpdatePayoutRangeProject = "update_payout_range:project",
   ReadProjectFileProject = "read_project_file:project",
   ReadProjectStatus = "read_project_status:project",
+  SplitProspectRate = "split:prospect_rate",
   /** coi declaration */
   ReadAllCOIDeclaration = "read_all:coi_declaration",
   CreateEmployeeCOIDeclaration = "create_employee:coi_declaration",
