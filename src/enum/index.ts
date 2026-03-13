@@ -26,6 +26,8 @@ export enum DocumentType {
   SsdMandate = "21",
   Certification = "CERTIFICATION",
   SignedCertification = "SIGNED_CERTIFICATION",
+  Files = "FILES",
+  Contract = "CONTRACT",
 }
 
 export enum DocumentStatus {
