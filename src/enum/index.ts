@@ -841,3 +841,8 @@ export enum VOPMatchTypes {
   NotApplicable = "NOAP",
   Error = "ERRR",
 }
+
+export enum SettlementConsentMethod {
+  Manual = "MANUAL",
+  DigitalSignature = "DIGITAL_SIGNATURE",
+}
