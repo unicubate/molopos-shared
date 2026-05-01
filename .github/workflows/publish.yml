@@ -18,5 +18,4 @@ jobs:
       - run: npm ci && npm run build
       - run: cd ./dist && npm publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
