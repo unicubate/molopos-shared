@@ -1,14 +1,17 @@
 {
   "name": "shared",
-  "version": "2.2.69",
+  "version": "2.0.0",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
     "docs:notion": "node ./scripts/docs.js --notion",
-    "test": "bun ./src/lib/codice-fiscale/test.ts",
+    "test": "ts-node ./src/lib/codice-fiscale/test.ts",
     "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
   },
   "devDependencies": {
+    "jest": "^30.2.0",
+    "ts-jest": "29.4.6",
+    "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
   }
 }
