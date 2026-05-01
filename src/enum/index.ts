@@ -152,3 +152,32 @@ export enum StatusQuoteItemEnum {
   Received = "RECEIVED",
   Cancelled = "CANCELLED",
 }
+
+/**
+ * Private public enum
+ */
+export enum PrivatePublicEnum {
+  Private = "PRIVATE",
+  Public = "PUBLIC",
+}
+
+/**
+ * Pages provider enum
+ */
+export enum PagesProviderEnum {
+  Dashboard = "DASHBOARD",
+  PointOfSale = "POINTOFSALE",
+  Shop = "SHOP",
+  Variant = "VARIANT",
+  Catalog = "CATALOG",
+  Customer = "CUSTOMER",
+}
+
+/**
+ * Application section module enum
+ */
+export enum ApplicationSectionModuleEnum {
+  Quote = "QUOTE",
+  Product = "PRODUCT",
+  Expense = "EXPENSE",
+}
