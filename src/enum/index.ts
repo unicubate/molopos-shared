@@ -133,3 +133,22 @@ export enum QuoteSignedViewEnum {
   Signed = "signed",
   View = "view",
 }
+
+/**
+ * Contributor role enum
+ */
+export enum ContributorRoleEnum {
+  Admin = "ADMIN",
+  Moderator = "MODERATOR",
+}
+
+/**
+ * Status quote item enum
+ */
+export enum StatusQuoteItemEnum {
+  Pending = "PENDING",
+  Confirmed = "CONFIRMED",
+  OrForDelivery = "OR_FOR_DELIVERY",
+  Received = "RECEIVED",
+  Cancelled = "CANCELLED",
+}
