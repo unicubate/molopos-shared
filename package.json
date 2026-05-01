@@ -1,5 +1,5 @@
 {
-  "name": "shared",
+  "name": "mp-shared",
   "version": "2.0.0",
   "scripts": {
     "dev": "tsc --watch",

@@ -10,6 +10,9 @@ fs.writeFileSync(
   "./dist/package.json",
   JSON.stringify({
     name: "@molopos/shared",
+    publishConfig: {
+      access: "public",
+    },
     version,
     description: "Shared between backend and frontend repos",
     license: "ISC",
