@@ -1,6 +1,6 @@
 {
   "name": "mp-shared",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
@@ -8,7 +8,12 @@
     "test": "ts-node ./src/lib/codice-fiscale/test.ts",
     "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
   },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "luxon": "^3.7.2"
+  },
   "devDependencies": {
+    "@types/luxon": "^3.7.1",
     "jest": "^30.2.0",
     "ts-jest": "29.4.6",
     "ts-node": "^10.9.2",
