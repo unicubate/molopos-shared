@@ -113,10 +113,32 @@ export const formateDDDateISO = (date: Date, locale: string) => {
   return dateInit.setLocale(locale).toFormat("DD");
 };
 
+/**
+ * Format a date to a string
+ * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
+ * @param locale - The locale to use (e.g. "en-US", "it-IT", "fr-FR", etc.)
+ * @returns The formatted date (e.g. "1 Jan 2026", "1 Jan 2026 00:00", etc.)
+ *
+ * @example
+ * formateToUnixIntegerddLLLyyyy("2026-01-01", "en-US"); // "1 Jan 2026"
+ */
 export const formateToUnixIntegerddLLLyyyy = (
   date: Numberlike,
   locale: string,
 ) => {
   const dateInit = DateTime.fromSeconds(Number(date));
   return dateInit.setLocale(locale).toFormat("dd LLL yyyy");
+};
+
+/**
+ * Format a date to a string
+ * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
+ * @param lang - The locale to use (e.g. "en-US", "it-IT", "fr-FR", etc.)
+ * @returns The formatted date (e.g. "1 Jan 2026", "1 Jan 2026 00:00", etc.)
+ *
+ * @example
+ * formateTDate("2026-01-01", "en-US"); // "1 Jan 2026"
+ */
+export const formateTDate = (date: Date, lang: string) => {
+  return DateTime.fromJSDate(date).setLocale(lang).toFormat("t");
 };
