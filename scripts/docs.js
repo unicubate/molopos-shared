@@ -69,6 +69,14 @@ if (process.argv.includes("--notion")) {
 
   let README_MD =
     "<small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>\n\n";
+  README_MD += "## Installation\n\n";
+  README_MD += "```sh\n";
+  README_MD += "npm install @molopos/shared\n";
+  README_MD += "```\n\n";
+  README_MD += "## Usage\n\n";
+  README_MD += "```typescript\n";
+  README_MD += "import { CustomerTypeEnum } from '@molopos/shared';\n";
+  README_MD += "```\n\n";
   README_MD += "# Statuses and types\n\n";
 
   README_MD += INDEX_MD;

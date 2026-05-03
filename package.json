@@ -1,6 +1,6 @@
 {
   "name": "mp-shared",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
@@ -9,7 +9,6 @@
     "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.100.7",
     "date-fns": "^4.1.0",
     "luxon": "^3.7.2"
   },

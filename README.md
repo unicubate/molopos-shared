@@ -1,5 +1,17 @@
 <small><sup>This file is generated from the source code. Do not edit directly, use `npm run docs`</sup></small>
 
+## Installation
+
+```sh
+npm install @molopos/shared
+```
+
+## Usage
+
+```typescript
+import { CustomerTypeEnum } from '@molopos/shared';
+```
+
 # Statuses and types
 
 - [Customer Type Enum](#customer-type-enum-customertypeenum), Customer type enum
