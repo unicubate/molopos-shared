@@ -13,21 +13,15 @@ import { DateLike, Numberlike } from "../index";
  */
 export const formateDate = (date: Date, locale: string) => {
   let dateReturn: string | null = null;
-  const todaysDate = new Date();
+  const todaysDate = dateTimeNowUtc();
   const currentYear = todaysDate.getFullYear();
   const dateInit = DateTime.fromISO(String(date));
   const dateYear = Number(dateInit.toFormat("yyyy"));
-  const todayNowDateFormatted = formatDateToUtc(date);
-  const todayDateFormatted = formatDateToUtc(todaysDate);
 
-  if (todayNowDateFormatted === todayDateFormatted) {
-    dateReturn = dateInit.setLocale(locale).toRelative();
+  if (currentYear === dateYear) {
+    dateReturn = dateInit.setLocale(locale).toFormat("dd MMM HH:mm");
   } else {
-    if (currentYear === dateYear) {
-      dateReturn = dateInit.setLocale(locale).toFormat("dd LLL HH:mm");
-    } else {
-      dateReturn = formatDateDDMMYYToUtc(date, locale);
-    }
+    dateReturn = formatDateDDMMYYToUtc(date, locale);
   }
 
   return dateReturn;
