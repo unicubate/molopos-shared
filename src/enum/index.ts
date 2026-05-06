@@ -181,3 +181,13 @@ export enum ApplicationSectionModuleEnum {
   Product = "PRODUCT",
   Expense = "EXPENSE",
 }
+
+/**
+ * User status enum
+ */
+export enum UserStatusEnum {
+  Client = "CLIENT",
+  Creator = "CREATOR",
+  Admin = "ADMIN",
+  Demo = "DEMO",
+}
