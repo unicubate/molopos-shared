@@ -1,4 +1,4 @@
-export type PathWithTrailingSlash<T extends string> = `/${T}`;
+export type EndpointLike<T extends string> = `/${T}`;
 
 /**
  * Create a URL with query parameters
@@ -27,7 +27,7 @@ export const URLEndpoint = ({
   query?: Object;
   baseUrl: string;
   params?: Object;
-  endpoint: PathWithTrailingSlash<string>;
+  endpoint: EndpointLike<string>;
 }): string => {
   //replace params in url
   let url = baseUrl + endpoint;
