@@ -26,7 +26,7 @@ export const URLEndpoint = ({
   endpoint,
 }: {
   query?: Object;
-  baseUrl: Url;
+  baseUrl: string;
   params?: Object;
   endpoint: EndpointLike<string>;
 }): Url => {
