@@ -26,10 +26,10 @@ export const URLEndpoint = ({
   endpoint,
 }: {
   query?: Object;
-  baseUrl: string;
+  baseUrl: Url;
   params?: Object;
   endpoint: EndpointLike<string>;
-}): Url => {
+}) => {
   //replace params in url
   let url = baseUrl + endpoint;
 
