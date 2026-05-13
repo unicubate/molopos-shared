@@ -191,3 +191,29 @@ export enum UserStatusEnum {
   Admin = "ADMIN",
   Demo = "DEMO",
 }
+
+/**
+ * Pricing type status enum
+ */
+export enum PricingTypeEnum {
+  Free = "free",
+  Custom = "enterprise-stripe",
+  BasicMonthStripe = "basic-month-stripe",
+  BasicYearStripe = "basic-year-stripe",
+  ProMonthStripe = "pro-month-stripe",
+  ProYearStripe = "pro-year-stripe",
+  BusinessMonthStripe = "business-month-stripe",
+  BusinessYearStripe = "business-year-stripe",
+  PremiumMonthStripe = "premium-month-stripe",
+  PremiumYearStripe = "premium-year-stripe",
+}
+
+/**
+ * Quote status module enum
+ */
+export enum QuoteStatusModuleEnum {
+  Signed = "SIGNED",
+  Pending = "PENDING",
+  Confirmed = "CONFIRMED",
+  Cancelled = "CANCELLED",
+}
