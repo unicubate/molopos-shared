@@ -31,6 +31,9 @@ import { CustomerTypeEnum } from '@molopos/shared';
 - [Private Public Enum](#private-public-enum-privatepublicenum), Private public enum
 - [Pages Provider Enum](#pages-provider-enum-pagesproviderenum), Pages provider enum
 - [Application Section Module Enum](#application-section-module-enum-applicationsectionmoduleenum), Application section module enum
+- [User Status Enum](#user-status-enum-userstatusenum), User status enum
+- [Pricing Type Enum](#pricing-type-enum-pricingtypeenum), Pricing type status enum
+- [Quote Status Enum](#quote-status-enum-quotestatusenum), Quote status enum
 ## Customer Type Enum <sub><sup>[CustomerTypeEnum](./src/enum/index.ts#L4)</sup></sub>
 
 Customer type enum
@@ -228,6 +231,45 @@ Application section module enum
 <tr><td>Quote</td><td>"QUOTE"</td></tr>
 <tr><td>Product</td><td>"PRODUCT"</td></tr>
 <tr><td>Expense</td><td>"EXPENSE"</td></tr>
+
+</table>
+
+## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L188)</sup></sub>
+
+User status enum
+<table>
+<tr><td>Client</td><td>"CLIENT"</td></tr>
+<tr><td>Creator</td><td>"CREATOR"</td></tr>
+<tr><td>Admin</td><td>"ADMIN"</td></tr>
+<tr><td>Demo</td><td>"DEMO"</td></tr>
+
+</table>
+
+## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L198)</sup></sub>
+
+Pricing type status enum
+<table>
+<tr><td>Free</td><td>"free"</td></tr>
+<tr><td>Custom</td><td>"enterprise-stripe"</td></tr>
+<tr><td>Basic Month Stripe</td><td>"basic-month-stripe"</td></tr>
+<tr><td>Basic Year Stripe</td><td>"basic-year-stripe"</td></tr>
+<tr><td>Pro Month Stripe</td><td>"pro-month-stripe"</td></tr>
+<tr><td>Pro Year Stripe</td><td>"pro-year-stripe"</td></tr>
+<tr><td>Business Month Stripe</td><td>"business-month-stripe"</td></tr>
+<tr><td>Business Year Stripe</td><td>"business-year-stripe"</td></tr>
+<tr><td>Premium Month Stripe</td><td>"premium-month-stripe"</td></tr>
+<tr><td>Premium Year Stripe</td><td>"premium-year-stripe"</td></tr>
+
+</table>
+
+## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L214)</sup></sub>
+
+Quote status enum
+<table>
+<tr><td>Signed</td><td>"SIGNED"</td></tr>
+<tr><td>Pending</td><td>"PENDING"</td></tr>
+<tr><td>Confirmed</td><td>"CONFIRMED"</td></tr>
+<tr><td>Cancelled</td><td>"CANCELLED"</td></tr>
 
 </table>
 

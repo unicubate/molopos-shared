@@ -209,9 +209,9 @@ export enum PricingTypeEnum {
 }
 
 /**
- * Quote status module enum
+ * Quote status enum
  */
-export enum QuoteStatusModuleEnum {
+export enum QuoteStatusEnum {
   Signed = "SIGNED",
   Pending = "PENDING",
   Confirmed = "CONFIRMED",
