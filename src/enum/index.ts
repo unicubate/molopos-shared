@@ -62,6 +62,7 @@ export enum QueryTypeEnum {
   QuoteOption = "QUOTEOPTION",
   Section = "SECTION",
   Discount = "DISCOUNT",
+  Project = "PROJECT",
   UserAddress = "USERADDRESS",
   Subcategory = "SUBCATEGORY",
   ExpenseItem = "EXPENSEITEM",
