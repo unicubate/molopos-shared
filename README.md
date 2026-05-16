@@ -34,6 +34,7 @@ import { CustomerTypeEnum } from '@molopos/shared';
 - [User Status Enum](#user-status-enum-userstatusenum), User status enum
 - [Pricing Type Enum](#pricing-type-enum-pricingtypeenum), Pricing type status enum
 - [Quote Status Enum](#quote-status-enum-quotestatusenum), Quote status enum
+- [Status Enum](#status-enum-statusenum), Status enum
 ## Customer Type Enum <sub><sup>[CustomerTypeEnum](./src/enum/index.ts#L4)</sup></sub>
 
 Customer type enum
@@ -102,6 +103,7 @@ Query type enum
 <tr><td>Quote Option</td><td>"QUOTEOPTION"</td></tr>
 <tr><td>Section</td><td>"SECTION"</td></tr>
 <tr><td>Discount</td><td>"DISCOUNT"</td></tr>
+<tr><td>Project</td><td>"PROJECT"</td></tr>
 <tr><td>User Address</td><td>"USERADDRESS"</td></tr>
 <tr><td>Subcategory</td><td>"SUBCATEGORY"</td></tr>
 <tr><td>Expense Item</td><td>"EXPENSEITEM"</td></tr>
@@ -110,7 +112,7 @@ Query type enum
 
 </table>
 
-## Transaction Direction Enum <sub><sup>[TransactionDirectionEnum](./src/enum/index.ts#L75)</sup></sub>
+## Transaction Direction Enum <sub><sup>[TransactionDirectionEnum](./src/enum/index.ts#L76)</sup></sub>
 
 Transaction direction enum
 <table>
@@ -120,7 +122,7 @@ Transaction direction enum
 
 </table>
 
-## Transaction Model Enum <sub><sup>[TransactionModelEnum](./src/enum/index.ts#L84)</sup></sub>
+## Transaction Model Enum <sub><sup>[TransactionModelEnum](./src/enum/index.ts#L85)</sup></sub>
 
 Transaction model enum
 <table>
@@ -131,7 +133,7 @@ Transaction model enum
 
 </table>
 
-## Boolean String Enum <sub><sup>[BooleanStringEnum](./src/enum/index.ts#L94)</sup></sub>
+## Boolean String Enum <sub><sup>[BooleanStringEnum](./src/enum/index.ts#L95)</sup></sub>
 
 Boolean string enum
 <table>
@@ -140,7 +142,7 @@ Boolean string enum
 
 </table>
 
-## Sort Order Enum <sub><sup>[SortOrderEnum](./src/enum/index.ts#L102)</sup></sub>
+## Sort Order Enum <sub><sup>[SortOrderEnum](./src/enum/index.ts#L103)</sup></sub>
 
 Sort type enum
 <table>
@@ -149,7 +151,7 @@ Sort type enum
 
 </table>
 
-## Export Ext Enum <sub><sup>[ExportExtEnum](./src/enum/index.ts#L110)</sup></sub>
+## Export Ext Enum <sub><sup>[ExportExtEnum](./src/enum/index.ts#L111)</sup></sub>
 
 Export file extensions
 <table>
@@ -158,7 +160,7 @@ Export file extensions
 
 </table>
 
-## Currency Enum <sub><sup>[CurrencyEnum](./src/enum/index.ts#L119)</sup></sub>
+## Currency Enum <sub><sup>[CurrencyEnum](./src/enum/index.ts#L120)</sup></sub>
 
 Currency codes used in the system @see https:en.wikipedia.orgwikiISO_4217
 <table>
@@ -172,7 +174,7 @@ Currency codes used in the system @see https:en.wikipedia.orgwikiISO_4217
 
 </table>
 
-## Quote Signed View Enum <sub><sup>[QuoteSignedViewEnum](./src/enum/index.ts#L132)</sup></sub>
+## Quote Signed View Enum <sub><sup>[QuoteSignedViewEnum](./src/enum/index.ts#L133)</sup></sub>
 
 Quote signed view enum
 <table>
@@ -181,7 +183,7 @@ Quote signed view enum
 
 </table>
 
-## Contributor Role Enum <sub><sup>[ContributorRoleEnum](./src/enum/index.ts#L140)</sup></sub>
+## Contributor Role Enum <sub><sup>[ContributorRoleEnum](./src/enum/index.ts#L141)</sup></sub>
 
 Contributor role enum
 <table>
@@ -190,7 +192,7 @@ Contributor role enum
 
 </table>
 
-## Status Quote Item Enum <sub><sup>[StatusQuoteItemEnum](./src/enum/index.ts#L148)</sup></sub>
+## Status Quote Item Enum <sub><sup>[StatusQuoteItemEnum](./src/enum/index.ts#L149)</sup></sub>
 
 Status quote item enum
 <table>
@@ -202,7 +204,7 @@ Status quote item enum
 
 </table>
 
-## Private Public Enum <sub><sup>[PrivatePublicEnum](./src/enum/index.ts#L159)</sup></sub>
+## Private Public Enum <sub><sup>[PrivatePublicEnum](./src/enum/index.ts#L160)</sup></sub>
 
 Private public enum
 <table>
@@ -211,7 +213,7 @@ Private public enum
 
 </table>
 
-## Pages Provider Enum <sub><sup>[PagesProviderEnum](./src/enum/index.ts#L167)</sup></sub>
+## Pages Provider Enum <sub><sup>[PagesProviderEnum](./src/enum/index.ts#L168)</sup></sub>
 
 Pages provider enum
 <table>
@@ -224,7 +226,7 @@ Pages provider enum
 
 </table>
 
-## Application Section Module Enum <sub><sup>[ApplicationSectionModuleEnum](./src/enum/index.ts#L179)</sup></sub>
+## Application Section Module Enum <sub><sup>[ApplicationSectionModuleEnum](./src/enum/index.ts#L180)</sup></sub>
 
 Application section module enum
 <table>
@@ -234,7 +236,7 @@ Application section module enum
 
 </table>
 
-## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L188)</sup></sub>
+## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L189)</sup></sub>
 
 User status enum
 <table>
@@ -245,7 +247,7 @@ User status enum
 
 </table>
 
-## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L198)</sup></sub>
+## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L199)</sup></sub>
 
 Pricing type status enum
 <table>
@@ -262,7 +264,7 @@ Pricing type status enum
 
 </table>
 
-## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L214)</sup></sub>
+## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L215)</sup></sub>
 
 Quote status enum
 <table>
@@ -270,6 +272,15 @@ Quote status enum
 <tr><td>Pending</td><td>"PENDING"</td></tr>
 <tr><td>Confirmed</td><td>"CONFIRMED"</td></tr>
 <tr><td>Cancelled</td><td>"CANCELLED"</td></tr>
+
+</table>
+
+## Status Enum <sub><sup>[StatusEnum](./src/enum/index.ts#L225)</sup></sub>
+
+Status enum
+<table>
+<tr><td>Public</td><td>"PUBLIC"</td></tr>
+<tr><td>Private</td><td>"PRIVATE"</td></tr>
 
 </table>
 

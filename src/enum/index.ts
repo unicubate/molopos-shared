@@ -218,3 +218,11 @@ export enum QuoteStatusEnum {
   Confirmed = "CONFIRMED",
   Cancelled = "CANCELLED",
 }
+
+/**
+ * Status enum
+ */
+export enum StatusEnum {
+  Public = "PUBLIC",
+  Private = "PRIVATE",
+}
