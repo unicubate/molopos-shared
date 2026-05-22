@@ -181,7 +181,6 @@ export enum ExportExtEnum {
 
 /**
  * Currency codes used in the system
- * @see https://en.wikipedia.org/wiki/ISO_4217
  */
 export enum CurrencyEnum {
   USD = "USD",
