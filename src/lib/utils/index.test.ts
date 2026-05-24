@@ -1,4 +1,11 @@
-import { calculDiscount, calculVat, fromCents, toCents } from "./index";
+import {
+  calculDiscount,
+  calculVat,
+  formatePrice,
+  formatPercent,
+  fromCents,
+  toCents,
+} from "./index";
 
 describe("Utils", () => {
   test("fromCents", () => {
@@ -22,6 +29,16 @@ describe("Utils", () => {
   test("calculDiscount", () => {
     const result = calculDiscount({ value: 100, percentage: 20 });
     expect(result).toEqual(20);
+    expect(result).not.toBeNull();
+  });
+
+  test("formatePrice", () => {
+    const result = formatePrice({ value: 2, currency: "EUR", locale: "fr" });
+    expect(result.toString()).not.toBeNull();
+  });
+
+  test("formatPercent", () => {
+    const result = formatPercent({ value: 20, locale: "fr" });
     expect(result).not.toBeNull();
   });
 });

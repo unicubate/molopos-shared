@@ -1,22 +1,24 @@
 {
   "name": "mp-shared",
-  "version": "2.0.26",
+  "version": "2.0.27",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
     "docs:notion": "node ./scripts/docs.js --notion",
-    "test": "jest --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
   },
   "dependencies": {
-    "date-fns": "^4.1.0",
+    "date-fns": "^4.3.0",
     "luxon": "^3.7.2"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/luxon": "^3.7.1",
     "jest": "^30.4.2",
-    "ts-jest": "29.4.9",
+    "ts-jest": "29.4.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
