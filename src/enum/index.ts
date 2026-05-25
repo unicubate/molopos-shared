@@ -40,12 +40,14 @@ export enum ProductTypeEnum {
  * Query type enum
  */
 export enum QueryTypeEnum {
+  Task = "TASK",
   Unit = "UNIT",
   Post = "POST",
   Shop = "SHOP",
   Brand = "BRAND",
   Order = "ORDER",
   Quote = "QUOTE",
+  Section = "SECTION",
   Message = "MESSAGE",
   Catalog = "CATALOG",
   Product = "PRODUCT",
@@ -54,22 +56,21 @@ export enum QueryTypeEnum {
   Expense = "EXPENSE",
   Profile = "PROFILE",
   Variant = "VARIANT",
+  Project = "PROJECT",
+  Pipeline = "PIPELINE",
+  Customer = "CUSTOMER",
   Checkout = "CHECKOUT",
   Category = "CATEGORY",
+  Discount = "DISCOUNT",
   Warehouse = "WAREHOUSE",
   OrderItem = "ORDERITEM",
   QuoteItem = "QUOTEITEM",
   QuoteOption = "QUOTEOPTION",
-  Section = "SECTION",
-  Discount = "DISCOUNT",
-  Project = "PROJECT",
   UserAddress = "USERADDRESS",
   Subcategory = "SUBCATEGORY",
   ExpenseItem = "EXPENSEITEM",
   Organization = "ORGANIZATION",
   ApplicationSection = "APPLICATIONSECTION",
-  Task = "TASK",
-  Pipeline = "PIPELINE",
 }
 
 /**
