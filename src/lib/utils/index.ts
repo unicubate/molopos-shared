@@ -1,3 +1,4 @@
+const isNaNumber = (value: number) => (!isNaN(Number(value)) ? value : 0);
 /**
  * @example
  * fromCents(2300) // 23
@@ -52,8 +53,8 @@ export const formatePrice = ({
   locale = "en",
   isDivide = false,
 }: Props) => {
-  if (isNaN(value)) return "—";
-  const numberCal = isDivide ? fromCents(value) : value;
+  const newValue = isNaNumber(value);
+  const numberCal = isDivide ? fromCents(newValue) : newValue;
 
   const lang = ["fr", "it"].includes(locale.toLowerCase()) ? "de" : locale;
   return new Intl.NumberFormat(lang, {
@@ -75,9 +76,11 @@ export const formatPercent = ({
   value: number;
   locale: string;
 }) => {
-  return new Intl.NumberFormat(locale, {
+  const newValue = isNaNumber(value);
+  const result = new Intl.NumberFormat(locale, {
     style: "percent",
     notation: "standard",
     maximumFractionDigits: 1,
-  }).format(value / 100);
+  }).format(newValue / 100);
+  return result;
 };
