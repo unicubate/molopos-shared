@@ -298,5 +298,5 @@ export enum StatusEnum {
  */
 export enum SectionStatusEnum {
   Open = "OPEN",
-  Closed = "CLOSED",
+  Close = "CLOSE",
 }
