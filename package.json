@@ -1,6 +1,6 @@
 {
   "name": "mp-shared",
-  "version": "2.0.29",
+  "version": "2.0.30",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
@@ -11,6 +11,7 @@
     "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
   },
   "dependencies": {
+    "class-transformer": "^0.5.1",
     "date-fns": "^4.3.0",
     "luxon": "^3.7.2"
   },
