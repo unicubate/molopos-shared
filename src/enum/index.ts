@@ -300,3 +300,19 @@ export enum SectionStatusEnum {
   Open = "OPEN",
   Close = "CLOSE",
 }
+
+/**
+ * Quote module enum
+ */
+export enum QuoteModuleEnum {
+  Quote = "QUOTE",
+  Invoice = "INVOICE",
+}
+
+/**
+ * Expense module enum
+ */
+export enum ExpenseModuleEnum {
+  Expense = "EXPENSE",
+  Investment = "INVESTMENT",
+}
