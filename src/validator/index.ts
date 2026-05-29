@@ -6,6 +6,7 @@ import { Transform } from "class-transformer";
  *
  * @example
  * class MyDto {
+ *   @IsBoolean()
  *   @TransformBooleanString()
  *   isClosed?: boolean;
  * }

@@ -292,3 +292,11 @@ export enum StatusEnum {
   Public = "PUBLIC",
   Private = "PRIVATE",
 }
+
+/**
+ * Section status enum
+ */
+export enum SectionStatusEnum {
+  Open = "OPEN",
+  Closed = "CLOSED",
+}
