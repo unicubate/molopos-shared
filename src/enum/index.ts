@@ -247,6 +247,7 @@ export enum ApplicationSectionModuleEnum {
   Quote = "QUOTE",
   Product = "PRODUCT",
   Expense = "EXPENSE",
+  CollaborativeFund = "COLLABORATIVEFUND",
 }
 
 /**
@@ -299,14 +300,6 @@ export enum StatusEnum {
 export enum SectionStatusEnum {
   Open = "OPEN",
   Close = "CLOSE",
-}
-
-/**
- * Quote module enum
- */
-export enum QuoteModuleEnum {
-  Quote = "QUOTE",
-  Invoice = "INVOICE",
 }
 
 /**
