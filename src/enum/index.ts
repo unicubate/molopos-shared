@@ -307,5 +307,5 @@ export enum SectionStatusEnum {
  */
 export enum ExpenseModuleEnum {
   Expense = "EXPENSE",
-  Investment = "INVESTMENT",
+  CollaborativeFund = "COLLABORATIVEFUND",
 }
