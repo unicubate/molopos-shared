@@ -71,6 +71,7 @@ export enum QueryTypeEnum {
   ExpenseItem = "EXPENSEITEM",
   Organization = "ORGANIZATION",
   ApplicationSection = "APPLICATIONSECTION",
+  CollaborativeFund = "COLLABORATIVEFUND",
 }
 
 /**
