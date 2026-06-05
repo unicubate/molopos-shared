@@ -3,12 +3,6 @@ export type Url = string | UrlObject;
 export type EndpointLike<T extends string> = `/${T}`;
 /**
  * Create a URL with query parameters
- * @param baseUrl - The base URL
- * @param endpoint - The endpoint
- * @param params - The URL parameters
- * @param query - The query parameters
- * @returns
- *
  * @example
  * const url = URLEndpoint({
  *   baseUrl: "https://api.example.com",

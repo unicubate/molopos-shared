@@ -123,7 +123,11 @@ export enum ActivityModelEnum {
   ApplicationSectionCreate = "APPLICATION_SECTION_CREATE",
   ApplicationSectionUpdate = "APPLICATION_SECTION_UPDATE",
   ApplicationSectionDelete = "APPLICATION_SECTION_DELETE",
+  QuotePaid = "QUOTE_PAID",
+  QuoteSigned = "QUOTE_SIGNED",
   QuoteConfirmed = "QUOTE_CONFIRMED",
+  QuoteCancelled = "QUOTE_CANCELLED",
+  QuoteArchived = "QUOTE_ARCHIVED",
   ProjectCreate = "PROJECT_CREATE",
   ProjectUpdate = "PROJECT_UPDATE",
   ProjectDelete = "PROJECT_DELETE",
@@ -281,8 +285,10 @@ export enum PricingTypeEnum {
  * Quote status enum
  */
 export enum QuoteStatusEnum {
+  Paid = "PAID",
   Signed = "SIGNED",
   Pending = "PENDING",
+  Archived = "ARCHIVED",
   Confirmed = "CONFIRMED",
   Cancelled = "CANCELLED",
 }
