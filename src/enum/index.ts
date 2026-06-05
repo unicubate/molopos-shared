@@ -321,7 +321,7 @@ export enum ExpenseModuleEnum {
 /**
  * Additional module enum
  */
-export enum AdditionalModuleEnum {
+export enum AdditionModuleEnum {
   Order = "ORDER",
   Quote = "QUOTE",
   Invoice = "INVOICE",
