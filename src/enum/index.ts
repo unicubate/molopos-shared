@@ -70,6 +70,7 @@ export enum QueryTypeEnum {
   Subcategory = "SUBCATEGORY",
   ExpenseItem = "EXPENSEITEM",
   Organization = "ORGANIZATION",
+  InvoiceBalance = "INVOICEBALANCE",
   ApplicationSection = "APPLICATIONSECTION",
   CollaborativeFund = "COLLABORATIVEFUND",
 }
@@ -155,10 +156,10 @@ export enum TransactionDirectionEnum {
  * Transaction model enum
  */
 export enum TransactionModelEnum {
+  Withdraw = "WITHDRAW",
   Product = "PRODUCT",
   StoreShop = "STORESHOP",
   Subscription = "SUBSCRIPTION",
-  Withdraw = "WITHDRAW",
 }
 
 /**
@@ -315,4 +316,16 @@ export enum SectionStatusEnum {
 export enum ExpenseModuleEnum {
   Expense = "EXPENSE",
   CollaborativeFund = "COLLABORATIVEFUND",
+}
+
+/**
+ * Additional module enum
+ */
+export enum AdditionalModuleEnum {
+  Order = "ORDER",
+  Quote = "QUOTE",
+  Invoice = "INVOICE",
+  QuoteItem = "QUOTEITEM",
+  QuoteOption = "QUOTEOPTION",
+  InvoiceBalance = "INVOICEBALANCE",
 }
