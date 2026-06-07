@@ -70,7 +70,7 @@ export enum QueryTypeEnum {
   Subcategory = "SUBCATEGORY",
   ExpenseItem = "EXPENSEITEM",
   Organization = "ORGANIZATION",
-  InvoiceBalance = "INVOICEBALANCE",
+  Advancement = "ADVANCEMENT",
   ApplicationSection = "APPLICATIONSECTION",
   CollaborativeFund = "COLLABORATIVEFUND",
 }
@@ -316,16 +316,4 @@ export enum SectionStatusEnum {
 export enum ExpenseModuleEnum {
   Expense = "EXPENSE",
   CollaborativeFund = "COLLABORATIVEFUND",
-}
-
-/**
- * Additional module enum
- */
-export enum AdditionModuleEnum {
-  Order = "ORDER",
-  Quote = "QUOTE",
-  Invoice = "INVOICE",
-  QuoteItem = "QUOTEITEM",
-  QuoteOption = "QUOTEOPTION",
-  InvoiceBalance = "INVOICEBALANCE",
 }
