@@ -292,6 +292,7 @@ export enum QuoteStatusEnum {
   Archived = "ARCHIVED",
   Confirmed = "CONFIRMED",
   Cancelled = "CANCELLED",
+  Deposited = "DEPOSITED",
 }
 
 /**
