@@ -62,6 +62,7 @@ export enum QueryTypeEnum {
   Checkout = "CHECKOUT",
   Category = "CATEGORY",
   Discount = "DISCOUNT",
+  Currency = "CURRENCY",
   Warehouse = "WAREHOUSE",
   OrderItem = "ORDERITEM",
   QuoteItem = "QUOTEITEM",
@@ -312,9 +313,11 @@ export enum SectionStatusEnum {
 }
 
 /**
- * Expense module enum
+ * Upload folder enum
  */
-export enum ExpenseModuleEnum {
-  Expense = "EXPENSE",
-  CollaborativeFund = "COLLABORATIVEFUND",
+export enum UploadFolderEnum {
+  File = "FILE",
+  Cover = "COVER",
+  Image = "IMAGE",
+  Document = "DOCUMENT",
 }
