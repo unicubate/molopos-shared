@@ -74,6 +74,7 @@ export enum QueryTypeEnum {
   Advancement = "ADVANCEMENT",
   ApplicationSection = "APPLICATIONSECTION",
   CollaborativeFund = "COLLABORATIVEFUND",
+  Subscription = "SUBSCRIPTION",
 }
 
 /**
@@ -142,6 +143,9 @@ export enum ActivityModelEnum {
   NoteCreate = "NOTE_CREATE",
   NoteUpdate = "NOTE_UPDATE",
   NoteDelete = "NOTE_DELETE",
+  SubscriptionCreate = "SUBSCRIPTION_CREATE",
+  SubscriptionUpdate = "SUBSCRIPTION_UPDATE",
+  SubscriptionDelete = "SUBSCRIPTION_DELETE",
 }
 
 /**
