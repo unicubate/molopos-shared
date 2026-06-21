@@ -149,6 +149,9 @@ export enum ActivityModelEnum {
   SubCategoryCreate = "SUBCATEGORY_CREATE",
   SubCategoryUpdate = "SUBCATEGORY_UPDATE",
   SubCategoryDelete = "SUBCATEGORY_DELETE",
+  CustomerCreate = "CUSTOMER_CREATE",
+  CustomerUpdate = "CUSTOMER_UPDATE",
+  CustomerDelete = "CUSTOMER_DELETE",
 }
 
 /**
