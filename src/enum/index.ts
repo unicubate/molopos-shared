@@ -57,6 +57,7 @@ export enum QueryTypeEnum {
   Profile = "PROFILE",
   Variant = "VARIANT",
   Project = "PROJECT",
+  Supplier = "SUPPLIER",
   Pipeline = "PIPELINE",
   Customer = "CUSTOMER",
   Checkout = "CHECKOUT",
