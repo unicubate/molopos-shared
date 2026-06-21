@@ -84,3 +84,21 @@ export const formatPercent = ({
   }).format(newValue / 100);
   return result;
 };
+
+/**
+ * @example
+ * capitalizeFirstLetter("john doe") // "John Doe"
+ */
+export const capitalizeFirstLetter = (value: string): string => {
+  // Séparer le nom complet en parties (prénom et nom)
+  const parties = value?.split(" ");
+  // Appliquer la capitalisation à chaque partie
+  if (parties?.length > 0) {
+    const partiesFormatees = parties?.map(
+      (item) => item?.charAt(0).toUpperCase() + item?.slice(1).toLowerCase(),
+    );
+    // Rejoindre les parties avec un espace
+    return partiesFormatees.join(" ");
+  }
+  return "";
+};

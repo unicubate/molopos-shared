@@ -1,6 +1,7 @@
 import {
   calculDiscount,
   calculVat,
+  capitalizeFirstLetter,
   formatePrice,
   formatPercent,
   fromCents,
@@ -40,5 +41,12 @@ describe("Utils", () => {
   test("formatPercent", () => {
     const result = formatPercent({ value: 20, locale: "fr" });
     expect(result).not.toBeNull();
+  });
+
+  test("capitalizeFirstLetter", () => {
+    const result = capitalizeFirstLetter("john doe");
+    expect(result).not.toBeNull();
+    expect(result).toBeDefined();
+    expect(result).toEqual("John Doe");
   });
 });

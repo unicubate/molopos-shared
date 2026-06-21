@@ -146,6 +146,9 @@ export enum ActivityModelEnum {
   SubscriptionCreate = "SUBSCRIPTION_CREATE",
   SubscriptionUpdate = "SUBSCRIPTION_UPDATE",
   SubscriptionDelete = "SUBSCRIPTION_DELETE",
+  SubCategoryCreate = "SUBCATEGORY_CREATE",
+  SubCategoryUpdate = "SUBCATEGORY_UPDATE",
+  SubCategoryDelete = "SUBCATEGORY_DELETE",
 }
 
 /**
