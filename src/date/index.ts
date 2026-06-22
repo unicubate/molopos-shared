@@ -1,6 +1,12 @@
 import { format } from "date-fns";
 import { DateTime } from "luxon";
+import { RecurrenceEnum } from "../enum";
 import { DateLike, Numberlike } from "../index";
+interface PropsRecurrence {
+  date: Date;
+  duration?: number;
+  recurrence: RecurrenceEnum;
+}
 
 /**
  * Format a date to a string
@@ -135,4 +141,25 @@ export const formateToUnixIntegerddLLLyyyy = (
  */
 export const formateTDate = (date: Date, lang: string) => {
   return DateTime.fromJSDate(date).setLocale(lang).toFormat("t");
+};
+
+/**
+ * @example
+ * recurrenceDate({ date: new Date(), recurrence: RecurrenceEnum.Monthly }) // 23/06/2026
+ */
+export const recurrenceDate = ({
+  date,
+  recurrence,
+  duration = 1,
+}: PropsRecurrence): Date => {
+  switch (recurrence) {
+    case RecurrenceEnum.Daily:
+      return DateTime.fromJSDate(date).plus({ days: duration }).toJSDate();
+    case RecurrenceEnum.Weekly:
+      return DateTime.fromJSDate(date).plus({ weeks: duration }).toJSDate();
+    case RecurrenceEnum.Monthly:
+      return DateTime.fromJSDate(date).plus({ months: duration }).toJSDate();
+    case RecurrenceEnum.Yearly:
+      return DateTime.fromJSDate(date).plus({ years: duration }).toJSDate();
+  }
 };

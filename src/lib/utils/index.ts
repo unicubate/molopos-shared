@@ -1,3 +1,11 @@
+interface Props {
+  value: number;
+  isDivide?: boolean;
+  currency: string;
+  locale?: string;
+  maximumFractionDigits?: number;
+}
+
 const isNaNumber = (value: number) => (!isNaN(Number(value)) ? value : 0);
 /**
  * @example
@@ -35,14 +43,6 @@ export const calculDiscount = ({
   value: number;
   percentage: number;
 }): number => (percentage > 0 ? fromCents(value * percentage) : 0);
-
-interface Props {
-  value: number;
-  isDivide?: boolean;
-  currency: string;
-  locale?: string;
-  maximumFractionDigits?: number;
-}
 
 /**
  * @example
