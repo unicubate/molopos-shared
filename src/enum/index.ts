@@ -334,9 +334,9 @@ export enum UploadFolderEnum {
 }
 
 /**
- * Interval repeat enum
+ * Recurrence enum
  */
-export enum RepeatIntervalEnum {
+export enum RecurrenceEnum {
   Daily = "DAILY",
   Weekly = "WEEKLY",
   Monthly = "MONTHLY",
