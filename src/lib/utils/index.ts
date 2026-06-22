@@ -41,6 +41,7 @@ interface Props {
   isDivide?: boolean;
   currency: string;
   locale?: string;
+  maximumFractionDigits?: number;
 }
 
 /**
@@ -52,6 +53,7 @@ export const formatePrice = ({
   currency,
   locale = "en",
   isDivide = false,
+  maximumFractionDigits = 3,
 }: Props) => {
   const newValue = isNaNumber(value);
   const numberCal = isDivide ? fromCents(newValue) : newValue;
@@ -61,7 +63,7 @@ export const formatePrice = ({
     currency,
     style: "currency",
     notation: "standard",
-    maximumFractionDigits: 1,
+    maximumFractionDigits,
   }).format(numberCal);
 };
 

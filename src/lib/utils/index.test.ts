@@ -34,7 +34,11 @@ describe("Utils", () => {
   });
 
   test("formatePrice", () => {
-    const result = formatePrice({ value: 2, currency: "EUR", locale: "fr" });
+    const result = formatePrice({
+      value: 205.35714285714286,
+      currency: "EUR",
+      locale: "fr",
+    });
     expect(result.toString()).not.toBeNull();
   });
 
