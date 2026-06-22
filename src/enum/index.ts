@@ -332,3 +332,13 @@ export enum UploadFolderEnum {
   Image = "IMAGE",
   Document = "DOCUMENT",
 }
+
+/**
+ * Expense Item repeat interval enum
+ */
+export enum ExpenseItemIntervalRepeatEnum {
+  Daily = "DAILY",
+  Weekly = "WEEKLY",
+  Monthly = "MONTHLY",
+  Yearly = "YEARLY",
+}
