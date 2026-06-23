@@ -6,6 +6,7 @@ interface PropsRecurrence {
   date: Date;
   duration?: number;
   recurrence: RecurrenceEnum;
+  isRecurrence?: boolean;
 }
 
 /**
@@ -151,15 +152,20 @@ export const recurrenceDate = ({
   date,
   recurrence,
   duration = 1,
+  isRecurrence = true,
 }: PropsRecurrence): Date => {
-  switch (recurrence) {
-    case RecurrenceEnum.Daily:
-      return DateTime.fromJSDate(date).plus({ days: duration }).toJSDate();
-    case RecurrenceEnum.Weekly:
-      return DateTime.fromJSDate(date).plus({ weeks: duration }).toJSDate();
-    case RecurrenceEnum.Monthly:
-      return DateTime.fromJSDate(date).plus({ months: duration }).toJSDate();
-    case RecurrenceEnum.Yearly:
-      return DateTime.fromJSDate(date).plus({ years: duration }).toJSDate();
+  if (isRecurrence) {
+    switch (recurrence) {
+      case RecurrenceEnum.Daily:
+        return DateTime.fromJSDate(date).plus({ days: duration }).toJSDate();
+      case RecurrenceEnum.Weekly:
+        return DateTime.fromJSDate(date).plus({ weeks: duration }).toJSDate();
+      case RecurrenceEnum.Monthly:
+        return DateTime.fromJSDate(date).plus({ months: duration }).toJSDate();
+      case RecurrenceEnum.Yearly:
+        return DateTime.fromJSDate(date).plus({ years: duration }).toJSDate();
+    }
+  } else {
+    return date;
   }
 };
