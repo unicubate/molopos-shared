@@ -145,6 +145,23 @@ export const formateTDate = (date: Date, lang: string) => {
 };
 
 /**
+ *
+ * @returns The current date in Unix integer format
+ * @example 1719168000
+ */
+export const dateTimeNowUtcUnixInteger = () =>
+  DateTime.fromJSDate(dateTimeNowUtc()).toUnixInteger() as unknown as number;
+
+/**
+ * Format a date to a Unix integer
+ * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
+ * @returns The formatted date in Unix integer format
+ * @example 1719168000
+ */
+export const formateDateUnixInteger = (date: Date) =>
+  DateTime.fromJSDate(date).toUnixInteger() as unknown as number;
+
+/**
  * @example
  * recurrenceDate({ date: new Date(), recurrence: RecurrenceEnum.Monthly }) // 23/06/2026
  */
@@ -155,15 +172,21 @@ export const recurrenceDate = ({
   isRecurrence = true,
 }: PropsRecurrence): Date => {
   if (isRecurrence) {
+    const dateNow = dateTimeNowUtcUnixInteger();
+    const dateInit = formateDateUnixInteger(date);
+    const dateNowInit =
+      dateInit > dateNow
+        ? DateTime.fromJSDate(date)
+        : DateTime.fromJSDate(dateTimeNowUtc());
     switch (recurrence) {
       case RecurrenceEnum.Daily:
-        return DateTime.fromJSDate(date).plus({ days: duration }).toJSDate();
+        return dateNowInit.plus({ days: duration }).toJSDate();
       case RecurrenceEnum.Weekly:
-        return DateTime.fromJSDate(date).plus({ weeks: duration }).toJSDate();
+        return dateNowInit.plus({ weeks: duration }).toJSDate();
       case RecurrenceEnum.Monthly:
-        return DateTime.fromJSDate(date).plus({ months: duration }).toJSDate();
+        return dateNowInit.plus({ months: duration }).toJSDate();
       case RecurrenceEnum.Yearly:
-        return DateTime.fromJSDate(date).plus({ years: duration }).toJSDate();
+        return dateNowInit.plus({ years: duration }).toJSDate();
     }
   } else {
     return date;
