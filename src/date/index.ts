@@ -162,6 +162,24 @@ export const formateDateUnixInteger = (date: Date) =>
   DateTime.fromJSDate(date).toUnixInteger() as unknown as number;
 
 /**
+ * Subtract days from the current date
+ * @param value - The number of days to subtract
+ * @returns The date minus the number of days
+ * @example 2026-01-01
+ */
+export const subtractDaysToDateTimeNowUtc = (value: number) =>
+  DateTime.utc().minus({ days: value }).toJSDate();
+
+/**
+ * Subtract days from the current date
+ * @param value - The number of days to subtract
+ * @returns The date minus the number of days
+ * @example 2026-01-01
+ */
+export const subtractDaysToDateTime = (date: Date, value: number) =>
+  DateTime.fromJSDate(date).minus({ days: value }).toJSDate();
+
+/**
  * @example
  * recurrenceDate({ date: new Date(), recurrence: RecurrenceEnum.Monthly }) // 23/06/2026
  */

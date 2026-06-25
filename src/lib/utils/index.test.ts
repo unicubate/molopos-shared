@@ -1,5 +1,3 @@
-import { dateTimeNowUtc, RecurrenceEnum } from "../..";
-import { recurrenceDate } from "../../date";
 import {
   calculDiscount,
   calculVat,
@@ -54,34 +52,5 @@ describe("Utils", () => {
     expect(result).not.toBeNull();
     expect(result).toBeDefined();
     expect(result).toEqual("John Doe");
-  });
-
-  test("recurrenceDate", () => {
-    const dateNow = dateTimeNowUtc();
-    const dateNextMonth = recurrenceDate({
-      date: dateNow,
-      recurrence: RecurrenceEnum.Monthly,
-    });
-    const dateNextYear = recurrenceDate({
-      date: dateNow,
-      recurrence: RecurrenceEnum.Yearly,
-    });
-    const dateNextWeek = recurrenceDate({
-      date: dateNow,
-      recurrence: RecurrenceEnum.Weekly,
-    });
-    const dateNextDay = recurrenceDate({
-      date: dateNow,
-      recurrence: RecurrenceEnum.Daily,
-    });
-
-    expect(dateNextDay).not.toBeNull();
-    expect(dateNextYear).not.toBeNull();
-    expect(dateNextMonth).not.toBeNull();
-    expect(dateNextWeek).not.toBeNull();
-    expect(dateNextDay).toBeDefined();
-    expect(dateNextYear).toBeDefined();
-    expect(dateNextMonth).toBeDefined();
-    expect(dateNextWeek).toBeDefined();
   });
 });

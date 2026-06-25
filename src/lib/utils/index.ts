@@ -53,7 +53,7 @@ export const formatePrice = ({
   currency,
   locale = "en",
   isDivide = false,
-  maximumFractionDigits = 3,
+  maximumFractionDigits = 2,
 }: Props) => {
   const newValue = isNaNumber(value);
   const numberCal = isDivide ? fromCents(newValue) : newValue;
