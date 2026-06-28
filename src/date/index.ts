@@ -5,7 +5,7 @@ import { DateLike, Numberlike } from "../index";
 interface PropsRecurrence {
   date: Date;
   duration?: number;
-  isRecurrence?: boolean;
+  isRecurrence: boolean;
   recurrence: RecurrenceEnum;
 }
 
@@ -193,9 +193,9 @@ export const recurrenceDate = ({
     return null;
   }
   const dateNow = dateTimeNowUtcUnixInteger();
-  const dateInit = formateDateUnixInteger(date);
+  const dateFromRecurrence = formateDateUnixInteger(date);
   const dateNowInit =
-    dateInit > dateNow
+    dateFromRecurrence > dateNow
       ? DateTime.fromJSDate(date)
       : DateTime.fromJSDate(dateTimeNowUtc());
   switch (recurrence) {

@@ -342,3 +342,14 @@ export enum RecurrenceEnum {
   Monthly = "MONTHLY",
   Yearly = "YEARLY",
 }
+
+/**
+ * Provider enum
+ */
+export enum ProviderEnum {
+  Apple = "APPLE",
+  Google = "GOOGLE",
+  Github = "GITHUB",
+  Facebook = "FACEBOOK",
+  Microsoft = "MICROSOFT",
+}

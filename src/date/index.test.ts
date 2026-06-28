@@ -69,18 +69,22 @@ describe("Date", () => {
     const dateNow = dateTimeNowUtc();
     const dateNextMonth = recurrenceDate({
       date: dateNow,
+      isRecurrence: false,
       recurrence: RecurrenceEnum.Monthly,
     });
     const dateNextYear = recurrenceDate({
       date: dateNow,
+      isRecurrence: false,
       recurrence: RecurrenceEnum.Yearly,
     });
     const dateNextWeek = recurrenceDate({
       date: dateNow,
+      isRecurrence: false,
       recurrence: RecurrenceEnum.Weekly,
     });
     const dateNextDay = recurrenceDate({
       date: dateNow,
+      isRecurrence: false,
       recurrence: RecurrenceEnum.Daily,
     });
     expect(dateNextMonth).toBeNull();
