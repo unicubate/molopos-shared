@@ -5,8 +5,8 @@ import { DateLike, Numberlike } from "../index";
 interface PropsRecurrence {
   date: Date;
   duration?: number;
-  recurrence: RecurrenceEnum;
   isRecurrence?: boolean;
+  recurrence: RecurrenceEnum;
 }
 
 /**
@@ -187,26 +187,25 @@ export const recurrenceDate = ({
   date,
   recurrence,
   duration = 1,
-  isRecurrence = true,
+  isRecurrence = false,
 }: PropsRecurrence): Date => {
-  if (isRecurrence) {
-    const dateNow = dateTimeNowUtcUnixInteger();
-    const dateInit = formateDateUnixInteger(date);
-    const dateNowInit =
-      dateInit > dateNow
-        ? DateTime.fromJSDate(date)
-        : DateTime.fromJSDate(dateTimeNowUtc());
-    switch (recurrence) {
-      case RecurrenceEnum.Daily:
-        return dateNowInit.plus({ days: duration }).toJSDate();
-      case RecurrenceEnum.Weekly:
-        return dateNowInit.plus({ weeks: duration }).toJSDate();
-      case RecurrenceEnum.Monthly:
-        return dateNowInit.plus({ months: duration }).toJSDate();
-      case RecurrenceEnum.Yearly:
-        return dateNowInit.plus({ years: duration }).toJSDate();
-    }
-  } else {
-    return date;
+  if (!isRecurrence) {
+    return null;
+  }
+  const dateNow = dateTimeNowUtcUnixInteger();
+  const dateInit = formateDateUnixInteger(date);
+  const dateNowInit =
+    dateInit > dateNow
+      ? DateTime.fromJSDate(date)
+      : DateTime.fromJSDate(dateTimeNowUtc());
+  switch (recurrence) {
+    case RecurrenceEnum.Daily:
+      return dateNowInit.plus({ days: duration }).toJSDate();
+    case RecurrenceEnum.Weekly:
+      return dateNowInit.plus({ weeks: duration }).toJSDate();
+    case RecurrenceEnum.Monthly:
+      return dateNowInit.plus({ months: duration }).toJSDate();
+    case RecurrenceEnum.Yearly:
+      return dateNowInit.plus({ years: duration }).toJSDate();
   }
 };

@@ -32,7 +32,40 @@ describe("Date", () => {
     expect(dateNow).toBeDefined();
   });
 
-  test("recurrenceDate", () => {
+  test("recurrenceDate isRecurrence = true", () => {
+    const dateNow = dateTimeNowUtc();
+    const dateNextMonth = recurrenceDate({
+      date: dateNow,
+      isRecurrence: true,
+      recurrence: RecurrenceEnum.Monthly,
+    });
+    const dateNextYear = recurrenceDate({
+      date: dateNow,
+      isRecurrence: true,
+      recurrence: RecurrenceEnum.Yearly,
+    });
+    const dateNextWeek = recurrenceDate({
+      date: dateNow,
+      isRecurrence: true,
+      recurrence: RecurrenceEnum.Weekly,
+    });
+    const dateNextDay = recurrenceDate({
+      date: dateNow,
+      isRecurrence: true,
+      recurrence: RecurrenceEnum.Daily,
+    });
+
+    expect(dateNextDay).not.toBeNull();
+    expect(dateNextYear).not.toBeNull();
+    expect(dateNextMonth).not.toBeNull();
+    expect(dateNextWeek).not.toBeNull();
+    expect(dateNextDay).toBeDefined();
+    expect(dateNextYear).toBeDefined();
+    expect(dateNextMonth).toBeDefined();
+    expect(dateNextWeek).toBeDefined();
+  });
+
+  test("recurrenceDate isRecurrence = false", () => {
     const dateNow = dateTimeNowUtc();
     const dateNextMonth = recurrenceDate({
       date: dateNow,
@@ -50,14 +83,9 @@ describe("Date", () => {
       date: dateNow,
       recurrence: RecurrenceEnum.Daily,
     });
-
-    expect(dateNextDay).not.toBeNull();
-    expect(dateNextYear).not.toBeNull();
-    expect(dateNextMonth).not.toBeNull();
-    expect(dateNextWeek).not.toBeNull();
-    expect(dateNextDay).toBeDefined();
-    expect(dateNextYear).toBeDefined();
-    expect(dateNextMonth).toBeDefined();
-    expect(dateNextWeek).toBeDefined();
+    expect(dateNextMonth).toBeNull();
+    expect(dateNextYear).toBeNull();
+    expect(dateNextWeek).toBeNull();
+    expect(dateNextDay).toBeNull();
   });
 });
