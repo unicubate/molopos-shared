@@ -192,12 +192,22 @@ export const recurrenceDate = ({
   if (!isRecurrence) {
     return null;
   }
-  const dateNow = dateTimeNowUtcUnixInteger();
-  const dateFromRecurrence = formateDateUnixInteger(date);
-  const dateNowInit =
-    dateFromRecurrence > dateNow
+
+  const dateNowUnix = dateTimeNowUtcUnixInteger();
+  const dateUnix = formateDateUnixInteger(date);
+  const isFutureDate = dateUnix > dateNowUnix;
+  const preservesDay =
+    recurrence === RecurrenceEnum.Monthly ||
+    recurrence === RecurrenceEnum.Yearly;
+
+  const dateNowInit = preservesDay
+    ? isFutureDate
+      ? DateTime.fromJSDate(date)
+      : DateTime.fromJSDate(dateTimeNowUtc()).set({ day: date.getDate() })
+    : isFutureDate
       ? DateTime.fromJSDate(date)
       : DateTime.fromJSDate(dateTimeNowUtc());
+
   switch (recurrence) {
     case RecurrenceEnum.Daily:
       return dateNowInit.plus({ days: duration }).toJSDate();
