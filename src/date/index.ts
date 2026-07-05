@@ -196,17 +196,15 @@ export const recurrenceDate = ({
   const dateNowUnix = dateTimeNowUtcUnixInteger();
   const dateUnix = formateDateUnixInteger(date);
   const isFutureDate = dateUnix > dateNowUnix;
-  const preservesDay =
-    recurrence === RecurrenceEnum.Monthly ||
-    recurrence === RecurrenceEnum.Yearly;
 
-  const dateNowInit = preservesDay
-    ? isFutureDate
-      ? DateTime.fromJSDate(date)
-      : DateTime.fromJSDate(dateTimeNowUtc()).set({ day: date.getDate() })
-    : isFutureDate
-      ? DateTime.fromJSDate(date)
-      : DateTime.fromJSDate(dateTimeNowUtc());
+  const dateNowInit =
+    recurrence === RecurrenceEnum.Monthly
+      ? isFutureDate
+        ? DateTime.fromJSDate(date)
+        : DateTime.fromJSDate(dateTimeNowUtc()).set({ day: date.getDate() })
+      : isFutureDate
+        ? DateTime.fromJSDate(date)
+        : DateTime.fromJSDate(dateTimeNowUtc());
 
   switch (recurrence) {
     case RecurrenceEnum.Daily:
@@ -215,7 +213,19 @@ export const recurrenceDate = ({
       return dateNowInit.plus({ weeks: duration }).toJSDate();
     case RecurrenceEnum.Monthly:
       return dateNowInit.plus({ months: duration }).toJSDate();
-    case RecurrenceEnum.Yearly:
-      return dateNowInit.plus({ years: duration }).toJSDate();
+    case RecurrenceEnum.Yearly: {
+      if (isFutureDate) {
+        return dateNowInit.plus({ years: duration }).toJSDate();
+      }
+      const now = DateTime.fromJSDate(dateTimeNowUtc());
+      let nextOccurrence = now.set({
+        month: date.getMonth() + 1,
+        day: date.getDate(),
+      });
+      if (nextOccurrence.toUnixInteger() <= dateNowUnix) {
+        nextOccurrence = nextOccurrence.plus({ years: duration });
+      }
+      return nextOccurrence.toJSDate();
+    }
   }
 };

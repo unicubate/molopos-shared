@@ -8,32 +8,32 @@ import {
 import { RecurrenceEnum } from "../enum";
 
 describe("Date", () => {
-  test("dateTimeNowUtc", () => {
+  it("dateTimeNowUtc", () => {
     const dateNow = dateTimeNowUtc();
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
   });
 
-  test("dateTimeNowUtcUnixInteger", () => {
+  it("dateTimeNowUtcUnixInteger", () => {
     const dateNow = dateTimeNowUtcUnixInteger();
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
   });
 
-  test("formateDateUnixInteger", () => {
+  it("formateDateUnixInteger", () => {
     const dateNow = formateDateUnixInteger(new Date());
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
   });
 
-  test("subtractDaysToDateTimeNowUtc", () => {
+  it("subtractDaysToDateTimeNowUtc", () => {
     const dateNow = subtractDaysToDateTimeNowUtc(1);
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
   });
 
-  test("recurrenceDate isRecurrence = true", () => {
-    const dateNow = dateTimeNowUtc();
+  it("recurrenceDate isRecurrence = true", () => {
+    const dateNow = new Date("2024-08-05T00:00:00.000Z");
     const dateNextMonth = recurrenceDate({
       date: dateNow,
       isRecurrence: true,
@@ -65,7 +65,7 @@ describe("Date", () => {
     expect(dateNextWeek).toBeDefined();
   });
 
-  test("recurrenceDate isRecurrence = false", () => {
+  it("recurrenceDate isRecurrence = false", () => {
     const dateNow = dateTimeNowUtc();
     const dateNextMonth = recurrenceDate({
       date: dateNow,
