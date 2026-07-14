@@ -33,7 +33,7 @@ describe("Date", () => {
   });
 
   it("recurrenceDate isRecurrence = true", () => {
-    const dateNow = new Date("2024-08-05T00:00:00.000Z");
+    const dateNow = new Date("2025-07-09 00:00:00+00");
     const dateNextMonth = recurrenceDate({
       date: dateNow,
       isRecurrence: true,
@@ -66,7 +66,7 @@ describe("Date", () => {
   });
 
   it("recurrenceDate isRecurrence = false", () => {
-    const dateNow = dateTimeNowUtc();
+    const dateNow = new Date("2025-07-10 00:00:00+00");
     const dateNextMonth = recurrenceDate({
       date: dateNow,
       isRecurrence: false,
