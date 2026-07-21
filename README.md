@@ -324,11 +324,12 @@ Application section module enum
 <tr><td>Quote</td><td>"QUOTE"</td></tr>
 <tr><td>Product</td><td>"PRODUCT"</td></tr>
 <tr><td>Expense</td><td>"EXPENSE"</td></tr>
+<tr><td>Project</td><td>"PROJECT"</td></tr>
 <tr><td>Collaborative Fund</td><td>"COLLABORATIVEFUND"</td></tr>
 
 </table>
 
-## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L274)</sup></sub>
+## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L275)</sup></sub>
 
 User status enum
 <table>
@@ -339,7 +340,7 @@ User status enum
 
 </table>
 
-## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L284)</sup></sub>
+## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L285)</sup></sub>
 
 Pricing type status enum
 <table>
@@ -356,7 +357,7 @@ Pricing type status enum
 
 </table>
 
-## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L300)</sup></sub>
+## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L301)</sup></sub>
 
 Quote status enum
 <table>
@@ -370,7 +371,7 @@ Quote status enum
 
 </table>
 
-## Status Enum <sub><sup>[StatusEnum](./src/enum/index.ts#L313)</sup></sub>
+## Status Enum <sub><sup>[StatusEnum](./src/enum/index.ts#L314)</sup></sub>
 
 Status enum
 <table>
@@ -379,7 +380,7 @@ Status enum
 
 </table>
 
-## Section Status Enum <sub><sup>[SectionStatusEnum](./src/enum/index.ts#L321)</sup></sub>
+## Section Status Enum <sub><sup>[SectionStatusEnum](./src/enum/index.ts#L322)</sup></sub>
 
 Section status enum
 <table>
@@ -388,7 +389,7 @@ Section status enum
 
 </table>
 
-## Upload Folder Enum <sub><sup>[UploadFolderEnum](./src/enum/index.ts#L329)</sup></sub>
+## Upload Folder Enum <sub><sup>[UploadFolderEnum](./src/enum/index.ts#L330)</sup></sub>
 
 Upload folder enum
 <table>
@@ -399,7 +400,7 @@ Upload folder enum
 
 </table>
 
-## Recurrence Enum <sub><sup>[RecurrenceEnum](./src/enum/index.ts#L339)</sup></sub>
+## Recurrence Enum <sub><sup>[RecurrenceEnum](./src/enum/index.ts#L340)</sup></sub>
 
 Recurrence enum
 <table>
@@ -410,7 +411,7 @@ Recurrence enum
 
 </table>
 
-## Provider Enum <sub><sup>[ProviderEnum](./src/enum/index.ts#L349)</sup></sub>
+## Provider Enum <sub><sup>[ProviderEnum](./src/enum/index.ts#L350)</sup></sub>
 
 Provider enum
 <table>

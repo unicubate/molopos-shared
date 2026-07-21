@@ -265,6 +265,7 @@ export enum ApplicationSectionModuleEnum {
   Quote = "QUOTE",
   Product = "PRODUCT",
   Expense = "EXPENSE",
+  Project = "PROJECT",
   CollaborativeFund = "COLLABORATIVEFUND",
 }
 
