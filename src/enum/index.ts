@@ -199,19 +199,6 @@ export enum ExportExtEnum {
 }
 
 /**
- * Currency codes used in the system
- */
-export enum CurrencyEnum {
-  USD = "USD",
-  GBP = "GBP",
-  XAF = "XAF",
-  EUR = "EUR",
-  XOF = "XOF",
-  CHF = "CHF",
-  CAD = "CAD",
-}
-
-/**
  * Quote signed view enum
  */
 export enum QuoteSignedViewEnum {
