@@ -1,5 +1,6 @@
 export * from "./data/countries";
 export * from "./data/currencies";
+export * from "./data/langs";
 export * from "./date";
 export * from "./enum";
 export * from "./lib/utils";

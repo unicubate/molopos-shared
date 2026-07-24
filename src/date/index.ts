@@ -22,10 +22,7 @@ export const formateDate = (date: Date, locale: string) => {
   let dateReturn: string | null = null;
   const todaysDate = dateTimeNowUtc();
   const currentYear = todaysDate.getFullYear();
-  const dateInit =
-    date instanceof Date
-      ? DateTime.fromISO(String(date))
-      : DateTime.fromJSDate(date);
+  const dateInit = DateTime.fromISO(String(date));
   const dateYear = Number(dateInit.toFormat("yyyy"));
 
   if (currentYear === dateYear) {
@@ -47,36 +44,24 @@ export const formateDate = (date: Date, locale: string) => {
  * formateddLLLyyyy("2026-01-01", "en-US"); // "1 Jan 2026"
  */
 export const formateddLLLyyyy = (date: DateLike, locale: string) => {
-  const dateInit =
-    date instanceof Date
-      ? DateTime.fromISO(String(date))
-      : DateTime.fromJSDate(date as unknown as Date);
+  const dateInit = DateTime.fromISO(String(date));
   return dateInit.setLocale(locale).toFormat("dd LLL yyyy");
 };
 
 export const formateYYDDMM = (date: Date, locale: string) => {
-  const dateInit =
-    date instanceof Date
-      ? DateTime.fromISO(String(date))
-      : DateTime.fromJSDate(date as unknown as Date);
+  const dateInit = DateTime.fromISO(String(date));
   return dateInit.setLocale(locale).toFormat("ff");
 };
 
 export const formateHHmm = (date: Date, locale: string) => {
-  const dateInit =
-    date instanceof Date
-      ? DateTime.fromISO(String(date))
-      : DateTime.fromJSDate(date as unknown as Date);
+  const dateInit = DateTime.fromISO(String(date));
   return dateInit.setLocale(locale).toFormat("t");
 };
 
 export const formatDateToUtc = (date: Date) => format(date, "dd-MM-yyyy");
 
 export const formatDateDDMMYYToUtc = (date: Date, locale: string) => {
-  const dateInit =
-    date instanceof Date
-      ? DateTime.fromISO(String(date))
-      : DateTime.fromJSDate(date as unknown as Date);
+  const dateInit = DateTime.fromISO(String(date));
   return dateInit.setLocale(locale).toFormat("D");
 };
 
