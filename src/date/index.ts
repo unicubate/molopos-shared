@@ -193,12 +193,13 @@ export const recurrenceDate = ({
     return null;
   }
 
+  const dateInit = date instanceof Date ? date : new Date(date);
   const dateNowUnix = dateTimeNowUtcUnixInteger();
-  const dateUnix = formateDateUnixInteger(date);
+  const dateUnix = formateDateUnixInteger(dateInit);
   const isFutureDate = dateUnix > dateNowUnix;
 
   const dateNowInit = isFutureDate
-    ? DateTime.fromJSDate(date)
+    ? DateTime.fromJSDate(dateInit)
     : DateTime.fromJSDate(dateTimeNowUtc());
 
   switch (recurrence) {
@@ -211,7 +212,7 @@ export const recurrenceDate = ({
         return dateNowInit.plus({ months: duration }).toJSDate();
       }
       const now = DateTime.fromJSDate(dateTimeNowUtc());
-      let nextOccurrence = now.set({ day: date.getDate() });
+      let nextOccurrence = now.set({ day: dateInit.getDate() });
       if (nextOccurrence.toUnixInteger() <= dateNowUnix) {
         nextOccurrence = nextOccurrence.plus({ months: duration });
       }
@@ -223,8 +224,8 @@ export const recurrenceDate = ({
       }
       const now = DateTime.fromJSDate(dateTimeNowUtc());
       let nextOccurrence = now.set({
-        month: date.getMonth() + 1,
-        day: date.getDate(),
+        month: dateInit.getMonth() + 1,
+        day: dateInit.getDate(),
       });
       if (nextOccurrence.toUnixInteger() <= dateNowUnix) {
         nextOccurrence = nextOccurrence.plus({ years: duration });
