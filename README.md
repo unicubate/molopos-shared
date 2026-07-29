@@ -118,7 +118,7 @@ Query type enum
 <tr><td>Expense Item</td><td>"EXPENSEITEM"</td></tr>
 <tr><td>Organization</td><td>"ORGANIZATION"</td></tr>
 <tr><td>Advancement</td><td>"ADVANCEMENT"</td></tr>
-<tr><td>Payment Origin</td><td>"PAYMENTORIGIN"</td></tr>
+<tr><td>Payment Type</td><td>"PAYMENTTYPE"</td></tr>
 <tr><td>Application Section</td><td>"APPLICATIONSECTION"</td></tr>
 <tr><td>Collaborative Fund</td><td>"COLLABORATIVEFUND"</td></tr>
 <tr><td>Subscription</td><td>"SUBSCRIPTION"</td></tr>
@@ -200,9 +200,9 @@ Activity model enum
 <tr><td>Customer Create</td><td>"CUSTOMER_CREATE"</td></tr>
 <tr><td>Customer Update</td><td>"CUSTOMER_UPDATE"</td></tr>
 <tr><td>Customer Delete</td><td>"CUSTOMER_DELETE"</td></tr>
-<tr><td>Payment Origin Create</td><td>"PAYMENT_ORIGIN_CREATE"</td></tr>
-<tr><td>Payment Origin Update</td><td>"PAYMENT_ORIGIN_UPDATE"</td></tr>
-<tr><td>Payment Origin Delete</td><td>"PAYMENT_ORIGIN_DELETE"</td></tr>
+<tr><td>Payment Type Create</td><td>"PAYMENT_TYPE_CREATE"</td></tr>
+<tr><td>Payment Type Update</td><td>"PAYMENT_TYPE_UPDATE"</td></tr>
+<tr><td>Payment Type Delete</td><td>"PAYMENT_TYPE_DELETE"</td></tr>
 
 </table>
 

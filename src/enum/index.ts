@@ -73,7 +73,7 @@ export enum QueryTypeEnum {
   ExpenseItem = "EXPENSEITEM",
   Organization = "ORGANIZATION",
   Advancement = "ADVANCEMENT",
-  PaymentOrigin = "PAYMENTORIGIN",
+  PaymentType = "PAYMENTTYPE",
   ApplicationSection = "APPLICATIONSECTION",
   CollaborativeFund = "COLLABORATIVEFUND",
   Subscription = "SUBSCRIPTION",
@@ -154,9 +154,9 @@ export enum ActivityModelEnum {
   CustomerCreate = "CUSTOMER_CREATE",
   CustomerUpdate = "CUSTOMER_UPDATE",
   CustomerDelete = "CUSTOMER_DELETE",
-  PaymentOriginCreate = "PAYMENT_ORIGIN_CREATE",
-  PaymentOriginUpdate = "PAYMENT_ORIGIN_UPDATE",
-  PaymentOriginDelete = "PAYMENT_ORIGIN_DELETE",
+  PaymentTypeCreate = "PAYMENT_TYPE_CREATE",
+  PaymentTypeUpdate = "PAYMENT_TYPE_UPDATE",
+  PaymentTypeDelete = "PAYMENT_TYPE_DELETE",
 }
 
 /**
