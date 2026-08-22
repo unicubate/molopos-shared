@@ -84,6 +84,9 @@ export enum QueryTypeEnum {
  * Activity model enum
  */
 export enum ActivityModelEnum {
+  InventoryCreate = "INVENTORY_CREATE",
+  InventoryUpdate = "INVENTORY_UPDATE",
+  InventoryDelete = "INVENTORY_DELETE",
   ViewCount = "VIEW_COUNT",
   ProductCreate = "PRODUCT_CREATE",
   ProductUpdate = "PRODUCT_UPDATE",
@@ -158,9 +161,6 @@ export enum ActivityModelEnum {
   PaymentTypeCreate = "PAYMENT_TYPE_CREATE",
   PaymentTypeUpdate = "PAYMENT_TYPE_UPDATE",
   PaymentTypeDelete = "PAYMENT_TYPE_DELETE",
-  InventoryCreate = "INVENTORY_CREATE",
-  InventoryUpdate = "INVENTORY_UPDATE",
-  InventoryDelete = "INVENTORY_DELETE",
   InventoryAdjustmentCreate = "INVENTORY_ADJUSTMENT_CREATE",
   InventoryAdjustmentUpdate = "INVENTORY_ADJUSTMENT_UPDATE",
   InventoryAdjustmentDelete = "INVENTORY_ADJUSTMENT_DELETE",
