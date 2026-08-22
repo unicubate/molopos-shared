@@ -77,6 +77,7 @@ export enum QueryTypeEnum {
   ApplicationSection = "APPLICATIONSECTION",
   CollaborativeFund = "COLLABORATIVEFUND",
   Subscription = "SUBSCRIPTION",
+  InventoryAdjustment = "INVENTORYADJUSTMENT",
 }
 
 /**
@@ -157,6 +158,12 @@ export enum ActivityModelEnum {
   PaymentTypeCreate = "PAYMENT_TYPE_CREATE",
   PaymentTypeUpdate = "PAYMENT_TYPE_UPDATE",
   PaymentTypeDelete = "PAYMENT_TYPE_DELETE",
+  InventoryCreate = "INVENTORY_CREATE",
+  InventoryUpdate = "INVENTORY_UPDATE",
+  InventoryDelete = "INVENTORY_DELETE",
+  InventoryAdjustmentCreate = "INVENTORY_ADJUSTMENT_CREATE",
+  InventoryAdjustmentUpdate = "INVENTORY_ADJUSTMENT_UPDATE",
+  InventoryAdjustmentDelete = "INVENTORY_ADJUSTMENT_DELETE",
 }
 
 /**

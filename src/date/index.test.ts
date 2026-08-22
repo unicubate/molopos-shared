@@ -8,6 +8,12 @@ import {
 import { RecurrenceEnum } from "../enum";
 
 describe("Date", () => {
+  it("formateDDDateISO", () => {
+    const dateNow = formateDateUnixInteger(new Date());
+    console.log("dateNow ====>", dateNow);
+    expect(dateNow).not.toBeNull();
+    expect(dateNow).toBeDefined();
+  });
   it("dateTimeNowUtc", () => {
     const dateNow = dateTimeNowUtc();
     expect(dateNow).not.toBeNull();
