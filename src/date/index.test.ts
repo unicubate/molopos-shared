@@ -13,6 +13,7 @@ describe("Date", () => {
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
   });
+
   it("dateTimeNowUtc", () => {
     const dateNow = dateTimeNowUtc();
     expect(dateNow).not.toBeNull();
