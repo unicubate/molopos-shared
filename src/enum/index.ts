@@ -352,3 +352,11 @@ export enum ProviderEnum {
   Facebook = "FACEBOOK",
   Microsoft = "MICROSOFT",
 }
+
+/**
+ * Increment/Decrement enum
+ */
+export enum IncrementDecrementEnum {
+  Increment = "INCREMENT",
+  Decrement = "DECREMENT",
+}

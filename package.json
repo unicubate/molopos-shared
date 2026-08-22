@@ -1,6 +1,6 @@
 {
   "name": "mp-shared",
-  "version": "2.0.72",
+  "version": "2.0.73",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
