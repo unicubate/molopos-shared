@@ -364,7 +364,7 @@ export enum IncrementDecrementEnum {
 /**
  * Inventory adjustment input mode enum
  */
-export enum InventoryAdjustmentInputModeEnum {
+export enum InventoryAdjustmentMovementTypeEnum {
   Counted = "COUNTED",
   Removed = "REMOVED",
 }
