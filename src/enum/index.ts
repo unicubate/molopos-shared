@@ -47,6 +47,7 @@ export enum QueryTypeEnum {
   Brand = "BRAND",
   Order = "ORDER",
   Quote = "QUOTE",
+  Wallet = "WALLET",
   Section = "SECTION",
   Message = "MESSAGE",
   Catalog = "CATALOG",
@@ -67,6 +68,7 @@ export enum QueryTypeEnum {
   Warehouse = "WAREHOUSE",
   OrderItem = "ORDERITEM",
   QuoteItem = "QUOTEITEM",
+  Transaction = "TRANSACTION",
   QuoteOption = "QUOTEOPTION",
   UserAddress = "USERADDRESS",
   Subcategory = "SUBCATEGORY",
@@ -166,6 +168,12 @@ export enum ActivityModelEnum {
   InventoryAdjustmentCreate = "INVENTORY_ADJUSTMENT_CREATE",
   InventoryAdjustmentUpdate = "INVENTORY_ADJUSTMENT_UPDATE",
   InventoryAdjustmentDelete = "INVENTORY_ADJUSTMENT_DELETE",
+  WalletCreate = "WALLET_CREATE",
+  WalletUpdate = "WALLET_UPDATE",
+  WalletDelete = "WALLET_DELETE",
+  TransactionCreate = "TRANSACTION_CREATE",
+  TransactionUpdate = "TRANSACTION_UPDATE",
+  TransactionDelete = "TRANSACTION_DELETE",
 }
 
 /**

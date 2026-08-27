@@ -35,3 +35,19 @@ export function TransformBooleanString() {
 export function TransformToNullIfFalsy() {
   return Transform(({ value }) => (value ? value : null));
 }
+
+/**
+ * Transforme les chaînes séparées par des virgules en un tableau de chaînes.
+ *
+ * @example
+ * class MyDto {
+ *   @IsArray()
+ *   @TransformArrayString()
+ *   tags?: string[];
+ * }
+ */
+export function TransformArrayString() {
+  return Transform(({ value }) =>
+    value ? value?.split(",").map((item) => item.trim()) : null,
+  );
+}
