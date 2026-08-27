@@ -158,6 +158,8 @@ export enum ActivityModelEnum {
   CustomerCreate = "CUSTOMER_CREATE",
   CustomerUpdate = "CUSTOMER_UPDATE",
   CustomerDelete = "CUSTOMER_DELETE",
+  CustomerWalletRecharge = "CUSTOMER_WALLET_RECHARGE",
+  CustomerWalletWithdraw = "CUSTOMER_WALLET_WITHDRAW",
   PaymentTypeCreate = "PAYMENT_TYPE_CREATE",
   PaymentTypeUpdate = "PAYMENT_TYPE_UPDATE",
   PaymentTypeDelete = "PAYMENT_TYPE_DELETE",
@@ -179,8 +181,9 @@ export enum TransactionDirectionEnum {
  * Transaction model enum
  */
 export enum TransactionModelEnum {
-  Withdraw = "WITHDRAW",
   Product = "PRODUCT",
+  Customer = "CUSTOMER",
+  Withdraw = "WITHDRAW",
   StoreShop = "STORESHOP",
   Subscription = "SUBSCRIPTION",
 }
