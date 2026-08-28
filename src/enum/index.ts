@@ -18,14 +18,16 @@ export enum DiscountTypeEnum {
  * Payment method enum
  */
 export enum PaymentMethodEnum {
-  Paypal = "PAYPAL",
-  Stripe = "STRIPE",
   Free = "FREE",
   Card = "CARD",
-  Office = "OFFICE",
-  Phone = "PHONE",
   Cash = "CASH",
   Iban = "IBAN",
+  Phone = "PHONE",
+  Office = "OFFICE",
+  Paypal = "PAYPAL",
+  Stripe = "STRIPE",
+  PayLater = "PAYLATER",
+  Customise = "CUSTOMISE",
 }
 
 /**

@@ -39,6 +39,8 @@ import { CustomerTypeEnum } from '@molopos/shared';
 - [Upload Folder Enum](#upload-folder-enum-uploadfolderenum), Upload folder enum
 - [Recurrence Enum](#recurrence-enum-recurrenceenum), Recurrence enum
 - [Provider Enum](#provider-enum-providerenum), Provider enum
+- [Increment Decrement Enum](#increment-decrement-enum-incrementdecrementenum), IncrementDecrement enum
+- [Inventory Adjustment Movement Type Enum](#inventory-adjustment-movement-type-enum-inventoryadjustmentmovementtypeenum), Inventory adjustment input mode enum
 ## Customer Type Enum <sub><sup>[CustomerTypeEnum](./src/enum/index.ts#L4)</sup></sub>
 
 Customer type enum
@@ -61,18 +63,20 @@ Discount type enum
 
 Payment method enum
 <table>
-<tr><td>Paypal</td><td>"PAYPAL"</td></tr>
-<tr><td>Stripe</td><td>"STRIPE"</td></tr>
 <tr><td>Free</td><td>"FREE"</td></tr>
 <tr><td>Card</td><td>"CARD"</td></tr>
-<tr><td>Office</td><td>"OFFICE"</td></tr>
-<tr><td>Phone</td><td>"PHONE"</td></tr>
 <tr><td>Cash</td><td>"CASH"</td></tr>
 <tr><td>Iban</td><td>"IBAN"</td></tr>
+<tr><td>Phone</td><td>"PHONE"</td></tr>
+<tr><td>Office</td><td>"OFFICE"</td></tr>
+<tr><td>Paypal</td><td>"PAYPAL"</td></tr>
+<tr><td>Stripe</td><td>"STRIPE"</td></tr>
+<tr><td>Pay Later</td><td>"PAYLATER"</td></tr>
+<tr><td>Customise</td><td>"CUSTOMISE"</td></tr>
 
 </table>
 
-## Product Type Enum <sub><sup>[ProductTypeEnum](./src/enum/index.ts#L34)</sup></sub>
+## Product Type Enum <sub><sup>[ProductTypeEnum](./src/enum/index.ts#L36)</sup></sub>
 
 Product type enum
 <table>
@@ -81,7 +85,7 @@ Product type enum
 
 </table>
 
-## Query Type Enum <sub><sup>[QueryTypeEnum](./src/enum/index.ts#L42)</sup></sub>
+## Query Type Enum <sub><sup>[QueryTypeEnum](./src/enum/index.ts#L44)</sup></sub>
 
 Query type enum
 <table>
@@ -92,6 +96,7 @@ Query type enum
 <tr><td>Brand</td><td>"BRAND"</td></tr>
 <tr><td>Order</td><td>"ORDER"</td></tr>
 <tr><td>Quote</td><td>"QUOTE"</td></tr>
+<tr><td>Wallet</td><td>"WALLET"</td></tr>
 <tr><td>Section</td><td>"SECTION"</td></tr>
 <tr><td>Message</td><td>"MESSAGE"</td></tr>
 <tr><td>Catalog</td><td>"CATALOG"</td></tr>
@@ -112,6 +117,7 @@ Query type enum
 <tr><td>Warehouse</td><td>"WAREHOUSE"</td></tr>
 <tr><td>Order Item</td><td>"ORDERITEM"</td></tr>
 <tr><td>Quote Item</td><td>"QUOTEITEM"</td></tr>
+<tr><td>Transaction</td><td>"TRANSACTION"</td></tr>
 <tr><td>Quote Option</td><td>"QUOTEOPTION"</td></tr>
 <tr><td>User Address</td><td>"USERADDRESS"</td></tr>
 <tr><td>Subcategory</td><td>"SUBCATEGORY"</td></tr>
@@ -126,10 +132,13 @@ Query type enum
 
 </table>
 
-## Activity Model Enum <sub><sup>[ActivityModelEnum](./src/enum/index.ts#L86)</sup></sub>
+## Activity Model Enum <sub><sup>[ActivityModelEnum](./src/enum/index.ts#L90)</sup></sub>
 
 Activity model enum
 <table>
+<tr><td>Inventory Create</td><td>"INVENTORY_CREATE"</td></tr>
+<tr><td>Inventory Update</td><td>"INVENTORY_UPDATE"</td></tr>
+<tr><td>Inventory Delete</td><td>"INVENTORY_DELETE"</td></tr>
 <tr><td>View Count</td><td>"VIEW_COUNT"</td></tr>
 <tr><td>Product Create</td><td>"PRODUCT_CREATE"</td></tr>
 <tr><td>Product Update</td><td>"PRODUCT_UPDATE"</td></tr>
@@ -201,19 +210,24 @@ Activity model enum
 <tr><td>Customer Create</td><td>"CUSTOMER_CREATE"</td></tr>
 <tr><td>Customer Update</td><td>"CUSTOMER_UPDATE"</td></tr>
 <tr><td>Customer Delete</td><td>"CUSTOMER_DELETE"</td></tr>
+<tr><td>Customer Wallet Recharge</td><td>"CUSTOMER_WALLET_RECHARGE"</td></tr>
+<tr><td>Customer Wallet Withdraw</td><td>"CUSTOMER_WALLET_WITHDRAW"</td></tr>
 <tr><td>Payment Type Create</td><td>"PAYMENT_TYPE_CREATE"</td></tr>
 <tr><td>Payment Type Update</td><td>"PAYMENT_TYPE_UPDATE"</td></tr>
 <tr><td>Payment Type Delete</td><td>"PAYMENT_TYPE_DELETE"</td></tr>
-<tr><td>Inventory Create</td><td>"INVENTORY_CREATE"</td></tr>
-<tr><td>Inventory Update</td><td>"INVENTORY_UPDATE"</td></tr>
-<tr><td>Inventory Delete</td><td>"INVENTORY_DELETE"</td></tr>
 <tr><td>Inventory Adjustment Create</td><td>"INVENTORY_ADJUSTMENT_CREATE"</td></tr>
 <tr><td>Inventory Adjustment Update</td><td>"INVENTORY_ADJUSTMENT_UPDATE"</td></tr>
 <tr><td>Inventory Adjustment Delete</td><td>"INVENTORY_ADJUSTMENT_DELETE"</td></tr>
+<tr><td>Wallet Create</td><td>"WALLET_CREATE"</td></tr>
+<tr><td>Wallet Update</td><td>"WALLET_UPDATE"</td></tr>
+<tr><td>Wallet Delete</td><td>"WALLET_DELETE"</td></tr>
+<tr><td>Transaction Create</td><td>"TRANSACTION_CREATE"</td></tr>
+<tr><td>Transaction Update</td><td>"TRANSACTION_UPDATE"</td></tr>
+<tr><td>Transaction Delete</td><td>"TRANSACTION_DELETE"</td></tr>
 
 </table>
 
-## Transaction Direction Enum <sub><sup>[TransactionDirectionEnum](./src/enum/index.ts#L172)</sup></sub>
+## Transaction Direction Enum <sub><sup>[TransactionDirectionEnum](./src/enum/index.ts#L184)</sup></sub>
 
 Transaction direction enum
 <table>
@@ -223,18 +237,19 @@ Transaction direction enum
 
 </table>
 
-## Transaction Model Enum <sub><sup>[TransactionModelEnum](./src/enum/index.ts#L181)</sup></sub>
+## Transaction Model Enum <sub><sup>[TransactionModelEnum](./src/enum/index.ts#L193)</sup></sub>
 
 Transaction model enum
 <table>
-<tr><td>Withdraw</td><td>"WITHDRAW"</td></tr>
 <tr><td>Product</td><td>"PRODUCT"</td></tr>
+<tr><td>Customer</td><td>"CUSTOMER"</td></tr>
+<tr><td>Withdraw</td><td>"WITHDRAW"</td></tr>
 <tr><td>Store Shop</td><td>"STORESHOP"</td></tr>
 <tr><td>Subscription</td><td>"SUBSCRIPTION"</td></tr>
 
 </table>
 
-## Boolean String Enum <sub><sup>[BooleanStringEnum](./src/enum/index.ts#L191)</sup></sub>
+## Boolean String Enum <sub><sup>[BooleanStringEnum](./src/enum/index.ts#L204)</sup></sub>
 
 Boolean string enum
 <table>
@@ -243,7 +258,7 @@ Boolean string enum
 
 </table>
 
-## Sort Order Enum <sub><sup>[SortOrderEnum](./src/enum/index.ts#L199)</sup></sub>
+## Sort Order Enum <sub><sup>[SortOrderEnum](./src/enum/index.ts#L212)</sup></sub>
 
 Sort type enum
 <table>
@@ -252,7 +267,7 @@ Sort type enum
 
 </table>
 
-## Export Ext Enum <sub><sup>[ExportExtEnum](./src/enum/index.ts#L207)</sup></sub>
+## Export Ext Enum <sub><sup>[ExportExtEnum](./src/enum/index.ts#L220)</sup></sub>
 
 Export file extensions
 <table>
@@ -261,7 +276,7 @@ Export file extensions
 
 </table>
 
-## Quote Signed View Enum <sub><sup>[QuoteSignedViewEnum](./src/enum/index.ts#L215)</sup></sub>
+## Quote Signed View Enum <sub><sup>[QuoteSignedViewEnum](./src/enum/index.ts#L228)</sup></sub>
 
 Quote signed view enum
 <table>
@@ -270,7 +285,7 @@ Quote signed view enum
 
 </table>
 
-## Contributor Role Enum <sub><sup>[ContributorRoleEnum](./src/enum/index.ts#L223)</sup></sub>
+## Contributor Role Enum <sub><sup>[ContributorRoleEnum](./src/enum/index.ts#L236)</sup></sub>
 
 Contributor role enum
 <table>
@@ -279,7 +294,7 @@ Contributor role enum
 
 </table>
 
-## Status Quote Item Enum <sub><sup>[StatusQuoteItemEnum](./src/enum/index.ts#L231)</sup></sub>
+## Status Quote Item Enum <sub><sup>[StatusQuoteItemEnum](./src/enum/index.ts#L244)</sup></sub>
 
 Status quote item enum
 <table>
@@ -291,7 +306,7 @@ Status quote item enum
 
 </table>
 
-## Private Public Enum <sub><sup>[PrivatePublicEnum](./src/enum/index.ts#L242)</sup></sub>
+## Private Public Enum <sub><sup>[PrivatePublicEnum](./src/enum/index.ts#L255)</sup></sub>
 
 Private public enum
 <table>
@@ -300,7 +315,7 @@ Private public enum
 
 </table>
 
-## Pages Provider Enum <sub><sup>[PagesProviderEnum](./src/enum/index.ts#L250)</sup></sub>
+## Pages Provider Enum <sub><sup>[PagesProviderEnum](./src/enum/index.ts#L263)</sup></sub>
 
 Pages provider enum
 <table>
@@ -313,7 +328,7 @@ Pages provider enum
 
 </table>
 
-## Application Section Module Enum <sub><sup>[ApplicationSectionModuleEnum](./src/enum/index.ts#L262)</sup></sub>
+## Application Section Module Enum <sub><sup>[ApplicationSectionModuleEnum](./src/enum/index.ts#L275)</sup></sub>
 
 Application section module enum
 <table>
@@ -325,7 +340,7 @@ Application section module enum
 
 </table>
 
-## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L273)</sup></sub>
+## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L286)</sup></sub>
 
 User status enum
 <table>
@@ -336,7 +351,7 @@ User status enum
 
 </table>
 
-## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L283)</sup></sub>
+## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L296)</sup></sub>
 
 Pricing type status enum
 <table>
@@ -353,7 +368,7 @@ Pricing type status enum
 
 </table>
 
-## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L299)</sup></sub>
+## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L312)</sup></sub>
 
 Quote status enum
 <table>
@@ -367,7 +382,7 @@ Quote status enum
 
 </table>
 
-## Status Enum <sub><sup>[StatusEnum](./src/enum/index.ts#L312)</sup></sub>
+## Status Enum <sub><sup>[StatusEnum](./src/enum/index.ts#L325)</sup></sub>
 
 Status enum
 <table>
@@ -376,7 +391,7 @@ Status enum
 
 </table>
 
-## Section Status Enum <sub><sup>[SectionStatusEnum](./src/enum/index.ts#L320)</sup></sub>
+## Section Status Enum <sub><sup>[SectionStatusEnum](./src/enum/index.ts#L333)</sup></sub>
 
 Section status enum
 <table>
@@ -385,7 +400,7 @@ Section status enum
 
 </table>
 
-## Upload Folder Enum <sub><sup>[UploadFolderEnum](./src/enum/index.ts#L328)</sup></sub>
+## Upload Folder Enum <sub><sup>[UploadFolderEnum](./src/enum/index.ts#L341)</sup></sub>
 
 Upload folder enum
 <table>
@@ -396,7 +411,7 @@ Upload folder enum
 
 </table>
 
-## Recurrence Enum <sub><sup>[RecurrenceEnum](./src/enum/index.ts#L338)</sup></sub>
+## Recurrence Enum <sub><sup>[RecurrenceEnum](./src/enum/index.ts#L351)</sup></sub>
 
 Recurrence enum
 <table>
@@ -407,7 +422,7 @@ Recurrence enum
 
 </table>
 
-## Provider Enum <sub><sup>[ProviderEnum](./src/enum/index.ts#L348)</sup></sub>
+## Provider Enum <sub><sup>[ProviderEnum](./src/enum/index.ts#L361)</sup></sub>
 
 Provider enum
 <table>
@@ -416,6 +431,24 @@ Provider enum
 <tr><td>Github</td><td>"GITHUB"</td></tr>
 <tr><td>Facebook</td><td>"FACEBOOK"</td></tr>
 <tr><td>Microsoft</td><td>"MICROSOFT"</td></tr>
+
+</table>
+
+## Increment Decrement Enum <sub><sup>[IncrementDecrementEnum](./src/enum/index.ts#L372)</sup></sub>
+
+IncrementDecrement enum
+<table>
+<tr><td>Increment</td><td>"INCREMENT"</td></tr>
+<tr><td>Decrement</td><td>"DECREMENT"</td></tr>
+
+</table>
+
+## Inventory Adjustment Movement Type Enum <sub><sup>[InventoryAdjustmentMovementTypeEnum](./src/enum/index.ts#L380)</sup></sub>
+
+Inventory adjustment input mode enum
+<table>
+<tr><td>Counted</td><td>"COUNTED"</td></tr>
+<tr><td>Removed</td><td>"REMOVED"</td></tr>
 
 </table>
 
