@@ -381,3 +381,15 @@ export enum InventoryAdjustmentMovementTypeEnum {
   Counted = "COUNTED",
   Removed = "REMOVED",
 }
+
+/**
+ * Status order enum
+ */
+export enum StatusOrderEnum {
+  Failed = "FAILED",
+  Pending = "PENDING",
+  Refunded = "REFUNDED",
+  Confirmed = "CONFIRMED",
+  Cancelled = "CANCELLED",
+  Completed = "COMPLETED",
+}
