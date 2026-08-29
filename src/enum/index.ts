@@ -386,10 +386,7 @@ export enum InventoryAdjustmentMovementTypeEnum {
  * Order status enum
  */
 export enum OrderStatusEnum {
-  Failed = "FAILED",
+  Paid = "PAID",
   Pending = "PENDING",
-  Refunded = "REFUNDED",
   Confirmed = "CONFIRMED",
-  Cancelled = "CANCELLED",
-  Completed = "COMPLETED",
 }
