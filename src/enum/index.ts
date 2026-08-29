@@ -383,9 +383,9 @@ export enum InventoryAdjustmentMovementTypeEnum {
 }
 
 /**
- * Status order enum
+ * Order status enum
  */
-export enum StatusOrderEnum {
+export enum OrderStatusEnum {
   Failed = "FAILED",
   Pending = "PENDING",
   Refunded = "REFUNDED",
