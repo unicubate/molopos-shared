@@ -1,6 +1,6 @@
 {
   "name": "mp-shared",
-  "version": "2.0.82",
+  "version": "2.0.83",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
@@ -18,10 +18,10 @@
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/luxon": "^3.7.5",
-    "jest": "^30.4.2",
-    "ts-jest": "29.4.11",
+    "jest": "^30.5.1",
+    "ts-jest": "29.4.12",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "vitest": "^4.1.9"
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.0"
   }
 }

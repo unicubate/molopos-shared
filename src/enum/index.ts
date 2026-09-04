@@ -370,6 +370,7 @@ export enum ProviderEnum {
  * Increment/Decrement enum
  */
 export enum IncrementDecrementEnum {
+  Lost = "LOST",
   Increment = "INCREMENT",
   Decrement = "DECREMENT",
 }
