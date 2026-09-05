@@ -393,3 +393,11 @@ export enum OrderStatusEnum {
   Confirmed = "CONFIRMED",
   Cancelled = "CANCELLED",
 }
+
+/**
+ * Quote party enum
+ */
+export enum PartnerEnum {
+  Customer = "CUSTOMER",
+  Supplier = "SUPPLIER",
+}
