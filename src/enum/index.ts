@@ -397,7 +397,7 @@ export enum OrderStatusEnum {
 /**
  * Quote party enum
  */
-export enum PartnerEnum {
+export enum PartyEnum {
   Customer = "CUSTOMER",
   Supplier = "SUPPLIER",
 }
