@@ -392,6 +392,8 @@ export enum OrderStatusEnum {
   PayLater = "PAYLATER",
   Confirmed = "CONFIRMED",
   Cancelled = "CANCELLED",
+  Received = "RECEIVED",
+  OrForDelivery = "OR_FOR_DELIVERY",
 }
 
 /**
@@ -400,4 +402,49 @@ export enum OrderStatusEnum {
 export enum PartyEnum {
   Customer = "CUSTOMER",
   Supplier = "SUPPLIER",
+}
+
+/**
+ * Upload type enum
+ */
+export enum UploadTypeEnum {
+  File = "FILE",
+  Image = "IMAGE",
+}
+
+/**
+ * Action payment enum
+ */
+export enum ActionPaymentEnum {
+  Payment = "PAYMENT",
+}
+
+/**
+ * Pricing type enum
+ */
+export enum PricingTypeEnum {
+  BasicMonth = "BASIC_MONTH",
+  BasicYear = "BASIC_YEAR",
+  ProMonth = "PRO_MONTH",
+  ProYear = "PRO_YEAR",
+  StandardMonth = "STANDARD_MONTH",
+  StandardYear = "STANDARD_YEAR",
+}
+
+/**
+ * Pricing variant enum
+ */
+export enum PricingVariantEnum {
+  Basic = "BASIC",
+  Pro = "PRO",
+  Free = "FREE",
+  Standard = "STANDARD",
+}
+
+/**
+ * Order type enum
+ */
+export enum OrderTypeEnum {
+  Seller = "SELLER",
+  Buyer = "BUYER",
 }
