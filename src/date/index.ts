@@ -1,4 +1,5 @@
-import { format } from "date-fns";
+import { format as formatDateFns, Locale } from "date-fns";
+import { de, enUS, es, fr, it, ru } from "date-fns/locale";
 import { DateTime } from "luxon";
 import { RecurrenceEnum } from "../enum";
 import { DateLike, Numberlike } from "../index";
@@ -8,6 +9,15 @@ interface PropsRecurrence {
   isRecurrence: boolean;
   recurrence: RecurrenceEnum;
 }
+
+const dataFnsLocale: Partial<Record<string, Locale>> = {
+  es: es,
+  ru: ru,
+  it: it,
+  fr: fr,
+  en: enUS,
+  de: de,
+};
 
 /**
  * Format a date to a string
@@ -58,7 +68,27 @@ export const formateHHmm = (date: Date, locale: string) => {
   return dateInit.setLocale(locale).toFormat("t");
 };
 
-export const formatDateToUtc = (date: Date) => format(date, "dd-MM-yyyy");
+/**
+ * Format a date to a string
+ * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
+ * @returns The formatted date (e.g. "01-01-2026", "01-01-2026 00:00:00", etc.)
+ *
+ * @example
+ * formatDateFnsToDdMMYYYY("2026-01-01"); // "01-01-2026"
+ */
+export const formatDateFnsToDdMMYYYY = (date: Date) =>
+  formatDateFns(date, "dd-MM-yyyy");
+
+/**
+ * Format a date to a string
+ * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
+ * @returns The formatted date (e.g. "01-01-2026 00:00:00", "01-01-2026 00:00:00", etc.)
+ *
+ * @example
+ * formatDateFnsToDdMMYYYYHHmmss("2026-01-01"); // "01-01-2026 00:00:00"
+ */
+export const formatDateFnsToDdMMYYYYHHmm = (date: Date) =>
+  formatDateFns(date, "dd-MM-yyyy HH:mm");
 
 export const formatDateDDMMYYToUtc = (date: Date, locale: string) => {
   const dateInit = DateTime.fromISO(String(date));
