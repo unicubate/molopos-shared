@@ -448,3 +448,12 @@ export enum OrderTypeEnum {
   Seller = "SELLER",
   Buyer = "BUYER",
 }
+
+/**
+ * Notification target enum
+ */
+export enum NotificationTargetEnum {
+  OrderPush = "ORDER_PUSH",
+  LowQuantity = "LOW_QUANTITY",
+  RecurringExpense = "RECURRING_EXPENSE",
+}

@@ -41,6 +41,14 @@ import { CustomerTypeEnum } from '@molopos/shared';
 - [Provider Enum](#provider-enum-providerenum), Provider enum
 - [Increment Decrement Enum](#increment-decrement-enum-incrementdecrementenum), IncrementDecrement enum
 - [Inventory Adjustment Movement Type Enum](#inventory-adjustment-movement-type-enum-inventoryadjustmentmovementtypeenum), Inventory adjustment input mode enum
+- [Order Status Enum](#order-status-enum-orderstatusenum), Order status enum
+- [Party Enum](#party-enum-partyenum), Quote party enum
+- [Upload Type Enum](#upload-type-enum-uploadtypeenum), Upload type enum
+- [Action Payment Enum](#action-payment-enum-actionpaymentenum), Action payment enum
+- [Pricing Type Enum](#pricing-type-enum-pricingtypeenum), Pricing type enum
+- [Pricing Variant Enum](#pricing-variant-enum-pricingvariantenum), Pricing variant enum
+- [Order Type Enum](#order-type-enum-ordertypeenum), Order type enum
+- [Notification Target Enum](#notification-target-enum-notificationtargetenum), Notification target enum
 ## Customer Type Enum <sub><sup>[CustomerTypeEnum](./src/enum/index.ts#L4)</sup></sub>
 
 Customer type enum
@@ -438,17 +446,101 @@ Provider enum
 
 IncrementDecrement enum
 <table>
+<tr><td>Lost</td><td>"LOST"</td></tr>
 <tr><td>Increment</td><td>"INCREMENT"</td></tr>
 <tr><td>Decrement</td><td>"DECREMENT"</td></tr>
 
 </table>
 
-## Inventory Adjustment Movement Type Enum <sub><sup>[InventoryAdjustmentMovementTypeEnum](./src/enum/index.ts#L380)</sup></sub>
+## Inventory Adjustment Movement Type Enum <sub><sup>[InventoryAdjustmentMovementTypeEnum](./src/enum/index.ts#L381)</sup></sub>
 
 Inventory adjustment input mode enum
 <table>
 <tr><td>Counted</td><td>"COUNTED"</td></tr>
 <tr><td>Removed</td><td>"REMOVED"</td></tr>
+
+</table>
+
+## Order Status Enum <sub><sup>[OrderStatusEnum](./src/enum/index.ts#L389)</sup></sub>
+
+Order status enum
+<table>
+<tr><td>Paid</td><td>"PAID"</td></tr>
+<tr><td>Pending</td><td>"PENDING"</td></tr>
+<tr><td>Pay Later</td><td>"PAYLATER"</td></tr>
+<tr><td>Confirmed</td><td>"CONFIRMED"</td></tr>
+<tr><td>Cancelled</td><td>"CANCELLED"</td></tr>
+<tr><td>Received</td><td>"RECEIVED"</td></tr>
+<tr><td>Or For Delivery</td><td>"OR_FOR_DELIVERY"</td></tr>
+
+</table>
+
+## Party Enum <sub><sup>[PartyEnum](./src/enum/index.ts#L402)</sup></sub>
+
+Quote party enum
+<table>
+<tr><td>Customer</td><td>"CUSTOMER"</td></tr>
+<tr><td>Supplier</td><td>"SUPPLIER"</td></tr>
+
+</table>
+
+## Upload Type Enum <sub><sup>[UploadTypeEnum](./src/enum/index.ts#L410)</sup></sub>
+
+Upload type enum
+<table>
+<tr><td>File</td><td>"FILE"</td></tr>
+<tr><td>Image</td><td>"IMAGE"</td></tr>
+
+</table>
+
+## Action Payment Enum <sub><sup>[ActionPaymentEnum](./src/enum/index.ts#L418)</sup></sub>
+
+Action payment enum
+<table>
+<tr><td>Payment</td><td>"PAYMENT"</td></tr>
+
+</table>
+
+## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L425)</sup></sub>
+
+Pricing type enum
+<table>
+<tr><td>Basic Month</td><td>"BASIC_MONTH"</td></tr>
+<tr><td>Basic Year</td><td>"BASIC_YEAR"</td></tr>
+<tr><td>Pro Month</td><td>"PRO_MONTH"</td></tr>
+<tr><td>Pro Year</td><td>"PRO_YEAR"</td></tr>
+<tr><td>Standard Month</td><td>"STANDARD_MONTH"</td></tr>
+<tr><td>Standard Year</td><td>"STANDARD_YEAR"</td></tr>
+
+</table>
+
+## Pricing Variant Enum <sub><sup>[PricingVariantEnum](./src/enum/index.ts#L437)</sup></sub>
+
+Pricing variant enum
+<table>
+<tr><td>Basic</td><td>"BASIC"</td></tr>
+<tr><td>Pro</td><td>"PRO"</td></tr>
+<tr><td>Free</td><td>"FREE"</td></tr>
+<tr><td>Standard</td><td>"STANDARD"</td></tr>
+
+</table>
+
+## Order Type Enum <sub><sup>[OrderTypeEnum](./src/enum/index.ts#L447)</sup></sub>
+
+Order type enum
+<table>
+<tr><td>Seller</td><td>"SELLER"</td></tr>
+<tr><td>Buyer</td><td>"BUYER"</td></tr>
+
+</table>
+
+## Notification Target Enum <sub><sup>[NotificationTargetEnum](./src/enum/index.ts#L455)</sup></sub>
+
+Notification target enum
+<table>
+<tr><td>Order Push</td><td>"ORDER_PUSH"</td></tr>
+<tr><td>Low Quantity</td><td>"LOW_QUANTITY"</td></tr>
+<tr><td>Recurring Expense</td><td>"RECURRING_EXPENSE"</td></tr>
 
 </table>
 
