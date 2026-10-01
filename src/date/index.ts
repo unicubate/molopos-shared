@@ -6,6 +6,7 @@ import {
   addWeeks,
   isFuture,
   isThisYear,
+  subDays as subDaysFns,
   addDays as addDaysFns,
   addYears as addYearsFns,
   format as formatDateFns,
@@ -110,8 +111,8 @@ export const formateToyyyy = (date: Date) => getYear(date);
  * @example
  * addDaysToTimeNowUtcDate(1); // 2026-01-02
  */
-export const addDaysToTimeNowUtcDate = (dayNumber: number) =>
-  addDaysFns(dateTimeNowUtc(), dayNumber);
+export const addDaysToTimeNowUtcDate = (value: number) =>
+  addDaysFns(dateTimeNowUtc(), value);
 
 /**
  *
@@ -127,6 +128,55 @@ export const dateTimeNowUtcUnixInteger = () =>
  */
 export const formateDateUnixInteger = (date: Date) =>
   Number(formatDateFns(date, "T"));
+
+/**
+ * @example
+ * addMonthsToTimeNowUtcDate(1); // 1719168000
+ */
+export const addMonthsToTimeNowUtcUnixInteger = (month: number) =>
+  Number(formatDateFns(addMonthsFns(dateTimeNowUtc(), month), "T"));
+
+/**
+ * @example
+ * addDaysToTimeNowUtcUnixInteger(1); // 1719168000
+ */
+export const addDaysToTimeNowUtcUnixInteger = (value: number) =>
+  Number(formatDateFns(addDaysFns(dateTimeNowUtc(), value), "T"));
+
+/**
+ * @example
+ * addMonthsToTimeDateNowUtc(1); // 2026-01-02
+ */
+export const addMonthsToTimeDateNowUtc = (value: number) =>
+  addMonthsFns(dateTimeNowUtc(), value);
+
+/**
+ * @example
+ * addDaysToTimeDateNowUtc(1); // 2026-01-02
+ */
+export const addDaysToTimeDateNowUtc = (value: number) =>
+  addDaysFns(dateTimeNowUtc(), value);
+
+/**
+ * @example
+ * addMonthsToTimeDate(new Date(), 1); // 2026-01-02
+ */
+export const addMonthsToTimeDate = (date: Date, value: number) =>
+  addMonthsFns(date, value);
+
+/**
+ * @example
+ * addDaysToTimeDate(new Date(), 1); // 2026-01-02
+ */
+export const addDaysToTimeDate = (date: Date, value: number) =>
+  addDaysFns(date, value);
+
+/**
+ * @example
+ * substrateDaysToTimeDateNowUtc(1); // 2026-01-02
+ */
+export const substrateDaysToTimeDateNowUtc = (value: number) =>
+  subDaysFns(dateTimeNowUtc(), value);
 
 /**
  * @example
@@ -151,17 +201,17 @@ export const recurrenceDate = ({
 
   switch (recurrence) {
     case RecurrenceEnum.Daily:
-      return addDaysFns(dateNowInit, duration);
+      return addDaysToTimeDate(dateNowInit, duration);
     case RecurrenceEnum.Weekly:
       return addWeeks(dateNowInit, duration);
     case RecurrenceEnum.Monthly: {
       if (isFutureDate) {
-        return addMonthsFns(dateNowInit, duration);
+        return addMonthsToTimeDate(dateNowInit, duration);
       }
       const now = dateTimeNowUtc();
       let nextOccurrence = setDate(now, dateInit.getDate());
       if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
-        nextOccurrence = addMonthsFns(nextOccurrence, duration);
+        nextOccurrence = addMonthsToTimeDate(nextOccurrence, duration);
       }
       return nextOccurrence;
     }
