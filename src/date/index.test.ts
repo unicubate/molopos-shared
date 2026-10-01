@@ -3,8 +3,7 @@ import {
   dateTimeNowUtcUnixInteger,
   formateDateUnixInteger,
   recurrenceDate,
-  subtractDaysToDateTimeNowUtc,
-} from ".";
+} from "./index";
 import { RecurrenceEnum } from "../enum";
 
 describe("Date", () => {
@@ -32,70 +31,29 @@ describe("Date", () => {
     expect(dateNow).toBeDefined();
   });
 
-  it("subtractDaysToDateTimeNowUtc", () => {
-    const dateNow = subtractDaysToDateTimeNowUtc(1);
-    expect(dateNow).not.toBeNull();
-    expect(dateNow).toBeDefined();
-  });
-
   it("recurrenceDate isRecurrence = true", () => {
-    const dateNow = new Date("2025-07-09 00:00:00+00");
-    const dateNextMonth = recurrenceDate({
-      date: dateNow,
-      isRecurrence: true,
-      recurrence: RecurrenceEnum.Monthly,
-    });
-    const dateNextYear = recurrenceDate({
-      date: dateNow,
-      isRecurrence: true,
-      recurrence: RecurrenceEnum.Yearly,
-    });
-    const dateNextWeek = recurrenceDate({
-      date: dateNow,
-      isRecurrence: true,
-      recurrence: RecurrenceEnum.Weekly,
-    });
-    const dateNextDay = recurrenceDate({
-      date: dateNow,
-      isRecurrence: true,
-      recurrence: RecurrenceEnum.Daily,
-    });
+    jest.useFakeTimers();
+    jest.setSystemTime(new Date(2026, 9, 1, 14, 0, 0));
 
-    expect(dateNextDay).not.toBeNull();
-    expect(dateNextYear).not.toBeNull();
-    expect(dateNextMonth).not.toBeNull();
-    expect(dateNextWeek).not.toBeNull();
-    expect(dateNextDay).toBeDefined();
-    expect(dateNextYear).toBeDefined();
-    expect(dateNextMonth).toBeDefined();
-    expect(dateNextWeek).toBeDefined();
-  });
+    const date = new Date(2025, 6, 10, 2, 0, 0);
+    const nextDate = (recurrence: RecurrenceEnum) =>
+      recurrenceDate({
+        date,
+        isRecurrence: true,
+        recurrence,
+      });
 
-  it("recurrenceDate isRecurrence = false", () => {
-    const dateNow = new Date("2025-07-10 00:00:00+00");
-    const dateNextMonth = recurrenceDate({
-      date: dateNow,
-      isRecurrence: false,
-      recurrence: RecurrenceEnum.Monthly,
-    });
-    const dateNextYear = recurrenceDate({
-      date: dateNow,
-      isRecurrence: false,
-      recurrence: RecurrenceEnum.Yearly,
-    });
-    const dateNextWeek = recurrenceDate({
-      date: dateNow,
-      isRecurrence: false,
-      recurrence: RecurrenceEnum.Weekly,
-    });
-    const dateNextDay = recurrenceDate({
-      date: dateNow,
-      isRecurrence: false,
-      recurrence: RecurrenceEnum.Daily,
-    });
-    expect(dateNextMonth).toBeNull();
-    expect(dateNextYear).toBeNull();
-    expect(dateNextWeek).toBeNull();
-    expect(dateNextDay).toBeNull();
+    expect(nextDate(RecurrenceEnum.Daily)).toEqual(new Date(2026, 9, 2, 14, 0, 0));
+    expect(nextDate(RecurrenceEnum.Weekly)).toEqual(
+      new Date(2026, 9, 8, 14, 0, 0),
+    );
+    expect(nextDate(RecurrenceEnum.Monthly)).toEqual(
+      new Date(2026, 9, 10, 14, 0, 0),
+    );
+    expect(nextDate(RecurrenceEnum.Yearly)).toEqual(
+      new Date(2027, 6, 10, 14, 0, 0),
+    );
+
+    jest.useRealTimers();
   });
 });

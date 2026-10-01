@@ -1,6 +1,16 @@
-import { format as formatDateFns, Locale, getYear } from "date-fns";
+import {
+  addDays as addDaysFns,
+  addMonths,
+  addWeeks,
+  addYears,
+  format as formatDateFns,
+  getYear,
+  isThisYear,
+  Locale,
+  set,
+  setDate,
+} from "date-fns";
 import { de, enUS, es, fr, it, ru } from "date-fns/locale";
-import { DateTime } from "luxon";
 import { RecurrenceEnum } from "../enum";
 import { DateLike, Numberlike } from "../index";
 interface PropsRecurrence {
@@ -24,39 +34,20 @@ const dataFnsLocale: Partial<Record<string, Locale>> = {
  * formateDate("2026-01-01", "en-US"); // "1 Jan 2026 00:00"
  */
 export const formateDate = (date: Date, locale: string) => {
-  let dateReturn: string | null = null;
-  const todaysDate = dateTimeNowUtc();
-  const currentYear = todaysDate.getFullYear();
-  const dateYear = getYear(date);
-
-  if (currentYear === dateYear) {
-    dateReturn = formatDateFns(date, "PPp", {
-      locale: dataFnsLocale[locale],
-    });
-  } else {
-    dateReturn = formatDateDDMMYYToUtc(date, locale);
-  }
-
-  return dateReturn;
+  const formatString = locale !== "en" ? "dd MMM p" : "MMM dd p";
+  return formatDateFns(date, isThisYear(date) ? formatString : "P", {
+    locale: dataFnsLocale[locale],
+  });
 };
 
 /**
- * Format a date to a string
- * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
- * @param locale - The locale to use (e.g. "en-US", "it-IT", "fr-FR", etc.)
- * @returns The formatted date (e.g. "1 Jan 2026", "1 Jan 2026 00:00", etc.)
- *
  * @example
  * formateddLLLyyyy("2026-01-01", "en-US"); // "1 Jan 2026"
  */
 export const formateddLLLyyyy = (date: DateLike, locale: string) => {
-  const dateInit = DateTime.fromISO(String(date));
-  return dateInit.setLocale(locale).toFormat("dd LLL yyyy");
-};
-
-export const formateYYDDMM = (date: Date, locale: string) => {
-  const dateInit = DateTime.fromISO(String(date));
-  return dateInit.setLocale(locale).toFormat("ff");
+  return formatDateFns(date, "PPp", {
+    locale: dataFnsLocale[locale],
+  });
 };
 
 /**
@@ -87,119 +78,36 @@ export const formatDateFnsToDdMMYYYY = (date: Date) =>
 export const formatDateFnsToDdMMYYYYHHmm = (date: Date) =>
   formatDateFns(date, "dd-MM-yyyy HH:mm");
 
-export const formateToT = (date: Date) =>
-  DateTime.fromJSDate(date).toFormat("T");
+export const dateTimeNowUtc = () => new Date();
 
-export const dateTimeNowUtc = () => DateTime.utc().toJSDate();
+/**
+ * @example
+ * formateToyyyy("2026-01-01"); // 2026
+ */
+export const formateToyyyy = (date: Date) => getYear(date);
 
-export const formateToCccc = (date: Date, locale: string) =>
-  DateTime.fromISO(String(date)).setLocale(locale).toFormat("cccc");
-
-export const formateTodd = (date: Date, locale: string) =>
-  DateTime.fromISO(String(date)).setLocale(locale).toFormat("dd");
-
-export const formateToLLLL = (date: Date, locale: string) =>
-  DateTime.fromISO(String(date)).setLocale(locale).toFormat("LLLL");
-
-export const formateToRFC2822 = (date: Date, locale: string) =>
-  DateTime.fromISO(String(date)).setLocale(locale).toFormat("DDDD");
-
-export const formateToyyyy = (date: Date) =>
-  DateTime.fromISO(String(date)).toFormat("yyyy");
-
-export const viewYyformateToYyyy = (date: Date) => {
-  const todaysDate = new Date();
-  const currentYear = todaysDate.getFullYear();
-  const dateYear = Number(DateTime.fromISO(String(date)).toFormat("yyyy"));
-  return currentYear === dateYear ? null : `- ${dateYear}`;
-};
-
+/**
+ * @example
+ * addDaysToTimeNowUtcDate(1); // 2026-01-02
+ */
 export const addDaysToTimeNowUtcDate = (dayNumber: number) =>
-  DateTime.utc().plus({ days: dayNumber }).toJSDate();
+  addDaysFns(dateTimeNowUtc(), dayNumber);
 
-export const formateMMLongDate = (date: Date, locale: string) => {
-  return DateTime.fromJSDate(date)
-    .setLocale(locale)
-    .toLocaleString({ month: "long" });
-};
-
-export const formateDDDate = (date: Date, lang: string) => {
-  return DateTime.fromJSDate(date).setLocale(lang).toFormat("DD");
-};
-
-export const formateddLLDate = (date: Date, lang: string) => {
-  return DateTime.fromJSDate(date).setLocale(lang).toFormat("dd LLL");
-};
-
-export const formateDDDateISO = (date: Date, locale: string) => {
-  const dateInit = DateTime.fromISO(String(date));
-  return dateInit.setLocale(locale).toFormat("DD");
-};
 
 /**
- * Format a date to a string
- * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
- * @param locale - The locale to use (e.g. "en-US", "it-IT", "fr-FR", etc.)
- * @returns The formatted date (e.g. "1 Jan 2026", "1 Jan 2026 00:00", etc.)
  *
  * @example
- * formateToUnixIntegerddLLLyyyy("2026-01-01", "en-US"); // "1 Jan 2026"
- */
-export const formateToUnixIntegerddLLLyyyy = (
-  date: Numberlike,
-  locale: string,
-) => {
-  const dateInit = DateTime.fromSeconds(Number(date));
-  return dateInit.setLocale(locale).toFormat("dd LLL yyyy");
-};
-
-/**
- * Format a date to a string
- * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
- * @param lang - The locale to use (e.g. "en-US", "it-IT", "fr-FR", etc.)
- * @returns The formatted date (e.g. "1 Jan 2026", "1 Jan 2026 00:00", etc.)
- *
- * @example
- * formateTDate("2026-01-01", "en-US"); // "1 Jan 2026"
- */
-export const formateTDate = (date: Date, lang: string) => {
-  return DateTime.fromJSDate(date).setLocale(lang).toFormat("t");
-};
-
-/**
- *
- * @returns The current date in Unix integer format
- * @example 1719168000
+ * dateTimeNowUtcUnixInteger(); // 1719168000
  */
 export const dateTimeNowUtcUnixInteger = () =>
-  DateTime.fromJSDate(dateTimeNowUtc()).toUnixInteger() as unknown as number;
+  Number(formatDateFns(dateTimeNowUtc(), "T"));
 
 /**
- * Format a date to a Unix integer
- * @param date - The date to format (e.g. "2026-01-01", "2026-01-01T00:00:00.000Z", etc.)
- * @returns The formatted date in Unix integer format
- * @example 1719168000
+ * @example
+ * formateDateUnixInteger("2026-01-01"); // 1719168000
  */
 export const formateDateUnixInteger = (date: Date) =>
-  DateTime.fromJSDate(date).toUnixInteger() as unknown as number;
-
-/**
- * Subtract days from the current date
- * @param value - The number of days to subtract
- * @returns The date minus the number of days
- * @example 2026-01-01
- */
-export const subtractDaysToDateTimeNowUtc = (value: number) =>
-  DateTime.utc().minus({ days: value }).toJSDate();
-
-/**
- * Subtract days from the current date
- * @param value - The number of days to subtract
- * @returns The date minus the number of days
- * @example 2026-01-01
- */
-export const subtractDaysToDateTime = (date: Date, value: number) =>
-  DateTime.fromJSDate(date).minus({ days: value }).toJSDate();
+  Number(formatDateFns(date, "T"));
 
 /**
  * @example
@@ -220,39 +128,37 @@ export const recurrenceDate = ({
   const dateUnix = formateDateUnixInteger(dateInit);
   const isFutureDate = dateUnix > dateNowUnix;
 
-  const dateNowInit = isFutureDate
-    ? DateTime.fromJSDate(dateInit)
-    : DateTime.fromJSDate(dateTimeNowUtc());
+  const dateNowInit = isFutureDate ? dateInit : dateTimeNowUtc();
 
   switch (recurrence) {
     case RecurrenceEnum.Daily:
-      return dateNowInit.plus({ days: duration }).toJSDate();
+      return addDaysFns(dateNowInit, duration);
     case RecurrenceEnum.Weekly:
-      return dateNowInit.plus({ weeks: duration }).toJSDate();
+      return addWeeks(dateNowInit, duration);
     case RecurrenceEnum.Monthly: {
       if (isFutureDate) {
-        return dateNowInit.plus({ months: duration }).toJSDate();
+        return addMonths(dateNowInit, duration);
       }
-      const now = DateTime.fromJSDate(dateTimeNowUtc());
-      let nextOccurrence = now.set({ day: dateInit.getDate() });
-      if (nextOccurrence.toUnixInteger() <= dateNowUnix) {
-        nextOccurrence = nextOccurrence.plus({ months: duration });
+      const now = dateTimeNowUtc();
+      let nextOccurrence = setDate(now, dateInit.getDate());
+      if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
+        nextOccurrence = addMonths(nextOccurrence, duration);
       }
-      return nextOccurrence.toJSDate();
+      return nextOccurrence;
     }
     case RecurrenceEnum.Yearly: {
       if (isFutureDate) {
-        return dateNowInit.plus({ years: duration }).toJSDate();
+        return addYears(dateNowInit, duration);
       }
-      const now = DateTime.fromJSDate(dateTimeNowUtc());
-      let nextOccurrence = now.set({
-        month: dateInit.getMonth() + 1,
-        day: dateInit.getDate(),
+      const now = dateTimeNowUtc();
+      let nextOccurrence = set(now, {
+        month: dateInit.getMonth(),
+        date: dateInit.getDate(),
       });
-      if (nextOccurrence.toUnixInteger() <= dateNowUnix) {
-        nextOccurrence = nextOccurrence.plus({ years: duration });
+      if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
+        nextOccurrence = addYears(nextOccurrence, duration);
       }
-      return nextOccurrence.toJSDate();
+      return nextOccurrence;
     }
   }
 };
