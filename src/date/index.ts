@@ -1,13 +1,15 @@
 import {
-  addDays as addDaysFns,
-  addMonths as addMonthsFns,
-  addWeeks,
-  addYears as addYearsFns,
-  format as formatDateFns,
   getYear,
   Locale,
   set,
   setDate,
+  addWeeks,
+  isFuture,
+  isThisYear,
+  addDays as addDaysFns,
+  addYears as addYearsFns,
+  format as formatDateFns,
+  addMonths as addMonthsFns,
 } from "date-fns";
 import { de, enUS, es, fr, it, ru, enGB } from "date-fns/locale";
 import { RecurrenceEnum } from "../enum";
@@ -37,19 +39,35 @@ export const dateTimeNowUtc = () => new Date();
  * formateDate("2026-01-01", "en-US"); // "1 Jan 2026 00:00"
  */
 export const formateDate = (date: Date, locale: string) => {
-  const localeFormat = locale !== "en" ? "dd MMM p" : "MMM dd, p";
-  const isYearControle = getYear(date) >= getYear(dateTimeNowUtc());
-  return formatDateFns(date, isYearControle ? localeFormat : "P", {
+  const formatString = isThisYear(date)
+    ? locale === "en"
+      ? "MMM dd, p"
+      : "dd MMM p"
+    : isFuture(date)
+      ? "PPpp"
+      : "Pp";
+
+  return formatDateFns(date, formatString, {
     locale: dataFnsLocale[locale],
   });
 };
 
 /**
  * @example
- * formateddLLLyyyy("2026-01-01", "en-US"); // "1 Jan 2026"
+ * formateddMMYYYY("2026-01-01", "en-US"); // "1 Jan 2026"
  */
-export const formateddLLLyyyy = (date: DateLike, locale: string) => {
-  return formatDateFns(date, "PPp", {
+export const formateddMMYYYY = (date: DateLike, locale: string) => {
+  return formatDateFns(date, "PP", {
+    locale: dataFnsLocale[locale],
+  });
+};
+
+/**
+ * @example
+ * formateddMMYYYYHHmm("2026-01-01", "en-US"); // "1 Jan 2026 00:00"
+ */
+export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
+  return formatDateFns(date, "PPpp", {
     locale: dataFnsLocale[locale],
   });
 };
