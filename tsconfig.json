@@ -2,11 +2,15 @@
     "include": [
         "./src/**/*"
     ],
+    "exclude": [
+        "./src/**/*.test.ts"
+    ],
     "compilerOptions": {
         "target": "ES6",
         "module": "CommonJS",
         "moduleResolution": "Node",
         "outDir": "./dist",
-        "declaration": true
+        "declaration": true,
+        "skipLibCheck": true
     }
 }
