@@ -1,18 +1,17 @@
 import {
   addDays as addDaysFns,
-  addMonths,
+  addMonths as addMonthsFns,
   addWeeks,
-  addYears,
+  addYears as addYearsFns,
   format as formatDateFns,
   getYear,
-  isThisYear,
   Locale,
-  set,
   setDate,
 } from "date-fns";
-import { de, enUS, es, fr, it, ru } from "date-fns/locale";
+import { de, enUS, es, fr, it, ru, enGB } from "date-fns/locale";
 import { RecurrenceEnum } from "../enum";
 import { DateLike, Numberlike } from "../index";
+import { DateTime } from "luxon";
 interface PropsRecurrence {
   date: Date;
   duration?: number;
@@ -25,17 +24,21 @@ const dataFnsLocale: Partial<Record<string, Locale>> = {
   ru: ru,
   it: it,
   fr: fr,
-  en: enUS,
+  en: enGB,
+  enUS: enUS,
   de: de,
 };
+
+export const dateTimeNowUtc = () => new Date();
 
 /**
  * @example
  * formateDate("2026-01-01", "en-US"); // "1 Jan 2026 00:00"
  */
 export const formateDate = (date: Date, locale: string) => {
-  const formatString = locale !== "en" ? "dd MMM p" : "MMM dd p";
-  return formatDateFns(date, isThisYear(date) ? formatString : "P", {
+  const localeFormat = locale !== "en" ? "dd MMM p" : "MMM dd, p";
+  const isYearControle = getYear(dateTimeNowUtc()) >= getYear(date);
+  return formatDateFns(date, isYearControle ? localeFormat : "P", {
     locale: dataFnsLocale[locale],
   });
 };
@@ -78,8 +81,6 @@ export const formatDateFnsToDdMMYYYY = (date: Date) =>
 export const formatDateFnsToDdMMYYYYHHmm = (date: Date) =>
   formatDateFns(date, "dd-MM-yyyy HH:mm");
 
-export const dateTimeNowUtc = () => new Date();
-
 /**
  * @example
  * formateToyyyy("2026-01-01"); // 2026
@@ -92,7 +93,6 @@ export const formateToyyyy = (date: Date) => getYear(date);
  */
 export const addDaysToTimeNowUtcDate = (dayNumber: number) =>
   addDaysFns(dateTimeNowUtc(), dayNumber);
-
 
 /**
  *
@@ -137,26 +137,22 @@ export const recurrenceDate = ({
       return addWeeks(dateNowInit, duration);
     case RecurrenceEnum.Monthly: {
       if (isFutureDate) {
-        return addMonths(dateNowInit, duration);
+        return addMonthsFns(dateNowInit, duration);
       }
       const now = dateTimeNowUtc();
       let nextOccurrence = setDate(now, dateInit.getDate());
       if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
-        nextOccurrence = addMonths(nextOccurrence, duration);
+        nextOccurrence = addMonthsFns(nextOccurrence, duration);
       }
       return nextOccurrence;
     }
     case RecurrenceEnum.Yearly: {
       if (isFutureDate) {
-        return addYears(dateNowInit, duration);
+        return addYearsFns(dateNowInit, duration);
       }
-      const now = dateTimeNowUtc();
-      let nextOccurrence = set(now, {
-        month: dateInit.getMonth(),
-        date: dateInit.getDate(),
-      });
+      let nextOccurrence = addYearsFns(dateInit, duration);
       if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
-        nextOccurrence = addYears(nextOccurrence, duration);
+        nextOccurrence = addYearsFns(nextOccurrence, duration);
       }
       return nextOccurrence;
     }
