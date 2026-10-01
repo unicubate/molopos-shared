@@ -6,6 +6,7 @@ import {
   format as formatDateFns,
   getYear,
   Locale,
+  set,
   setDate,
 } from "date-fns";
 import { de, enUS, es, fr, it, ru, enGB } from "date-fns/locale";
@@ -37,7 +38,7 @@ export const dateTimeNowUtc = () => new Date();
  */
 export const formateDate = (date: Date, locale: string) => {
   const localeFormat = locale !== "en" ? "dd MMM p" : "MMM dd, p";
-  const isYearControle = getYear(dateTimeNowUtc()) >= getYear(date);
+  const isYearControle = getYear(date) >= getYear(dateTimeNowUtc());
   return formatDateFns(date, isYearControle ? localeFormat : "P", {
     locale: dataFnsLocale[locale],
   });
@@ -150,7 +151,11 @@ export const recurrenceDate = ({
       if (isFutureDate) {
         return addYearsFns(dateNowInit, duration);
       }
-      let nextOccurrence = addYearsFns(dateInit, duration);
+      const now = dateTimeNowUtc();
+      let nextOccurrence = set(now, {
+        month: dateInit.getMonth(),
+        date: dateInit.getDate(),
+      });
       if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
         nextOccurrence = addYearsFns(nextOccurrence, duration);
       }
