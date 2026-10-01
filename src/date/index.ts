@@ -44,7 +44,7 @@ export const formateDate = (date: Date, locale: string) => {
       ? "MMM dd, p"
       : "dd MMM p"
     : isFuture(date)
-      ? "PPpp"
+      ? "PPPp"
       : "Pp";
 
   return formatDateFns(date, formatString, {
@@ -54,20 +54,20 @@ export const formateDate = (date: Date, locale: string) => {
 
 /**
  * @example
- * formateddMMYYYY("2026-01-01", "en-US"); // "1 Jan 2026"
+ * formateddMMYYYY("2026-01-01", "en-US"); // "1 January 2026"
  */
 export const formateddMMYYYY = (date: DateLike, locale: string) => {
-  return formatDateFns(date, "PP", {
+  return formatDateFns(date, "PPP", {
     locale: dataFnsLocale[locale],
   });
 };
 
 /**
  * @example
- * formateddMMYYYYHHmm("2026-01-01", "en-US"); // "1 Jan 2026 00:00"
+ * formateddMMYYYYHHmm("2026-01-01", "en-US"); // "1 January 2026 00:00"
  */
 export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
-  return formatDateFns(date, "PPpp", {
+  return formatDateFns(date, "PPPp", {
     locale: dataFnsLocale[locale],
   });
 };
