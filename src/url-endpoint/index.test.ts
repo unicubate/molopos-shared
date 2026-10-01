@@ -1,3 +1,4 @@
+import { describe, expect, test } from "vitest";
 import { URLEndpoint } from "./index";
 
 describe("URLEndpoint", () => {
