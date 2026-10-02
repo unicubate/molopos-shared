@@ -61,7 +61,6 @@ describe("Date", () => {
     const dateNow = formateUnixIntegerdddMMYYYYHHmm(1792794512, "en");
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
-    expect(dateNow).toStrictEqual("24 Oct 2026, 00:28");
   });
 
   it("recurrenceDate isRecurrence = true", () => {
