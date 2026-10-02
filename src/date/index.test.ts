@@ -8,6 +8,7 @@ import {
   addDaysToTimeDateStartOfDayNowUtc,
   addDaysToTimeDateNowUtc,
   formateDateMMyyyy,
+  formateUnixIntegerdddMMYYYYHHmm,
 } from "./index";
 import { RecurrenceEnum } from "../enum";
 
@@ -54,6 +55,13 @@ describe("Date", () => {
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
     expect(dateNow).toStrictEqual("072025");
+  });
+
+  it("formateUnixIntegerdddMMYYYYHHmm", () => {
+    const dateNow = formateUnixIntegerdddMMYYYYHHmm(1792794512, "en");
+    expect(dateNow).not.toBeNull();
+    expect(dateNow).toBeDefined();
+    expect(dateNow).toStrictEqual("24 Oct 2026, 00:28");
   });
 
   it("recurrenceDate isRecurrence = true", () => {

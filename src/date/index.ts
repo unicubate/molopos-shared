@@ -13,7 +13,7 @@ import {
   format as formatDateFns,
   addMonths as addMonthsFns,
 } from "date-fns";
-import { utc, UTCDate } from "@date-fns/utc";
+import { UTCDate, utc } from "@date-fns/utc";
 import { de, enUS, es, fr, it, ru, enGB } from "date-fns/locale";
 import { RecurrenceEnum } from "../enum";
 import { DateLike } from "../index";
@@ -66,6 +66,16 @@ export const formateddMMYYYY = (date: DateLike, locale: string) => {
 
 /**
  * @example
+ * formateUnixIntegerdddMMYYYYHHmm(1792794512, "en"); // "24 Oct 2026, 00:28"
+ */
+export const formateUnixIntegerdddMMYYYYHHmm = (value: number, locale: string) => {
+  return formatDateFns(new Date(value * 1000), "PPp", {
+    locale: dataFnsLocale[locale],
+  });
+};
+
+/**
+ * @example
  * formateddMMYYYYHHmm("2026-01-01", "en-US"); // "1 January 2026 00:00"
  */
 export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
@@ -73,6 +83,7 @@ export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
     locale: dataFnsLocale[locale],
   });
 };
+
 
 /**
  * @example
@@ -122,6 +133,13 @@ export const formateToyyyy = (date: Date) => getYear(date);
 
 /**
  * @example
+ * formateDateUnixInteger("2026-01-01"); // 1719168000
+ */
+export const formateDateUnixInteger = (date: Date) =>
+  Number(formatDateFns(date, "T"));
+
+/**
+ * @example
  * addDaysToTimeNowUtcDate(1); // 2026-01-02
  */
 export const addDaysToTimeNowUtcDate = (value: number) =>
@@ -134,13 +152,6 @@ export const addDaysToTimeNowUtcDate = (value: number) =>
  */
 export const dateTimeNowUtcUnixInteger = () =>
   Number(formatDateFns(dateTimeNowUtc(), "T"));
-
-/**
- * @example
- * formateDateUnixInteger("2026-01-01"); // 1719168000
- */
-export const formateDateUnixInteger = (date: Date) =>
-  Number(formatDateFns(date, "T"));
 
 /**
  * @example
