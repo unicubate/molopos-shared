@@ -6,16 +6,17 @@ import {
   addWeeks,
   isFuture,
   isThisYear,
+  startOfDay as startOfDayFns,
   subDays as subDaysFns,
   addDays as addDaysFns,
   addYears as addYearsFns,
   format as formatDateFns,
   addMonths as addMonthsFns,
 } from "date-fns";
+import { utc, UTCDate } from "@date-fns/utc";
 import { de, enUS, es, fr, it, ru, enGB } from "date-fns/locale";
 import { RecurrenceEnum } from "../enum";
-import { DateLike, Numberlike } from "../index";
-import { DateTime } from "luxon";
+import { DateLike } from "../index";
 interface PropsRecurrence {
   date: Date;
   duration?: number;
@@ -82,6 +83,12 @@ export const formateHHmm = (date: Date, locale: string) =>
 
 /**
  * @example
+ * formateHH("2026-01-01"); // "00:00"
+ */
+export const formateHH = (date: Date) => formatDateFns(date, "HH");
+
+/**
+ * @example
  * formatDateDDMMYYToUtc("2026-01-01", "en"); // "01/01/2026"
  */
 export const formatDateDDMMYYToUtc = (date: Date, locale: string) =>
@@ -100,6 +107,12 @@ export const formatDateFnsToDdMMYYYY = (date: Date) =>
  */
 export const formatDateFnsToDdMMYYYYHHmm = (date: Date) =>
   formatDateFns(date, "dd-MM-yyyy HH:mm");
+
+/**
+ * @example
+ * formateDateMMyyyy("2026-01-01"); // "012026"
+ */
+export const formateDateMMyyyy = (date: Date) => formatDateFns(date, "MMyyyy");
 
 /**
  * @example
@@ -156,6 +169,13 @@ export const addMonthsToTimeDateNowUtc = (value: number) =>
  */
 export const addDaysToTimeDateNowUtc = (value: number) =>
   addDaysFns(dateTimeNowUtc(), value);
+
+/**
+ * @example
+ * addDaysToTimeDateStartOfDayNowUtc(1); // 2026-01-02 00:00:00
+ */
+export const addDaysToTimeDateStartOfDayNowUtc = (value: number) =>
+  new Date(startOfDayFns(addDaysFns(new UTCDate(dateTimeNowUtc()), value)));
 
 /**
  * @example
