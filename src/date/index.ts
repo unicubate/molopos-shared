@@ -68,8 +68,11 @@ export const formateddMMYYYY = (date: DateLike, locale: string) => {
  * @example
  * formateUnixIntegerdddMMYYYYHHmm(1792794512, "en"); // "24 Oct 2026, 00:28"
  */
-export const formateUnixIntegerdddMMYYYYHHmm = (value: number, locale: string) => {
-  return formatDateFns(new Date(value * 1000), "PPp", {
+export const formateUnixIntegerdddMMYYYYHHmm = (
+  value: number,
+  locale: string,
+) => {
+  return formatDateFns(new Date(Number(value) * 1000), "PPp", {
     locale: dataFnsLocale[locale],
   });
 };
@@ -84,56 +87,55 @@ export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
   });
 };
 
-
 /**
  * @example
- * formateHHmm("2026-01-01", "en-US"); // "00:00"
+ * formateHHmm("2026-01-01T00:00:00Z", "en-US"); // "00:00"
  */
 export const formateHHmm = (date: Date, locale: string) =>
   formatDateFns(date, "p", { locale: dataFnsLocale[locale] });
 
 /**
  * @example
- * formateHH("2026-01-01"); // "00:00"
+ * formateHH("2026-01-01T00:00:00Z"); // "00:00"
  */
 export const formateHH = (date: Date) => formatDateFns(date, "HH");
 
 /**
  * @example
- * formatDateDDMMYYToUtc("2026-01-01", "en"); // "01/01/2026"
+ * formatDateDDMMYYToUtc("2026-01-01T00:00:00Z", "en"); // "01/01/2026"
  */
 export const formatDateDDMMYYToUtc = (date: Date, locale: string) =>
   formatDateFns(date, "P", { locale: dataFnsLocale[locale] });
 
 /**
  * @example
- * formatDateFnsToDdMMYYYY("2026-01-01"); // "01-01-2026"
+ * formatDateFnsToDdMMYYYY("2026-01-01T00:00:00Z"); // "01-01-2026"
  */
 export const formatDateFnsToDdMMYYYY = (date: Date) =>
   formatDateFns(date, "dd-MM-yyyy");
 
 /**
  * @example
- * formatDateFnsToDdMMYYYYHHmmss("2026-01-01"); // "01-01-2026 00:00:00"
+ * formatDateFnsToDdMMYYYYHHmmss("2026-01-01T00:00:00Z"); // "01-01-2026 00:00:00"
  */
 export const formatDateFnsToDdMMYYYYHHmm = (date: Date) =>
   formatDateFns(date, "dd-MM-yyyy HH:mm");
 
 /**
  * @example
- * formateDateMMyyyy("2026-01-01"); // "012026"
+ * formateDateMMyyyy("2026-01-01T00:00:00Z"); // "012026"
  */
 export const formateDateMMyyyy = (date: Date) => formatDateFns(date, "MMyyyy");
 
 /**
  * @example
- * formateToyyyy("2026-01-01"); // 2026
+ * formateToyyyy("2026-01-01T00:00:00Z"); // 2026
  */
 export const formateToyyyy = (date: Date) => getYear(date);
 
 /**
  * @example
- * formateDateUnixInteger("2026-01-01"); // 1719168000
+ * formateDateUnixInteger("2026-01-01T00:00:00Z"); // 1719168000
  */
 export const formateDateUnixInteger = (date: Date) =>
   Number(formatDateFns(date, "T"));
@@ -143,7 +145,7 @@ export const formateDateUnixInteger = (date: Date) =>
  * addDaysToTimeNowUtcDate(1); // 2026-01-02
  */
 export const addDaysToTimeNowUtcDate = (value: number) =>
-  addDaysFns(dateTimeNowUtc(), value);
+  addDaysFns(dateTimeNowUtc(), Number(value));
 
 /**
  *
@@ -158,56 +160,58 @@ export const dateTimeNowUtcUnixInteger = () =>
  * addMonthsToTimeNowUtcDate(1); // 1719168000
  */
 export const addMonthsToTimeNowUtcUnixInteger = (month: number) =>
-  Number(formatDateFns(addMonthsFns(dateTimeNowUtc(), month), "T"));
+  Number(formatDateFns(addMonthsFns(dateTimeNowUtc(), Number(month)), "T"));
 
 /**
  * @example
  * addDaysToTimeNowUtcUnixInteger(1); // 1719168000
  */
 export const addDaysToTimeNowUtcUnixInteger = (value: number) =>
-  Number(formatDateFns(addDaysFns(dateTimeNowUtc(), value), "T"));
+  Number(formatDateFns(addDaysFns(dateTimeNowUtc(), Number(value)), "T"));
 
 /**
  * @example
  * addMonthsToTimeDateNowUtc(1); // 2026-01-02
  */
 export const addMonthsToTimeDateNowUtc = (value: number) =>
-  addMonthsFns(dateTimeNowUtc(), value);
+  addMonthsFns(dateTimeNowUtc(), Number(value));
 
 /**
  * @example
  * addDaysToTimeDateNowUtc(1); // 2026-01-02
  */
 export const addDaysToTimeDateNowUtc = (value: number) =>
-  addDaysFns(dateTimeNowUtc(), value);
+  addDaysFns(dateTimeNowUtc(), Number(value));
 
 /**
  * @example
  * addDaysToTimeDateStartOfDayNowUtc(1); // 2026-01-02 00:00:00
  */
 export const addDaysToTimeDateStartOfDayNowUtc = (value: number) =>
-  new Date(startOfDayFns(addDaysFns(new UTCDate(dateTimeNowUtc()), value)));
+  new Date(
+    startOfDayFns(addDaysFns(new UTCDate(dateTimeNowUtc()), Number(value))),
+  );
 
 /**
  * @example
  * addMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addMonthsToTimeDate = (date: Date, value: number) =>
-  addMonthsFns(date, value);
+  addMonthsFns(date, Number(value));
 
 /**
  * @example
  * addDaysToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addDaysToTimeDate = (date: Date, value: number) =>
-  addDaysFns(date, value);
+  addDaysFns(date, Number(value));
 
 /**
  * @example
  * substrateDaysToTimeDateNowUtc(1); // 2026-01-02
  */
 export const substrateDaysToTimeDateNowUtc = (value: number) =>
-  subDaysFns(dateTimeNowUtc(), value);
+  subDaysFns(dateTimeNowUtc(), Number(value));
 
 /**
  * @example
