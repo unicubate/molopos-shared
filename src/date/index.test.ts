@@ -8,7 +8,7 @@ import {
   addDaysToTimeDateStartOfDayNowUtc,
   addDaysToTimeDateNowUtc,
   formateDateMMyyyy,
-  formateUnixIntegerdddMMYYYYHHmm,
+  formateUnixIntegerPPp,
 } from "./index";
 import { RecurrenceEnum } from "../enum";
 
@@ -57,8 +57,8 @@ describe("Date", () => {
     expect(dateNow).toStrictEqual("072025");
   });
 
-  it("formateUnixIntegerdddMMYYYYHHmm", () => {
-    const dateNow = formateUnixIntegerdddMMYYYYHHmm(1792794512, "en");
+  it("formateUnixIntegerPPp", () => {
+    const dateNow = formateUnixIntegerPPp(1792794512, "en");
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
   });

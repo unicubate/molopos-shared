@@ -38,7 +38,7 @@ export const dateTimeNowUtc = () => new Date();
 
 /**
  * @example
- * formateDate("2026-01-01", "en-US"); // "1 Jan 2026 00:00"
+ * formateDate("2026-01-01T09:00:00Z", "en-US"); // "1 Jan 2026 09:00"
  */
 export const formateDate = (date: Date, locale: string) => {
   const formatString = isThisYear(date)
@@ -66,12 +66,9 @@ export const formateddMMYYYY = (date: DateLike, locale: string) => {
 
 /**
  * @example
- * formateUnixIntegerdddMMYYYYHHmm(1792794512, "en"); // "24 Oct 2026, 00:28"
+ * formateUnixIntegerPPp(1792794512, "en"); // "24 Oct 2026, 00:28"
  */
-export const formateUnixIntegerdddMMYYYYHHmm = (
-  value: number,
-  locale: string,
-) => {
+export const formateUnixIntegerPPp = (value: number, locale: string) => {
   return formatDateFns(new Date(Number(value) * 1000), "PPp", {
     locale: dataFnsLocale[locale],
   });
