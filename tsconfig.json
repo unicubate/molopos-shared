@@ -6,11 +6,15 @@
         "./src/**/*.test.ts"
     ],
     "compilerOptions": {
-        "target": "ES6",
+        "target": "ES2023",
+        "lib": ["ES2023", "DOM"],
         "module": "CommonJS",
-        "moduleResolution": "Node",
+        "moduleResolution": "bundler",
+        "rootDir": "./src",
         "outDir": "./dist",
         "declaration": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "strict": false,
+        "types": ["node"]
     }
 }

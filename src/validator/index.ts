@@ -48,6 +48,6 @@ export function TransformToNullIfFalsy() {
  */
 export function TransformArrayString() {
   return Transform(({ value }) =>
-    value ? value?.split(",").map((item) => item.trim()) : null,
+    value ? value?.split(",").map((item: string) => item.trim()) : null,
   );
 }
