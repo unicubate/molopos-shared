@@ -461,3 +461,12 @@ export enum NotificationTargetEnum {
   LowQuantity = "LOW_QUANTITY",
   RecurringExpense = "RECURRING_EXPENSE",
 }
+
+/**
+ * Stripe status subscrube
+ */
+export enum StripeStatusSubscribeEnum {
+  Active = "active",
+  Unpaid = "unpaid",
+  PastDue = "past_due",
+}
