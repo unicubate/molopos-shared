@@ -2,7 +2,9 @@ import { parseCodiceFiscale } from ".";
 
 const data = parseCodiceFiscale("BGLMRC99R30F205T");
 
-if (JSON.stringify(data, null, 4) !== `{
+if (
+  JSON.stringify(data, null, 4) !==
+  `{
     "firstName": "MRC",
     "lastName": "BGL",
     "gender": "M",
@@ -10,11 +12,15 @@ if (JSON.stringify(data, null, 4) !== `{
     "belfiore": "F205",
     "isOmocodia": false,
     "isForeign": false
-}`) throw 1;
+}`
+)
+  throw 1;
 
 const dataOmocodia = parseCodiceFiscale("BGLMRCVVRPLFNLRE");
 
-if (JSON.stringify(dataOmocodia, null, 4) !== `{
+if (
+  JSON.stringify(dataOmocodia, null, 4) !==
+  `{
     "firstName": "MRC",
     "lastName": "BGL",
     "gender": "M",
@@ -22,4 +28,6 @@ if (JSON.stringify(dataOmocodia, null, 4) !== `{
     "belfiore": "F205",
     "isOmocodia": true,
     "isForeign": false
-}`) throw 1;
+}`
+)
+  throw 1;

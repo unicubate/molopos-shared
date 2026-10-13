@@ -1,6 +1,6 @@
 {
   "name": "mp-shared",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
@@ -8,12 +8,14 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "build": "rm -rf ./dist && tsc && node ./scripts/package.js"
   },
   "dependencies": {
     "@date-fns/utc": "^2.1.1",
     "class-transformer": "^0.5.1",
-    "date-fns": "^4.4.0"
+    "date-fns": "^4.4.0",
+    "prettier": "^3.9.10"
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^5.0.4",

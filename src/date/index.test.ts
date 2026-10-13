@@ -68,7 +68,6 @@ describe("Date", () => {
     const nowYear = formateToyyyy(new Date());
     vi.setSystemTime(new Date(nowYear, 9, 1, 14, 0, 0));
 
-
     const nextDate = (recurrence: RecurrenceEnum) =>
       recurrenceDate({
         date: dateTest,

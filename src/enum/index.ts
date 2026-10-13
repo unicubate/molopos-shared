@@ -179,7 +179,6 @@ export enum ActivityModelEnum {
   VarianItemCreate = "VARIANT_ITEM_CREATE",
   VarianItemUpdate = "VARIANT_ITEM_UPDATE",
   VarianItemDelete = "VARIANT_ITEM_DELETE",
-  
 }
 
 /**

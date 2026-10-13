@@ -9,7 +9,7 @@ npm install @molopos/shared
 ## Usage
 
 ```typescript
-import { CustomerTypeEnum } from '@molopos/shared';
+import { CustomerTypeEnum } from "@molopos/shared";
 ```
 
 # Statuses and types
@@ -49,6 +49,7 @@ import { CustomerTypeEnum } from '@molopos/shared';
 - [Pricing Variant Enum](#pricing-variant-enum-pricingvariantenum), Pricing variant enum
 - [Order Type Enum](#order-type-enum-ordertypeenum), Order type enum
 - [Notification Target Enum](#notification-target-enum-notificationtargetenum), Notification target enum
+
 ## Customer Type Enum <sub><sup>[CustomerTypeEnum](./src/enum/index.ts#L4)</sup></sub>
 
 Customer type enum
@@ -543,4 +544,3 @@ Notification target enum
 <tr><td>Recurring Expense</td><td>"RECURRING_EXPENSE"</td></tr>
 
 </table>
-
