@@ -9,4 +9,6 @@ export * from "./validator";
 
 export type DateLike = Date | string;
 
+export type StringLike = string | string[] | null | undefined;
+
 export type Numberlike = number | `${number}` | `${number}.${number}`;
