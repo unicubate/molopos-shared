@@ -227,19 +227,17 @@ export const recurrenceDate = ({
   const dateInit = date instanceof Date ? date : new Date(date);
   const dateNowUnix = dateTimeNowUtcUnixInteger();
   const dateUnix = formateDateUnixInteger(dateInit);
-  const isFutureDate = dateUnix > dateNowUnix;
 
-  const dateNowInit = isFutureDate ? dateInit : dateTimeNowUtc();
+  if (dateUnix > dateNowUnix) {
+    return dateInit;
+  }
 
   switch (recurrence) {
     case RecurrenceEnum.Daily:
-      return addDaysToTimeDate(dateNowInit, duration);
+      return addDaysToTimeDate(dateTimeNowUtc(), duration);
     case RecurrenceEnum.Weekly:
-      return addWeeks(dateNowInit, duration);
+      return addWeeks(dateTimeNowUtc(), duration);
     case RecurrenceEnum.Monthly: {
-      if (isFutureDate) {
-        return addMonthsToTimeDate(dateNowInit, duration);
-      }
       const now = dateTimeNowUtc();
       let nextOccurrence = setDate(now, dateInit.getDate());
       if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
@@ -248,9 +246,6 @@ export const recurrenceDate = ({
       return nextOccurrence;
     }
     case RecurrenceEnum.Yearly: {
-      if (isFutureDate) {
-        return addYearsFns(dateNowInit, duration);
-      }
       const now = dateTimeNowUtc();
       let nextOccurrence = set(now, {
         month: dateInit.getMonth(),
