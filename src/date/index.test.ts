@@ -90,4 +90,27 @@ describe("Date", () => {
 
     vi.useRealTimers();
   });
+
+  it("recurrenceDate returns dateInit when it is in the future", () => {
+    vi.useFakeTimers();
+    const nowYear = formateToyyyy(new Date());
+    const nowMonth = new Date().getMonth();
+    const nowDay = new Date().getDate();
+    vi.setSystemTime(new Date(nowYear, 9, 1, 14, 0, 0));
+    const futureDate = new Date(nowYear, nowMonth, nowDay + 4, 9, 30, 0);
+
+    const nextDate = (recurrence: RecurrenceEnum) =>
+      recurrenceDate({
+        date: futureDate,
+        recurrence,
+        isRecurrence: true,
+      });
+
+    expect(nextDate(RecurrenceEnum.Daily)).toStrictEqual(futureDate);
+    expect(nextDate(RecurrenceEnum.Weekly)).toStrictEqual(futureDate);
+    expect(nextDate(RecurrenceEnum.Monthly)).toStrictEqual(futureDate);
+    expect(nextDate(RecurrenceEnum.Yearly)).toStrictEqual(futureDate);
+
+    vi.useRealTimers();
+  });
 });
