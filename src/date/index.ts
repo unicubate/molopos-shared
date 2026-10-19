@@ -212,7 +212,8 @@ export const substrateDaysToTimeDateNowUtc = (value: number) =>
 
 /**
  * @example
- * recurrenceDate({ date: new Date(), recurrence: RecurrenceEnum.Monthly }) // 23/06/2026
+ * const date = new Date(2026, 5, 23);
+ * recurrenceDate({ date, recurrence: RecurrenceEnum.Monthly }) // 2026-06-23
  */
 export const recurrenceDate = ({
   date,
