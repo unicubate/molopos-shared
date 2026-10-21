@@ -39,6 +39,16 @@ export enum ProductTypeEnum {
 }
 
 /**
+ * Expense item module enum
+ */
+export enum ExpenseItemModuleEnum {
+  Loan = "LOAN",
+  Expense = "EXPENSE",
+  LoanShedule = "LOANSHEDULE",
+  CollaborativeFund = "COLLABORATIVEFUND",
+}
+
+/**
  * Query type enum
  */
 export enum QueryTypeEnum {
@@ -81,7 +91,9 @@ export enum QueryTypeEnum {
   ApplicationSection = "APPLICATIONSECTION",
   CollaborativeFund = "COLLABORATIVEFUND",
   Subscription = "SUBSCRIPTION",
+  ExpenseLoan = "EXPENSELOAN",
   InventoryAdjustment = "INVENTORYADJUSTMENT",
+  ExpenseLoanShedule = "EXPENSELOANSHEDULE",
 }
 
 /**
@@ -179,6 +191,12 @@ export enum ActivityModelEnum {
   VarianItemCreate = "VARIANT_ITEM_CREATE",
   VarianItemUpdate = "VARIANT_ITEM_UPDATE",
   VarianItemDelete = "VARIANT_ITEM_DELETE",
+  ExpenseLoanCreate = "EXPENSE_LOAN_CREATE",
+  ExpenseLoanUpdate = "EXPENSE_LOAN_UPDATE",
+  ExpenseLoanDelete = "EXPENSE_LOAN_DELETE",
+  ExpenseLoanSheduleCreate = "EXPENSE_LOAN_SHEDULE_CREATE",
+  ExpenseLoanSheduleUpdate = "EXPENSE_LOAN_SHEDULE_UPDATE",
+  ExpenseLoanSheduleDelete = "EXPENSE_LOAN_SHEDULE_DELETE",
 }
 
 /**
@@ -280,6 +298,7 @@ export enum ApplicationSectionModuleEnum {
   Product = "PRODUCT",
   Expense = "EXPENSE",
   Project = "PROJECT",
+  MutualFund = "MUTUALFUND",
   CollaborativeFund = "COLLABORATIVEFUND",
 }
 
@@ -287,10 +306,10 @@ export enum ApplicationSectionModuleEnum {
  * User status enum
  */
 export enum UserStatusEnum {
+  Demo = "DEMO",
+  Admin = "ADMIN",
   Client = "CLIENT",
   Creator = "CREATOR",
-  Admin = "ADMIN",
-  Demo = "DEMO",
 }
 
 /**
