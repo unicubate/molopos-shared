@@ -41,10 +41,9 @@ export enum ProductTypeEnum {
 /**
  * Expense item module enum
  */
-export enum ExpenseItemModuleEnum {
-  Loan = "LOAN",
+export enum ExpenseModuleEnum {
   Expense = "EXPENSE",
-  LoanShedule = "LOANSHEDULE",
+  MutualFund = "MUTUALFUND",
   CollaborativeFund = "COLLABORATIVEFUND",
 }
 
@@ -80,6 +79,7 @@ export enum QueryTypeEnum {
   Warehouse = "WAREHOUSE",
   OrderItem = "ORDERITEM",
   QuoteItem = "QUOTEITEM",
+  MutualFund = "MUTUALFUND",
   Transaction = "TRANSACTION",
   QuoteOption = "QUOTEOPTION",
   UserAddress = "USERADDRESS",
