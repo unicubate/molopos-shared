@@ -104,3 +104,60 @@ export const capitalizeFirstLetter = (value: string): string => {
   }
   return "";
 };
+
+interface PropsInterest {
+  amount: number;
+  interest: number;
+  scheduleCount: number;
+}
+
+interface InterestResult {
+  amountSchedule: number;
+  interestSchedule: number;
+  interestScheduleTotal: number;
+  amountInterestSchedule: number;
+  amountInterestScheduleTotal: number;
+}
+
+/**
+ * Répartit un montant et ses intérêts simples sur un nombre d'échéances.
+ * @example
+ * calculInterest({ amount: 500, interest: 3, schedule: 10 }) // 500€, 3%, 10 mois
+ * {
+ *   amountSchedule: 50, ==> 50€ / mois
+ *   interestSchedule: 1.5, ==> 1.5€ / mois
+ *   interestScheduleTotal: 15, ==> 15€ / 10 mois
+ *   amountInterestSchedule: 51.5, ==> 51.5€ / mois
+ *   amountInterestScheduleTotal: 515, ==> 515€ / 10 mois
+ * }
+ */
+export const calculInterest = ({
+  amount,
+  interest,
+  scheduleCount,
+}: PropsInterest): InterestResult => {
+  const safeAmount = isNaNumber(amount);
+  const rate = isNaNumber(interest) / 100;
+  const empty: InterestResult = {
+    amountSchedule: 0,
+    interestSchedule: 0,
+    interestScheduleTotal: 0,
+    amountInterestSchedule: 0,
+    amountInterestScheduleTotal: 0,
+  };
+
+  if (!Number.isFinite(scheduleCount) || scheduleCount <= 0) {
+    return empty;
+  }
+
+  const amountSchedule = safeAmount / scheduleCount;
+  const interestSchedule = amountSchedule * rate;
+
+  return {
+    amountSchedule,
+    interestSchedule,
+    amountInterestScheduleTotal: safeAmount * (1 + rate),
+    interestScheduleTotal: interestSchedule * scheduleCount,
+    amountInterestSchedule: amountSchedule + interestSchedule,
+  };
+};
