@@ -51,3 +51,17 @@ export function TransformArrayString() {
     value ? value?.split(",").map((item: string) => item.trim()) : null,
   );
 }
+
+/**
+ * Transforme les chaînes séparées par des virgules en un tableau de chaînes.
+ *
+ * @example
+ * class MyDto {
+ *   @IsNumber()
+ *   @TransformStringToNumber()
+ *   age?: number;
+ * }
+ */
+export function TransformStringToNumber() {
+  return Transform(({ value }) => (value ? Number(value) : null));
+}
