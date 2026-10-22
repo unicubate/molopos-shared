@@ -13,7 +13,10 @@ import {
 import { RecurrenceEnum } from "../enum";
 
 describe("Date", () => {
-  const dateTest = new Date(2025, 6, 10, 14, 0, 0);
+  const nowYear = formateToyyyy(new Date());
+  const nowMonth = new Date().getMonth();
+  const pastDateTest = new Date(2025, 6, 10, 14, 0, 0);
+  const futureDateTest = new Date(nowYear, nowMonth + 4, 1, 9, 30, 0);
   it("formateDDDateISO", () => {
     const dateNow = formateDateUnixInteger(new Date());
     expect(dateNow).not.toBeNull();
@@ -51,7 +54,7 @@ describe("Date", () => {
   });
 
   it("formateDateMMyyyy", () => {
-    const dateNow = formateDateMMyyyy(dateTest);
+    const dateNow = formateDateMMyyyy(pastDateTest);
     expect(dateNow).not.toBeNull();
     expect(dateNow).toBeDefined();
     expect(dateNow).toStrictEqual("072025");
@@ -66,26 +69,59 @@ describe("Date", () => {
   it("recurrenceDate isRecurrence = true", () => {
     vi.useFakeTimers();
     const nowYear = formateToyyyy(new Date());
-    vi.setSystemTime(new Date(nowYear, 9, 1, 14, 0, 0));
+    const nowMonth = new Date().getMonth();
+    const nowDay = new Date().getDate();
+    vi.setSystemTime(new Date(nowYear, nowMonth, nowDay, 14, 0, 0));
 
     const nextDate = (recurrence: RecurrenceEnum) =>
       recurrenceDate({
-        date: dateTest,
+        date: pastDateTest,
         recurrence,
         isRecurrence: true,
       });
 
     expect(nextDate(RecurrenceEnum.Daily)).toStrictEqual(
-      new Date(nowYear, 9, 2, 14, 0, 0),
+      new Date(nowYear, nowMonth, nowDay + 1, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Weekly)).toStrictEqual(
-      new Date(nowYear, 9, 8, 14, 0, 0),
+      new Date(nowYear, nowMonth, nowDay + 7, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Monthly)).toStrictEqual(
-      new Date(nowYear, 9, 10, 14, 0, 0),
+      new Date(nowYear, nowMonth + 1, nowDay, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Yearly)).toStrictEqual(
-      new Date(nowYear + 1, 6, 10, 14, 0, 0),
+      new Date(nowYear + 1, nowMonth, nowDay, 14, 0, 0),
+    );
+
+    vi.useRealTimers();
+  });
+
+
+  it("recurrenceDate  futureDate", () => {
+    vi.useFakeTimers();
+    const nowYear = formateToyyyy(futureDateTest);
+    const nowMonth = futureDateTest.getMonth();
+    const nowDay = futureDateTest.getDate();
+    vi.setSystemTime(new Date(nowYear, nowMonth, nowDay, 14, 0, 0));
+
+    const nextDate = (recurrence: RecurrenceEnum) =>
+      recurrenceDate({
+        date: futureDateTest,
+        recurrence,
+        isRecurrence: true,
+      });
+
+    expect(nextDate(RecurrenceEnum.Daily)).toStrictEqual(
+      new Date(nowYear, nowMonth, nowDay, 14, 0, 0),
+    );
+    expect(nextDate(RecurrenceEnum.Weekly)).toStrictEqual(
+      new Date(nowYear, nowMonth, nowDay, 14, 0, 0),
+    );
+    expect(nextDate(RecurrenceEnum.Monthly)).toStrictEqual(
+      new Date(nowYear, nowMonth, nowDay, 14, 0, 0),
+    );
+    expect(nextDate(RecurrenceEnum.Yearly)).toStrictEqual(
+      new Date(nowYear, nowMonth, nowDay, 14, 0, 0),
     );
 
     vi.useRealTimers();
