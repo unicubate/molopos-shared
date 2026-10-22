@@ -3,7 +3,6 @@ import {
   Locale,
   addWeeks,
   isFuture,
-  isSameDay,
   isThisYear,
   startOfDay as startOfDayFns,
   subDays as subDaysFns,
@@ -220,9 +219,12 @@ const nextOccurrenceByRecurrence: Record<
 };
 
 /**
+ * Prochaine échéance à partir de `date`, pas de maintenant.
+ * Une date future est renvoyée telle quelle. Sinon on avance d'une période,
+ * puis on rattrape les retards tant que le résultat n'est pas après maintenant.
  * @example
- * recurrenceDate({ date: futureDate, recurrence: RecurrenceEnum.Monthly, isRecurrence: true })
- * // futureDate, when it is still ahead of now
+ * recurrenceDate({ date: today, recurrence: RecurrenceEnum.Monthly, isRecurrence: true })
+ * // today + 1 month
  */
 export const recurrenceDate = ({
   date,
@@ -241,10 +243,16 @@ export const recurrenceDate = ({
     return dateInit;
   }
 
-  if (isSameDay(dateInit, now)) {
-    return now;
+  const advance = nextOccurrenceByRecurrence[recurrence];
+  let nextDate = advance(dateInit, duration);
+
+  while (nextDate.getTime() <= now.getTime()) {
+    const following = advance(nextDate, duration);
+    if (following.getTime() <= nextDate.getTime()) {
+      break;
+    }
+    nextDate = following;
   }
-  const nextDate = nextOccurrenceByRecurrence[recurrence](now, duration);
 
   return nextDate;
 };
