@@ -1,10 +1,9 @@
 import {
   getYear,
   Locale,
-  set,
-  setDate,
   addWeeks,
   isFuture,
+  isSameDay,
   isThisYear,
   startOfDay as startOfDayFns,
   subDays as subDaysFns,
@@ -210,10 +209,20 @@ export const addDaysToTimeDate = (date: Date, value: number) =>
 export const substrateDaysToTimeDateNowUtc = (value: number) =>
   subDaysFns(dateTimeNowUtc(), Number(value));
 
+const nextOccurrenceByRecurrence: Record<
+  RecurrenceEnum,
+  (date: Date, duration: number) => Date
+> = {
+  [RecurrenceEnum.Daily]: addDaysToTimeDate,
+  [RecurrenceEnum.Weekly]: addWeeks,
+  [RecurrenceEnum.Monthly]: addMonthsToTimeDate,
+  [RecurrenceEnum.Yearly]: addYearsFns,
+};
+
 /**
  * @example
- * const date = new Date(2026, 5, 23);
- * recurrenceDate({ date, recurrence: RecurrenceEnum.Monthly }) // 2026-06-23
+ * recurrenceDate({ date: futureDate, recurrence: RecurrenceEnum.Monthly, isRecurrence: true })
+ * // futureDate, when it is still ahead of now
  */
 export const recurrenceDate = ({
   date,
@@ -226,36 +235,16 @@ export const recurrenceDate = ({
   }
 
   const dateInit = date instanceof Date ? date : new Date(date);
-  const dateNowUnix = dateTimeNowUtcUnixInteger();
-  const dateUnix = formateDateUnixInteger(dateInit);
+  const now = dateTimeNowUtc();
 
-  if (dateUnix > dateNowUnix) {
+  if (dateInit.getTime() > now.getTime()) {
     return dateInit;
   }
 
-  switch (recurrence) {
-    case RecurrenceEnum.Daily:
-      return addDaysToTimeDate(dateTimeNowUtc(), duration);
-    case RecurrenceEnum.Weekly:
-      return addWeeks(dateTimeNowUtc(), duration);
-    case RecurrenceEnum.Monthly: {
-      const now = dateTimeNowUtc();
-      let nextOccurrence = setDate(now, dateInit.getDate());
-      if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
-        nextOccurrence = addMonthsToTimeDate(nextOccurrence, duration);
-      }
-      return nextOccurrence;
-    }
-    case RecurrenceEnum.Yearly: {
-      const now = dateTimeNowUtc();
-      let nextOccurrence = set(now, {
-        month: dateInit.getMonth(),
-        date: dateInit.getDate(),
-      });
-      if (formateDateUnixInteger(nextOccurrence) <= dateNowUnix) {
-        nextOccurrence = addYearsFns(nextOccurrence, duration);
-      }
-      return nextOccurrence;
-    }
+  if (isSameDay(dateInit, now)) {
+    return now;
   }
+  const nextDate = nextOccurrenceByRecurrence[recurrence](now, duration);
+
+  return nextDate;
 };
