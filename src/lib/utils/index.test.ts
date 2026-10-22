@@ -1,6 +1,7 @@
 import { describe, expect, test } from "vitest";
 import {
   calculDiscount,
+  calculInterest,
   calculVat,
   capitalizeFirstLetter,
   formatePrice,
@@ -53,5 +54,53 @@ describe("Utils", () => {
     expect(result).not.toBeNull();
     expect(result).toBeDefined();
     expect(result).toEqual("John Doe");
+  });
+
+  describe("calculInterest", () => {
+    test("calculInterest", () => {
+      const result = calculInterest({
+        amount: 500, // 500€
+        interest: 3, // 3%
+        scheduleCount: 10, // 10 mois
+      });
+      expect(result).not.toBeNull();
+      expect(result).toBeDefined();
+      expect(result).toStrictEqual({
+        amountSchedule: 50, // 50€
+        interestSchedule: 1.5, // 1.5€ / mois
+        interestScheduleTotal: 15, // 15€
+        amountInterestSchedule: 51.5, // 51.5€ / mois
+        amountInterestScheduleTotal: 515, // 515€ / 10 mois
+      });
+    });
+
+    test("calculInterest returns zeros when schedule is invalid", () => {
+      expect(
+        calculInterest({ amount: 1000, interest: 10, scheduleCount: 0 }),
+      ).toStrictEqual({
+        amountSchedule: 0,
+        interestSchedule: 0,
+        interestScheduleTotal: 0,
+        amountInterestSchedule: 0,
+        amountInterestScheduleTotal: 0,
+      });
+    });
+
+    test("calculInterest returns zeros when interest is invalid", () => {
+      const result = calculInterest({
+        amount: 1000, // 1000€
+        interest: 0, // 0%
+        scheduleCount: 10, // 10 mois
+      });
+      expect(result).not.toBeNull();
+      expect(result).toBeDefined();
+      expect(result).toStrictEqual({
+        amountSchedule: 100,
+        interestSchedule: 0,
+        interestScheduleTotal: 0,
+        amountInterestSchedule: 100,
+        amountInterestScheduleTotal: 1000,
+      });
+    });
   });
 });
