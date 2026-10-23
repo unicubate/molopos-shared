@@ -214,6 +214,27 @@ export const addMonthsToTimeDate = (date: Date, value: number) =>
 
 /**
  * @example
+ * addTrimestralMonthsToTimeDate(new Date(), 1); // 2026-01-02
+ */
+export const addTrimestralMonthsToTimeDate = (date: Date, value: number) =>
+  addMonthsFns(date, Number(value) * 3);
+
+/**
+ * @example
+ * addSemestralMonthsToTimeDate(new Date(), 1); // 2026-01-02
+ */
+export const addSemestralMonthsToTimeDate = (date: Date, value: number) =>
+  addMonthsFns(date, Number(value) * 6);
+
+/**
+ * @example
+ * addBimonthlyMonthsToTimeDate(new Date(), 1); // 2026-01-02
+ */
+export const addBimonthlyMonthsToTimeDate = (date: Date, value: number) =>
+  addMonthsFns(date, Number(value) * 2);
+
+/**
+ * @example
  * addDaysToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addDaysToTimeDate = (date: Date, value: number) =>
@@ -227,20 +248,6 @@ export const substrateDaysToTimeDateNowUtc = (value: number) =>
   subDaysFns(dateTimeNowUtc(), Number(value));
 
 /**
- * @example
- * nextOccurrenceByRecurrence[RecurrenceEnum.Monthly](new Date(), 1); // 2026-01-02
- */
-export const nextOccurrenceByRecurrence: Record<
-  RecurrenceEnum,
-  (date: Date, duration: number) => Date
-> = {
-  [RecurrenceEnum.Daily]: addDaysToTimeDate,
-  [RecurrenceEnum.Weekly]: addWeeks,
-  [RecurrenceEnum.Monthly]: addMonthsToTimeDate,
-  [RecurrenceEnum.Yearly]: addYearsFns,
-};
-
-/**
  * Prochaine échéance à partir de `date`, pas de maintenant.
  * Une date future est renvoyée telle quelle. Sinon on avance d'une période,
  * puis on rattrape les retards tant que le résultat n'est pas après maintenant.
@@ -248,6 +255,20 @@ export const nextOccurrenceByRecurrence: Record<
  * recurrenceDate({ date: today, recurrence: RecurrenceEnum.Monthly, isRecurrence: true })
  * // today + 1 month
  */
+
+const nextOccurrenceByRecurrence: Record<
+  RecurrenceEnum,
+  (date: Date, duration: number) => Date
+> = {
+  [RecurrenceEnum.Daily]: addDaysToTimeDate,
+  [RecurrenceEnum.Weekly]: addWeeks,
+  [RecurrenceEnum.Monthly]: addMonthsToTimeDate,
+  [RecurrenceEnum.Yearly]: addYearsFns,
+  [RecurrenceEnum.Bimonthly]: addBimonthlyMonthsToTimeDate,
+  [RecurrenceEnum.Trimestral]: addTrimestralMonthsToTimeDate,
+  [RecurrenceEnum.Semestral]: addSemestralMonthsToTimeDate,
+};
+
 export const recurrenceDate = ({
   date,
   recurrence,
@@ -278,3 +299,17 @@ export const recurrenceDate = ({
 
   return nextDate;
 };
+
+/**
+ * @example
+ * recurrenceHandler({ date: new Date(), duration: 1, recurrence: RecurrenceEnum.Monthly }); // 2026-01-02
+ */
+export const recurrenceHandler = ({
+  date,
+  duration,
+  recurrence,
+}: {
+  date: Date;
+  duration: number;
+  recurrence: RecurrenceEnum;
+}) => nextOccurrenceByRecurrence[recurrence](date, duration);
