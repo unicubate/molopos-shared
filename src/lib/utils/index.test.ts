@@ -9,7 +9,7 @@ import {
   fromCents,
   toCents,
 } from "./index";
-import { RecurrenceEnum } from "../../enum";
+import { DiscountTypeEnum, RecurrenceEnum } from "../../enum";
 
 describe("Utils", () => {
   test("fromCents", () => {
@@ -30,14 +30,30 @@ describe("Utils", () => {
     expect(result).not.toBeNull();
   });
 
-  test("calculDiscount", () => {
-    const result = calculDiscount({ value: 60, percentage: 5 });
-    expect(result).toStrictEqual({
-      value: 57,
-      percentage: 5,
-      percentageValue: 3,
+  test("calculDiscount percentage", () => {
+    const result = calculDiscount({
+      value: 100,
+      percentage: 20,
+      type: DiscountTypeEnum.Percentage,
     });
-    expect(result).not.toBeNull();
+    expect(result).toStrictEqual({
+      value: 80,
+      percentage: 20,
+      percentageValue: 20,
+    });
+  });
+
+  test("calculDiscount amount", () => {
+    const result = calculDiscount({
+      value: 60,
+      percentage: 10,
+      type: DiscountTypeEnum.Amount,
+    });
+    expect(result).toStrictEqual({
+      value: 60,
+      percentage: null,
+      percentageValue: null,
+    });
   });
 
   test("formatePrice", () => {
