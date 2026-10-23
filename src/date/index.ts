@@ -14,7 +14,7 @@ import {
 import { UTCDate, utc } from "@date-fns/utc";
 import { de, enUS, es, fr, it, ru, enGB } from "date-fns/locale";
 import { RecurrenceEnum } from "../enum";
-import { DateLike } from "../index";
+import { DateLike, LocaleEnum } from "../index";
 interface PropsRecurrence {
   date: Date;
   duration?: number;
@@ -22,9 +22,7 @@ interface PropsRecurrence {
   recurrence: RecurrenceEnum;
 }
 
-type LocaleString = "es" | "ru" | "it" | "fr" | "en" | "enUS" | "de";
-
-const dataFnsLocale: Partial<Record<LocaleString, Locale>> = {
+const dataFnsLocale: Partial<Record<LocaleEnum, Locale>> = {
   es: es,
   ru: ru,
   it: it,
@@ -40,7 +38,7 @@ export const dateTimeNowUtc = () => new Date();
  * @example
  * formateDate("2026-01-01T09:00:00Z", "en-US"); // "1 Jan 2026 09:00"
  */
-export const formateDate = (date: Date, locale: LocaleString) => {
+export const formateDate = (date: Date, locale: string) => {
   const formatString = isThisYear(date)
     ? locale === "en"
       ? "MMM dd, p"
