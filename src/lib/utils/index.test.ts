@@ -9,6 +9,7 @@ import {
   fromCents,
   toCents,
 } from "./index";
+import { RecurrenceEnum } from "../../enum";
 
 describe("Utils", () => {
   test("fromCents", () => {
@@ -59,47 +60,63 @@ describe("Utils", () => {
   describe("calculInterest", () => {
     test("calculInterest", () => {
       const result = calculInterest({
-        amount: 500, // 500€
+        amountTotal: 500, // 500€
         interest: 3, // 3%
         scheduleCount: 10, // 10 mois
+        recurrence: RecurrenceEnum.Monthly,
       });
       expect(result).not.toBeNull();
       expect(result).toBeDefined();
       expect(result).toStrictEqual({
-        amountSchedule: 50, // 50€
-        interestSchedule: 1.5, // 1.5€ / mois
-        interestScheduleTotal: 15, // 15€
-        amountInterestSchedule: 51.5, // 51.5€ / mois
-        amountInterestScheduleTotal: 515, // 515€ / 10 mois
+        recurrence: RecurrenceEnum.Monthly,
+        amountTotal: 500,
+        interest: 3,
+        interestRecurrence: 1.5,
+        amountInterestRecurrence: 51.5,
+        amountNotInterestRecurrence: 50,
+        interestTotal: 15,
+        amountInterestTotal: 515,
       });
     });
 
     test("calculInterest returns zeros when schedule is invalid", () => {
       expect(
-        calculInterest({ amount: 1000, interest: 10, scheduleCount: 0 }),
+        calculInterest({
+          amountTotal: 1000,
+          interest: 10,
+          scheduleCount: 0,
+          recurrence: RecurrenceEnum.Monthly,
+        }),
       ).toStrictEqual({
-        amountSchedule: 0,
-        interestSchedule: 0,
-        interestScheduleTotal: 0,
-        amountInterestSchedule: 0,
-        amountInterestScheduleTotal: 0,
+        recurrence: RecurrenceEnum.Monthly,
+        amountTotal: 1000,
+        interest: 10,
+        interestRecurrence: 0,
+        amountInterestRecurrence: 0,
+        amountNotInterestRecurrence: 0,
+        interestTotal: 0,
+        amountInterestTotal: 0,
       });
     });
 
-    test("calculInterest returns zeros when interest is invalid", () => {
+    test("calculInterest with zero interest still splits the principal", () => {
       const result = calculInterest({
-        amount: 1000, // 1000€
+        amountTotal: 1000, // 1000€
         interest: 0, // 0%
         scheduleCount: 10, // 10 mois
+        recurrence: RecurrenceEnum.Monthly,
       });
       expect(result).not.toBeNull();
       expect(result).toBeDefined();
       expect(result).toStrictEqual({
-        amountSchedule: 100,
-        interestSchedule: 0,
-        interestScheduleTotal: 0,
-        amountInterestSchedule: 100,
-        amountInterestScheduleTotal: 1000,
+        recurrence: RecurrenceEnum.Monthly,
+        amountTotal: 1000,
+        interest: 0,
+        interestRecurrence: 0,
+        amountInterestRecurrence: 100,
+        amountNotInterestRecurrence: 100,
+        interestTotal: 0,
+        amountInterestTotal: 1000,
       });
     });
   });
