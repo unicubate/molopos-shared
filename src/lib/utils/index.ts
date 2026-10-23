@@ -1,4 +1,4 @@
-import { RecurrenceEnum } from "../../enum";
+import { DiscountTypeEnum, RecurrenceEnum } from "../../enum";
 
 interface Props {
   value: number;
@@ -35,25 +35,44 @@ export const calculVat = ({
 }): number => isNaNumber(value) * fromCents(isNaNumber(percentage));
 
 /**
+ * Calcule une remise en % ou en montant fixe.
  * @example
- * calculDiscount({ value: 2300, percentage: 20 }) // 460
+ * calculDiscount({ value: 60, percentage: 5, type: DiscountTypeEnum.Percentage })
+ * // { value: 57, percentage: 5, percentageValue: 3 }
+ *
+ * calculDiscount({ value: 60, percentage: 10, type: DiscountTypeEnum.Amount })
+ * // { value: 50, percentage: null, percentageValue: null }
  */
 export const calculDiscount = ({
   value,
   percentage,
+  type,
 }: {
   value: number;
   percentage: number;
-}): { value: number; percentage: number; percentageValue: number } => {
-  const newValue = isNaNumber(value);
-  const newPercentage = isNaNumber(percentage);
-  const percentageValue = fromCents(newValue * newPercentage);
-  const valuePercentage = newValue - fromCents(value * percentage);
+  type: DiscountTypeEnum;
+}): {
+  value: number;
+  percentage: number | null;
+  percentageValue: number | null;
+} => {
+  const safeValue = isNaNumber(value);
+  const safeDiscount = isNaNumber(percentage);
+
+  if (type === DiscountTypeEnum.Amount) {
+    return {
+      percentage: null,
+      percentageValue: null,
+      value: safeValue,
+    };
+  }
+
+  const percentageValue = fromCents(safeValue * safeDiscount);
 
   return {
+    percentage: safeDiscount,
     percentageValue,
-    value: valuePercentage,
-    percentage: newPercentage,
+    value: Math.max(0, safeValue - percentageValue),
   };
 };
 
