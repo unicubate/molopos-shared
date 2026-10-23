@@ -252,7 +252,7 @@ export const recurrenceDate = ({
   date,
   recurrence,
   duration = 1,
-  isRecurrence = false,
+  isRecurrence = true,
 }: PropsRecurrence): Date | null => {
   if (!isRecurrence) {
     return null;
