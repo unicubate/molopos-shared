@@ -29,3 +29,5 @@ export const currencies: Currency[] = [
   { code: CurrencyEnum.CAD, symbol: "C$", name: "Canadian Dollar" },
   { code: CurrencyEnum.CHF, symbol: "CHF", name: "Swiss Franc" },
 ];
+
+

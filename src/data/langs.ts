@@ -4,6 +4,8 @@ export enum LocaleEnum {
   fr = "fr",
   de = "de",
   es = "es",
+  ru = "ru",
+  enUS = "enUS",
 }
 
 export type Locale = {
@@ -24,4 +26,16 @@ export const locales: Locale[] = [
     name: "English",
     code: LocaleEnum.en,
   },
+  // {
+  //   name: "German",
+  //   code: LocaleEnum.de,
+  // },
+  // {
+  //   name: "Spanish",
+  //   code: LocaleEnum.es,
+  // },
+  // {
+  //   name: "Russian",
+  //   code: LocaleEnum.ru,
+  // },
 ];
