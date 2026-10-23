@@ -226,7 +226,11 @@ export const addDaysToTimeDate = (date: Date, value: number) =>
 export const substrateDaysToTimeDateNowUtc = (value: number) =>
   subDaysFns(dateTimeNowUtc(), Number(value));
 
-const nextOccurrenceByRecurrence: Record<
+/**
+ * @example
+ * nextOccurrenceByRecurrence[RecurrenceEnum.Monthly](new Date(), 1); // 2026-01-02
+ */
+export const nextOccurrenceByRecurrence: Record<
   RecurrenceEnum,
   (date: Date, duration: number) => Date
 > = {
