@@ -65,26 +65,30 @@ describe("Date", () => {
 
   it("recurrenceDate catches up from the original past date", () => {
     vi.useFakeTimers();
-    vi.setSystemTime(new Date(2026, 9, 22, 14, 0, 0));
+    const nowDay = new Date().getDate();
+    const nowMonth = new Date().getMonth();
+    const nowYear = formateToyyyy(new Date());
+    const futureDate = new Date(nowYear, nowMonth + 1, nowDay + 6, 14, 0, 0);
+    vi.setSystemTime(futureDate);
 
     const nextDate = (recurrence: RecurrenceEnum) =>
       recurrenceDate({
         recurrence,
-        date: pastDateTest,
+        date: futureDate,
         isRecurrence: true,
       });
 
     expect(nextDate(RecurrenceEnum.Daily)).toStrictEqual(
-      new Date(2026, 9, 23, 14, 0, 0),
+      new Date(nowYear, nowMonth + 1, nowDay + 7, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Weekly)).toStrictEqual(
-      new Date(2026, 9, 29, 14, 0, 0),
+      new Date(nowYear, nowMonth + 1, nowDay + 13, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Monthly)).toStrictEqual(
-      new Date(2026, 10, 10, 14, 0, 0),
+      new Date(nowYear, nowMonth + 2, nowDay + 6, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Yearly)).toStrictEqual(
-      new Date(2027, 6, 10, 14, 0, 0),
+      new Date(nowYear + 1, nowMonth + 1, nowDay + 6, 14, 0, 0),
     );
 
     vi.useRealTimers();

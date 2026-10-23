@@ -22,7 +22,9 @@ interface PropsRecurrence {
   recurrence: RecurrenceEnum;
 }
 
-const dataFnsLocale: Partial<Record<string, Locale>> = {
+type LocaleString = "es" | "ru" | "it" | "fr" | "en" | "enUS" | "de";
+
+const dataFnsLocale: Partial<Record<LocaleString, Locale>> = {
   es: es,
   ru: ru,
   it: it,
@@ -38,7 +40,7 @@ export const dateTimeNowUtc = () => new Date();
  * @example
  * formateDate("2026-01-01T09:00:00Z", "en-US"); // "1 Jan 2026 09:00"
  */
-export const formateDate = (date: Date, locale: string) => {
+export const formateDate = (date: Date, locale: LocaleString) => {
   const formatString = isThisYear(date)
     ? locale === "en"
       ? "MMM dd, p"
@@ -54,9 +56,27 @@ export const formateDate = (date: Date, locale: string) => {
 
 /**
  * @example
+ * formatedPP("2026-01-01", "en-US"); // "Apr 29, 2026"
+ */
+export const formatedPP = (date: DateLike, locale?: LocaleString) =>
+  formatDateFns(date, "PP", {
+    locale: dataFnsLocale[locale],
+  });
+
+/**
+ * @example
+ * formatedPPP("2026-01-01", "en-US"); // "April 29th 2026"
+ */
+export const formatedPPP = (date: DateLike, locale: LocaleString) =>
+  formatDateFns(date, "PPP", {
+    locale: dataFnsLocale[locale],
+  });
+
+/**
+ * @example
  * formateddMMYYYY("2026-01-01", "en-US"); // "1 January 2026"
  */
-export const formateddMMYYYY = (date: DateLike, locale: string) => {
+export const formateddMMYYYY = (date: DateLike, locale: LocaleString) => {
   return formatDateFns(date, "PPP", {
     locale: dataFnsLocale[locale],
   });
@@ -66,7 +86,7 @@ export const formateddMMYYYY = (date: DateLike, locale: string) => {
  * @example
  * formateUnixIntegerPPp(1792794512, "en"); // "24 Oct 2026, 00:28"
  */
-export const formateUnixIntegerPPp = (value: number, locale: string) => {
+export const formateUnixIntegerPPp = (value: number, locale: LocaleString) => {
   return formatDateFns(new Date(Number(value) * 1000), "PPp", {
     locale: dataFnsLocale[locale],
   });
@@ -76,7 +96,7 @@ export const formateUnixIntegerPPp = (value: number, locale: string) => {
  * @example
  * formateddMMYYYYHHmm("2026-01-01", "en-US"); // "1 January 2026 00:00"
  */
-export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
+export const formateddMMYYYYHHmm = (date: DateLike, locale: LocaleString) => {
   return formatDateFns(date, "PPPp", {
     locale: dataFnsLocale[locale],
   });
@@ -86,7 +106,7 @@ export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
  * @example
  * formateHHmm("2026-01-01T00:00:00Z", "en-US"); // "00:00"
  */
-export const formateHHmm = (date: Date, locale: string) =>
+export const formateHHmm = (date: Date, locale: LocaleString) =>
   formatDateFns(date, "p", { locale: dataFnsLocale[locale] });
 
 /**
@@ -99,7 +119,7 @@ export const formateHH = (date: Date) => formatDateFns(date, "HH");
  * @example
  * formatDateDDMMYYToUtc("2026-01-01T00:00:00Z", "en"); // "01/01/2026"
  */
-export const formatDateDDMMYYToUtc = (date: Date, locale: string) =>
+export const formatDateDDMMYYToUtc = (date: Date, locale: LocaleString) =>
   formatDateFns(date, "P", { locale: dataFnsLocale[locale] });
 
 /**
