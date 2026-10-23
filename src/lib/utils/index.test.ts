@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 import {
   calculDiscount,
-  calculInterest,
+  calculateInterest,
   calculVat,
   capitalizeFirstLetter,
   formatePrice,
@@ -59,7 +59,7 @@ describe("Utils", () => {
 
   describe("calculInterest", () => {
     test("calculInterest", () => {
-      const result = calculInterest({
+      const result = calculateInterest({
         amountTotal: 500, // 500€
         interest: 3, // 3%
         scheduleCount: 10, // 10 mois
@@ -73,7 +73,7 @@ describe("Utils", () => {
         interest: 3,
         interestRecurrence: 1.5,
         amountInterestRecurrence: 51.5,
-        amountNotInterestRecurrence: 50,
+        amountRecurrence: 50,
         interestTotal: 15,
         amountInterestTotal: 515,
       });
@@ -81,7 +81,7 @@ describe("Utils", () => {
 
     test("calculInterest returns zeros when schedule is invalid", () => {
       expect(
-        calculInterest({
+        calculateInterest({
           amountTotal: 1000,
           interest: 10,
           scheduleCount: 0,
@@ -93,14 +93,14 @@ describe("Utils", () => {
         interest: 10,
         interestRecurrence: 0,
         amountInterestRecurrence: 0,
-        amountNotInterestRecurrence: 0,
+        amountRecurrence: 0,
         interestTotal: 0,
         amountInterestTotal: 0,
       });
     });
 
     test("calculInterest with zero interest still splits the principal", () => {
-      const result = calculInterest({
+      const result = calculateInterest({
         amountTotal: 1000, // 1000€
         interest: 0, // 0%
         scheduleCount: 10, // 10 mois
@@ -114,7 +114,7 @@ describe("Utils", () => {
         interest: 0,
         interestRecurrence: 0,
         amountInterestRecurrence: 100,
-        amountNotInterestRecurrence: 100,
+        amountRecurrence: 100,
         interestTotal: 0,
         amountInterestTotal: 1000,
       });
