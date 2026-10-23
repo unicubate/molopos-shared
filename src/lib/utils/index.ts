@@ -107,7 +107,6 @@ export const capitalizeFirstLetter = (value: string): string => {
   return "";
 };
 
-
 interface PropsInterest {
   amountTotal: number;
   interest: number;
@@ -115,65 +114,63 @@ interface PropsInterest {
   recurrence: RecurrenceEnum;
 }
 
-interface InterestResult {
+export interface CalculateInterestResult {
   interest: number;
   amountTotal: number;
   interestRecurrence: number;
   recurrence: RecurrenceEnum;
   amountInterestRecurrence: number;
-  amountNotInterestRecurrence: number;
+  amountRecurrence: number;
   interestTotal: number;
   amountInterestTotal: number;
 }
 
 /**
-* Répartit un montant et ses intérêts simples sur un nombre d'échéances.
-* @example
-* calculInterest({ amount: 500, interest: 3, schedule: 10 }) // 500€, 3%, 10 mois
-* {
-*   amountNotInterestRecurrence: 50, ==> 50€ / mois
-*   interestRecurrence: 1.5, ==> 1.5€ / mois
-*   interestRecurrenceTotal: 15, ==> 15€ / 10 mois
-*   amountInterestRecurrence: 51.5, ==> 51.5€ / mois
-*   amountInterestTotal: 515, ==> 515€ / 10 mois
-* }
-*/
-export const calculInterest = ({
+ * Répartit un montant et ses intérêts simples sur un nombre d'échéances.
+ * @example
+ * calculateInterest({ amount: 500, interest: 3, schedule: 10 }) // 500€, 3%, 10 mois
+ * {
+ *   amountRecurrence: 50, ==> 50€ / mois
+ *   interestRecurrence: 1.5, ==> 1.5€ / mois
+ *   interestTotal: 15, ==> 15€ / 10 mois
+ *   amountInterestRecurrence: 51.5, ==> 51.5€ / mois
+ *   amountInterestTotal: 515, ==> 515€ / 10 mois
+ * }
+ */
+export const calculateInterest = ({
   amountTotal,
   interest,
   scheduleCount,
   recurrence,
-}: PropsInterest): InterestResult => {
+}: PropsInterest): CalculateInterestResult => {
   const safeAmount = isNaNumber(Number(amountTotal));
   const rate = isNaNumber(Number(interest)) / 100;
-  const empty: InterestResult = {
-      recurrence,
-      amountTotal: Number(amountTotal),
-      interest: Number(interest),
-      interestRecurrence: 0,
-      amountInterestRecurrence: 0,
-      amountNotInterestRecurrence: 0,
-      interestTotal: 0,
-      amountInterestTotal: 0,
+  const empty: CalculateInterestResult = {
+    recurrence,
+    amountTotal: Number(amountTotal),
+    interest: Number(interest),
+    interestRecurrence: 0,
+    amountInterestRecurrence: 0,
+    amountRecurrence: 0,
+    interestTotal: 0,
+    amountInterestTotal: 0,
   };
 
   if (!Number.isFinite(Number(scheduleCount)) || Number(scheduleCount) <= 0) {
-      return empty;
+    return empty;
   }
 
-  const amountNotInterestRecurrence =
-      safeAmount / Number(scheduleCount);
-  const interestRecurrence = amountNotInterestRecurrence * rate;
+  const amountRecurrence = safeAmount / Number(scheduleCount);
+  const interestRecurrence = amountRecurrence * rate;
 
   return {
-      interest,
-      amountTotal,
-      recurrence,
-      interestRecurrence,
-      amountNotInterestRecurrence,
-      amountInterestRecurrence:
-          amountNotInterestRecurrence + interestRecurrence,
-      interestTotal: interestRecurrence * Number(scheduleCount),
-      amountInterestTotal: safeAmount * (1 + rate),
+    interest,
+    amountTotal,
+    recurrence,
+    amountRecurrence,
+    interestRecurrence,
+    amountInterestRecurrence: amountRecurrence + interestRecurrence,
+    interestTotal: interestRecurrence * Number(scheduleCount),
+    amountInterestTotal: safeAmount * (1 + rate),
   };
 };
