@@ -18,7 +18,7 @@ import { DateLike, LocaleEnum } from "../index";
 interface PropsRecurrence {
   date: Date;
   duration?: number;
-  isRecurrence: boolean;
+  isRecurrence?: boolean;
   recurrence: RecurrenceEnum;
 }
 
