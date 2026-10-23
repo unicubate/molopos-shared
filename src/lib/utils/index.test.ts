@@ -31,8 +31,12 @@ describe("Utils", () => {
   });
 
   test("calculDiscount", () => {
-    const result = calculDiscount({ value: 100, percentage: 20 });
-    expect(result).toEqual(20);
+    const result = calculDiscount({ value: 60, percentage: 5 });
+    expect(result).toStrictEqual({
+      value: 57,
+      percentage: 5,
+      percentageValue: 3,
+    });
     expect(result).not.toBeNull();
   });
 

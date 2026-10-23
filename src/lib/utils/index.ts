@@ -32,7 +32,7 @@ export const calculVat = ({
 }: {
   value: number;
   percentage: number;
-}): number => (percentage > 0 ? value * fromCents(percentage) : 0);
+}): number => isNaNumber(value) * fromCents(isNaNumber(percentage));
 
 /**
  * @example
@@ -44,7 +44,18 @@ export const calculDiscount = ({
 }: {
   value: number;
   percentage: number;
-}): number => (percentage > 0 ? fromCents(value * percentage) : 0);
+}): { value: number; percentage: number; percentageValue: number } => {
+  const newValue = isNaNumber(value);
+  const newPercentage = isNaNumber(percentage);
+  const percentageValue = fromCents(newValue * newPercentage);
+  const valuePercentage = newValue - fromCents(value * percentage);
+
+  return {
+    percentageValue,
+    value: valuePercentage,
+    percentage: newPercentage,
+  };
+};
 
 /**
  * @example

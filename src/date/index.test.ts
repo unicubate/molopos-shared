@@ -9,7 +9,7 @@ import {
   addDaysToTimeDateNowUtc,
   formateDateMMyyyy,
   formateUnixIntegerPPp,
-  nextOccurrenceByRecurrence,
+  recurrenceHandler,
 } from "./index";
 import { RecurrenceEnum } from "../enum";
 
@@ -151,25 +151,41 @@ describe("Date", () => {
 
   it("nextOccurrenceByRecurrence Daily", () => {
     const date = new Date(2026, 0, 15, 14, 0, 0);
-    const nextDate = nextOccurrenceByRecurrence[RecurrenceEnum.Daily](date, 1);
+    const nextDate = recurrenceHandler({
+      date,
+      duration: 1,
+      recurrence: RecurrenceEnum.Daily,
+    });
     expect(nextDate).toStrictEqual(new Date(2026, 0, 16, 14, 0, 0));
   });
 
   it("nextOccurrenceByRecurrence Weekly", () => {
     const date = new Date(2026, 0, 15, 14, 0, 0);
-    const nextDate = nextOccurrenceByRecurrence[RecurrenceEnum.Weekly](date, 1);
+    const nextDate = recurrenceHandler({
+      date,
+      duration: 1,
+      recurrence: RecurrenceEnum.Weekly,
+    });
     expect(nextDate).toStrictEqual(new Date(2026, 0, 22, 14, 0, 0));
   });
 
   it("nextOccurrenceByRecurrence Monthly", () => {
     const date = new Date(2026, 0, 15, 14, 0, 0);
-    const nextDate = nextOccurrenceByRecurrence[RecurrenceEnum.Monthly](date, 1);
+    const nextDate = recurrenceHandler({
+      date,
+      duration: 1,
+      recurrence: RecurrenceEnum.Monthly,
+    });
     expect(nextDate).toStrictEqual(new Date(2026, 1, 15, 14, 0, 0));
   });
 
   it("nextOccurrenceByRecurrence Yearly", () => {
     const date = new Date(2026, 0, 15, 14, 0, 0);
-    const nextDate = nextOccurrenceByRecurrence[RecurrenceEnum.Yearly](date, 1);
+    const nextDate = recurrenceHandler({
+      date,
+      duration: 1,
+      recurrence: RecurrenceEnum.Yearly,
+    });
     expect(nextDate).toStrictEqual(new Date(2027, 0, 15, 14, 0, 0));
   });
 });
