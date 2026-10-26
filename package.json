@@ -1,6 +1,6 @@
 {
   "name": "mp-shared",
-  "version": "2.1.25",
+  "version": "2.1.26",
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",
@@ -18,9 +18,9 @@
     "prettier": "^3.9.10"
   },
   "devDependencies": {
-    "@vitest/coverage-v8": "^5.0.4",
+    "@vitest/coverage-v8": "^5.0.5",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.4"
+    "vitest": "^5.0.5"
   }
 }

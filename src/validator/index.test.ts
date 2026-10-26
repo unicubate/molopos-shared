@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   TransformArrayString,
   TransformBooleanString,
+  TransformStringToDate,
   TransformStringToNumber,
   TransformToNullIfFalsy,
 } from "./index";
@@ -64,5 +65,17 @@ describe("Validator", () => {
     expect(convert("0")).toStrictEqual(0);
     expect(convert("")).toBeNull();
     expect(convert(null)).toBeNull();
+  });
+
+  it("TransformStringToDate converts a date string", () => {
+    const convert = (value: unknown) =>
+      transform(TransformStringToDate(), value);
+
+    expect(convert("2026-01-01")).toStrictEqual(new Date("2026-01-01"));
+    expect(convert("2026-01-01T00:00:00.000Z")).toStrictEqual(new Date("2026-01-01T00:00:00.000Z"));
+    expect(convert(new Date("2026-01-01"))).toStrictEqual(new Date("2026-01-01"));
+    expect(convert("")).toBeNull();
+    expect(convert(null)).toBeNull();
+    expect(convert(undefined)).toBeNull();
   });
 });

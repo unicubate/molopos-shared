@@ -21,6 +21,11 @@ interface PropsRecurrence {
   isRecurrence?: boolean;
   recurrence: RecurrenceEnum;
 }
+interface PropsScheduleCount {
+  startedAt: Date;
+  expiredAt: Date;
+  recurrence: RecurrenceEnum;
+}
 
 const dataFnsLocale: Partial<Record<LocaleEnum, Locale>> = {
   es: es,
@@ -302,9 +307,9 @@ export const recurrenceDate = ({
 
 /**
  * @example
- * recurrenceHandler({ date: new Date(), duration: 1, recurrence: RecurrenceEnum.Monthly }); // 2026-01-02
+ * scheduleDate({ date: new Date(), duration: 1, recurrence: RecurrenceEnum.Monthly }); // 2026-01-02
  */
-export const recurrenceHandler = ({
+export const scheduleDate = ({
   date,
   duration,
   recurrence,
@@ -313,3 +318,36 @@ export const recurrenceHandler = ({
   duration: number;
   recurrence: RecurrenceEnum;
 }) => nextOccurrenceByRecurrence[recurrence](date, duration);
+
+/**
+ * Nombre d'échéances entre `startedAt` et `expiredAt` selon `recurrence`.
+ * @example
+ * scheduleCount({
+ *   startedAt: new Date(2026, 0, 1),
+ *   expiredAt: new Date(2026, 9, 1),
+ *   recurrence: RecurrenceEnum.Monthly,
+ * }); // 9
+ */
+export const scheduleCount = ({
+  startedAt,
+  expiredAt,
+  recurrence,
+}: PropsScheduleCount): number => {
+  const start = startedAt instanceof Date ? startedAt : new Date(startedAt);
+  const expired = expiredAt instanceof Date ? expiredAt : new Date(expiredAt);
+  const advance = nextOccurrenceByRecurrence[recurrence];
+
+  let scheduleCount = 0;
+  let nextDate = advance(start, 1);
+
+  while (nextDate.getTime() <= expired.getTime()) {
+    scheduleCount += 1;
+    const following = advance(nextDate, 1);
+    if (following.getTime() <= nextDate.getTime()) {
+      break;
+    }
+    nextDate = following;
+  }
+
+  return scheduleCount;
+};

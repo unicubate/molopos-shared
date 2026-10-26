@@ -3,13 +3,13 @@ import {
   dateTimeNowUtc,
   dateTimeNowUtcUnixInteger,
   formateDateUnixInteger,
-  formateToyyyy,
   recurrenceDate,
   addDaysToTimeDateStartOfDayNowUtc,
   addDaysToTimeDateNowUtc,
   formateDateMMyyyy,
   formateUnixIntegerPPp,
-  recurrenceHandler,
+  scheduleDate,
+  scheduleCount,
 } from "./index";
 import { RecurrenceEnum } from "../enum";
 
@@ -66,30 +66,27 @@ describe("Date", () => {
 
   it("recurrenceDate catches up from the original past date", () => {
     vi.useFakeTimers();
-    const nowDay = new Date().getDate();
-    const nowMonth = new Date().getMonth();
-    const nowYear = formateToyyyy(new Date());
-    const futureDate = new Date(nowYear, nowMonth + 1, nowDay + 6, 14, 0, 0);
-    vi.setSystemTime(futureDate);
+    const pastDate = new Date(2026, 0, 15, 14, 0, 0);
+    vi.setSystemTime(pastDate);
 
     const nextDate = (recurrence: RecurrenceEnum) =>
       recurrenceDate({
         recurrence,
-        date: futureDate,
+        date: pastDate,
         isRecurrence: true,
       });
 
     expect(nextDate(RecurrenceEnum.Daily)).toStrictEqual(
-      new Date(nowYear, nowMonth + 1, nowDay + 7, 14, 0, 0),
+      new Date(2026, 0, 16, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Weekly)).toStrictEqual(
-      new Date(nowYear, nowMonth + 1, nowDay + 13, 14, 0, 0),
+      new Date(2026, 0, 22, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Monthly)).toStrictEqual(
-      new Date(nowYear, nowMonth + 2, nowDay + 6, 14, 0, 0),
+      new Date(2026, 1, 15, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Yearly)).toStrictEqual(
-      new Date(nowYear + 1, nowMonth + 1, nowDay + 6, 14, 0, 0),
+      new Date(2027, 0, 15, 14, 0, 0),
     );
 
     vi.useRealTimers();
@@ -97,10 +94,7 @@ describe("Date", () => {
 
   it("recurrenceDate same day advances from that date", () => {
     vi.useFakeTimers();
-    const nowDay = new Date().getDate();
-    const nowMonth = new Date().getMonth();
-    const nowYear = formateToyyyy(new Date());
-    const today = new Date(nowYear, nowMonth, nowDay, 14, 0, 0);
+    const today = new Date(2026, 0, 15, 14, 0, 0);
     vi.setSystemTime(today);
 
     const nextDate = (recurrence: RecurrenceEnum) =>
@@ -111,16 +105,16 @@ describe("Date", () => {
       });
 
     expect(nextDate(RecurrenceEnum.Daily)).toStrictEqual(
-      new Date(nowYear, nowMonth, nowDay + 1, 14, 0, 0),
+      new Date(2026, 0, 16, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Weekly)).toStrictEqual(
-      new Date(nowYear, nowMonth, nowDay + 7, 14, 0, 0),
+      new Date(2026, 0, 22, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Monthly)).toStrictEqual(
-      new Date(nowYear, nowMonth + 1, nowDay, 14, 0, 0),
+      new Date(2026, 1, 15, 14, 0, 0),
     );
     expect(nextDate(RecurrenceEnum.Yearly)).toStrictEqual(
-      new Date(nowYear + 1, nowMonth, nowDay, 14, 0, 0),
+      new Date(2027, 0, 15, 14, 0, 0),
     );
 
     vi.useRealTimers();
@@ -128,11 +122,8 @@ describe("Date", () => {
 
   it("recurrenceDate returns dateInit when it is in the future", () => {
     vi.useFakeTimers();
-    const nowYear = formateToyyyy(new Date());
-    const nowMonth = new Date().getMonth();
-    const nowDay = new Date().getDate();
-    vi.setSystemTime(new Date(nowYear, 9, 1, 14, 0, 0));
-    const futureDate = new Date(nowYear, nowMonth, nowDay + 4, 9, 30, 0);
+    vi.setSystemTime(new Date(2026, 9, 1, 14, 0, 0));
+    const futureDate = new Date(2026, 9, 10, 9, 30, 0);
 
     const nextDate = (recurrence: RecurrenceEnum) =>
       recurrenceDate({
@@ -151,7 +142,7 @@ describe("Date", () => {
 
   it("nextOccurrenceByRecurrence Daily", () => {
     const date = new Date(2026, 0, 15, 14, 0, 0);
-    const nextDate = recurrenceHandler({
+    const nextDate = scheduleDate({
       date,
       duration: 1,
       recurrence: RecurrenceEnum.Daily,
@@ -161,7 +152,7 @@ describe("Date", () => {
 
   it("nextOccurrenceByRecurrence Weekly", () => {
     const date = new Date(2026, 0, 15, 14, 0, 0);
-    const nextDate = recurrenceHandler({
+    const nextDate = scheduleDate({
       date,
       duration: 1,
       recurrence: RecurrenceEnum.Weekly,
@@ -171,7 +162,7 @@ describe("Date", () => {
 
   it("nextOccurrenceByRecurrence Monthly", () => {
     const date = new Date(2026, 0, 15, 14, 0, 0);
-    const nextDate = recurrenceHandler({
+    const nextDate = scheduleDate({
       date,
       duration: 1,
       recurrence: RecurrenceEnum.Monthly,
@@ -181,11 +172,59 @@ describe("Date", () => {
 
   it("nextOccurrenceByRecurrence Yearly", () => {
     const date = new Date(2026, 0, 15, 14, 0, 0);
-    const nextDate = recurrenceHandler({
+    const nextDate = scheduleDate({
       date,
       duration: 1,
       recurrence: RecurrenceEnum.Yearly,
     });
     expect(nextDate).toStrictEqual(new Date(2027, 0, 15, 14, 0, 0));
+  });
+
+  describe("calculateNextOccurrenceDate", () => {
+    const startedAt = new Date(2026, 0, 1, 14, 0, 0);
+
+    it("Monthly with long expiredAt", () => {
+      // Jan 2026 → Oct 2026 = 9 mois
+      expect(
+        scheduleCount({
+          startedAt,
+          expiredAt: new Date(2026, 9, 1, 14, 0, 0),
+          recurrence: RecurrenceEnum.Monthly,
+        }),
+      ).toStrictEqual(9);
+    });
+
+    it("Daily with long expiredAt", () => {
+      // Jan 1 → Jan 31 = 30 jours
+      expect(
+        scheduleCount({
+          startedAt,
+          expiredAt: new Date(2026, 0, 31, 14, 0, 0),
+          recurrence: RecurrenceEnum.Daily,
+        }),
+      ).toStrictEqual(30);
+    });
+
+    it("Weekly with long expiredAt", () => {
+      // Jan 1 → Apr 2 = 13 semaines
+      expect(
+        scheduleCount({
+          startedAt,
+          expiredAt: new Date(2026, 3, 2, 14, 0, 0),
+          recurrence: RecurrenceEnum.Weekly,
+        }),
+      ).toStrictEqual(13);
+    });
+
+    it("Yearly with long expiredAt", () => {
+      // Jan 2026 → Jan 2030 = 4 ans
+      expect(
+        scheduleCount({
+          startedAt,
+          expiredAt: new Date(2030, 0, 1, 14, 0, 0),
+          recurrence: RecurrenceEnum.Yearly,
+        }),
+      ).toStrictEqual(4);
+    });
   });
 });
