@@ -33,7 +33,10 @@ export function TransformBooleanString() {
  * }
  */
 export function TransformToNullIfFalsy() {
-  return Transform(({ value }) => (value ? value : null));
+  return Transform(({ value }) => {
+    if (!value) return null;
+    return value;
+  });
 }
 
 /**
@@ -63,5 +66,27 @@ export function TransformArrayString() {
  * }
  */
 export function TransformStringToNumber() {
-  return Transform(({ value }) => (value ? Number(value) : null));
+  return Transform(({ value }) => {
+    if (!value) return null;
+    if (typeof value === "number") return value;
+    return Number(value);
+  });
+}
+
+/**
+ * Transforme une chaîne de date en un objet Date.
+ *
+ * @example
+ * class MyDto {
+ *   @IsDate()
+ *   @TransformStringToDate()
+ *   createdAt?: Date;
+ * }
+ */
+export function TransformStringToDate() {
+  return Transform(({ value }) => {
+    if (!value) return null;
+    if (value instanceof Date) return value;
+    return new Date(value);
+  });
 }
