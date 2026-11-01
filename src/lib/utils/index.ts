@@ -174,7 +174,7 @@ export const calculateInterest = ({
   recurrence,
 }: PropsInterest): CalculateInterestResult => {
   const safeAmount = isNaNumber(Number(amountTotal));
-  const rate = isNaNumber(Number(interest)) / 100;
+  const rate = (isNaNumber(Number(interest)) / 100) * Number(scheduleCount);
   const empty: CalculateInterestResult = {
     recurrence,
     amountTotal: Number(amountTotal),
