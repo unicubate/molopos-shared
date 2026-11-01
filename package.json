@@ -1,6 +1,13 @@
 {
   "name": "mp-shared",
-  "version": "2.1.26",
+  "version": "2.1.27",
+  "engines": {
+    "npm": ">=11.19.0",
+    "node": ">=24.22.1"
+  },
+  "contributors": [
+    "Unicubate (https://github.com/unicubate"
+  ],
   "scripts": {
     "dev": "tsc --watch",
     "docs": "node ./scripts/docs.js",

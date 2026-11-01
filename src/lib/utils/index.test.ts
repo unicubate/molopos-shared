@@ -91,11 +91,11 @@ describe("Utils", () => {
         recurrence: RecurrenceEnum.Monthly,
         amountTotal: 500,
         interest: 3,
-        interestRecurrence: 1.5,
-        amountInterestRecurrence: 51.5,
+        interestRecurrence: 15,
+        amountInterestRecurrence: 65,
         amountRecurrence: 50,
-        interestTotal: 15,
-        amountInterestTotal: 515,
+        interestTotal: 150,
+        amountInterestTotal: 650,
       });
     });
 
