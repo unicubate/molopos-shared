@@ -6,6 +6,7 @@ export * from "./enum";
 export * from "./lib/utils";
 export * from "./url-endpoint";
 export * from "./validator";
+export * from "./data/recurences";
 
 export type DateLike = Date | string;
 

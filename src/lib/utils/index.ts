@@ -1,4 +1,5 @@
-import { DiscountTypeEnum, RecurrenceEnum } from "../../enum";
+import { DiscountTypeEnum } from "../../enum";
+import { RecurrenceEnum } from "../../data/recurences";
 
 interface Props {
   value: number;

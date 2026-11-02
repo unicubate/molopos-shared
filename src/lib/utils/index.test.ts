@@ -9,7 +9,8 @@ import {
   fromCents,
   toCents,
 } from "./index";
-import { DiscountTypeEnum, RecurrenceEnum } from "../../enum";
+import { DiscountTypeEnum } from "../../enum";
+import { RecurrenceEnum } from "../../data/recurences";
 
 describe("Utils", () => {
   test("fromCents", () => {
