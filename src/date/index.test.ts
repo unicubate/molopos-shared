@@ -11,7 +11,7 @@ import {
   scheduleDate,
   scheduleCount,
 } from "./index";
-import { RecurrenceEnum } from "../enum";
+import { RecurrenceEnum } from "../data/recurences";
 
 describe("Date", () => {
   const pastDateTest = new Date(2025, 6, 10, 14, 0, 0);
