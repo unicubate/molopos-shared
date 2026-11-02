@@ -11,7 +11,7 @@ export enum RecurrenceEnum {
   Semestral = "SEMESTRAL", // 2 fois par an
 }
 
-export type Recurrence = {
+type Recurrence = {
   value: RecurrenceEnum;
   label: RecurrenceEnum;
 };
