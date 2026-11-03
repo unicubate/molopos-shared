@@ -1,5 +1,6 @@
 import { DiscountTypeEnum } from "../../enum";
 import { RecurrenceEnum } from "../../data/recurences";
+import { LocaleEnum } from "../../data/langs";
 
 interface Props {
   value: number;
@@ -109,10 +110,10 @@ export const formatPercent = ({
   locale,
 }: {
   value: number;
-  locale: string;
+  locale?: string;
 }) => {
   const newValue = isNaNumber(value);
-  const result = new Intl.NumberFormat(locale, {
+  const result = new Intl.NumberFormat(locale ?? LocaleEnum.en, {
     style: "percent",
     notation: "standard",
     maximumFractionDigits: 1,
