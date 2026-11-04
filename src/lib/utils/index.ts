@@ -110,9 +110,9 @@ export const formatePrice = ({
  * @example
  * formatPercent(20, 'en') // 20%
  */
-export const formatPercent = (value: number, locale = LocaleEnum.en) => {
+export const formatPercent = (value: number, locale?: string) => {
   const newValue = isNaNumber(value);
-  const result = new Intl.NumberFormat(locale, {
+  const result = new Intl.NumberFormat(locale ?? LocaleEnum.en, {
     style: "percent",
     notation: "standard",
     maximumFractionDigits: 1,
