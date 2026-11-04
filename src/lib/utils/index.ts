@@ -13,7 +13,7 @@ interface Props {
 export const toRounded = (n: number, decimales = 2): number => {
   const facteur = 10 ** decimales;
   return Math.round(n * facteur) / facteur;
-}
+};
 
 const isNaNumber = (value: number) => (!isNaN(Number(value)) ? value : 0);
 /**
@@ -108,17 +108,11 @@ export const formatePrice = ({
 
 /**
  * @example
- * formatPercent({ value: 20, locale: 'fr' }) // 20%
+ * formatPercent(20, 'en') // 20%
  */
-export const formatPercent = ({
-  value,
-  locale,
-}: {
-  value: number;
-  locale?: string;
-}) => {
+export const formatPercent = (value: number, locale = LocaleEnum.en) => {
   const newValue = isNaNumber(value);
-  const result = new Intl.NumberFormat(locale ?? LocaleEnum.en, {
+  const result = new Intl.NumberFormat(locale, {
     style: "percent",
     notation: "standard",
     maximumFractionDigits: 1,

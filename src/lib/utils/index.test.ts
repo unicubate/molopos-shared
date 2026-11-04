@@ -75,8 +75,10 @@ describe("Utils", () => {
   });
 
   test("formatPercent", () => {
-    const result = formatPercent({ value: 20, locale: "fr" });
+    const result = formatPercent(20);
     expect(result).not.toBeNull();
+    expect(result).toBeDefined();
+    expect(result).toEqual("20%");
   });
 
   test("capitalizeFirstLetter", () => {
