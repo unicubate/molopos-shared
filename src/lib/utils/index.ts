@@ -10,6 +10,11 @@ interface Props {
   maximumFractionDigits?: number;
 }
 
+export const toRounded = (n: number, decimales = 2): number => {
+  const facteur = 10 ** decimales;
+  return Math.round(n * facteur) / facteur;
+}
+
 const isNaNumber = (value: number) => (!isNaN(Number(value)) ? value : 0);
 /**
  * @example
