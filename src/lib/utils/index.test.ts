@@ -8,20 +8,21 @@ import {
   formatPercent,
   fromCents,
   toCents,
+  toRounded,
 } from "./index";
 import { DiscountTypeEnum } from "../../enum";
 import { RecurrenceEnum } from "../../data/recurences";
 
 describe("Utils", () => {
   test("fromCents", () => {
-    const result = fromCents(100);
-    expect(result).toEqual(1);
+    const result = fromCents(123);
+    expect(result).toEqual(1.23);
     expect(result).not.toBeNull();
   });
 
   test("toCents", () => {
-    const result = toCents(1);
-    expect(result).toEqual(100);
+    const result = toCents(1.23);
+    expect(result).toEqual(123);
     expect(result).not.toBeNull();
   });
 
@@ -29,6 +30,13 @@ describe("Utils", () => {
     const result = calculVat({ value: 100, percentage: 20 });
     expect(result).toEqual(20);
     expect(result).not.toBeNull();
+  });
+
+  test("toRounded", () => {
+    const result = toRounded(104.1999, 2);
+    expect(result).toEqual(104.2);
+    expect(result).not.toBeNull();
+    expect(result).toBeDefined();
   });
 
   test("calculDiscount percentage", () => {
@@ -67,8 +75,10 @@ describe("Utils", () => {
   });
 
   test("formatPercent", () => {
-    const result = formatPercent({ value: 20, locale: "fr" });
+    const result = formatPercent(20);
     expect(result).not.toBeNull();
+    expect(result).toBeDefined();
+    expect(result).toEqual("20%");
   });
 
   test("capitalizeFirstLetter", () => {
