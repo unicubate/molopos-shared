@@ -54,6 +54,7 @@ export enum ExpenseItemModuleEnum {
   Loan = "LOAN",
   Expense = "EXPENSE",
   Interest = "INTEREST",
+  Repayment = "REPAYMENT",
   MutualFund = "MUTUALFUND",
   CollaborativeFund = "COLLABORATIVEFUND",
 }
@@ -92,6 +93,7 @@ export enum QueryTypeEnum {
   Warehouse = "WAREHOUSE",
   OrderItem = "ORDERITEM",
   QuoteItem = "QUOTEITEM",
+  Repayment = "REPAYMENT",
   MutualFund = "MUTUALFUND",
   Transaction = "TRANSACTION",
   QuoteOption = "QUOTEOPTION",
