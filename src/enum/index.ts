@@ -48,9 +48,21 @@ export enum ExpenseModuleEnum {
 }
 
 /**
+ * Expense item module enum
+ */
+export enum ExpenseItemModuleEnum {
+  Loan = "LOAN",
+  Expense = "EXPENSE",
+  Interest = "INTEREST",
+  MutualFund = "MUTUALFUND",
+  CollaborativeFund = "COLLABORATIVEFUND",
+}
+
+/**
  * Query type enum
  */
 export enum QueryTypeEnum {
+  Loan = "LOAN",
   Task = "TASK",
   Unit = "UNIT",
   Post = "POST",
@@ -69,6 +81,7 @@ export enum QueryTypeEnum {
   Profile = "PROFILE",
   Variant = "VARIANT",
   Project = "PROJECT",
+  Interest = "INTEREST",
   Supplier = "SUPPLIER",
   Pipeline = "PIPELINE",
   Customer = "CUSTOMER",
@@ -85,13 +98,13 @@ export enum QueryTypeEnum {
   UserAddress = "USERADDRESS",
   Subcategory = "SUBCATEGORY",
   ExpenseItem = "EXPENSEITEM",
-  Organization = "ORGANIZATION",
   Advancement = "ADVANCEMENT",
   PaymentType = "PAYMENTTYPE",
-  ApplicationSection = "APPLICATIONSECTION",
-  CollaborativeFund = "COLLABORATIVEFUND",
-  Subscription = "SUBSCRIPTION",
   ExpenseLoan = "EXPENSELOAN",
+  Organization = "ORGANIZATION",
+  Subscription = "SUBSCRIPTION",
+  CollaborativeFund = "COLLABORATIVEFUND",
+  ApplicationSection = "APPLICATIONSECTION",
   InventoryAdjustment = "INVENTORYADJUSTMENT",
   ExpenseLoanShedule = "EXPENSELOANSHEDULE",
 }
