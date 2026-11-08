@@ -494,3 +494,19 @@ export enum StripeStatusSubscribeEnum {
   Unpaid = "unpaid",
   PastDue = "past_due",
 }
+
+/**
+ * Allocation mode enum
+ */
+export enum AllocationModeEnum {
+  Manual = 'MANUAL',
+  Proportional = 'PROPORTIONAL',
+}
+
+/**
+ * Loan fundingable module enum
+ */
+export enum LoanFundingableModuleEnum {
+  Customer = 'CUSTOMER',
+  Supplier = 'SUPPLIER',
+}

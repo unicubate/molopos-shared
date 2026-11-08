@@ -14,7 +14,7 @@ import {
 import { UTCDate, utc } from "@date-fns/utc";
 import { de, enUS, es, fr, it, ru, enGB } from "date-fns/locale";
 import { RecurrenceEnum } from "../data/recurences";
-import { DateLike, LocaleEnum } from "../index";
+import type { DateLike, LocaleEnum } from "../index";
 interface PropsRecurrence {
   date: Date;
   duration?: number;
