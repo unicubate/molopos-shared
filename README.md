@@ -18,6 +18,7 @@ import { CustomerTypeEnum } from '@molopos/shared';
 - [Discount Type Enum](#discount-type-enum-discounttypeenum), Discount type enum
 - [Payment Method Enum](#payment-method-enum-paymentmethodenum), Payment method enum
 - [Product Type Enum](#product-type-enum-producttypeenum), Product type enum
+- [Expense Module Enum](#expense-module-enum-expensemoduleenum), Expense item module enum
 - [Expense Item Module Enum](#expense-item-module-enum-expenseitemmoduleenum), Expense item module enum
 - [Query Type Enum](#query-type-enum-querytypeenum), Query type enum
 - [Activity Model Enum](#activity-model-enum-activitymodelenum), Activity model enum
@@ -38,7 +39,6 @@ import { CustomerTypeEnum } from '@molopos/shared';
 - [Status Enum](#status-enum-statusenum), Status enum
 - [Section Status Enum](#section-status-enum-sectionstatusenum), Section status enum
 - [Upload Folder Enum](#upload-folder-enum-uploadfolderenum), Upload folder enum
-- [Recurrence Enum](#recurrence-enum-recurrenceenum), Recurrence enum
 - [Provider Enum](#provider-enum-providerenum), Provider enum
 - [Increment Decrement Enum](#increment-decrement-enum-incrementdecrementenum), IncrementDecrement enum
 - [Inventory Adjustment Movement Type Enum](#inventory-adjustment-movement-type-enum-inventoryadjustmentmovementtypeenum), Inventory adjustment input mode enum
@@ -51,6 +51,8 @@ import { CustomerTypeEnum } from '@molopos/shared';
 - [Order Type Enum](#order-type-enum-ordertypeenum), Order type enum
 - [Notification Target Enum](#notification-target-enum-notificationtargetenum), Notification target enum
 - [Stripe Status Subscribe Enum](#stripe-status-subscribe-enum-stripestatussubscribeenum), Stripe status subscrube
+- [Loan Funding Allocation Enum](#loan-funding-allocation-enum-loanfundingallocationenum), Loan funding allocation enum
+- [Loan Funding Module Enum](#loan-funding-module-enum-loanfundingmoduleenum), Loan fundingable module enum
 ## Customer Type Enum <sub><sup>[CustomerTypeEnum](./src/enum/index.ts#L4)</sup></sub>
 
 Customer type enum
@@ -95,21 +97,34 @@ Product type enum
 
 </table>
 
-## Expense Item Module Enum <sub><sup>[ExpenseItemModuleEnum](./src/enum/index.ts#L44)</sup></sub>
+## Expense Module Enum <sub><sup>[ExpenseModuleEnum](./src/enum/index.ts#L44)</sup></sub>
+
+Expense item module enum
+<table>
+<tr><td>Expense</td><td>"EXPENSE"</td></tr>
+<tr><td>Mutual Fund</td><td>"MUTUALFUND"</td></tr>
+<tr><td>Collaborative Fund</td><td>"COLLABORATIVEFUND"</td></tr>
+
+</table>
+
+## Expense Item Module Enum <sub><sup>[ExpenseItemModuleEnum](./src/enum/index.ts#L53)</sup></sub>
 
 Expense item module enum
 <table>
 <tr><td>Loan</td><td>"LOAN"</td></tr>
 <tr><td>Expense</td><td>"EXPENSE"</td></tr>
-<tr><td>Loan Shedule</td><td>"LOANSHEDULE"</td></tr>
+<tr><td>Interest</td><td>"INTEREST"</td></tr>
+<tr><td>Repayment</td><td>"REPAYMENT"</td></tr>
+<tr><td>Mutual Fund</td><td>"MUTUALFUND"</td></tr>
 <tr><td>Collaborative Fund</td><td>"COLLABORATIVEFUND"</td></tr>
 
 </table>
 
-## Query Type Enum <sub><sup>[QueryTypeEnum](./src/enum/index.ts#L54)</sup></sub>
+## Query Type Enum <sub><sup>[QueryTypeEnum](./src/enum/index.ts#L65)</sup></sub>
 
 Query type enum
 <table>
+<tr><td>Loan</td><td>"LOAN"</td></tr>
 <tr><td>Task</td><td>"TASK"</td></tr>
 <tr><td>Unit</td><td>"UNIT"</td></tr>
 <tr><td>Post</td><td>"POST"</td></tr>
@@ -128,6 +143,7 @@ Query type enum
 <tr><td>Profile</td><td>"PROFILE"</td></tr>
 <tr><td>Variant</td><td>"VARIANT"</td></tr>
 <tr><td>Project</td><td>"PROJECT"</td></tr>
+<tr><td>Interest</td><td>"INTEREST"</td></tr>
 <tr><td>Supplier</td><td>"SUPPLIER"</td></tr>
 <tr><td>Pipeline</td><td>"PIPELINE"</td></tr>
 <tr><td>Customer</td><td>"CUSTOMER"</td></tr>
@@ -138,24 +154,26 @@ Query type enum
 <tr><td>Warehouse</td><td>"WAREHOUSE"</td></tr>
 <tr><td>Order Item</td><td>"ORDERITEM"</td></tr>
 <tr><td>Quote Item</td><td>"QUOTEITEM"</td></tr>
+<tr><td>Repayment</td><td>"REPAYMENT"</td></tr>
+<tr><td>Mutual Fund</td><td>"MUTUALFUND"</td></tr>
 <tr><td>Transaction</td><td>"TRANSACTION"</td></tr>
 <tr><td>Quote Option</td><td>"QUOTEOPTION"</td></tr>
 <tr><td>User Address</td><td>"USERADDRESS"</td></tr>
 <tr><td>Subcategory</td><td>"SUBCATEGORY"</td></tr>
 <tr><td>Expense Item</td><td>"EXPENSEITEM"</td></tr>
-<tr><td>Organization</td><td>"ORGANIZATION"</td></tr>
 <tr><td>Advancement</td><td>"ADVANCEMENT"</td></tr>
 <tr><td>Payment Type</td><td>"PAYMENTTYPE"</td></tr>
-<tr><td>Application Section</td><td>"APPLICATIONSECTION"</td></tr>
-<tr><td>Collaborative Fund</td><td>"COLLABORATIVEFUND"</td></tr>
-<tr><td>Subscription</td><td>"SUBSCRIPTION"</td></tr>
 <tr><td>Expense Loan</td><td>"EXPENSELOAN"</td></tr>
+<tr><td>Organization</td><td>"ORGANIZATION"</td></tr>
+<tr><td>Subscription</td><td>"SUBSCRIPTION"</td></tr>
+<tr><td>Collaborative Fund</td><td>"COLLABORATIVEFUND"</td></tr>
+<tr><td>Application Section</td><td>"APPLICATIONSECTION"</td></tr>
 <tr><td>Inventory Adjustment</td><td>"INVENTORYADJUSTMENT"</td></tr>
 <tr><td>Expense Loan Shedule</td><td>"EXPENSELOANSHEDULE"</td></tr>
 
 </table>
 
-## Activity Model Enum <sub><sup>[ActivityModelEnum](./src/enum/index.ts#L102)</sup></sub>
+## Activity Model Enum <sub><sup>[ActivityModelEnum](./src/enum/index.ts#L117)</sup></sub>
 
 Activity model enum
 <table>
@@ -259,7 +277,7 @@ Activity model enum
 
 </table>
 
-## Transaction Direction Enum <sub><sup>[TransactionDirectionEnum](./src/enum/index.ts#L205)</sup></sub>
+## Transaction Direction Enum <sub><sup>[TransactionDirectionEnum](./src/enum/index.ts#L220)</sup></sub>
 
 Transaction direction enum
 <table>
@@ -269,7 +287,7 @@ Transaction direction enum
 
 </table>
 
-## Transaction Model Enum <sub><sup>[TransactionModelEnum](./src/enum/index.ts#L214)</sup></sub>
+## Transaction Model Enum <sub><sup>[TransactionModelEnum](./src/enum/index.ts#L229)</sup></sub>
 
 Transaction model enum
 <table>
@@ -281,7 +299,7 @@ Transaction model enum
 
 </table>
 
-## Boolean String Enum <sub><sup>[BooleanStringEnum](./src/enum/index.ts#L225)</sup></sub>
+## Boolean String Enum <sub><sup>[BooleanStringEnum](./src/enum/index.ts#L240)</sup></sub>
 
 Boolean string enum
 <table>
@@ -290,7 +308,7 @@ Boolean string enum
 
 </table>
 
-## Sort Order Enum <sub><sup>[SortOrderEnum](./src/enum/index.ts#L233)</sup></sub>
+## Sort Order Enum <sub><sup>[SortOrderEnum](./src/enum/index.ts#L248)</sup></sub>
 
 Sort type enum
 <table>
@@ -299,7 +317,7 @@ Sort type enum
 
 </table>
 
-## Export Ext Enum <sub><sup>[ExportExtEnum](./src/enum/index.ts#L241)</sup></sub>
+## Export Ext Enum <sub><sup>[ExportExtEnum](./src/enum/index.ts#L256)</sup></sub>
 
 Export file extensions
 <table>
@@ -308,7 +326,7 @@ Export file extensions
 
 </table>
 
-## Quote Signed View Enum <sub><sup>[QuoteSignedViewEnum](./src/enum/index.ts#L249)</sup></sub>
+## Quote Signed View Enum <sub><sup>[QuoteSignedViewEnum](./src/enum/index.ts#L264)</sup></sub>
 
 Quote signed view enum
 <table>
@@ -317,7 +335,7 @@ Quote signed view enum
 
 </table>
 
-## Contributor Role Enum <sub><sup>[ContributorRoleEnum](./src/enum/index.ts#L257)</sup></sub>
+## Contributor Role Enum <sub><sup>[ContributorRoleEnum](./src/enum/index.ts#L272)</sup></sub>
 
 Contributor role enum
 <table>
@@ -326,7 +344,7 @@ Contributor role enum
 
 </table>
 
-## Status Quote Item Enum <sub><sup>[StatusQuoteItemEnum](./src/enum/index.ts#L265)</sup></sub>
+## Status Quote Item Enum <sub><sup>[StatusQuoteItemEnum](./src/enum/index.ts#L280)</sup></sub>
 
 Status quote item enum
 <table>
@@ -338,7 +356,7 @@ Status quote item enum
 
 </table>
 
-## Private Public Enum <sub><sup>[PrivatePublicEnum](./src/enum/index.ts#L276)</sup></sub>
+## Private Public Enum <sub><sup>[PrivatePublicEnum](./src/enum/index.ts#L291)</sup></sub>
 
 Private public enum
 <table>
@@ -347,7 +365,7 @@ Private public enum
 
 </table>
 
-## Pages Provider Enum <sub><sup>[PagesProviderEnum](./src/enum/index.ts#L284)</sup></sub>
+## Pages Provider Enum <sub><sup>[PagesProviderEnum](./src/enum/index.ts#L299)</sup></sub>
 
 Pages provider enum
 <table>
@@ -360,7 +378,7 @@ Pages provider enum
 
 </table>
 
-## Application Section Module Enum <sub><sup>[ApplicationSectionModuleEnum](./src/enum/index.ts#L296)</sup></sub>
+## Application Section Module Enum <sub><sup>[ApplicationSectionModuleEnum](./src/enum/index.ts#L311)</sup></sub>
 
 Application section module enum
 <table>
@@ -373,7 +391,7 @@ Application section module enum
 
 </table>
 
-## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L308)</sup></sub>
+## User Status Enum <sub><sup>[UserStatusEnum](./src/enum/index.ts#L323)</sup></sub>
 
 User status enum
 <table>
@@ -384,7 +402,7 @@ User status enum
 
 </table>
 
-## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L318)</sup></sub>
+## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L333)</sup></sub>
 
 Pricing type status enum
 <table>
@@ -401,7 +419,7 @@ Pricing type status enum
 
 </table>
 
-## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L334)</sup></sub>
+## Quote Status Enum <sub><sup>[QuoteStatusEnum](./src/enum/index.ts#L349)</sup></sub>
 
 Quote status enum
 <table>
@@ -415,7 +433,7 @@ Quote status enum
 
 </table>
 
-## Status Enum <sub><sup>[StatusEnum](./src/enum/index.ts#L347)</sup></sub>
+## Status Enum <sub><sup>[StatusEnum](./src/enum/index.ts#L362)</sup></sub>
 
 Status enum
 <table>
@@ -424,7 +442,7 @@ Status enum
 
 </table>
 
-## Section Status Enum <sub><sup>[SectionStatusEnum](./src/enum/index.ts#L355)</sup></sub>
+## Section Status Enum <sub><sup>[SectionStatusEnum](./src/enum/index.ts#L370)</sup></sub>
 
 Section status enum
 <table>
@@ -433,7 +451,7 @@ Section status enum
 
 </table>
 
-## Upload Folder Enum <sub><sup>[UploadFolderEnum](./src/enum/index.ts#L363)</sup></sub>
+## Upload Folder Enum <sub><sup>[UploadFolderEnum](./src/enum/index.ts#L378)</sup></sub>
 
 Upload folder enum
 <table>
@@ -444,18 +462,7 @@ Upload folder enum
 
 </table>
 
-## Recurrence Enum <sub><sup>[RecurrenceEnum](./src/enum/index.ts#L373)</sup></sub>
-
-Recurrence enum
-<table>
-<tr><td>Daily</td><td>"DAILY"</td></tr>
-<tr><td>Weekly</td><td>"WEEKLY"</td></tr>
-<tr><td>Monthly</td><td>"MONTHLY"</td></tr>
-<tr><td>Yearly</td><td>"YEARLY"</td></tr>
-
-</table>
-
-## Provider Enum <sub><sup>[ProviderEnum](./src/enum/index.ts#L383)</sup></sub>
+## Provider Enum <sub><sup>[ProviderEnum](./src/enum/index.ts#L389)</sup></sub>
 
 Provider enum
 <table>
@@ -467,7 +474,7 @@ Provider enum
 
 </table>
 
-## Increment Decrement Enum <sub><sup>[IncrementDecrementEnum](./src/enum/index.ts#L394)</sup></sub>
+## Increment Decrement Enum <sub><sup>[IncrementDecrementEnum](./src/enum/index.ts#L400)</sup></sub>
 
 IncrementDecrement enum
 <table>
@@ -477,7 +484,7 @@ IncrementDecrement enum
 
 </table>
 
-## Inventory Adjustment Movement Type Enum <sub><sup>[InventoryAdjustmentMovementTypeEnum](./src/enum/index.ts#L403)</sup></sub>
+## Inventory Adjustment Movement Type Enum <sub><sup>[InventoryAdjustmentMovementTypeEnum](./src/enum/index.ts#L409)</sup></sub>
 
 Inventory adjustment input mode enum
 <table>
@@ -486,7 +493,7 @@ Inventory adjustment input mode enum
 
 </table>
 
-## Order Status Enum <sub><sup>[OrderStatusEnum](./src/enum/index.ts#L411)</sup></sub>
+## Order Status Enum <sub><sup>[OrderStatusEnum](./src/enum/index.ts#L417)</sup></sub>
 
 Order status enum
 <table>
@@ -500,7 +507,7 @@ Order status enum
 
 </table>
 
-## Party Enum <sub><sup>[PartyEnum](./src/enum/index.ts#L424)</sup></sub>
+## Party Enum <sub><sup>[PartyEnum](./src/enum/index.ts#L430)</sup></sub>
 
 Quote party enum
 <table>
@@ -509,7 +516,7 @@ Quote party enum
 
 </table>
 
-## Upload Type Enum <sub><sup>[UploadTypeEnum](./src/enum/index.ts#L432)</sup></sub>
+## Upload Type Enum <sub><sup>[UploadTypeEnum](./src/enum/index.ts#L438)</sup></sub>
 
 Upload type enum
 <table>
@@ -518,7 +525,7 @@ Upload type enum
 
 </table>
 
-## Action Payment Enum <sub><sup>[ActionPaymentEnum](./src/enum/index.ts#L440)</sup></sub>
+## Action Payment Enum <sub><sup>[ActionPaymentEnum](./src/enum/index.ts#L446)</sup></sub>
 
 Action payment enum
 <table>
@@ -526,7 +533,7 @@ Action payment enum
 
 </table>
 
-## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L447)</sup></sub>
+## Pricing Type Enum <sub><sup>[PricingTypeEnum](./src/enum/index.ts#L453)</sup></sub>
 
 Pricing type enum
 <table>
@@ -539,7 +546,7 @@ Pricing type enum
 
 </table>
 
-## Pricing Variant Enum <sub><sup>[PricingVariantEnum](./src/enum/index.ts#L459)</sup></sub>
+## Pricing Variant Enum <sub><sup>[PricingVariantEnum](./src/enum/index.ts#L465)</sup></sub>
 
 Pricing variant enum
 <table>
@@ -550,7 +557,7 @@ Pricing variant enum
 
 </table>
 
-## Order Type Enum <sub><sup>[OrderTypeEnum](./src/enum/index.ts#L469)</sup></sub>
+## Order Type Enum <sub><sup>[OrderTypeEnum](./src/enum/index.ts#L475)</sup></sub>
 
 Order type enum
 <table>
@@ -559,7 +566,7 @@ Order type enum
 
 </table>
 
-## Notification Target Enum <sub><sup>[NotificationTargetEnum](./src/enum/index.ts#L477)</sup></sub>
+## Notification Target Enum <sub><sup>[NotificationTargetEnum](./src/enum/index.ts#L483)</sup></sub>
 
 Notification target enum
 <table>
@@ -569,13 +576,31 @@ Notification target enum
 
 </table>
 
-## Stripe Status Subscribe Enum <sub><sup>[StripeStatusSubscribeEnum](./src/enum/index.ts#L486)</sup></sub>
+## Stripe Status Subscribe Enum <sub><sup>[StripeStatusSubscribeEnum](./src/enum/index.ts#L492)</sup></sub>
 
 Stripe status subscrube
 <table>
 <tr><td>Active</td><td>"active"</td></tr>
 <tr><td>Unpaid</td><td>"unpaid"</td></tr>
 <tr><td>Past Due</td><td>"past_due"</td></tr>
+
+</table>
+
+## Loan Funding Allocation Enum <sub><sup>[LoanFundingAllocationEnum](./src/enum/index.ts#L501)</sup></sub>
+
+Loan funding allocation enum
+<table>
+<tr><td>Manual</td><td>'MANUAL'</td></tr>
+<tr><td>Proportional</td><td>'PROPORTIONAL'</td></tr>
+
+</table>
+
+## Loan Funding Module Enum <sub><sup>[LoanFundingModuleEnum](./src/enum/index.ts#L509)</sup></sub>
+
+Loan fundingable module enum
+<table>
+<tr><td>Customer</td><td>'CUSTOMER'</td></tr>
+<tr><td>Supplier</td><td>'SUPPLIER'</td></tr>
 
 </table>
 
