@@ -502,11 +502,3 @@ export enum LoanFundingAllocationEnum {
   Manual = 'MANUAL',
   Proportional = 'PROPORTIONAL',
 }
-
-/**
- * Loan fundingable module enum
- */
-export enum LoanFundingModuleEnum {
-  Customer = 'CUSTOMER',
-  Supplier = 'SUPPLIER',
-}
