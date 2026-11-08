@@ -496,9 +496,9 @@ export enum StripeStatusSubscribeEnum {
 }
 
 /**
- * Allocation mode enum
+ * Loan funding allocation enum
  */
-export enum AllocationModeEnum {
+export enum LoanFundingAllocationEnum {
   Manual = 'MANUAL',
   Proportional = 'PROPORTIONAL',
 }
@@ -506,7 +506,7 @@ export enum AllocationModeEnum {
 /**
  * Loan fundingable module enum
  */
-export enum LoanFundingableModuleEnum {
+export enum LoanFundingModuleEnum {
   Customer = 'CUSTOMER',
   Supplier = 'SUPPLIER',
 }
