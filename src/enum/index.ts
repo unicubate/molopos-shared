@@ -508,4 +508,7 @@ export enum LoanFundingAllocationEnum {
 export enum QuoteModuleEnum {
   Quote = "QUOTE",
   Invoice = "INVOICE",
+  Discount = "DISCOUNT",
+  QuoteOption = "QUOTEOPTION",
+  Advancement = "ADVANCEMENT",
 }
