@@ -382,7 +382,6 @@ export enum UploadFolderEnum {
   Document = "DOCUMENT",
 }
 
-
 /**
  * Provider enum
  */
@@ -499,14 +498,14 @@ export enum StripeStatusSubscribeEnum {
  * Loan funding allocation enum
  */
 export enum LoanFundingAllocationEnum {
-  Manual = 'MANUAL',
-  Proportional = 'PROPORTIONAL',
+  Manual = "MANUAL",
+  Proportional = "PROPORTIONAL",
 }
 
 /**
- * Loan fundingable module enum
+ * Quote module enum
  */
-export enum LoanFundingModuleEnum {
-  Customer = 'CUSTOMER',
-  Supplier = 'SUPPLIER',
+export enum QuoteModuleEnum {
+  Quote = "QUOTE",
+  Invoice = "INVOICE",
 }
