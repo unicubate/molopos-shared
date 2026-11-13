@@ -512,3 +512,11 @@ export enum QuoteModuleEnum {
   QuoteOption = "QUOTEOPTION",
   Advancement = "ADVANCEMENT",
 }
+
+/**
+ * Expense item Party Role enum
+ */
+export enum ExpenseItemPartyRoleEnum {
+  Borrower = "BORROWER",
+  Lender = "LENDER",
+}
