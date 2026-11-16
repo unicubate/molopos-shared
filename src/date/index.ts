@@ -52,9 +52,11 @@ export const formateDate = (date: Date, locale: string) => {
       ? "PPPp"
       : "Pp";
 
-  return formatDateFns(date, formatString, {
-    locale: dataFnsLocale[locale],
-  });
+  return date
+    ? formatDateFns(date, formatString, {
+        locale: dataFnsLocale[locale],
+      })
+    : null;
 };
 
 /**
@@ -62,27 +64,33 @@ export const formateDate = (date: Date, locale: string) => {
  * formatedPP("2026-01-01", "en-US"); // "Apr 29, 2026"
  */
 export const formatedPP = (date: DateLike, locale?: string) =>
-  formatDateFns(date, "PP", {
-    locale: dataFnsLocale[locale],
-  });
+  date
+    ? formatDateFns(date, "PP", {
+        locale: dataFnsLocale[locale],
+      })
+    : null;
 
 /**
  * @example
  * formatedPPP("2026-01-01", "en-US"); // "April 29th 2026"
  */
 export const formatedPPP = (date: DateLike, locale: string) =>
-  formatDateFns(date, "PPP", {
-    locale: dataFnsLocale[locale],
-  });
+  date
+    ? formatDateFns(date, "PPP", {
+        locale: dataFnsLocale[locale],
+      })
+    : null;
 
 /**
  * @example
  * formateddMMYYYY("2026-01-01", "en-US"); // "1 January 2026"
  */
 export const formateddMMYYYY = (date: DateLike, locale: string) => {
-  return formatDateFns(date, "PPP", {
-    locale: dataFnsLocale[locale],
-  });
+  return date
+    ? formatDateFns(date, "PPP", {
+        locale: dataFnsLocale[locale],
+      })
+    : null;
 };
 
 /**
@@ -90,9 +98,11 @@ export const formateddMMYYYY = (date: DateLike, locale: string) => {
  * formateUnixIntegerPPp(1792794512, "en"); // "24 Oct 2026, 00:28"
  */
 export const formateUnixIntegerPPp = (value: number, locale: string) => {
-  return formatDateFns(new Date(Number(value) * 1000), "PPp", {
-    locale: dataFnsLocale[locale],
-  });
+  return value
+    ? formatDateFns(new Date(Number(value) * 1000), "PPp", {
+        locale: dataFnsLocale[locale],
+      })
+    : null;
 };
 
 /**
@@ -100,9 +110,11 @@ export const formateUnixIntegerPPp = (value: number, locale: string) => {
  * formateddMMYYYYHHmm("2026-01-01", "en-US"); // "1 January 2026 00:00"
  */
 export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
-  return formatDateFns(date, "PPPp", {
-    locale: dataFnsLocale[locale],
-  });
+  return date
+    ? formatDateFns(date, "PPPp", {
+        locale: dataFnsLocale[locale],
+      })
+    : null;
 };
 
 /**
@@ -110,60 +122,62 @@ export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
  * formateHHmm("2026-01-01T00:00:00Z", "en-US"); // "00:00"
  */
 export const formateHHmm = (date: Date, locale: string) =>
-  formatDateFns(date, "p", { locale: dataFnsLocale[locale] });
+  date ? formatDateFns(date, "p", { locale: dataFnsLocale[locale] }) : null;
 
 /**
  * @example
  * formateHH("2026-01-01T00:00:00Z"); // "00:00"
  */
-export const formateHH = (date: Date) => formatDateFns(date, "HH");
+export const formateHH = (date: Date) =>
+  date ? formatDateFns(date, "HH") : null;
 
 /**
  * @example
  * formatDateDDMMYYToUtc("2026-01-01T00:00:00Z", "en"); // "01/01/2026"
  */
 export const formatDateDDMMYYToUtc = (date: Date, locale: string) =>
-  formatDateFns(date, "P", { locale: dataFnsLocale[locale] });
+  date ? formatDateFns(date, "P", { locale: dataFnsLocale[locale] }) : null;
 
 /**
  * @example
  * formatDateFnsToDdMMYYYY("2026-01-01T00:00:00Z"); // "01-01-2026"
  */
 export const formatDateFnsToDdMMYYYY = (date: Date) =>
-  formatDateFns(date, "dd-MM-yyyy");
+  date ? formatDateFns(date, "dd-MM-yyyy") : null;
 
 /**
  * @example
  * formatDateFnsToDdMMYYYYHHmmss("2026-01-01T00:00:00Z"); // "01-01-2026 00:00:00"
  */
 export const formatDateFnsToDdMMYYYYHHmm = (date: Date) =>
-  formatDateFns(date, "dd-MM-yyyy HH:mm");
+  date ? formatDateFns(date, "dd-MM-yyyy HH:mm") : null;
 
 /**
  * @example
  * formateDateMMyyyy("2026-01-01T00:00:00Z"); // "012026"
  */
-export const formateDateMMyyyy = (date: Date) => formatDateFns(date, "MMyyyy");
+export const formateDateMMyyyy = (date: Date) =>
+  date ? formatDateFns(date, "MMyyyy") : null;
 
 /**
  * @example
  * formateToyyyy("2026-01-01T00:00:00Z"); // 2026
  */
-export const formateToyyyy = (date: Date) => getYear(date);
+export const formateToyyyy = (date: Date) => (date ? getYear(date) : null);
 
 /**
  * @example
  * formateDateUnixInteger("2026-01-01T00:00:00Z"); // 1719168000
  */
 export const formateDateUnixInteger = (date: Date) =>
-  Number(formatDateFns(date, "T"));
+  date ? Number(formatDateFns(date, "T")) : null;
 
 /**
  * @example
  * addDaysToTimeNowUtcDate(1); // 2026-01-02
  */
 export const addDaysToTimeNowUtcDate = (value: number) =>
-  addDaysFns(dateTimeNowUtc(), Number(value));
+  value ? addDaysFns(dateTimeNowUtc(), Number(value)) : null;
 
 /**
  *
@@ -171,35 +185,39 @@ export const addDaysToTimeNowUtcDate = (value: number) =>
  * dateTimeNowUtcUnixInteger(); // 1719168000
  */
 export const dateTimeNowUtcUnixInteger = () =>
-  Number(formatDateFns(dateTimeNowUtc(), "T"));
+  Number(formatDateFns(dateTimeNowUtc(), "T")) || null;
 
 /**
  * @example
  * addMonthsToTimeNowUtcDate(1); // 1719168000
  */
 export const addMonthsToTimeNowUtcUnixInteger = (month: number) =>
-  Number(formatDateFns(addMonthsFns(dateTimeNowUtc(), Number(month)), "T"));
+  month
+    ? Number(formatDateFns(addMonthsFns(dateTimeNowUtc(), Number(month)), "T"))
+    : null;
 
 /**
  * @example
  * addDaysToTimeNowUtcUnixInteger(1); // 1719168000
  */
 export const addDaysToTimeNowUtcUnixInteger = (value: number) =>
-  Number(formatDateFns(addDaysFns(dateTimeNowUtc(), Number(value)), "T"));
+  value
+    ? Number(formatDateFns(addDaysFns(dateTimeNowUtc(), Number(value)), "T"))
+    : null;
 
 /**
  * @example
  * addMonthsToTimeDateNowUtc(1); // 2026-01-02
  */
 export const addMonthsToTimeDateNowUtc = (value: number) =>
-  addMonthsFns(dateTimeNowUtc(), Number(value));
+  value ? addMonthsFns(dateTimeNowUtc(), Number(value)) : null;
 
 /**
  * @example
  * addDaysToTimeDateNowUtc(1); // 2026-01-02
  */
 export const addDaysToTimeDateNowUtc = (value: number) =>
-  addDaysFns(dateTimeNowUtc(), Number(value));
+  value ? addDaysFns(dateTimeNowUtc(), Number(value)) : null;
 
 /**
  * @example
@@ -207,7 +225,9 @@ export const addDaysToTimeDateNowUtc = (value: number) =>
  */
 export const addDaysToTimeDateStartOfDayNowUtc = (value: number) =>
   new Date(
-    startOfDayFns(addDaysFns(new UTCDate(dateTimeNowUtc()), Number(value))),
+    value
+      ? startOfDayFns(addDaysFns(new UTCDate(dateTimeNowUtc()), Number(value)))
+      : null,
   );
 
 /**
@@ -215,42 +235,42 @@ export const addDaysToTimeDateStartOfDayNowUtc = (value: number) =>
  * addMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addMonthsToTimeDate = (date: Date, value: number) =>
-  addMonthsFns(date, Number(value));
+  date ? addMonthsFns(date, Number(value)) : null;
 
 /**
  * @example
  * addTrimestralMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addTrimestralMonthsToTimeDate = (date: Date, value: number) =>
-  addMonthsFns(date, Number(value) * 3);
+  date ? addMonthsFns(date, Number(value) * 3) : null;
 
 /**
  * @example
  * addSemestralMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addSemestralMonthsToTimeDate = (date: Date, value: number) =>
-  addMonthsFns(date, Number(value) * 6);
+  date ? addMonthsFns(date, Number(value) * 6) : null;
 
 /**
  * @example
  * addBimonthlyMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addBimonthlyMonthsToTimeDate = (date: Date, value: number) =>
-  addMonthsFns(date, Number(value) * 2);
+  date ? addMonthsFns(date, Number(value) * 2) : null;
 
 /**
  * @example
  * addDaysToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addDaysToTimeDate = (date: Date, value: number) =>
-  addDaysFns(date, Number(value));
+  date ? addDaysFns(date, Number(value)) : null;
 
 /**
  * @example
  * substrateDaysToTimeDateNowUtc(1); // 2026-01-02
  */
 export const substrateDaysToTimeDateNowUtc = (value: number) =>
-  subDaysFns(dateTimeNowUtc(), Number(value));
+  value ? subDaysFns(dateTimeNowUtc(), Number(value)) : null;
 
 /**
  * Prochaine échéance à partir de `date`, pas de maintenant.
