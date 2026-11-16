@@ -27,6 +27,8 @@ interface PropsScheduleCount {
   recurrence: RecurrenceEnum;
 }
 
+const NOT_AVAILABLE = "N/A";
+
 const dataFnsLocale: Partial<Record<LocaleEnum, Locale>> = {
   es: es,
   ru: ru,
@@ -56,7 +58,7 @@ export const formateDate = (date: Date, locale: string) => {
     ? formatDateFns(date, formatString, {
         locale: dataFnsLocale[locale],
       })
-    : null;
+    : NOT_AVAILABLE;
 };
 
 /**
@@ -68,7 +70,7 @@ export const formatedPP = (date: DateLike, locale?: string) =>
     ? formatDateFns(date, "PP", {
         locale: dataFnsLocale[locale],
       })
-    : null;
+    : NOT_AVAILABLE;
 
 /**
  * @example
@@ -79,7 +81,7 @@ export const formatedPPP = (date: DateLike, locale: string) =>
     ? formatDateFns(date, "PPP", {
         locale: dataFnsLocale[locale],
       })
-    : null;
+    : NOT_AVAILABLE;
 
 /**
  * @example
@@ -90,7 +92,7 @@ export const formateddMMYYYY = (date: DateLike, locale: string) => {
     ? formatDateFns(date, "PPP", {
         locale: dataFnsLocale[locale],
       })
-    : null;
+    : NOT_AVAILABLE;
 };
 
 /**
@@ -102,7 +104,7 @@ export const formateUnixIntegerPPp = (value: number, locale: string) => {
     ? formatDateFns(new Date(Number(value) * 1000), "PPp", {
         locale: dataFnsLocale[locale],
       })
-    : null;
+    : NOT_AVAILABLE;
 };
 
 /**
@@ -114,7 +116,7 @@ export const formateddMMYYYYHHmm = (date: DateLike, locale: string) => {
     ? formatDateFns(date, "PPPp", {
         locale: dataFnsLocale[locale],
       })
-    : null;
+    : NOT_AVAILABLE;
 };
 
 /**
@@ -129,55 +131,58 @@ export const formateHHmm = (date: Date, locale: string) =>
  * formateHH("2026-01-01T00:00:00Z"); // "00:00"
  */
 export const formateHH = (date: Date) =>
-  date ? formatDateFns(date, "HH") : null;
+  date ? formatDateFns(date, "HH") : NOT_AVAILABLE;
 
 /**
  * @example
  * formatDateDDMMYYToUtc("2026-01-01T00:00:00Z", "en"); // "01/01/2026"
  */
 export const formatDateDDMMYYToUtc = (date: Date, locale: string) =>
-  date ? formatDateFns(date, "P", { locale: dataFnsLocale[locale] }) : null;
+  date
+    ? formatDateFns(date, "P", { locale: dataFnsLocale[locale] })
+    : NOT_AVAILABLE;
 
 /**
  * @example
  * formatDateFnsToDdMMYYYY("2026-01-01T00:00:00Z"); // "01-01-2026"
  */
 export const formatDateFnsToDdMMYYYY = (date: Date) =>
-  date ? formatDateFns(date, "dd-MM-yyyy") : null;
+  date ? formatDateFns(date, "dd-MM-yyyy") : NOT_AVAILABLE;
 
 /**
  * @example
  * formatDateFnsToDdMMYYYYHHmmss("2026-01-01T00:00:00Z"); // "01-01-2026 00:00:00"
  */
 export const formatDateFnsToDdMMYYYYHHmm = (date: Date) =>
-  date ? formatDateFns(date, "dd-MM-yyyy HH:mm") : null;
+  date ? formatDateFns(date, "dd-MM-yyyy HH:mm") : NOT_AVAILABLE;
 
 /**
  * @example
  * formateDateMMyyyy("2026-01-01T00:00:00Z"); // "012026"
  */
 export const formateDateMMyyyy = (date: Date) =>
-  date ? formatDateFns(date, "MMyyyy") : null;
+  date ? formatDateFns(date, "MMyyyy") : NOT_AVAILABLE;
 
 /**
  * @example
  * formateToyyyy("2026-01-01T00:00:00Z"); // 2026
  */
-export const formateToyyyy = (date: Date) => (date ? getYear(date) : null);
+export const formateToyyyy = (date: Date) =>
+  date ? getYear(date) : NOT_AVAILABLE;
 
 /**
  * @example
  * formateDateUnixInteger("2026-01-01T00:00:00Z"); // 1719168000
  */
 export const formateDateUnixInteger = (date: Date) =>
-  date ? Number(formatDateFns(date, "T")) : null;
+  date ? Number(formatDateFns(date, "T")) : NOT_AVAILABLE;
 
 /**
  * @example
  * addDaysToTimeNowUtcDate(1); // 2026-01-02
  */
 export const addDaysToTimeNowUtcDate = (value: number) =>
-  value ? addDaysFns(dateTimeNowUtc(), Number(value)) : null;
+  value ? addDaysFns(dateTimeNowUtc(), Number(value)) : NOT_AVAILABLE;
 
 /**
  *
@@ -185,7 +190,7 @@ export const addDaysToTimeNowUtcDate = (value: number) =>
  * dateTimeNowUtcUnixInteger(); // 1719168000
  */
 export const dateTimeNowUtcUnixInteger = () =>
-  Number(formatDateFns(dateTimeNowUtc(), "T")) || null;
+  Number(formatDateFns(dateTimeNowUtc(), "T")) || NOT_AVAILABLE;
 
 /**
  * @example
@@ -194,7 +199,7 @@ export const dateTimeNowUtcUnixInteger = () =>
 export const addMonthsToTimeNowUtcUnixInteger = (month: number) =>
   month
     ? Number(formatDateFns(addMonthsFns(dateTimeNowUtc(), Number(month)), "T"))
-    : null;
+    : NOT_AVAILABLE;
 
 /**
  * @example
@@ -203,21 +208,21 @@ export const addMonthsToTimeNowUtcUnixInteger = (month: number) =>
 export const addDaysToTimeNowUtcUnixInteger = (value: number) =>
   value
     ? Number(formatDateFns(addDaysFns(dateTimeNowUtc(), Number(value)), "T"))
-    : null;
+    : NOT_AVAILABLE;
 
 /**
  * @example
  * addMonthsToTimeDateNowUtc(1); // 2026-01-02
  */
 export const addMonthsToTimeDateNowUtc = (value: number) =>
-  value ? addMonthsFns(dateTimeNowUtc(), Number(value)) : null;
+  value ? addMonthsFns(dateTimeNowUtc(), Number(value)) : NOT_AVAILABLE;
 
 /**
  * @example
  * addDaysToTimeDateNowUtc(1); // 2026-01-02
  */
 export const addDaysToTimeDateNowUtc = (value: number) =>
-  value ? addDaysFns(dateTimeNowUtc(), Number(value)) : null;
+  value ? addDaysFns(dateTimeNowUtc(), Number(value)) : NOT_AVAILABLE;
 
 /**
  * @example
@@ -227,7 +232,7 @@ export const addDaysToTimeDateStartOfDayNowUtc = (value: number) =>
   new Date(
     value
       ? startOfDayFns(addDaysFns(new UTCDate(dateTimeNowUtc()), Number(value)))
-      : null,
+      : NOT_AVAILABLE,
   );
 
 /**
@@ -235,42 +240,42 @@ export const addDaysToTimeDateStartOfDayNowUtc = (value: number) =>
  * addMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addMonthsToTimeDate = (date: Date, value: number) =>
-  date ? addMonthsFns(date, Number(value)) : null;
+  addMonthsFns(date, Number(value));
 
 /**
  * @example
  * addTrimestralMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addTrimestralMonthsToTimeDate = (date: Date, value: number) =>
-  date ? addMonthsFns(date, Number(value) * 3) : null;
+  addMonthsFns(date, Number(value) * 3);
 
 /**
  * @example
  * addSemestralMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addSemestralMonthsToTimeDate = (date: Date, value: number) =>
-  date ? addMonthsFns(date, Number(value) * 6) : null;
+  addMonthsFns(date, Number(value) * 6);
 
 /**
  * @example
  * addBimonthlyMonthsToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addBimonthlyMonthsToTimeDate = (date: Date, value: number) =>
-  date ? addMonthsFns(date, Number(value) * 2) : null;
+  addMonthsFns(date, Number(value) * 2);
 
 /**
  * @example
  * addDaysToTimeDate(new Date(), 1); // 2026-01-02
  */
 export const addDaysToTimeDate = (date: Date, value: number) =>
-  date ? addDaysFns(date, Number(value)) : null;
+  addDaysFns(date, Number(value));
 
 /**
  * @example
  * substrateDaysToTimeDateNowUtc(1); // 2026-01-02
  */
 export const substrateDaysToTimeDateNowUtc = (value: number) =>
-  value ? subDaysFns(dateTimeNowUtc(), Number(value)) : null;
+  value ? subDaysFns(dateTimeNowUtc(), Number(value)) : NOT_AVAILABLE;
 
 /**
  * Prochaine échéance à partir de `date`, pas de maintenant.
