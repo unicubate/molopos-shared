@@ -163,6 +163,13 @@ export const formateDateMMyyyy = (date: Date) =>
 
 /**
  * @example
+ * formateDateMMyyyy("2026-01-01T00:00:00Z"); // "01012026"
+ */
+export const formateDateddMMyyyy = (date: Date) =>
+  formatDateFns(date, "ddMMyyyy");
+
+/**
+ * @example
  * formateToyyyy("2026-01-01T00:00:00Z"); // 2026
  */
 export const formateToyyyy = (date: Date) =>

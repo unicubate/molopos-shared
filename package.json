@@ -1,6 +1,6 @@
 {
   "name": "mp-shared",
-  "version": "2.1.41",
+  "version": "2.1.42",
   "engines": {
     "npm": ">=11.20.0",
     "node": ">=26.13.1"
