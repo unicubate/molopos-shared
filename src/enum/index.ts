@@ -259,14 +259,6 @@ export enum ExportExtEnum {
 }
 
 /**
- * Signed view enum
- */
-export enum SignedViewEnum {
-  Signed = "signed",
-  View = "view",
-}
-
-/**
  * Contributor role enum
  */
 export enum ContributorRoleEnum {
@@ -462,9 +454,9 @@ export enum PricingTypeEnum {
  * Pricing variant enum
  */
 export enum PricingVariantEnum {
-  Basic = "BASIC",
   Pro = "PRO",
   Free = "FREE",
+  Basic = "BASIC",
   Standard = "STANDARD",
 }
 
@@ -472,8 +464,8 @@ export enum PricingVariantEnum {
  * Order type enum
  */
 export enum OrderTypeEnum {
-  Seller = "SELLER",
   Buyer = "BUYER",
+  Seller = "SELLER",
 }
 
 /**
@@ -519,4 +511,12 @@ export enum QuoteModuleEnum {
 export enum PartyRoleEnum {
   Borrower = "BORROWER",
   Lender = "LENDER",
+}
+
+/**
+ * Signed view enum
+ */
+export enum SignedViewEnum {
+  Signed = "signed",
+  View = "view",
 }
