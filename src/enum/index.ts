@@ -259,9 +259,9 @@ export enum ExportExtEnum {
 }
 
 /**
- * Quote signed view enum
+ * Signed view enum
  */
-export enum QuoteSignedViewEnum {
+export enum SignedViewEnum {
   Signed = "signed",
   View = "view",
 }
